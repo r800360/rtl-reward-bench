@@ -81,8 +81,6 @@ RESULT: FAIL 2650 of 12000 checks
 SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
 SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
 SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_17 at harness.sv:7.15-7.56 in step 0
-SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
-SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_17 at harness.sv:7.15-7.56 in step 0
 SBY [check] DONE (FAIL, rc=2)
 == bug_ignores_validity [bug] synth: pass
 cells after ABC mapping to 2-input gates: 91
@@ -149,8 +147,6 @@ RESULT: FAIL 339 of 12000 checks
 == bug_ties_to_path1 [bug] formal: fail
 SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
 SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
-SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_18 at harness.sv:7.15-7.56 in step 0
-SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
 SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_18 at harness.sv:7.15-7.56 in step 0
 SBY [check] DONE (FAIL, rc=2)
 == bug_ties_to_path1 [bug] synth: pass

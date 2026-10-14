@@ -171,8 +171,16 @@ def formal(task, cand):
     summary = "\n".join(l for l in out.splitlines() if "summary" in l or "DONE" in l or "ERROR" in l)
     if rc == 0:
         return Result("pass", t, summary)
-    # on a failure, whether the induction engine finished before the base case found the counterexample is a race
-    summary = "\n".join(l for l in summary.splitlines() if "for induction" not in l)
+    # on a failure, whether the induction engine reports before the base case's counterexample stops it is a race:
+    # leave out the induction lines and the indented lines that belong to them
+    kept, skipping = [], False
+    for line in summary.splitlines():
+        if "induction" in line:
+            skipping = True
+        elif not (skipping and "summary:   " in line):
+            skipping = False
+            kept.append(line)
+    summary = "\n".join(kept)
     # a counterexample, even when SBY then fails to replay it as a trace (abc pdr): "returned FAIL"
     if "returned FAIL" in out or "failed assertion" in out or "DONE (FAIL" in out:
         return Result("fail", t, summary)

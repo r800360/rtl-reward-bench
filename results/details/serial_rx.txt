@@ -150,8 +150,6 @@ RESULT: FAIL 65313 of 66246 checks
 - tasks/serial_rx/tb_strong.sv:52: Verilog $finish
 == bug_data_cleared [bug] formal: fail
 SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
-SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
-SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_13_38 at harness.sv:13.42-13.70 in step 0
 SBY [check] DONE (UNKNOWN, rc=4)
 == bug_data_cleared [bug] synth: pass
 cells after ABC mapping to 2-input gates: 119
