@@ -54,6 +54,12 @@ def _libs(task):
     return [os.path.join(ROOT, "lib", f) for f in task.get("lib", [])]
 
 
+def _tail(text, lines):
+    """The last lines of a log. Cut by lines, not characters: absolute paths differ in length between machines, so a
+    character cut would start mid-line at a different place on each."""
+    return "\n".join(text.splitlines()[-lines:])
+
+
 def _passed(out):
     return re.search(r"^RESULT: PASS", out, re.M) is not None
 
@@ -73,7 +79,7 @@ def compile(task, cand):                                   # noqa: A001 - grader
     files = _libs(task) + [cand["path"], os.path.join(task["dir"], task["weak"]["tb"])]
     rc, out, t = _run(["iverilog", "-g2012", "-I", TB, "-Wno-timescale", "-s", task["weak"]["top"], "-o", "x.vvp",
                        *files], wd)
-    return Result("pass" if rc == 0 else "fail", t, out[-2000:])
+    return Result("pass" if rc == 0 else "fail", t, _tail(out, 30))
 
 
 def lint(task, cand):
@@ -90,7 +96,7 @@ def lint(task, cand):
 def weak(task, cand):
     wd = _workdir(task, cand, "weak")
     v, t, out = _iverilog_run(task, cand, wd, task["weak"]["tb"], task["weak"]["top"], {})
-    return Result(v, t, out[-2000:])
+    return Result(v, t, _tail(out, 30))
 
 
 def strong_icarus(task, cand):
@@ -102,7 +108,7 @@ def strong_icarus(task, cand):
         logs.append(f"{params}: {v}")
         if v != "pass":
             verdict = v if verdict == "pass" else verdict
-            logs.append(out[-1500:])
+            logs.append(_tail(out, 25))
     return Result(verdict, total, "\n".join(logs))
 
 
@@ -119,7 +125,7 @@ def strong_verilator(task, cand):
         if rc:
             total += t1
             verdict = "error" if verdict == "pass" else verdict
-            logs.append(f"{params}: build error\n" + out[-1500:])
+            logs.append(f"{params}: build error\n" + _tail(out, 25))
             continue
         rc, out2, t2 = _run([os.path.join(obj, "sim")], wd, timeout=300)
         total += t1 + t2
@@ -127,7 +133,7 @@ def strong_verilator(task, cand):
         logs.append(f"{params}: {v}")
         if v != "pass":
             verdict = v if verdict == "pass" else verdict
-            logs.append(out2[-1500:])
+            logs.append(_tail(out2, 25))
     return Result(verdict, total, "\n".join(logs))
 
 
@@ -165,10 +171,12 @@ def formal(task, cand):
     summary = "\n".join(l for l in out.splitlines() if "summary" in l or "DONE" in l or "ERROR" in l)
     if rc == 0:
         return Result("pass", t, summary)
+    # on a failure, whether the induction engine finished before the base case found the counterexample is a race
+    summary = "\n".join(l for l in summary.splitlines() if "for induction" not in l)
     # a counterexample, even when SBY then fails to replay it as a trace (abc pdr): "returned FAIL"
     if "returned FAIL" in out or "failed assertion" in out or "DONE (FAIL" in out:
         return Result("fail", t, summary)
-    return Result("error", t, summary or out[-1500:])
+    return Result("error", t, summary or _tail(out, 25))
 
 
 def _yosys(task, cand, wd, script):
@@ -189,7 +197,7 @@ def synth(task, cand):
         rc, out, t = _yosys(task, cand, wd, f"proc; opt_clean; tee -q -o cells.txt select -list {task['top']}/t:* {allowed}")
         total += t
         if rc:
-            return Result("error", total, out[-1500:])
+            return Result("error", total, _tail(out, 25))
         other = [l for l in open(os.path.join(wd, "cells.txt")).read().splitlines() if l.strip()]
         detail.append(f"cells other than {s['only_instances']}: {len(other)}")
         if other:
@@ -198,7 +206,7 @@ def synth(task, cand):
                                         "tee -q -o stat.txt stat; write_json netlist.json")
     total += t
     if rc:
-        return Result("error", total, out[-1500:])
+        return Result("error", total, _tail(out, 25))
     stat = open(os.path.join(wd, "stat.txt")).read()
     cells = re.search(r"Number of cells:\s+(\d+)", stat)
     detail.append(f"cells after ABC mapping to 2-input gates: {int(cells.group(1)) if cells else 0}")
@@ -215,7 +223,7 @@ def synth(task, cand):
                                             "tee -q -o ltp.txt ltp -noff")
         total += t
         if rc:
-            return Result("error", total, out[-1500:])
+            return Result("error", total, _tail(out, 25))
         m = re.search(r"length=(\d+)", open(os.path.join(wd, "ltp.txt")).read())
         depth = int(m.group(1)) if m else 0
         detail.append(f"logic depth {depth} (limit {s['max_depth']})")
@@ -257,17 +265,17 @@ def timed(task, cand):
                                          "dfflegalize -cell $_DFF_P_ x -cell $_DFF_N_ x; techmap; opt_clean; "
                                          f"rename {task['top']} {task['top']}_gl; write_verilog -noattr -noexpr netlist.v")
     if rc:
-        return Result("error", t1, out[-1500:])
+        return Result("error", t1, _tail(out, 25))
     files = [os.path.join(TB, "timed_cells.v"), os.path.join(wd, "netlist.v"), os.path.join(task["dir"], tm["tb"])]
     rc, out, t2 = _run(["iverilog", "-g2012", "-I", TB, "-Wno-timescale", "-s", tm["top"], "-o", "gl.vvp", *files], wd)
     if rc:
-        return Result("error", t1 + t2, out[-1500:])
+        return Result("error", t1 + t2, _tail(out, 25))
     total, failed = t1 + t2, []
     for trial in range(tm.get("trials", 8)):                 # a different random delay assignment per trial
         rc, out2, t3 = _run(["vvp", "-n", "gl.vvp", f"+TRIAL={trial}"], wd, timeout=300)
         total += t3
         if not _passed(out2):
-            failed.append(f"trial {trial}:\n{out2[-800:]}")
+            failed.append(f"trial {trial}:\n{_tail(out2, 12)}")
     return Result("fail" if failed else "pass", total, "\n".join(failed[:2]) or "no glitch in any trial")
 
 

@@ -14,28 +14,28 @@
 <text transform="translate(18,201.0) rotate(-90)" text-anchor="middle" fill="#1f2328">seconds</text>
 <rect x="78" y="44" width="658" height="314" fill="none" stroke="#8c959f"/>
 <text x="119.1" y="374" text-anchor="middle" fill="#1f2328">compile</text>
-<rect x="86.2" y="328.2" width="63.8" height="29.8" fill="#0969da"/>
-<text x="118.1" y="324.2" text-anchor="middle" font-size="10" fill="#1f2328">0.024</text>
+<rect x="86.2" y="381.6" width="63.8" height="-23.6" fill="#0969da"/>
+<text x="118.1" y="377.6" text-anchor="middle" font-size="10" fill="#1f2328">0.005</text>
 <text x="201.4" y="374" text-anchor="middle" fill="#1f2328">lint</text>
-<rect x="168.5" y="297.5" width="63.8" height="60.5" fill="#0969da"/>
-<text x="200.4" y="293.5" text-anchor="middle" font-size="10" fill="#1f2328">0.059</text>
+<rect x="168.5" y="310.7" width="63.8" height="47.3" fill="#0969da"/>
+<text x="200.4" y="306.7" text-anchor="middle" font-size="10" fill="#1f2328">0.04</text>
 <text x="283.6" y="374" text-anchor="middle" fill="#1f2328">weak</text>
-<rect x="250.7" y="318.3" width="63.8" height="39.7" fill="#0969da"/>
-<text x="282.6" y="314.3" text-anchor="middle" font-size="10" fill="#1f2328">0.032</text>
+<rect x="250.7" y="361.6" width="63.8" height="-3.6" fill="#0969da"/>
+<text x="282.6" y="357.6" text-anchor="middle" font-size="10" fill="#1f2328">0.009</text>
 <text x="365.9" y="374" text-anchor="middle" fill="#1f2328">strong_icarus</text>
-<rect x="333.0" y="275.9" width="63.8" height="82.1" fill="#0969da"/>
-<text x="364.9" y="271.9" text-anchor="middle" font-size="10" fill="#1f2328">0.111</text>
+<rect x="333.0" y="317.3" width="63.8" height="40.7" fill="#0969da"/>
+<text x="364.9" y="313.3" text-anchor="middle" font-size="10" fill="#1f2328">0.033</text>
 <text x="448.1" y="374" text-anchor="middle" fill="#1f2328">strong_verilator</text>
-<rect x="415.2" y="98.9" width="63.8" height="259.1" fill="#0969da"/>
-<text x="447.1" y="94.9" text-anchor="middle" font-size="10" fill="#1f2328">20.008</text>
+<rect x="415.2" y="104.4" width="63.8" height="253.6" fill="#0969da"/>
+<text x="447.1" y="100.4" text-anchor="middle" font-size="10" fill="#1f2328">17.014</text>
 <text x="530.4" y="374" text-anchor="middle" fill="#1f2328">formal</text>
-<rect x="497.5" y="215.0" width="63.8" height="143.0" fill="#0969da"/>
-<text x="529.4" y="211.0" text-anchor="middle" font-size="10" fill="#1f2328">0.663</text>
+<rect x="497.5" y="246.8" width="63.8" height="111.2" fill="#0969da"/>
+<text x="529.4" y="242.8" text-anchor="middle" font-size="10" fill="#1f2328">0.261</text>
 <text x="612.6" y="374" text-anchor="middle" fill="#1f2328">synth</text>
-<rect x="579.7" y="270.8" width="63.8" height="87.2" fill="#0969da"/>
-<text x="611.6" y="266.8" text-anchor="middle" font-size="10" fill="#1f2328">0.129</text>
+<rect x="579.7" y="279.5" width="63.8" height="78.5" fill="#0969da"/>
+<text x="611.6" y="275.5" text-anchor="middle" font-size="10" fill="#1f2328">0.1</text>
 <text x="694.9" y="374" text-anchor="middle" fill="#1f2328">timed</text>
-<rect x="662.0" y="245.8" width="63.8" height="112.2" fill="#0969da"/>
-<text x="693.9" y="241.8" text-anchor="middle" font-size="10" fill="#1f2328">0.269</text>
+<rect x="662.0" y="270.6" width="63.8" height="87.4" fill="#0969da"/>
+<text x="693.9" y="266.6" text-anchor="middle" font-size="10" fill="#1f2328">0.13</text>
 <text x="78" y="414" font-size="11" fill="#57606a">machine-dependent; not compared by make check</text>
 </svg>

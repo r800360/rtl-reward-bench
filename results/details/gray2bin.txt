@@ -48,9 +48,12 @@ tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
 [196000] MISMATCH value applied one clock earlier (16): got 5, expected 0
 RESULT: FAIL 12 of 18 checks
 tasks/gray2bin/tb_strong.sv:35: $finish called at 202000 (1ps)
-
 {'N': 8}: fail
-value applied one clock earlier (8): got a, expected f
+[66000] MISMATCH value applied one clock earlier (3): got x, expected 2
+[76000] MISMATCH value applied one clock earlier (4): got X, expected 7
+[86000] MISMATCH value applied one clock earlier (5): got X, expected 6
+[96000] MISMATCH value applied one clock earlier (6): got X, expected 4
+[116000] MISMATCH value applied one clock earlier (8): got a, expected f
 [126000] MISMATCH value applied one clock earlier (9): got c, expected e
 [156000] MISMATCH value applied one clock earlier (12): got a, expected 8
 [166000] MISMATCH value applied one clock earlier (13): got 8, expected 9
@@ -110,9 +113,12 @@ tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
 [196000] MISMATCH value applied one clock earlier (16): got 1, expected 0
 RESULT: FAIL 17 of 18 checks
 tasks/gray2bin/tb_strong.sv:35: $finish called at 202000 (1ps)
-
 {'N': 8}: fail
-ISMATCH value applied one clock earlier (7): got f, expected 5
+[66000] MISMATCH value applied one clock earlier (3): got 7, expected 2
+[76000] MISMATCH value applied one clock earlier (4): got 6, expected 7
+[86000] MISMATCH value applied one clock earlier (5): got 4, expected 6
+[96000] MISMATCH value applied one clock earlier (6): got 5, expected 4
+[106000] MISMATCH value applied one clock earlier (7): got f, expected 5
 [116000] MISMATCH value applied one clock earlier (8): got e, expected f
 [126000] MISMATCH value applied one clock earlier (9): got c, expected e
 [136000] MISMATCH value applied one clock earlier (10): got d, expected c
@@ -135,7 +141,7 @@ RESULT: FAIL 257 of 258 checks
 tasks/gray2bin/tb_strong.sv:35: $finish called at 2602000 (1ps)
 == bug_latency_one [bug] strong_verilator: fail
 {'N': 4}: fail
- clock earlier (0): got 1, expected 0
+[36000] MISMATCH value applied one clock earlier (0): got 1, expected 0
 [46000] MISMATCH value applied one clock earlier (1): got 3, expected 1
 [56000] MISMATCH value applied one clock earlier (2): got 2, expected 3
 [66000] MISMATCH value applied one clock earlier (3): got 7, expected 2
@@ -154,9 +160,11 @@ tasks/gray2bin/tb_strong.sv:35: $finish called at 2602000 (1ps)
 [196000] MISMATCH value applied one clock earlier (16): got 1, expected 0
 RESULT: FAIL 17 of 18 checks
 - tasks/gray2bin/tb_strong.sv:30: Verilog $finish
-
 {'N': 8}: fail
-one clock earlier (9): got c, expected e
+[96000] MISMATCH value applied one clock earlier (6): got 5, expected 4
+[106000] MISMATCH value applied one clock earlier (7): got f, expected 5
+[116000] MISMATCH value applied one clock earlier (8): got e, expected f
+[126000] MISMATCH value applied one clock earlier (9): got c, expected e
 [136000] MISMATCH value applied one clock earlier (10): got d, expected c
 [146000] MISMATCH value applied one clock earlier (11): got 8, expected d
 [156000] MISMATCH value applied one clock earlier (12): got 9, expected 8
@@ -208,9 +216,12 @@ tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
 [186000] MISMATCH value applied one clock earlier (15): got 8, expected a
 RESULT: FAIL 12 of 18 checks
 tasks/gray2bin/tb_strong.sv:35: $finish called at 202000 (1ps)
-
 {'N': 8}: fail
-lue applied one clock earlier (11): got e, expected d
+[106000] MISMATCH value applied one clock earlier (7): got 4, expected 5
+[116000] MISMATCH value applied one clock earlier (8): got c, expected f
+[126000] MISMATCH value applied one clock earlier (9): got d, expected e
+[136000] MISMATCH value applied one clock earlier (10): got f, expected c
+[146000] MISMATCH value applied one clock earlier (11): got e, expected d
 [156000] MISMATCH value applied one clock earlier (12): got a, expected 8
 [166000] MISMATCH value applied one clock earlier (13): got b, expected 9
 [176000] MISMATCH value applied one clock earlier (14): got 9, expected b
@@ -247,9 +258,11 @@ tasks/gray2bin/tb_strong.sv:35: $finish called at 2602000 (1ps)
 [186000] MISMATCH value applied one clock earlier (15): got 8, expected a
 RESULT: FAIL 12 of 18 checks
 - tasks/gray2bin/tb_strong.sv:30: Verilog $finish
-
 {'N': 8}: fail
-k earlier (13): got b, expected 9
+[136000] MISMATCH value applied one clock earlier (10): got f, expected c
+[146000] MISMATCH value applied one clock earlier (11): got e, expected d
+[156000] MISMATCH value applied one clock earlier (12): got a, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
 [176000] MISMATCH value applied one clock earlier (14): got 9, expected b
 [186000] MISMATCH value applied one clock earlier (15): got 8, expected a
 [196000] MISMATCH value applied one clock earlier (16): got 18, expected 1f

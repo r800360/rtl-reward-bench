@@ -67,7 +67,8 @@ RESULT: PASS 4 checks
 tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
 == bug_rotate_fill [bug] strong_icarus: fail
 {'N': 4}: fail
- left 0 amt 2 din 9: got a, expected 6
+[167000] MISMATCH rotate 1 left 0 amt 2 din 6: got 5, expected 9
+[170000] MISMATCH rotate 1 left 0 amt 2 din 9: got a, expected 6
 [171000] MISMATCH rotate 1 left 0 amt 2 din a: got 6, expected a
 [174000] MISMATCH rotate 1 left 0 amt 2 din d: got b, expected 7
 [175000] MISMATCH rotate 1 left 0 amt 2 din e: got 7, expected b
@@ -91,9 +92,10 @@ tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
 ... 7 further mismatches not printed
 RESULT: FAIL 32 of 256 checks
 tasks/log_shifter/tb_strong.sv:39: $finish called at 256000 (1ps)
-
 {'N': 8}: fail
-a: got 42, expected 82
+[4615000] MISMATCH rotate 1 left 0 amt 2 din 6: got 41, expected 81
+[4618000] MISMATCH rotate 1 left 0 amt 2 din 9: got 82, expected 42
+[4619000] MISMATCH rotate 1 left 0 amt 2 din a: got 42, expected 82
 [4622000] MISMATCH rotate 1 left 0 amt 2 din d: got 83, expected 43
 [4623000] MISMATCH rotate 1 left 0 amt 2 din e: got 43, expected 83
 [4626000] MISMATCH rotate 1 left 0 amt 2 din 11: got 84, expected 44
@@ -116,9 +118,11 @@ a: got 42, expected 82
 ... 2151 further mismatches not printed
 RESULT: FAIL 2176 of 8192 checks
 tasks/log_shifter/tb_strong.sv:39: $finish called at 8192000 (1ps)
-
 {'N': 16}: fail
-ected b928
+[12000] MISMATCH rotate 1 left 1 amt 6 din 13ae: got eb82, expected eb84
+[14000] MISMATCH rotate 1 left 1 amt 10 din 4b15: got 5634, expected 552c
+[15000] MISMATCH rotate 1 left 1 amt 2 din 559f: got 567e, expected 567d
+[16000] MISMATCH rotate 1 left 0 amt 7 din 945c: got d528, expected b928
 [18000] MISMATCH rotate 1 left 0 amt 12 din edc8: got 3b1e, expected dc8e
 [19000] MISMATCH rotate 1 left 1 amt 2 din 816d: got 5b5, expected 5b6
 [21000] MISMATCH rotate 1 left 1 amt 15 din 6358: got 3835, expected 31ac
@@ -142,7 +146,8 @@ RESULT: FAIL 7322 of 20000 checks
 tasks/log_shifter/tb_strong.sv:39: $finish called at 20000000 (1ps)
 == bug_rotate_fill [bug] strong_verilator: fail
 {'N': 4}: fail
-000] MISMATCH rotate 1 left 0 amt 2 din e: got 7, expected b
+[174000] MISMATCH rotate 1 left 0 amt 2 din d: got b, expected 7
+[175000] MISMATCH rotate 1 left 0 amt 2 din e: got 7, expected b
 [179000] MISMATCH rotate 1 left 0 amt 3 din 2: got 8, expected 4
 [180000] MISMATCH rotate 1 left 0 amt 3 din 3: got a, expected 6
 [181000] MISMATCH rotate 1 left 0 amt 3 din 4: got 4, expected 8
@@ -163,9 +168,10 @@ tasks/log_shifter/tb_strong.sv:39: $finish called at 20000000 (1ps)
 ... 7 further mismatches not printed
 RESULT: FAIL 32 of 256 checks
 - tasks/log_shifter/tb_strong.sv:34: Verilog $finish
-
 {'N': 8}: fail
- MISMATCH rotate 1 left 0 amt 2 din 11: got 84, expected 44
+[4622000] MISMATCH rotate 1 left 0 amt 2 din d: got 83, expected 43
+[4623000] MISMATCH rotate 1 left 0 amt 2 din e: got 43, expected 83
+[4626000] MISMATCH rotate 1 left 0 amt 2 din 11: got 84, expected 44
 [4627000] MISMATCH rotate 1 left 0 amt 2 din 12: got 44, expected 84
 [4630000] MISMATCH rotate 1 left 0 amt 2 din 15: got 85, expected 45
 [4631000] MISMATCH rotate 1 left 0 amt 2 din 16: got 45, expected 85
@@ -185,9 +191,11 @@ RESULT: FAIL 32 of 256 checks
 ... 2151 further mismatches not printed
 RESULT: FAIL 2176 of 8192 checks
 - tasks/log_shifter/tb_strong.sv:34: Verilog $finish
-
 {'N': 16}: fail
-MISMATCH rotate 1 left 0 amt 8 din 2bfb: got df2b, expected fb2b
+[22000] MISMATCH rotate 1 left 0 amt 9 din 95d7: got d7ca, expected ebca
+[23000] MISMATCH rotate 1 left 1 amt 13 din f5ef: got f7bd, expected febd
+[24000] MISMATCH rotate 1 left 0 amt 7 din e32a: got a9c6, expected 55c6
+[26000] MISMATCH rotate 1 left 0 amt 8 din 2bfb: got df2b, expected fb2b
 [27000] MISMATCH rotate 1 left 1 amt 4 din 41c8: got 1c82, expected 1c84
 [28000] MISMATCH rotate 1 left 1 amt 3 din dd21: got e90d, expected e90e
 [32000] MISMATCH rotate 1 left 1 amt 14 din a46c: got 19d8, expected 291b
@@ -229,7 +237,9 @@ tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
 == bug_two_stages [bug] strong_icarus: fail
 {'N': 4}: pass
 {'N': 8}: fail
-] MISMATCH rotate 0 left 0 amt 4 din 6: got 6, expected 0
+[1029000] MISMATCH rotate 0 left 0 amt 4 din 4: got 4, expected 0
+[1030000] MISMATCH rotate 0 left 0 amt 4 din 5: got 5, expected 0
+[1031000] MISMATCH rotate 0 left 0 amt 4 din 6: got 6, expected 0
 [1032000] MISMATCH rotate 0 left 0 amt 4 din 7: got 7, expected 0
 [1033000] MISMATCH rotate 0 left 0 amt 4 din 8: got 8, expected 0
 [1034000] MISMATCH rotate 0 left 0 amt 4 din 9: got 9, expected 0
@@ -252,9 +262,11 @@ tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
 ... 3913 further mismatches not printed
 RESULT: FAIL 3938 of 8192 checks
 tasks/log_shifter/tb_strong.sv:39: $finish called at 8192000 (1ps)
-
 {'N': 16}: fail
-got 830, expected 8
+[6000] MISMATCH rotate 1 left 0 amt 13 din 2665: got 9332, expected 3329
+[10000] MISMATCH rotate 1 left 1 amt 10 din 4c3c: got 30f1, expected f130
+[12000] MISMATCH rotate 1 left 1 amt 6 din 13ae: got 4eb8, expected eb84
+[13000] MISMATCH rotate 0 left 0 amt 11 din 4185: got 830, expected 8
 [14000] MISMATCH rotate 1 left 1 amt 10 din 4b15: got 2c55, expected 552c
 [16000] MISMATCH rotate 1 left 0 amt 7 din 945c: got 928b, expected b928
 [17000] MISMATCH rotate 1 left 1 amt 9 din c0d7: got 81af, expected af81
@@ -279,7 +291,8 @@ tasks/log_shifter/tb_strong.sv:39: $finish called at 20000000 (1ps)
 == bug_two_stages [bug] strong_verilator: fail
 {'N': 4}: pass
 {'N': 8}: fail
- 8: got 8, expected 0
+[1032000] MISMATCH rotate 0 left 0 amt 4 din 7: got 7, expected 0
+[1033000] MISMATCH rotate 0 left 0 amt 4 din 8: got 8, expected 0
 [1034000] MISMATCH rotate 0 left 0 amt 4 din 9: got 9, expected 0
 [1035000] MISMATCH rotate 0 left 0 amt 4 din a: got a, expected 0
 [1036000] MISMATCH rotate 0 left 0 amt 4 din b: got b, expected 0
@@ -300,9 +313,11 @@ tasks/log_shifter/tb_strong.sv:39: $finish called at 20000000 (1ps)
 ... 3913 further mismatches not printed
 RESULT: FAIL 3938 of 8192 checks
 - tasks/log_shifter/tb_strong.sv:34: Verilog $finish
-
 {'N': 16}: fail
-000] MISMATCH rotate 1 left 0 amt 7 din d55d: got baab, expected bbaa
+[10000] MISMATCH rotate 0 left 1 amt 8 din 3263: got 3263, expected 6300
+[12000] MISMATCH rotate 1 left 1 amt 8 din c16e: got c16e, expected 6ec1
+[16000] MISMATCH rotate 0 left 1 amt 9 din a8f3: got 51e6, expected e600
+[17000] MISMATCH rotate 1 left 0 amt 7 din d55d: got baab, expected bbaa
 [18000] MISMATCH rotate 0 left 1 amt 13 din b4a9: got 6952, expected 2000
 [20000] MISMATCH rotate 1 left 1 amt 13 din cb23: got 9647, expected 7964
 [21000] MISMATCH rotate 1 left 1 amt 14 din 50d5: got 4355, expected 5435

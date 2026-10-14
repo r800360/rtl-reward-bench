@@ -30,7 +30,7 @@ RESULT: PASS 20 checks
 tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
 == bug_load_exclusive [bug] strong_icarus: fail
 {'N': 3}: fail
-ock edge: got 2, expected 0
+[6566000] MISMATCH dout after a clock edge: got 2, expected 0
 [6596000] MISMATCH dout after a clock edge: got 1, expected 3
 [6626000] MISMATCH dout after a clock edge: got 1, expected 3
 [6696000] MISMATCH dout after a clock edge: got 1, expected 3
@@ -55,9 +55,8 @@ ock edge: got 2, expected 0
 ... 135 further mismatches not printed
 RESULT: FAIL 160 of 974 checks
 tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
-
 {'N': 5}: fail
-ock edge: got 1, expected 3
+[6576000] MISMATCH dout after a clock edge: got 1, expected 3
 [6586000] MISMATCH dout after a clock edge: got 2, expected 0
 [6606000] MISMATCH dout after a clock edge: got 1, expected 3
 [6616000] MISMATCH dout after a clock edge: got 1, expected 3
@@ -82,9 +81,8 @@ ock edge: got 1, expected 3
 ... 134 further mismatches not printed
 RESULT: FAIL 159 of 974 checks
 tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
-
 {'N': 9}: fail
-ock edge: got 2, expected 0
+[6606000] MISMATCH dout after a clock edge: got 2, expected 0
 [6616000] MISMATCH dout after a clock edge: got 1, expected 3
 [6626000] MISMATCH dout after a clock edge: got 1, expected 3
 [6646000] MISMATCH dout after a clock edge: got 1, expected 3
@@ -113,7 +111,7 @@ tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
 {'N': 3}: pass
 {'N': 5}: pass
 {'N': 9}: fail
-H dout after a clock edge: got 2, expected 0
+[6636000] MISMATCH dout after a clock edge: got 2, expected 0
 [6646000] MISMATCH dout after a clock edge: got 1, expected 3
 [6666000] MISMATCH dout after a clock edge: got 2, expected 0
 [6676000] MISMATCH dout after a clock edge: got 1, expected 3
@@ -166,7 +164,7 @@ RESULT: FAIL 13 of 20 checks
 tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
 == bug_reset_clears_generators [bug] strong_icarus: fail
 {'N': 3}: fail
-MISMATCH dout after a clock edge: got 0, expected 2
+[66000] MISMATCH dout after a clock edge: got 0, expected 2
 [76000] MISMATCH dout after a clock edge: got 0, expected 3
 [86000] MISMATCH dout after a clock edge: got 0, expected 2
 [96000] MISMATCH dout after a clock edge: got 0, expected 1
@@ -191,9 +189,8 @@ MISMATCH dout after a clock edge: got 0, expected 2
 ... 243 further mismatches not printed
 RESULT: FAIL 268 of 974 checks
 tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
-
 {'N': 5}: fail
-SMATCH dout after a clock edge: got 0, expected 2
+[86000] MISMATCH dout after a clock edge: got 0, expected 2
 [96000] MISMATCH dout after a clock edge: got 0, expected 1
 [116000] MISMATCH dout after a clock edge: got 0, expected 1
 [126000] MISMATCH dout after a clock edge: got 0, expected 1
@@ -218,9 +215,8 @@ SMATCH dout after a clock edge: got 0, expected 2
 ... 231 further mismatches not printed
 RESULT: FAIL 256 of 974 checks
 tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
-
 {'N': 9}: fail
-ISMATCH dout after a clock edge: got 0, expected 1
+[76000] MISMATCH dout after a clock edge: got 0, expected 1
 [86000] MISMATCH dout after a clock edge: got 0, expected 2
 [96000] MISMATCH dout after a clock edge: got 0, expected 3
 [106000] MISMATCH dout after a clock edge: got 0, expected 3
@@ -247,7 +243,6 @@ RESULT: FAIL 268 of 974 checks
 tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
 == bug_reset_clears_generators [bug] strong_verilator: fail
 {'N': 3}: fail
-2
 [176000] MISMATCH dout after a clock edge: got 0, expected 3
 [186000] MISMATCH dout after a clock edge: got 0, expected 1
 [196000] MISMATCH dout after a clock edge: got 0, expected 2
@@ -270,9 +265,7 @@ tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
 ... 237 further mismatches not printed
 RESULT: FAIL 262 of 974 checks
 - tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
-
 {'N': 5}: fail
-2
 [196000] MISMATCH dout after a clock edge: got 0, expected 3
 [206000] MISMATCH dout after a clock edge: got 0, expected 1
 [216000] MISMATCH dout after a clock edge: got 0, expected 2
@@ -295,9 +288,7 @@ RESULT: FAIL 262 of 974 checks
 ... 239 further mismatches not printed
 RESULT: FAIL 264 of 974 checks
 - tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
-
 {'N': 9}: fail
-1
 [176000] MISMATCH dout after a clock edge: got 0, expected 1
 [186000] MISMATCH dout after a clock edge: got 0, expected 3
 [206000] MISMATCH dout after a clock edge: got 0, expected 1
@@ -345,7 +336,6 @@ tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
 [6536000] MISMATCH dout after a clock edge: got 0, expected 3
 RESULT: FAIL 5 of 974 checks
 tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
-
 {'N': 5}: fail
 [3276000] MISMATCH dout after a clock edge: got 3, expected 0
 [3296000] MISMATCH dout after a clock edge: got 1, expected 2
@@ -355,7 +345,6 @@ tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
 [6556000] MISMATCH dout after a clock edge: got 0, expected 3
 RESULT: FAIL 6 of 974 checks
 tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
-
 {'N': 9}: fail
 [3266000] MISMATCH dout after a clock edge: got 2, expected 3
 [3276000] MISMATCH dout after a clock edge: got 1, expected 3
@@ -378,7 +367,6 @@ tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
 [6536000] MISMATCH dout after a clock edge: got 0, expected 3
 RESULT: FAIL 3 of 974 checks
 - tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
-
 {'N': 5}: fail
 [6516000] MISMATCH dout after a clock edge: got 3, expected 0
 [6536000] MISMATCH dout after a clock edge: got 0, expected 3
@@ -386,7 +374,6 @@ RESULT: FAIL 3 of 974 checks
 [6556000] MISMATCH dout after a clock edge: got 0, expected 3
 RESULT: FAIL 4 of 974 checks
 - tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
-
 {'N': 9}: fail
 [3266000] MISMATCH dout after a clock edge: got 0, expected 2
 [3276000] MISMATCH dout after a clock edge: got 3, expected 2

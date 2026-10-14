@@ -28,8 +28,6 @@ RESULT: PASS 3 checks
 tasks/acs_unit/tb_weak.sv:21: $finish called at 2000 (1ps)
 == bug_ignores_validity [bug] strong_icarus: fail
 {}: fail
- v=01 c0=16 c1=38: got 0, expected 1
-[2000] MISMATCH pm v=01 c0=16 c1=38: got 10, expected 26
 [5000] MISMATCH pm v=00 c0=6 c1=44: got 6, expected 0
 [9000] MISMATCH pm v=00 c0=11 c1=3: got b, expected 0
 [10000] MISMATCH sel v=01 c0=29 c1=29: got 0, expected 1
@@ -57,8 +55,6 @@ RESULT: FAIL 2692 of 12000 checks
 tasks/acs_unit/tb_strong.sv:33: $finish called at 4000000 (1ps)
 == bug_ignores_validity [bug] strong_verilator: fail
 {}: fail
-0 c1=14: got 1, expected 0
-[11000] MISMATCH pm v=10 c0=50 c1=14: got e, expected 32
 [13000] MISMATCH pm v=00 c0=17 c1=17: got 11, expected 0
 [14000] MISMATCH sel v=01 c0=37 c1=38: got 0, expected 1
 [14000] MISMATCH pm v=01 c0=37 c1=38: got 25, expected 26
@@ -101,8 +97,6 @@ RESULT: PASS 3 checks
 tasks/acs_unit/tb_weak.sv:21: $finish called at 2000 (1ps)
 == bug_ties_to_path1 [bug] strong_icarus: fail
 {}: fail
-t 1, expected 0
-[28000] MISMATCH sel v=11 c0=9 c1=9: got 1, expected 0
 [40000] MISMATCH sel v=11 c0=19 c1=19: got 1, expected 0
 [52000] MISMATCH sel v=11 c0=30 c1=30: got 1, expected 0
 [64000] MISMATCH sel v=11 c0=59 c1=59: got 1, expected 0
@@ -130,8 +124,6 @@ RESULT: FAIL 344 of 12000 checks
 tasks/acs_unit/tb_strong.sv:33: $finish called at 4000000 (1ps)
 == bug_ties_to_path1 [bug] strong_verilator: fail
 {}: fail
-7: got 1, expected 0
-[64000] MISMATCH sel v=11 c0=9 c1=9: got 1, expected 0
 [76000] MISMATCH sel v=11 c0=59 c1=59: got 1, expected 0
 [88000] MISMATCH sel v=11 c0=44 c1=44: got 1, expected 0
 [100000] MISMATCH sel v=11 c0=3 c1=3: got 1, expected 0

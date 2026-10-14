@@ -38,7 +38,6 @@ tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
 [166000] MISMATCH no done while loading: got 1, expected 0
 RESULT: FAIL 4 of 42 checks
 tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 216000 (1ps)
-
 {'N': 4}: fail
 [16000] MISMATCH no done after reset: got 1, expected 0
 [26000] MISMATCH no done while loading: got 1, expected 0
@@ -58,9 +57,7 @@ tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 216000 (1ps)
 [2686000] MISMATCH no done while loading: got 1, expected 0
 RESULT: FAIL 16 of 570 checks
 tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 2856000 (1ps)
-
 {'N': 6}: fail
-ted 0
 [1366000] MISMATCH no done while loading: got 1, expected 0
 [2036000] MISMATCH no done while loading: got 1, expected 0
 [2706000] MISMATCH no done while loading: got 1, expected 0
@@ -86,9 +83,8 @@ ted 0
 ... 39 further mismatches not printed
 RESULT: FAIL 64 of 8442 checks
 tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 42216000 (1ps)
-
 {'N': 8}: fail
-MISMATCH no done while loading: got 1, expected 0
+[5206000] MISMATCH no done while loading: got 1, expected 0
 [7796000] MISMATCH no done while loading: got 1, expected 0
 [10386000] MISMATCH no done while loading: got 1, expected 0
 [12976000] MISMATCH no done while loading: got 1, expected 0
@@ -121,7 +117,6 @@ tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 660456000 (1ps)
 [166000] MISMATCH no done while loading: got 1, expected 0
 RESULT: FAIL 4 of 42 checks
 - tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
-
 {'N': 4}: fail
 [16000] MISMATCH no done after reset: got 1, expected 0
 [26000] MISMATCH no done while loading: got 1, expected 0
@@ -141,9 +136,7 @@ RESULT: FAIL 4 of 42 checks
 [2686000] MISMATCH no done while loading: got 1, expected 0
 RESULT: FAIL 16 of 570 checks
 - tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
-
 {'N': 6}: fail
-ot 1, expected 0
 [3376000] MISMATCH no done while loading: got 1, expected 0
 [4046000] MISMATCH no done while loading: got 1, expected 0
 [4716000] MISMATCH no done while loading: got 1, expected 0
@@ -166,9 +159,7 @@ ot 1, expected 0
 ... 39 further mismatches not printed
 RESULT: FAIL 64 of 8442 checks
 - tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
-
 {'N': 8}: fail
-0
 [12976000] MISMATCH no done while loading: got 1, expected 0
 [15566000] MISMATCH no done while loading: got 1, expected 0
 [18156000] MISMATCH no done while loading: got 1, expected 0
@@ -214,7 +205,6 @@ tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
 [156000] MISMATCH reset gives 0: got 3, expected 0
 RESULT: FAIL 3 of 42 checks
 tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 216000 (1ps)
-
 {'N': 4}: fail
 [16000] MISMATCH reset gives 0: got f, expected 0
 [206000] MISMATCH reset gives 0: got f, expected 0
@@ -233,11 +223,7 @@ tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 216000 (1ps)
 [2676000] MISMATCH reset gives 0: got f, expected 0
 RESULT: FAIL 15 of 570 checks
 tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 2856000 (1ps)
-
 {'N': 6}: fail
-[16000] MISMATCH reset gives 0: got 3f, expected 0
-[686000] MISMATCH reset gives 0: got 3f, expected 0
-[1356000] MISMATCH reset gives 0: got 3f, expected 0
 [2026000] MISMATCH reset gives 0: got 3f, expected 0
 [2696000] MISMATCH reset gives 0: got 3f, expected 0
 [3366000] MISMATCH reset gives 0: got 3f, expected 0
@@ -263,11 +249,7 @@ tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 2856000 (1ps)
 ... 38 further mismatches not printed
 RESULT: FAIL 63 of 8442 checks
 tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 42216000 (1ps)
-
 {'N': 8}: fail
-CH reset gives 0: got ff, expected 0
-[2606000] MISMATCH reset gives 0: got ff, expected 0
-[5196000] MISMATCH reset gives 0: got ff, expected 0
 [7786000] MISMATCH reset gives 0: got ff, expected 0
 [10376000] MISMATCH reset gives 0: got ff, expected 0
 [12966000] MISMATCH reset gives 0: got ff, expected 0
@@ -300,7 +282,6 @@ tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 660456000 (1ps)
 [156000] MISMATCH reset gives 0: got 3, expected 0
 RESULT: FAIL 3 of 42 checks
 - tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
-
 {'N': 4}: fail
 [16000] MISMATCH reset gives 0: got f, expected 0
 [206000] MISMATCH reset gives 0: got f, expected 0
@@ -319,11 +300,7 @@ RESULT: FAIL 3 of 42 checks
 [2676000] MISMATCH reset gives 0: got f, expected 0
 RESULT: FAIL 15 of 570 checks
 - tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
-
 {'N': 6}: fail
-MISMATCH reset gives 0: got 3f, expected 0
-[2696000] MISMATCH reset gives 0: got 3f, expected 0
-[3366000] MISMATCH reset gives 0: got 3f, expected 0
 [4036000] MISMATCH reset gives 0: got 3f, expected 0
 [4706000] MISMATCH reset gives 0: got 3f, expected 0
 [5376000] MISMATCH reset gives 0: got 3f, expected 0
@@ -346,11 +323,7 @@ MISMATCH reset gives 0: got 3f, expected 0
 ... 38 further mismatches not printed
 RESULT: FAIL 63 of 8442 checks
 - tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
-
 {'N': 8}: fail
-ives 0: got ff, expected 0
-[10376000] MISMATCH reset gives 0: got ff, expected 0
-[12966000] MISMATCH reset gives 0: got ff, expected 0
 [15556000] MISMATCH reset gives 0: got ff, expected 0
 [18146000] MISMATCH reset gives 0: got ff, expected 0
 [20736000] MISMATCH reset gives 0: got ff, expected 0
@@ -394,9 +367,6 @@ tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
 {'N': 4}: pass
 {'N': 6}: pass
 {'N': 8}: fail
- step 5: got 22, expected 23
-[86000] MISMATCH seed 1 step 6: got 44, expected 47
-[96000] MISMATCH seed 1 step 7: got 88, expected 8e
 [106000] MISMATCH seed 1 step 8: got 10, expected 1c
 [116000] MISMATCH seed 1 step 9: got 20, expected 38
 [126000] MISMATCH seed 1 step 10: got 40, expected 71
@@ -427,9 +397,6 @@ tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 660456000 (1ps)
 {'N': 4}: pass
 {'N': 6}: pass
 {'N': 8}: fail
- 10, expected 1c
-[116000] MISMATCH seed 1 step 9: got 20, expected 38
-[126000] MISMATCH seed 1 step 10: got 40, expected 71
 [136000] MISMATCH seed 1 step 11: got 80, expected e2
 [146000] MISMATCH seed 1 step 12: got 1, expected c4
 [146000] MISMATCH done at step 12 of seed 1: got 1, expected 0

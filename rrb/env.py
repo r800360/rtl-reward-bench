@@ -44,7 +44,7 @@ class RTLRewardEnv:
         for g in self.stack:
             r = graders.run_grader(g, self.task, cand)
             info["graders"].append({"grader": g, "verdict": r.verdict, "seconds": round(r.seconds, 3),
-                                    "log": r.detail[-1500:]})
+                                    "log": "\n".join(r.detail.splitlines()[-25:])})
             if r.verdict not in ("pass", "n/a"):
                 break
             passed += 1

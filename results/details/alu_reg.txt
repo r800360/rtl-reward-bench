@@ -32,9 +32,6 @@ tasks/alu_reg/tb_weak.sv:30: $finish called at 66000 (1ps)
 {'N': 1}: pass
 {'N': 4}: pass
 {'N': 8}: fail
-MATCH op 0 a 129 b 9: got a, expected 8a
-[46000] MISMATCH op 3 a 13 b 141: got d, expected 8d
-[56000] MISMATCH op 1 a 18 b 1: got 1, expected 11
 [66000] MISMATCH op 1 a 118 b 61: got 9, expected 39
 [76000] MISMATCH op 1 a 140 b 249: got 3, expected 93
 [86000] MISMATCH op 2 a 197 b 170: got 0, expected 80
@@ -64,9 +61,6 @@ tasks/alu_reg/tb_strong.sv:50: $finish called at 30066000 (1ps)
 {'N': 1}: pass
 {'N': 4}: pass
 {'N': 8}: fail
-p 1 a 33 b 83: got e, expected ce
-[76000] MISMATCH op 2 a 130 b 197: got 0, expected 80
-[86000] MISMATCH op 2 a 18 b 53: got 0, expected 10
 [96000] MISMATCH op 3 a 244 b 253: got d, expected fd
 [116000] MISMATCH op 2 a 158 b 30: got e, expected 1e
 [136000] MISMATCH op 1 a 192 b 99: got d, expected 5d
@@ -110,11 +104,7 @@ tasks/alu_reg/tb_weak.sv:30: $finish called at 66000 (1ps)
 [196000] MISMATCH op 3 a 1 b 1: got 0, expected 1
 RESULT: FAIL 2 of 20 checks
 tasks/alu_reg/tb_strong.sv:50: $finish called at 226000 (1ps)
-
 {'N': 4}: fail
-[7886000] MISMATCH op 3 a 1 b 1: got 0, expected 1
-[7906000] MISMATCH op 3 a 1 b 3: got 2, expected 3
-[7926000] MISMATCH op 3 a 1 b 5: got 4, expected 5
 [7946000] MISMATCH op 3 a 1 b 7: got 6, expected 7
 [7966000] MISMATCH op 3 a 1 b 9: got 8, expected 9
 [7986000] MISMATCH op 3 a 1 b 11: got a, expected b
@@ -140,11 +130,7 @@ tasks/alu_reg/tb_strong.sv:50: $finish called at 226000 (1ps)
 ... 151 further mismatches not printed
 RESULT: FAIL 176 of 1028 checks
 tasks/alu_reg/tb_strong.sv:50: $finish called at 10306000 (1ps)
-
 {'N': 8}: fail
- expected 8d
-[106000] MISMATCH op 3 a 242 b 206: got 3c, expected fe
-[166000] MISMATCH op 3 a 107 b 213: got be, expected ff
 [186000] MISMATCH op 3 a 35 b 10: got 29, expected 2b
 [256000] MISMATCH op 3 a 58 b 126: got 44, expected 7e
 [286000] MISMATCH op 3 a 248 b 183: got 4f, expected ff
@@ -176,12 +162,7 @@ tasks/alu_reg/tb_strong.sv:50: $finish called at 30066000 (1ps)
 [196000] MISMATCH op 3 a 1 b 1: got 0, expected 1
 RESULT: FAIL 2 of 20 checks
 - tasks/alu_reg/tb_strong.sv:45: Verilog $finish
-
 {'N': 4}: fail
-MATCH op 3 a 1 b 5: got 4, expected 5
-[7946000] MISMATCH op 3 a 1 b 7: got 6, expected 7
-[7966000] MISMATCH op 3 a 1 b 9: got 8, expected 9
-[7986000] MISMATCH op 3 a 1 b 11: got a, expected b
 [8006000] MISMATCH op 3 a 1 b 13: got c, expected d
 [8026000] MISMATCH op 3 a 1 b 15: got e, expected f
 [8056000] MISMATCH op 3 a 2 b 2: got 0, expected 2
@@ -204,11 +185,7 @@ MATCH op 3 a 1 b 5: got 4, expected 5
 ... 151 further mismatches not printed
 RESULT: FAIL 176 of 1028 checks
 - tasks/alu_reg/tb_strong.sv:45: Verilog $finish
-
 {'N': 8}: fail
-d ef
-[206000] MISMATCH op 3 a 9 b 31: got 16, expected 1f
-[246000] MISMATCH op 3 a 93 b 202: got 97, expected df
 [346000] MISMATCH op 3 a 154 b 119: got ed, expected ff
 [456000] MISMATCH op 3 a 55 b 231: got d0, expected f7
 [526000] MISMATCH op 3 a 127 b 61: got 42, expected 7f
@@ -250,9 +227,6 @@ tasks/alu_reg/tb_weak.sv:30: $finish called at 66000 (1ps)
 == bug_sub_swapped [bug] strong_icarus: fail
 {'N': 1}: pass
 {'N': 4}: fail
-[2606000] MISMATCH op 1 a 0 b 1: got 1, expected f
-[2616000] MISMATCH op 1 a 0 b 2: got 2, expected e
-[2626000] MISMATCH op 1 a 0 b 3: got 3, expected d
 [2636000] MISMATCH op 1 a 0 b 4: got 4, expected c
 [2646000] MISMATCH op 1 a 0 b 5: got 5, expected b
 [2656000] MISMATCH op 1 a 0 b 6: got 6, expected a
@@ -278,11 +252,7 @@ tasks/alu_reg/tb_weak.sv:30: $finish called at 66000 (1ps)
 ... 199 further mismatches not printed
 RESULT: FAIL 224 of 1028 checks
 tasks/alu_reg/tb_strong.sv:50: $finish called at 10306000 (1ps)
-
 {'N': 8}: fail
-expected 11
-[66000] MISMATCH op 1 a 118 b 61: got c7, expected 39
-[76000] MISMATCH op 1 a 140 b 249: got 6d, expected 93
 [96000] MISMATCH op 1 a 119 b 18: got 9b, expected 65
 [126000] MISMATCH op 1 a 45 b 101: got 38, expected c8
 [246000] MISMATCH op 1 a 133 b 79: got ca, expected 36
@@ -311,10 +281,6 @@ tasks/alu_reg/tb_strong.sv:50: $finish called at 30066000 (1ps)
 == bug_sub_swapped [bug] strong_verilator: fail
 {'N': 1}: pass
 {'N': 4}: fail
-MATCH op 1 a 0 b 3: got 3, expected d
-[2636000] MISMATCH op 1 a 0 b 4: got 4, expected c
-[2646000] MISMATCH op 1 a 0 b 5: got 5, expected b
-[2656000] MISMATCH op 1 a 0 b 6: got 6, expected a
 [2666000] MISMATCH op 1 a 0 b 7: got 7, expected 9
 [2686000] MISMATCH op 1 a 0 b 9: got 9, expected 7
 [2696000] MISMATCH op 1 a 0 b 10: got a, expected 6
@@ -337,11 +303,7 @@ MATCH op 1 a 0 b 3: got 3, expected d
 ... 199 further mismatches not printed
 RESULT: FAIL 224 of 1028 checks
 - tasks/alu_reg/tb_strong.sv:45: Verilog $finish
-
 {'N': 8}: fail
-, expected 29
-[216000] MISMATCH op 1 a 132 b 31: got 9b, expected 65
-[236000] MISMATCH op 1 a 201 b 243: got 2a, expected d6
 [256000] MISMATCH op 1 a 239 b 36: got 35, expected cb
 [286000] MISMATCH op 1 a 35 b 84: got 31, expected cf
 [296000] MISMATCH op 1 a 173 b 179: got 6, expected fa
@@ -385,12 +347,10 @@ tasks/alu_reg/tb_weak.sv:30: $finish called at 66000 (1ps)
 [203000] MISMATCH reset clears y before the next clock edge: got 1, expected 0
 RESULT: FAIL 1 of 20 checks
 tasks/alu_reg/tb_strong.sv:50: $finish called at 226000 (1ps)
-
 {'N': 4}: fail
 [10283000] MISMATCH reset clears y before the next clock edge: got f, expected 0
 RESULT: FAIL 1 of 1028 checks
 tasks/alu_reg/tb_strong.sv:50: $finish called at 10306000 (1ps)
-
 {'N': 8}: fail
 [30043000] MISMATCH reset clears y before the next clock edge: got ff, expected 0
 RESULT: FAIL 1 of 3004 checks
@@ -400,12 +360,10 @@ tasks/alu_reg/tb_strong.sv:50: $finish called at 30066000 (1ps)
 [203000] MISMATCH reset clears y before the next clock edge: got 1, expected 0
 RESULT: FAIL 1 of 20 checks
 - tasks/alu_reg/tb_strong.sv:45: Verilog $finish
-
 {'N': 4}: fail
 [10283000] MISMATCH reset clears y before the next clock edge: got f, expected 0
 RESULT: FAIL 1 of 1028 checks
 - tasks/alu_reg/tb_strong.sv:45: Verilog $finish
-
 {'N': 8}: fail
 [30043000] MISMATCH reset clears y before the next clock edge: got ff, expected 0
 RESULT: FAIL 1 of 3004 checks

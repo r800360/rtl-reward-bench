@@ -44,11 +44,10 @@ Every verdict is committed, and CI reruns every grader on every design and requi
 * **Lint is a hint, not a reward.** Its warnings point at the bug in several designs (an enable or a shift-amount
   bit that is never read, a latch, an `always_comb` variable used before it is assigned), but it passes 31 of 40
   bugs and rejects a correct brute-force Hamming decoder for a width warning.
-* **Cost is not where one expects.** On these small blocks a formal proof takes a median 0.7 s per design, while
-  Verilator spends a median 20 s compiling C++ for the same testbench; Icarus needs 0.1 s
-  ([figures/grader_seconds.svg](figures/grader_seconds.svg); one laptop under WSL, where file access makes the C++
-  build slower than on native Linux). The reward environment runs the cheap graders first and stops at the first
-  failure.
+* **Cost is not where one expects.** On these small blocks a formal proof takes a median 0.26 s per design and the
+  strong testbench in Icarus 0.03 s, while Verilator spends a median 17 s compiling C++ before it simulates anything
+  ([figures/grader_seconds.svg](figures/grader_seconds.svg), one laptop). The reward environment runs the cheap
+  graders first and stops at the first failure.
 
 ![every grader on every design](figures/grader_matrix.svg)
 

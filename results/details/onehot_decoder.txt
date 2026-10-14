@@ -38,7 +38,6 @@ tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
 [6000] MISMATCH en=1 sel=1: got 1, expected 2
 RESULT: FAIL 2 of 8 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
-
 {'N': 2}: fail
 [2000] MISMATCH en=1 sel=1: got 4, expected 2
 [3000] MISMATCH en=1 sel=2: got 2, expected 4
@@ -48,7 +47,6 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
 [12000] MISMATCH en=1 sel=3: got 1, expected 8
 RESULT: FAIL 6 of 16 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
-
 {'N': 3}: fail
 [2000] MISMATCH en=1 sel=1: got 40, expected 2
 [3000] MISMATCH en=1 sel=2: got 20, expected 4
@@ -66,11 +64,7 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
 [24000] MISMATCH en=1 sel=7: got 1, expected 80
 RESULT: FAIL 14 of 32 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 32000 (1ps)
-
 {'N': 5}: fail
-l=1: got 40000000, expected 2
-[3000] MISMATCH en=1 sel=2: got 20000000, expected 4
-[4000] MISMATCH en=1 sel=3: got 10000000, expected 8
 [5000] MISMATCH en=1 sel=4: got 8000000, expected 10
 [6000] MISMATCH en=1 sel=5: got 4000000, expected 20
 [7000] MISMATCH en=1 sel=6: got 2000000, expected 40
@@ -102,7 +96,6 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 128000 (1ps)
 [6000] MISMATCH en=1 sel=1: got 1, expected 2
 RESULT: FAIL 2 of 8 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 2}: fail
 [2000] MISMATCH en=1 sel=1: got 4, expected 2
 [3000] MISMATCH en=1 sel=2: got 2, expected 4
@@ -112,7 +105,6 @@ RESULT: FAIL 2 of 8 checks
 [12000] MISMATCH en=1 sel=3: got 1, expected 8
 RESULT: FAIL 6 of 16 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 3}: fail
 [2000] MISMATCH en=1 sel=1: got 40, expected 2
 [3000] MISMATCH en=1 sel=2: got 20, expected 4
@@ -130,11 +122,7 @@ RESULT: FAIL 6 of 16 checks
 [24000] MISMATCH en=1 sel=7: got 1, expected 80
 RESULT: FAIL 14 of 32 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 5}: fail
-00, expected 10
-[6000] MISMATCH en=1 sel=5: got 4000000, expected 20
-[7000] MISMATCH en=1 sel=6: got 2000000, expected 40
 [8000] MISMATCH en=1 sel=7: got 1000000, expected 80
 [9000] MISMATCH en=1 sel=8: got 800000, expected 100
 [10000] MISMATCH en=1 sel=9: got 400000, expected 200
@@ -184,7 +172,6 @@ tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
 [8000] MISMATCH en=0 sel=1: got 2, expected 0
 RESULT: FAIL 4 of 8 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
-
 {'N': 2}: fail
 [5000] MISMATCH en=0 sel=0: got 1, expected 0
 [6000] MISMATCH en=0 sel=1: got 2, expected 0
@@ -196,7 +183,6 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
 [16000] MISMATCH en=0 sel=3: got 8, expected 0
 RESULT: FAIL 8 of 16 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
-
 {'N': 3}: fail
 [9000] MISMATCH en=0 sel=0: got 1, expected 0
 [10000] MISMATCH en=0 sel=1: got 2, expected 0
@@ -216,11 +202,7 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
 [32000] MISMATCH en=0 sel=7: got 80, expected 0
 RESULT: FAIL 16 of 32 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 32000 (1ps)
-
 {'N': 5}: fail
-[33000] MISMATCH en=0 sel=0: got 1, expected 0
-[34000] MISMATCH en=0 sel=1: got 2, expected 0
-[35000] MISMATCH en=0 sel=2: got 4, expected 0
 [36000] MISMATCH en=0 sel=3: got 8, expected 0
 [37000] MISMATCH en=0 sel=4: got 10, expected 0
 [38000] MISMATCH en=0 sel=5: got 20, expected 0
@@ -254,7 +236,6 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 128000 (1ps)
 [8000] MISMATCH en=0 sel=1: got 2, expected 0
 RESULT: FAIL 4 of 8 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 2}: fail
 [5000] MISMATCH en=0 sel=0: got 1, expected 0
 [6000] MISMATCH en=0 sel=1: got 2, expected 0
@@ -266,7 +247,6 @@ RESULT: FAIL 4 of 8 checks
 [16000] MISMATCH en=0 sel=3: got 8, expected 0
 RESULT: FAIL 8 of 16 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 3}: fail
 [9000] MISMATCH en=0 sel=0: got 1, expected 0
 [10000] MISMATCH en=0 sel=1: got 2, expected 0
@@ -286,12 +266,7 @@ RESULT: FAIL 8 of 16 checks
 [32000] MISMATCH en=0 sel=7: got 80, expected 0
 RESULT: FAIL 16 of 32 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 5}: fail
-[35000] MISMATCH en=0 sel=2: got 4, expected 0
-[36000] MISMATCH en=0 sel=3: got 8, expected 0
-[37000] MISMATCH en=0 sel=4: got 10, expected 0
-[38000] MISMATCH en=0 sel=5: got 20, expected 0
 [39000] MISMATCH en=0 sel=6: got 40, expected 0
 [40000] MISMATCH en=0 sel=7: got 80, expected 0
 [41000] MISMATCH en=0 sel=8: got 100, expected 0
@@ -341,7 +316,6 @@ tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
 [8000] MISMATCH en=0 sel=1: got 2, expected 0
 RESULT: FAIL 4 of 8 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
-
 {'N': 2}: fail
 [5000] MISMATCH en=0 sel=0: got 8, expected 0
 [6000] MISMATCH en=0 sel=1: got 8, expected 0
@@ -353,7 +327,6 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
 [16000] MISMATCH en=0 sel=3: got 8, expected 0
 RESULT: FAIL 8 of 16 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
-
 {'N': 3}: fail
 [9000] MISMATCH en=0 sel=0: got 80, expected 0
 [10000] MISMATCH en=0 sel=1: got 80, expected 0
@@ -373,11 +346,7 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
 [32000] MISMATCH en=0 sel=7: got 80, expected 0
 RESULT: FAIL 16 of 32 checks
 tasks/onehot_decoder/tb_strong.sv:26: $finish called at 32000 (1ps)
-
 {'N': 5}: fail
-ot 80000000, expected 0
-[34000] MISMATCH en=0 sel=1: got 80000000, expected 0
-[35000] MISMATCH en=0 sel=2: got 80000000, expected 0
 [36000] MISMATCH en=0 sel=3: got 80000000, expected 0
 [37000] MISMATCH en=0 sel=4: got 80000000, expected 0
 [38000] MISMATCH en=0 sel=5: got 80000000, expected 0
@@ -411,7 +380,6 @@ tasks/onehot_decoder/tb_strong.sv:26: $finish called at 128000 (1ps)
 [8000] MISMATCH en=0 sel=1: got 2, expected 0
 RESULT: FAIL 4 of 8 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 2}: fail
 [5000] MISMATCH en=0 sel=0: got 8, expected 0
 [6000] MISMATCH en=0 sel=1: got 8, expected 0
@@ -423,7 +391,6 @@ RESULT: FAIL 4 of 8 checks
 [16000] MISMATCH en=0 sel=3: got 8, expected 0
 RESULT: FAIL 8 of 16 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 3}: fail
 [9000] MISMATCH en=0 sel=0: got 80, expected 0
 [10000] MISMATCH en=0 sel=1: got 80, expected 0
@@ -443,11 +410,7 @@ RESULT: FAIL 8 of 16 checks
 [32000] MISMATCH en=0 sel=7: got 80, expected 0
 RESULT: FAIL 16 of 32 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
-
 {'N': 5}: fail
-, expected 0
-[37000] MISMATCH en=0 sel=4: got 80000000, expected 0
-[38000] MISMATCH en=0 sel=5: got 80000000, expected 0
 [39000] MISMATCH en=0 sel=6: got 80000000, expected 0
 [40000] MISMATCH en=0 sel=7: got 80000000, expected 0
 [41000] MISMATCH en=0 sel=8: got 80000000, expected 0
@@ -472,7 +435,6 @@ RESULT: FAIL 64 of 128 checks
 - tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
 == bug_latch [bug] formal: fail
 SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
-SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
 SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
 SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_24 at harness.sv:6.15-6.32 in step 0
 SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd

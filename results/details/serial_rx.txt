@@ -30,7 +30,7 @@ RESULT: PASS 5 checks
 tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
 == bug_bit7_as_stop [bug] strong_icarus: fail
 {}: fail
-e byte 2: got 82, expected 2
+[903200000] MISMATCH nominal rate byte 2: got 82, expected 2
 [903200000] MISMATCH nominal rate byte 3: got 83, expected 3
 [903200000] MISMATCH nominal rate byte 4: got 84, expected 4
 [903200000] MISMATCH nominal rate byte 5: got 85, expected 5
@@ -57,7 +57,7 @@ RESULT: FAIL 188 of 43394 checks
 tasks/serial_rx/tb_strong.sv:57: $finish called at 1335220000 (1ps)
 == bug_bit7_as_stop [bug] strong_verilator: fail
 {}: fail
-MATCH nominal rate byte 5: got 85, expected 5
+[903200000] MISMATCH nominal rate byte 5: got 85, expected 5
 [903200000] MISMATCH nominal rate byte 6: got 86, expected 6
 [903200000] MISMATCH nominal rate byte 7: got 87, expected 7
 [903200000] MISMATCH nominal rate byte 8: got 88, expected 8
@@ -99,7 +99,7 @@ RESULT: PASS 5 checks
 tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
 == bug_data_cleared [bug] strong_icarus: fail
 {}: fail
-ed 1
+[7770000] MISMATCH data holds between bytes: got 0, expected 1
 [7790000] MISMATCH data holds between bytes: got 0, expected 1
 [7810000] MISMATCH data holds between bytes: got 0, expected 1
 [7830000] MISMATCH data holds between bytes: got 0, expected 1
@@ -126,7 +126,7 @@ RESULT: FAIL 65313 of 66246 checks
 tasks/serial_rx/tb_strong.sv:57: $finish called at 1335220000 (1ps)
 == bug_data_cleared [bug] strong_verilator: fail
 {}: fail
-en bytes: got 0, expected 1
+[7830000] MISMATCH data holds between bytes: got 0, expected 1
 [7850000] MISMATCH data holds between bytes: got 0, expected 1
 [7870000] MISMATCH data holds between bytes: got 0, expected 1
 [7890000] MISMATCH data holds between bytes: got 0, expected 1
@@ -150,7 +150,6 @@ RESULT: FAIL 65313 of 66246 checks
 - tasks/serial_rx/tb_strong.sv:52: Verilog $finish
 == bug_data_cleared [bug] formal: fail
 SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
-SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
 SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
 SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_13_38 at harness.sv:13.42-13.70 in step 0
 SBY [check] DONE (UNKNOWN, rc=4)
@@ -191,7 +190,6 @@ RESULT: PASS 5 checks
 tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
 == bug_sample_at_edge [bug] strong_icarus: fail
 {}: fail
-byte 1: got 1a, expected 81
 [1121736000] MISMATCH 3 % slow byte 2: got da, expected 9
 [1121736000] MISMATCH 3 % slow byte 3: got 18, expected 63
 [1121736000] MISMATCH 3 % slow byte 4: got f3, expected d
@@ -219,7 +217,6 @@ RESULT: FAIL 33 of 66057 checks
 tasks/serial_rx/tb_strong.sv:57: $finish called at 1335220000 (1ps)
 == bug_sample_at_edge [bug] strong_verilator: fail
 {}: fail
- % slow byte 4: got 6c, expected 78
 [1121736000] MISMATCH 3 % slow byte 5: got c8, expected bc
 [1121736000] MISMATCH 3 % slow byte 6: got 6e, expected b6
 [1121736000] MISMATCH 3 % slow byte 7: got c2, expected e4

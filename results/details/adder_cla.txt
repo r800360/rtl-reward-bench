@@ -51,14 +51,12 @@ tasks/adder_cla/tb_weak.sv:20: $finish called at 20000 (1ps)
 [482000] MISMATCH f + 0 + 1: got 0, expected 10
 RESULT: FAIL 16 of 512 checks
 tasks/adder_cla/tb_strong.sv:29: $finish called at 512000 (1ps)
-
 {'N': 16}: fail
 [1000] MISMATCH ffff + 0 + 1: got 0, expected 10000
 [2000] MISMATCH 0 + ffff + 1: got 0, expected 10000
 [33504000] MISMATCH 9188 + 6e77 + 1: got 0, expected 10000
 RESULT: FAIL 3 of 50004 checks
 tasks/adder_cla/tb_strong.sv:29: $finish called at 50004000 (1ps)
-
 {'N': 32}: fail
 [1000] MISMATCH ffffffff + 0 + 1: got 0, expected 100000000
 [2000] MISMATCH 0 + ffffffff + 1: got 0, expected 100000000
@@ -84,13 +82,11 @@ tasks/adder_cla/tb_strong.sv:29: $finish called at 50004000 (1ps)
 [482000] MISMATCH f + 0 + 1: got 0, expected 10
 RESULT: FAIL 16 of 512 checks
 - tasks/adder_cla/tb_strong.sv:24: Verilog $finish
-
 {'N': 16}: fail
 [1000] MISMATCH ffff + 0 + 1: got 0, expected 10000
 [2000] MISMATCH 0 + ffff + 1: got 0, expected 10000
 RESULT: FAIL 2 of 50004 checks
 - tasks/adder_cla/tb_strong.sv:24: Verilog $finish
-
 {'N': 32}: fail
 [1000] MISMATCH ffffffff + 0 + 1: got 0, expected 100000000
 [2000] MISMATCH 0 + ffffffff + 1: got 0, expected 100000000
@@ -99,8 +95,6 @@ RESULT: FAIL 2 of 50004 checks
 == bug_missing_cin_term [bug] formal: fail
 SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
 SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
-SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_584 at harness.sv:6.15-6.32 in step 0
-SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
 SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_584 at harness.sv:6.15-6.32 in step 0
 SBY [check] DONE (FAIL, rc=2)
 == bug_missing_cin_term [bug] synth: pass

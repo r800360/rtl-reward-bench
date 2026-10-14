@@ -40,7 +40,6 @@ glitch: clk_out 1 after 6.0 ns at 354000
 [12110000] MISMATCH pulses shorter than 10 ns: got 18c, expected 0
 RESULT: FAIL 1 of 2 checks
 tasks/clkdiv3/tb_timed.sv:32: $finish called at 12110000 (1ps)
-
 trial 2:
 glitch: clk_out 1 after 4.0 ns at 231000
 glitch: clk_out 0 after 2.0 ns at 233000
@@ -59,8 +58,6 @@ RESULT: PASS 1 checks
 tasks/clkdiv3/tb_weak.sv:23: $finish called at 670000 (1ps)
 == bug_duty_33 [bug] strong_icarus: fail
 {}: fail
-gth (ns): got 28, expected 1e
-[230000] MISMATCH phase length (ns): got 14, expected 1e
 [270000] MISMATCH phase length (ns): got 28, expected 1e
 [290000] MISMATCH phase length (ns): got 14, expected 1e
 [330000] MISMATCH phase length (ns): got 28, expected 1e
@@ -88,8 +85,6 @@ RESULT: FAIL 77 of 159 checks
 tasks/clkdiv3/tb_strong.sv:34: $finish called at 2490000 (1ps)
 == bug_duty_33 [bug] strong_verilator: fail
 {}: fail
-length (ns): got 14, expected 1e
-[330000] MISMATCH phase length (ns): got 28, expected 1e
 [350000] MISMATCH phase length (ns): got 14, expected 1e
 [390000] MISMATCH phase length (ns): got 28, expected 1e
 [410000] MISMATCH phase length (ns): got 14, expected 1e

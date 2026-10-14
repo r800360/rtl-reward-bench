@@ -41,9 +41,6 @@ RESULT: FAIL 5 of 10 checks
 tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
 == bug_direction_inverted [bug] strong_icarus: fail
 {'N': 4}: fail
-[2000] MISMATCH m=0 a=0 b=1: got f, expected 1
-[3000] MISMATCH m=0 a=0 b=2: got e, expected 2
-[4000] MISMATCH m=0 a=0 b=3: got d, expected 3
 [5000] MISMATCH m=0 a=0 b=4: got c, expected 4
 [6000] MISMATCH m=0 a=0 b=5: got b, expected 5
 [7000] MISMATCH m=0 a=0 b=6: got a, expected 6
@@ -69,11 +66,7 @@ tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
 ... 679 further mismatches not printed
 RESULT: FAIL 704 of 1536 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 512000 (1ps)
-
 {'N': 5}: fail
-[2000] MISMATCH m=0 a=0 b=1: got 1f, expected 1
-[3000] MISMATCH m=0 a=0 b=2: got 1e, expected 2
-[4000] MISMATCH m=0 a=0 b=3: got 1d, expected 3
 [5000] MISMATCH m=0 a=0 b=4: got 1c, expected 4
 [6000] MISMATCH m=0 a=0 b=5: got 1b, expected 5
 [7000] MISMATCH m=0 a=0 b=6: got 1a, expected 6
@@ -99,9 +92,8 @@ tasks/subtractor/tb_strong.sv:34: $finish called at 512000 (1ps)
 ... 2919 further mismatches not printed
 RESULT: FAIL 2944 of 6144 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 2048000 (1ps)
-
 {'N': 16}: fail
-expected e180
+[2000] MISMATCH m=1 a=31501 b=-26227: got 1e80, expected e180
 [2000] MISMATCH ovf_pos m=1 a=31501 b=-26227: got 0, expected 1
 [2000] MISMATCH ovf_neg m=1 a=31501 b=-26227: got 1, expected 0
 [3000] MISMATCH m=1 a=21010 b=-7423: got 90ef, expected 6f11
@@ -128,11 +120,6 @@ RESULT: FAIL 29960 of 60000 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
 == bug_direction_inverted [bug] strong_verilator: fail
 {'N': 4}: fail
-=0 a=0 b=2: got e, expected 2
-[4000] MISMATCH m=0 a=0 b=3: got d, expected 3
-[5000] MISMATCH m=0 a=0 b=4: got c, expected 4
-[6000] MISMATCH m=0 a=0 b=5: got b, expected 5
-[7000] MISMATCH m=0 a=0 b=6: got a, expected 6
 [8000] MISMATCH m=0 a=0 b=7: got 9, expected 7
 [9000] MISMATCH ovf_pos m=0 a=0 b=-8: got 1, expected 0
 [10000] MISMATCH m=0 a=0 b=-7: got 7, expected 9
@@ -155,13 +142,7 @@ tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
 ... 679 further mismatches not printed
 RESULT: FAIL 704 of 1536 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
-
 {'N': 5}: fail
-e, expected 2
-[4000] MISMATCH m=0 a=0 b=3: got 1d, expected 3
-[5000] MISMATCH m=0 a=0 b=4: got 1c, expected 4
-[6000] MISMATCH m=0 a=0 b=5: got 1b, expected 5
-[7000] MISMATCH m=0 a=0 b=6: got 1a, expected 6
 [8000] MISMATCH m=0 a=0 b=7: got 19, expected 7
 [9000] MISMATCH m=0 a=0 b=8: got 18, expected 8
 [10000] MISMATCH m=0 a=0 b=9: got 17, expected 9
@@ -184,9 +165,8 @@ e, expected 2
 ... 2919 further mismatches not printed
 RESULT: FAIL 2944 of 6144 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
-
 {'N': 16}: fail
-15357: got fa09, expected 5f7
+[7000] MISMATCH m=1 a=16884 b=15357: got fa09, expected 5f7
 [8000] MISMATCH m=0 a=1202 b=19800: got b75a, expected 48a6
 [9000] MISMATCH m=0 a=17822 b=-31458: got c080, expected 3f80
 [9000] MISMATCH ovf_pos m=0 a=17822 b=-31458: got 1, expected 0
@@ -210,10 +190,7 @@ RESULT: FAIL 30006 of 60000 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
 == bug_direction_inverted [bug] formal: fail
 SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
-SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
 SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
-SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_24 at harness.sv:7.15-7.56 in step 0
-SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
 SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_24 at harness.sv:7.15-7.56 in step 0
 SBY [check] DONE (FAIL, rc=2)
 == bug_direction_inverted [bug] synth: pass
@@ -231,8 +208,6 @@ RESULT: PASS 10 checks
 tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
 == bug_flags_swapped [bug] strong_icarus: fail
 {'N': 4}: fail
- b=-8: got 0, expected 1
-[41000] MISMATCH ovf_pos m=0 a=2 b=-8: got 1, expected 0
 [41000] MISMATCH ovf_neg m=0 a=2 b=-8: got 0, expected 1
 [42000] MISMATCH ovf_pos m=0 a=2 b=-7: got 1, expected 0
 [42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
@@ -258,9 +233,7 @@ tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
 ... 231 further mismatches not printed
 RESULT: FAIL 256 of 1536 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 512000 (1ps)
-
 {'N': 5}: fail
-f_pos m=0 a=2 b=-16: got 1, expected 0
 [81000] MISMATCH ovf_neg m=0 a=2 b=-16: got 0, expected 1
 [82000] MISMATCH ovf_pos m=0 a=2 b=-15: got 1, expected 0
 [82000] MISMATCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
@@ -286,9 +259,9 @@ f_pos m=0 a=2 b=-16: got 1, expected 0
 ... 999 further mismatches not printed
 RESULT: FAIL 1024 of 6144 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 2048000 (1ps)
-
 {'N': 16}: fail
-=1 a=29303 b=-10734: got 0, expected 1
+[2000] MISMATCH ovf_neg m=1 a=31501 b=-26227: got 1, expected 0
+[7000] MISMATCH ovf_pos m=1 a=29303 b=-10734: got 0, expected 1
 [7000] MISMATCH ovf_neg m=1 a=29303 b=-10734: got 1, expected 0
 [8000] MISMATCH ovf_pos m=1 a=27122 b=-26930: got 0, expected 1
 [8000] MISMATCH ovf_neg m=1 a=27122 b=-26930: got 1, expected 0
@@ -314,8 +287,6 @@ RESULT: FAIL 9960 of 60000 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
 == bug_flags_swapped [bug] strong_verilator: fail
 {'N': 4}: fail
-=-7: got 1, expected 0
-[42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
 [57000] MISMATCH ovf_pos m=0 a=3 b=-8: got 1, expected 0
 [57000] MISMATCH ovf_neg m=0 a=3 b=-8: got 0, expected 1
 [58000] MISMATCH ovf_pos m=0 a=3 b=-7: got 1, expected 0
@@ -338,9 +309,7 @@ tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
 ... 231 further mismatches not printed
 RESULT: FAIL 256 of 1536 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
-
 {'N': 5}: fail
-TCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
 [113000] MISMATCH ovf_pos m=0 a=3 b=-16: got 1, expected 0
 [113000] MISMATCH ovf_neg m=0 a=3 b=-16: got 0, expected 1
 [114000] MISMATCH ovf_pos m=0 a=3 b=-15: got 1, expected 0
@@ -363,9 +332,9 @@ TCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
 ... 999 further mismatches not printed
 RESULT: FAIL 1024 of 6144 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
-
 {'N': 16}: fail
-000] MISMATCH ovf_neg m=1 a=11465 b=-22285: got 1, expected 0
+[21000] MISMATCH ovf_pos m=1 a=11465 b=-22285: got 0, expected 1
+[21000] MISMATCH ovf_neg m=1 a=11465 b=-22285: got 1, expected 0
 [22000] MISMATCH ovf_pos m=1 a=-10915 b=26058: got 1, expected 0
 [22000] MISMATCH ovf_neg m=1 a=-10915 b=26058: got 0, expected 1
 [28000] MISMATCH ovf_pos m=1 a=-18225 b=31534: got 1, expected 0
@@ -408,8 +377,6 @@ RESULT: FAIL 2 of 10 checks
 tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
 == bug_unsigned_borrow [bug] strong_icarus: fail
 {'N': 4}: fail
-vf_neg m=0 a=1 b=-8: got 0, expected 1
-[33000] MISMATCH ovf_neg m=0 a=2 b=0: got 1, expected 0
 [34000] MISMATCH ovf_neg m=0 a=2 b=1: got 1, expected 0
 [41000] MISMATCH ovf_neg m=0 a=2 b=-8: got 0, expected 1
 [42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
@@ -435,10 +402,7 @@ vf_neg m=0 a=1 b=-8: got 0, expected 1
 ... 343 further mismatches not printed
 RESULT: FAIL 368 of 1536 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 512000 (1ps)
-
 {'N': 5}: fail
-expected 1
-[65000] MISMATCH ovf_neg m=0 a=2 b=0: got 1, expected 0
 [66000] MISMATCH ovf_neg m=0 a=2 b=1: got 1, expected 0
 [81000] MISMATCH ovf_neg m=0 a=2 b=-16: got 0, expected 1
 [82000] MISMATCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
@@ -464,9 +428,9 @@ expected 1
 ... 1479 further mismatches not printed
 RESULT: FAIL 1504 of 6144 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 2048000 (1ps)
-
 {'N': 16}: fail
-pos m=1 a=29303 b=-10734: got 0, expected 1
+[3000] MISMATCH ovf_neg m=1 a=21010 b=-7423: got 1, expected 0
+[7000] MISMATCH ovf_pos m=1 a=29303 b=-10734: got 0, expected 1
 [7000] MISMATCH ovf_neg m=1 a=29303 b=-10734: got 1, expected 0
 [8000] MISMATCH ovf_pos m=1 a=27122 b=-26930: got 0, expected 1
 [8000] MISMATCH ovf_neg m=1 a=27122 b=-26930: got 1, expected 0
@@ -492,8 +456,6 @@ RESULT: FAIL 15104 of 60000 checks
 tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
 == bug_unsigned_borrow [bug] strong_verilator: fail
 {'N': 4}: fail
-eg m=0 a=2 b=-8: got 0, expected 1
-[42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
 [49000] MISMATCH ovf_neg m=0 a=3 b=0: got 1, expected 0
 [50000] MISMATCH ovf_neg m=0 a=3 b=1: got 1, expected 0
 [51000] MISMATCH ovf_neg m=0 a=3 b=2: got 1, expected 0
@@ -516,10 +478,7 @@ eg m=0 a=2 b=-8: got 0, expected 1
 ... 343 further mismatches not printed
 RESULT: FAIL 368 of 1536 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
-
 {'N': 5}: fail
-, expected 1
-[82000] MISMATCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
 [97000] MISMATCH ovf_neg m=0 a=3 b=0: got 1, expected 0
 [98000] MISMATCH ovf_neg m=0 a=3 b=1: got 1, expected 0
 [99000] MISMATCH ovf_neg m=0 a=3 b=2: got 1, expected 0
@@ -542,9 +501,9 @@ RESULT: FAIL 368 of 1536 checks
 ... 1479 further mismatches not printed
 RESULT: FAIL 1504 of 6144 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
-
 {'N': 16}: fail
-] MISMATCH ovf_neg m=0 a=-10121 b=-19554: got 1, expected 0
+[12000] MISMATCH ovf_neg m=1 a=-28922 b=3874: got 0, expected 1
+[15000] MISMATCH ovf_neg m=0 a=-10121 b=-19554: got 1, expected 0
 [17000] MISMATCH ovf_neg m=0 a=12002 b=-30316: got 0, expected 1
 [19000] MISMATCH ovf_neg m=1 a=-20604 b=-2529: got 1, expected 0
 [20000] MISMATCH ovf_neg m=0 a=-5557 b=-22989: got 1, expected 0
@@ -567,7 +526,6 @@ RESULT: FAIL 14971 of 60000 checks
 - tasks/subtractor/tb_strong.sv:29: Verilog $finish
 == bug_unsigned_borrow [bug] formal: fail
 SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
-SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
 SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
 SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_16 at harness.sv:7.15-7.56 in step 0
 SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd

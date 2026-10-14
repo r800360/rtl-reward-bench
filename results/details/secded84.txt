@@ -39,7 +39,7 @@ RESULT: PASS 6 checks
 tasks/secded84/tb_weak.sv:30: $finish called at 4000 (1ps)
 == bug_no_overall_parity [bug] strong_icarus: fail
 {}: fail
-: got 2, expected 1
+[5000] MISMATCH data 0, bits 0 and 3 wrong: got 2, expected 1
 [6000] MISMATCH data 0, bits 0 and 4 wrong: got 2, expected 1
 [7000] MISMATCH data 0, bits 0 and 5 wrong: got 2, expected 1
 [8000] MISMATCH data 0, bits 0 and 6 wrong: got 2, expected 1
@@ -66,7 +66,7 @@ RESULT: FAIL 464 of 592 checks
 tasks/secded84/tb_strong.sv:35: $finish called at 592000 (1ps)
 == bug_no_overall_parity [bug] strong_verilator: fail
 {}: fail
-0 and 6 wrong: got 2, expected 1
+[8000] MISMATCH data 0, bits 0 and 6 wrong: got 2, expected 1
 [9000] MISMATCH data 0, bits 0 and 7 wrong: got 2, expected 1
 [11000] MISMATCH data 0, bits 1 and 2 wrong: got 2, expected 1
 [12000] MISMATCH data 0, bits 1 and 3 wrong: got 2, expected 1
@@ -113,7 +113,6 @@ RESULT: PASS 6 checks
 tasks/secded84/tb_weak.sv:30: $finish called at 4000 (1ps)
 == bug_syndrome_map [bug] strong_icarus: fail
 {}: fail
-65000] MISMATCH data 1, bit 4 wrong: got a, expected 6
 [69000] MISMATCH data 1, bit 5 wrong: got a, expected 6
 [102000] MISMATCH data 2, bit 4 wrong: got 6, expected a
 [106000] MISMATCH data 2, bit 5 wrong: got 6, expected a
@@ -141,7 +140,6 @@ RESULT: FAIL 32 of 592 checks
 tasks/secded84/tb_strong.sv:35: $finish called at 592000 (1ps)
 == bug_syndrome_map [bug] strong_verilator: fail
 {}: fail
-00] MISMATCH data 2, bit 5 wrong: got 6, expected a
 [139000] MISMATCH data 3, bit 4 wrong: got 2, expected e
 [143000] MISMATCH data 3, bit 5 wrong: got 2, expected e
 [176000] MISMATCH data 4, bit 4 wrong: got 1e, expected 12
