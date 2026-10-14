@@ -1,0 +1,361 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 8}: pass
+{'N': 16}: pass
+== golden [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 8}: pass
+{'N': 16}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells other than ['mux2']: 0
+cells after ABC mapping to 2-input gates: 60
+== golden [correct] timed: n/a
+
+== bug_behavioral [bug] compile: pass
+
+== bug_behavioral [bug] lint: fail
+%Warning-UNUSEDSIGNAL: tasks/log_shifter/candidates/bug_behavioral.sv:12:19: Bits of signal are not used: 'wl'[7:0]
+%Warning-UNUSEDSIGNAL: tasks/log_shifter/candidates/bug_behavioral.sv:12:23: Bits of signal are not used: 'wr'[15:8]
+%Error: Exiting due to 2 warning(s)
+== bug_behavioral [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
+== bug_behavioral [bug] strong_icarus: pass
+{'N': 4}: pass
+{'N': 8}: pass
+{'N': 16}: pass
+== bug_behavioral [bug] strong_verilator: pass
+{'N': 4}: pass
+{'N': 8}: pass
+{'N': 16}: pass
+== bug_behavioral [bug] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== bug_behavioral [bug] synth: fail
+cells other than ['mux2']: 7
+log_shifter/$shl$tasks/log_shifter/candidates/bug_behavioral.sv:13$9
+log_shifter/$shl$tasks/log_shifter/candidates/bug_behavioral.sv:15$11
+log_shifter/$shr$tasks/log_shifter/candidates/bug_behavioral.sv:14$10
+log_shifter/$shr$tasks/log_shifter/candidates/bug_behavioral.sv:15$13
+log_shifter/$ternary$tasks/log_shifter/candidates/bug_behavioral.sv:15$12
+log_shifter/$ternary$tasks/log_shifter/candidates/bug_behavioral.sv:15$14
+log_shifter/$ternary$tasks/log_shifter/candidates/bug_behavioral.sv:15$15
+== bug_behavioral [bug] timed: n/a
+
+== bug_rotate_fill [bug] compile: pass
+
+== bug_rotate_fill [bug] lint: pass
+
+== bug_rotate_fill [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
+== bug_rotate_fill [bug] strong_icarus: fail
+{'N': 4}: fail
+ left 0 amt 2 din 9: got a, expected 6
+[171000] MISMATCH rotate 1 left 0 amt 2 din a: got 6, expected a
+[174000] MISMATCH rotate 1 left 0 amt 2 din d: got b, expected 7
+[175000] MISMATCH rotate 1 left 0 amt 2 din e: got 7, expected b
+[179000] MISMATCH rotate 1 left 0 amt 3 din 2: got 8, expected 4
+[180000] MISMATCH rotate 1 left 0 amt 3 din 3: got a, expected 6
+[181000] MISMATCH rotate 1 left 0 amt 3 din 4: got 4, expected 8
+[182000] MISMATCH rotate 1 left 0 amt 3 din 5: got 6, expected a
+[187000] MISMATCH rotate 1 left 0 amt 3 din a: got 9, expected 5
+[188000] MISMATCH rotate 1 left 0 amt 3 din b: got b, expected 7
+[189000] MISMATCH rotate 1 left 0 amt 3 din c: got 5, expected 9
+[190000] MISMATCH rotate 1 left 0 amt 3 din d: got 7, expected b
+[229000] MISMATCH rotate 1 left 1 amt 2 din 4: got 2, expected 1
+[230000] MISMATCH rotate 1 left 1 amt 2 din 5: got 6, expected 5
+[231000] MISMATCH rotate 1 left 1 amt 2 din 6: got a, expected 9
+[232000] MISMATCH rotate 1 left 1 amt 2 din 7: got e, expected d
+[233000] MISMATCH rotate 1 left 1 amt 2 din 8: got 1, expected 2
+[234000] MISMATCH rotate 1 left 1 amt 2 din 9: got 5, expected 6
+[235000] MISMATCH rotate 1 left 1 amt 2 din a: got 9, expected a
+[236000] MISMATCH rotate 1 left 1 amt 2 din b: got d, expected e
+[243000] MISMATCH rotate 1 left 1 amt 3 din 2: got 2, expected 1
+... 7 further mismatches not printed
+RESULT: FAIL 32 of 256 checks
+tasks/log_shifter/tb_strong.sv:39: $finish called at 256000 (1ps)
+
+{'N': 8}: fail
+a: got 42, expected 82
+[4622000] MISMATCH rotate 1 left 0 amt 2 din d: got 83, expected 43
+[4623000] MISMATCH rotate 1 left 0 amt 2 din e: got 43, expected 83
+[4626000] MISMATCH rotate 1 left 0 amt 2 din 11: got 84, expected 44
+[4627000] MISMATCH rotate 1 left 0 amt 2 din 12: got 44, expected 84
+[4630000] MISMATCH rotate 1 left 0 amt 2 din 15: got 85, expected 45
+[4631000] MISMATCH rotate 1 left 0 amt 2 din 16: got 45, expected 85
+[4634000] MISMATCH rotate 1 left 0 amt 2 din 19: got 86, expected 46
+[4635000] MISMATCH rotate 1 left 0 amt 2 din 1a: got 46, expected 86
+[4638000] MISMATCH rotate 1 left 0 amt 2 din 1d: got 87, expected 47
+[4639000] MISMATCH rotate 1 left 0 amt 2 din 1e: got 47, expected 87
+[4642000] MISMATCH rotate 1 left 0 amt 2 din 21: got 88, expected 48
+[4643000] MISMATCH rotate 1 left 0 amt 2 din 22: got 48, expected 88
+[4646000] MISMATCH rotate 1 left 0 amt 2 din 25: got 89, expected 49
+[4647000] MISMATCH rotate 1 left 0 amt 2 din 26: got 49, expected 89
+[4650000] MISMATCH rotate 1 left 0 amt 2 din 29: got 8a, expected 4a
+[4651000] MISMATCH rotate 1 left 0 amt 2 din 2a: got 4a, expected 8a
+[4654000] MISMATCH rotate 1 left 0 amt 2 din 2d: got 8b, expected 4b
+[4655000] MISMATCH rotate 1 left 0 amt 2 din 2e: got 4b, expected 8b
+[4658000] MISMATCH rotate 1 left 0 amt 2 din 31: got 8c, expected 4c
+... 2151 further mismatches not printed
+RESULT: FAIL 2176 of 8192 checks
+tasks/log_shifter/tb_strong.sv:39: $finish called at 8192000 (1ps)
+
+{'N': 16}: fail
+ected b928
+[18000] MISMATCH rotate 1 left 0 amt 12 din edc8: got 3b1e, expected dc8e
+[19000] MISMATCH rotate 1 left 1 amt 2 din 816d: got 5b5, expected 5b6
+[21000] MISMATCH rotate 1 left 1 amt 15 din 6358: got 3835, expected 31ac
+[23000] MISMATCH rotate 1 left 1 amt 15 din 565f: got 9df4, expected ab2f
+[25000] MISMATCH rotate 1 left 1 amt 10 din e2b5: got d751, expected d78a
+[27000] MISMATCH rotate 1 left 0 amt 12 din 72fd: got f4b7, expected 2fd7
+[28000] MISMATCH rotate 1 left 0 amt 14 din 340a: got b44, expected d028
+[30000] MISMATCH rotate 1 left 0 amt 9 din de4d: got 64ef, expected 26ef
+[31000] MISMATCH rotate 1 left 1 amt 6 din 2db6: got 6d8d, expected 6d8b
+[37000] MISMATCH rotate 1 left 0 amt 9 din 3796: got d31b, expected cb1b
+[44000] MISMATCH rotate 1 left 0 amt 6 din b52a: got 56d4, expected aad4
+[50000] MISMATCH rotate 1 left 1 amt 14 din 1e0b: got ce41, expected c782
+[51000] MISMATCH rotate 1 left 1 amt 6 din 568f: got a3ea, expected a3d5
+[52000] MISMATCH rotate 1 left 0 amt 14 din 4592: got 6825, expected 1649
+[54000] MISMATCH rotate 1 left 0 amt 8 din 1c86: got 611c, expected 861c
+[55000] MISMATCH rotate 1 left 1 amt 8 din 6256: got 5646, expected 5662
+[56000] MISMATCH rotate 1 left 0 amt 4 din b4d8: got 1b4d, expected 8b4d
+[58000] MISMATCH rotate 1 left 1 amt 8 din f9a1: got a19f, expected a1f9
+... 7297 further mismatches not printed
+RESULT: FAIL 7322 of 20000 checks
+tasks/log_shifter/tb_strong.sv:39: $finish called at 20000000 (1ps)
+== bug_rotate_fill [bug] strong_verilator: fail
+{'N': 4}: fail
+000] MISMATCH rotate 1 left 0 amt 2 din e: got 7, expected b
+[179000] MISMATCH rotate 1 left 0 amt 3 din 2: got 8, expected 4
+[180000] MISMATCH rotate 1 left 0 amt 3 din 3: got a, expected 6
+[181000] MISMATCH rotate 1 left 0 amt 3 din 4: got 4, expected 8
+[182000] MISMATCH rotate 1 left 0 amt 3 din 5: got 6, expected a
+[187000] MISMATCH rotate 1 left 0 amt 3 din a: got 9, expected 5
+[188000] MISMATCH rotate 1 left 0 amt 3 din b: got b, expected 7
+[189000] MISMATCH rotate 1 left 0 amt 3 din c: got 5, expected 9
+[190000] MISMATCH rotate 1 left 0 amt 3 din d: got 7, expected b
+[229000] MISMATCH rotate 1 left 1 amt 2 din 4: got 2, expected 1
+[230000] MISMATCH rotate 1 left 1 amt 2 din 5: got 6, expected 5
+[231000] MISMATCH rotate 1 left 1 amt 2 din 6: got a, expected 9
+[232000] MISMATCH rotate 1 left 1 amt 2 din 7: got e, expected d
+[233000] MISMATCH rotate 1 left 1 amt 2 din 8: got 1, expected 2
+[234000] MISMATCH rotate 1 left 1 amt 2 din 9: got 5, expected 6
+[235000] MISMATCH rotate 1 left 1 amt 2 din a: got 9, expected a
+[236000] MISMATCH rotate 1 left 1 amt 2 din b: got d, expected e
+[243000] MISMATCH rotate 1 left 1 amt 3 din 2: got 2, expected 1
+... 7 further mismatches not printed
+RESULT: FAIL 32 of 256 checks
+- tasks/log_shifter/tb_strong.sv:34: Verilog $finish
+
+{'N': 8}: fail
+ MISMATCH rotate 1 left 0 amt 2 din 11: got 84, expected 44
+[4627000] MISMATCH rotate 1 left 0 amt 2 din 12: got 44, expected 84
+[4630000] MISMATCH rotate 1 left 0 amt 2 din 15: got 85, expected 45
+[4631000] MISMATCH rotate 1 left 0 amt 2 din 16: got 45, expected 85
+[4634000] MISMATCH rotate 1 left 0 amt 2 din 19: got 86, expected 46
+[4635000] MISMATCH rotate 1 left 0 amt 2 din 1a: got 46, expected 86
+[4638000] MISMATCH rotate 1 left 0 amt 2 din 1d: got 87, expected 47
+[4639000] MISMATCH rotate 1 left 0 amt 2 din 1e: got 47, expected 87
+[4642000] MISMATCH rotate 1 left 0 amt 2 din 21: got 88, expected 48
+[4643000] MISMATCH rotate 1 left 0 amt 2 din 22: got 48, expected 88
+[4646000] MISMATCH rotate 1 left 0 amt 2 din 25: got 89, expected 49
+[4647000] MISMATCH rotate 1 left 0 amt 2 din 26: got 49, expected 89
+[4650000] MISMATCH rotate 1 left 0 amt 2 din 29: got 8a, expected 4a
+[4651000] MISMATCH rotate 1 left 0 amt 2 din 2a: got 4a, expected 8a
+[4654000] MISMATCH rotate 1 left 0 amt 2 din 2d: got 8b, expected 4b
+[4655000] MISMATCH rotate 1 left 0 amt 2 din 2e: got 4b, expected 8b
+[4658000] MISMATCH rotate 1 left 0 amt 2 din 31: got 8c, expected 4c
+... 2151 further mismatches not printed
+RESULT: FAIL 2176 of 8192 checks
+- tasks/log_shifter/tb_strong.sv:34: Verilog $finish
+
+{'N': 16}: fail
+MISMATCH rotate 1 left 0 amt 8 din 2bfb: got df2b, expected fb2b
+[27000] MISMATCH rotate 1 left 1 amt 4 din 41c8: got 1c82, expected 1c84
+[28000] MISMATCH rotate 1 left 1 amt 3 din dd21: got e90d, expected e90e
+[32000] MISMATCH rotate 1 left 1 amt 14 din a46c: got 19d8, expected 291b
+[37000] MISMATCH rotate 1 left 0 amt 5 din 1b64: got 40db, expected 20db
+[40000] MISMATCH rotate 1 left 1 amt 4 din 48d4: got 8d42, expected 8d44
+[46000] MISMATCH rotate 1 left 0 amt 4 din 5aed: got b5ae, expected d5ae
+[47000] MISMATCH rotate 1 left 1 amt 11 din c114: got a510, expected a608
+[53000] MISMATCH rotate 1 left 1 amt 6 din 1ea2: got a88e, expected a887
+[54000] MISMATCH rotate 1 left 1 amt 4 din 51dc: got 1dca, expected 1dc5
+[62000] MISMATCH rotate 1 left 0 amt 9 din 746e: got ec3a, expected 373a
+[63000] MISMATCH rotate 1 left 1 amt 4 din 80b8: got b81, expected b88
+[65000] MISMATCH rotate 1 left 0 amt 14 din 9c57: got 8eae, expected 715e
+[74000] MISMATCH rotate 1 left 0 amt 3 din ee9c: got 5dd3, expected 9dd3
+[77000] MISMATCH rotate 1 left 0 amt 13 din e2d8: got 6837, expected 16c7
+[81000] MISMATCH rotate 1 left 0 amt 9 din 6ae8: got 2e35, expected 7435
+... 7574 further mismatches not printed
+RESULT: FAIL 7599 of 20000 checks
+- tasks/log_shifter/tb_strong.sv:34: Verilog $finish
+== bug_rotate_fill [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_113 at harness.sv:6.15-6.30 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_113 at harness.sv:6.15-6.30 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_rotate_fill [bug] synth: pass
+cells other than ['mux2']: 0
+cells after ABC mapping to 2-input gates: 60
+== bug_rotate_fill [bug] timed: n/a
+
+== bug_two_stages [bug] compile: pass
+
+== bug_two_stages [bug] lint: fail
+%Warning-UNUSEDSIGNAL: tasks/log_shifter/candidates/bug_two_stages.sv:7:32: Bits of signal are not used: 'amt'[2]
+%Error: Exiting due to 1 warning(s)
+== bug_two_stages [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
+== bug_two_stages [bug] strong_icarus: fail
+{'N': 4}: pass
+{'N': 8}: fail
+] MISMATCH rotate 0 left 0 amt 4 din 6: got 6, expected 0
+[1032000] MISMATCH rotate 0 left 0 amt 4 din 7: got 7, expected 0
+[1033000] MISMATCH rotate 0 left 0 amt 4 din 8: got 8, expected 0
+[1034000] MISMATCH rotate 0 left 0 amt 4 din 9: got 9, expected 0
+[1035000] MISMATCH rotate 0 left 0 amt 4 din a: got a, expected 0
+[1036000] MISMATCH rotate 0 left 0 amt 4 din b: got b, expected 0
+[1037000] MISMATCH rotate 0 left 0 amt 4 din c: got c, expected 0
+[1038000] MISMATCH rotate 0 left 0 amt 4 din d: got d, expected 0
+[1039000] MISMATCH rotate 0 left 0 amt 4 din e: got e, expected 0
+[1040000] MISMATCH rotate 0 left 0 amt 4 din f: got f, expected 0
+[1041000] MISMATCH rotate 0 left 0 amt 4 din 10: got 10, expected 1
+[1042000] MISMATCH rotate 0 left 0 amt 4 din 11: got 11, expected 1
+[1043000] MISMATCH rotate 0 left 0 amt 4 din 12: got 12, expected 1
+[1044000] MISMATCH rotate 0 left 0 amt 4 din 13: got 13, expected 1
+[1045000] MISMATCH rotate 0 left 0 amt 4 din 14: got 14, expected 1
+[1046000] MISMATCH rotate 0 left 0 amt 4 din 15: got 15, expected 1
+[1047000] MISMATCH rotate 0 left 0 amt 4 din 16: got 16, expected 1
+[1048000] MISMATCH rotate 0 left 0 amt 4 din 17: got 17, expected 1
+[1049000] MISMATCH rotate 0 left 0 amt 4 din 18: got 18, expected 1
+[1050000] MISMATCH rotate 0 left 0 amt 4 din 19: got 19, expected 1
+... 3913 further mismatches not printed
+RESULT: FAIL 3938 of 8192 checks
+tasks/log_shifter/tb_strong.sv:39: $finish called at 8192000 (1ps)
+
+{'N': 16}: fail
+got 830, expected 8
+[14000] MISMATCH rotate 1 left 1 amt 10 din 4b15: got 2c55, expected 552c
+[16000] MISMATCH rotate 1 left 0 amt 7 din 945c: got 928b, expected b928
+[17000] MISMATCH rotate 1 left 1 amt 9 din c0d7: got 81af, expected af81
+[18000] MISMATCH rotate 1 left 0 amt 12 din edc8: got edc8, expected dc8e
+[21000] MISMATCH rotate 1 left 1 amt 15 din 6358: got 1ac3, expected 31ac
+[22000] MISMATCH rotate 0 left 0 amt 12 din bc26: got bc26, expected b
+[23000] MISMATCH rotate 1 left 1 amt 15 din 565f: got b2fa, expected ab2f
+[24000] MISMATCH rotate 0 left 1 amt 11 din db5a: got dad0, expected d000
+[25000] MISMATCH rotate 1 left 1 amt 10 din e2b5: got 8ad7, expected d78a
+[26000] MISMATCH rotate 1 left 1 amt 4 din b2a: got b2a, expected b2a0
+[27000] MISMATCH rotate 1 left 0 amt 12 din 72fd: got 72fd, expected 2fd7
+[28000] MISMATCH rotate 1 left 0 amt 14 din 340a: got 8d02, expected d028
+[29000] MISMATCH rotate 0 left 0 amt 9 din bf94: got 5fca, expected 5f
+[30000] MISMATCH rotate 1 left 0 amt 9 din de4d: got ef26, expected 26ef
+[31000] MISMATCH rotate 1 left 1 amt 6 din 2db6: got b6d8, expected 6d8b
+[32000] MISMATCH rotate 1 left 0 amt 4 din 769: got 769, expected 9076
+[33000] MISMATCH rotate 0 left 0 amt 8 din 30c7: got 30c7, expected 30
+[34000] MISMATCH rotate 0 left 0 amt 12 din 729: got 729, expected 0
+... 14861 further mismatches not printed
+RESULT: FAIL 14886 of 20000 checks
+tasks/log_shifter/tb_strong.sv:39: $finish called at 20000000 (1ps)
+== bug_two_stages [bug] strong_verilator: fail
+{'N': 4}: pass
+{'N': 8}: fail
+ 8: got 8, expected 0
+[1034000] MISMATCH rotate 0 left 0 amt 4 din 9: got 9, expected 0
+[1035000] MISMATCH rotate 0 left 0 amt 4 din a: got a, expected 0
+[1036000] MISMATCH rotate 0 left 0 amt 4 din b: got b, expected 0
+[1037000] MISMATCH rotate 0 left 0 amt 4 din c: got c, expected 0
+[1038000] MISMATCH rotate 0 left 0 amt 4 din d: got d, expected 0
+[1039000] MISMATCH rotate 0 left 0 amt 4 din e: got e, expected 0
+[1040000] MISMATCH rotate 0 left 0 amt 4 din f: got f, expected 0
+[1041000] MISMATCH rotate 0 left 0 amt 4 din 10: got 10, expected 1
+[1042000] MISMATCH rotate 0 left 0 amt 4 din 11: got 11, expected 1
+[1043000] MISMATCH rotate 0 left 0 amt 4 din 12: got 12, expected 1
+[1044000] MISMATCH rotate 0 left 0 amt 4 din 13: got 13, expected 1
+[1045000] MISMATCH rotate 0 left 0 amt 4 din 14: got 14, expected 1
+[1046000] MISMATCH rotate 0 left 0 amt 4 din 15: got 15, expected 1
+[1047000] MISMATCH rotate 0 left 0 amt 4 din 16: got 16, expected 1
+[1048000] MISMATCH rotate 0 left 0 amt 4 din 17: got 17, expected 1
+[1049000] MISMATCH rotate 0 left 0 amt 4 din 18: got 18, expected 1
+[1050000] MISMATCH rotate 0 left 0 amt 4 din 19: got 19, expected 1
+... 3913 further mismatches not printed
+RESULT: FAIL 3938 of 8192 checks
+- tasks/log_shifter/tb_strong.sv:34: Verilog $finish
+
+{'N': 16}: fail
+000] MISMATCH rotate 1 left 0 amt 7 din d55d: got baab, expected bbaa
+[18000] MISMATCH rotate 0 left 1 amt 13 din b4a9: got 6952, expected 2000
+[20000] MISMATCH rotate 1 left 1 amt 13 din cb23: got 9647, expected 7964
+[21000] MISMATCH rotate 1 left 1 amt 14 din 50d5: got 4355, expected 5435
+[22000] MISMATCH rotate 1 left 0 amt 9 din 95d7: got caeb, expected ebca
+[23000] MISMATCH rotate 1 left 1 amt 13 din f5ef: got ebdf, expected febd
+[24000] MISMATCH rotate 1 left 0 amt 7 din e32a: got 5c65, expected 55c6
+[25000] MISMATCH rotate 0 left 0 amt 15 din 1f53: got 3ea, expected 0
+[26000] MISMATCH rotate 1 left 0 amt 8 din 2bfb: got 2bfb, expected fb2b
+[27000] MISMATCH rotate 1 left 1 amt 4 din 41c8: got 41c8, expected 1c84
+[29000] MISMATCH rotate 0 left 0 amt 14 din 16bd: got 5af, expected 0
+[30000] MISMATCH rotate 0 left 0 amt 5 din 1e90: got f48, expected f4
+[32000] MISMATCH rotate 1 left 1 amt 14 din a46c: got 91b2, expected 291b
+[34000] MISMATCH rotate 1 left 0 amt 7 din 1ab6: got c356, expected 6c35
+[35000] MISMATCH rotate 0 left 0 amt 4 din f653: got f653, expected f65
+[36000] MISMATCH rotate 0 left 1 amt 7 din 7b28: got d940, expected 9400
+... 15029 further mismatches not printed
+RESULT: FAIL 15054 of 20000 checks
+- tasks/log_shifter/tb_strong.sv:34: Verilog $finish
+== bug_two_stages [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_113 at harness.sv:6.15-6.30 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_113 at harness.sv:6.15-6.30 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_two_stages [bug] synth: pass
+cells other than ['mux2']: 0
+cells after ABC mapping to 2-input gates: 42
+== bug_two_stages [bug] timed: n/a
+
+== correct_two_networks [correct] compile: pass
+
+== correct_two_networks [correct] lint: pass
+
+== correct_two_networks [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/log_shifter/tb_weak.sv:22: $finish called at 4000 (1ps)
+== correct_two_networks [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 8}: pass
+{'N': 16}: pass
+== correct_two_networks [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 8}: pass
+{'N': 16}: pass
+== correct_two_networks [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_two_networks [correct] synth: pass
+cells other than ['mux2']: 0
+cells after ABC mapping to 2-input gates: 114
+== correct_two_networks [correct] timed: n/a
+

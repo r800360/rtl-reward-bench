@@ -1,0 +1,11 @@
+{
+  "id": "twisted_ring_counter",
+  "title": "N-bit Johnson counter with asynchronous clear and synchronous load",
+  "origin": "a twisted-ring counter exercise",
+  "top": "twisted_ring_counter",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 3}, {"N": 4}, {"N": 6}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "pdr"},
+  "synth": {"params": {"N": 4}}
+}

@@ -1,0 +1,137 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 1 checks
+tasks/clkdiv3/tb_weak.sv:23: $finish called at 670000 (1ps)
+== golden [correct] strong_icarus: pass
+{}: pass
+== golden [correct] strong_verilator: pass
+{}: pass
+== golden [correct] formal: n/a
+
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 9
+== golden [correct] timed: pass
+no glitch in any trial
+== bug_decoded_counters [bug] compile: pass
+
+== bug_decoded_counters [bug] lint: pass
+
+== bug_decoded_counters [bug] weak: pass
+RESULT: PASS 1 checks
+tasks/clkdiv3/tb_weak.sv:23: $finish called at 670000 (1ps)
+== bug_decoded_counters [bug] strong_icarus: pass
+{}: pass
+== bug_decoded_counters [bug] strong_verilator: pass
+{}: pass
+== bug_decoded_counters [bug] formal: n/a
+
+== bug_decoded_counters [bug] synth: pass
+cells after ABC mapping to 2-input gates: 18
+== bug_decoded_counters [bug] timed: fail
+trial 1:
+glitch: clk_out 1 after 6.0 ns at 234000
+glitch: clk_out 0 after 3.0 ns at 237000
+glitch: clk_out 1 after 6.0 ns at 294000
+glitch: clk_out 0 after 3.0 ns at 297000
+glitch: clk_out 1 after 6.0 ns at 354000
+[12110000] MISMATCH pulses shorter than 10 ns: got 18c, expected 0
+RESULT: FAIL 1 of 2 checks
+tasks/clkdiv3/tb_timed.sv:32: $finish called at 12110000 (1ps)
+
+trial 2:
+glitch: clk_out 1 after 4.0 ns at 231000
+glitch: clk_out 0 after 2.0 ns at 233000
+glitch: clk_out 1 after 4.0 ns at 291000
+glitch: clk_out 0 after 2.0 ns at 293000
+glitch: clk_out 1 after 4.0 ns at 351000
+[12110000] MISMATCH pulses shorter than 10 ns: got 18c, expected 0
+RESULT: FAIL 1 of 2 checks
+tasks/clkdiv3/tb_timed.sv:32: $finish called at 12110000 (1ps)
+== bug_duty_33 [bug] compile: pass
+
+== bug_duty_33 [bug] lint: pass
+
+== bug_duty_33 [bug] weak: pass
+RESULT: PASS 1 checks
+tasks/clkdiv3/tb_weak.sv:23: $finish called at 670000 (1ps)
+== bug_duty_33 [bug] strong_icarus: fail
+{}: fail
+gth (ns): got 28, expected 1e
+[230000] MISMATCH phase length (ns): got 14, expected 1e
+[270000] MISMATCH phase length (ns): got 28, expected 1e
+[290000] MISMATCH phase length (ns): got 14, expected 1e
+[330000] MISMATCH phase length (ns): got 28, expected 1e
+[350000] MISMATCH phase length (ns): got 14, expected 1e
+[390000] MISMATCH phase length (ns): got 28, expected 1e
+[410000] MISMATCH phase length (ns): got 14, expected 1e
+[450000] MISMATCH phase length (ns): got 28, expected 1e
+[470000] MISMATCH phase length (ns): got 14, expected 1e
+[510000] MISMATCH phase length (ns): got 28, expected 1e
+[530000] MISMATCH phase length (ns): got 14, expected 1e
+[570000] MISMATCH phase length (ns): got 28, expected 1e
+[590000] MISMATCH phase length (ns): got 14, expected 1e
+[630000] MISMATCH phase length (ns): got 28, expected 1e
+[650000] MISMATCH phase length (ns): got 14, expected 1e
+[690000] MISMATCH phase length (ns): got 28, expected 1e
+[710000] MISMATCH phase length (ns): got 14, expected 1e
+[750000] MISMATCH phase length (ns): got 28, expected 1e
+[770000] MISMATCH phase length (ns): got 14, expected 1e
+[810000] MISMATCH phase length (ns): got 28, expected 1e
+[830000] MISMATCH phase length (ns): got 14, expected 1e
+[870000] MISMATCH phase length (ns): got 28, expected 1e
+[890000] MISMATCH phase length (ns): got 14, expected 1e
+... 52 further mismatches not printed
+RESULT: FAIL 77 of 159 checks
+tasks/clkdiv3/tb_strong.sv:34: $finish called at 2490000 (1ps)
+== bug_duty_33 [bug] strong_verilator: fail
+{}: fail
+length (ns): got 14, expected 1e
+[330000] MISMATCH phase length (ns): got 28, expected 1e
+[350000] MISMATCH phase length (ns): got 14, expected 1e
+[390000] MISMATCH phase length (ns): got 28, expected 1e
+[410000] MISMATCH phase length (ns): got 14, expected 1e
+[450000] MISMATCH phase length (ns): got 28, expected 1e
+[470000] MISMATCH phase length (ns): got 14, expected 1e
+[510000] MISMATCH phase length (ns): got 28, expected 1e
+[530000] MISMATCH phase length (ns): got 14, expected 1e
+[570000] MISMATCH phase length (ns): got 28, expected 1e
+[590000] MISMATCH phase length (ns): got 14, expected 1e
+[630000] MISMATCH phase length (ns): got 28, expected 1e
+[650000] MISMATCH phase length (ns): got 14, expected 1e
+[690000] MISMATCH phase length (ns): got 28, expected 1e
+[710000] MISMATCH phase length (ns): got 14, expected 1e
+[750000] MISMATCH phase length (ns): got 28, expected 1e
+[770000] MISMATCH phase length (ns): got 14, expected 1e
+[810000] MISMATCH phase length (ns): got 28, expected 1e
+[830000] MISMATCH phase length (ns): got 14, expected 1e
+[870000] MISMATCH phase length (ns): got 28, expected 1e
+[890000] MISMATCH phase length (ns): got 14, expected 1e
+... 52 further mismatches not printed
+RESULT: FAIL 77 of 159 checks
+- tasks/clkdiv3/tb_strong.sv:29: Verilog $finish
+== bug_duty_33 [bug] formal: n/a
+
+== bug_duty_33 [bug] synth: pass
+cells after ABC mapping to 2-input gates: 7
+== bug_duty_33 [bug] timed: pass
+no glitch in any trial
+== correct_shift_ring [correct] compile: pass
+
+== correct_shift_ring [correct] lint: pass
+
+== correct_shift_ring [correct] weak: pass
+RESULT: PASS 1 checks
+tasks/clkdiv3/tb_weak.sv:23: $finish called at 670000 (1ps)
+== correct_shift_ring [correct] strong_icarus: pass
+{}: pass
+== correct_shift_ring [correct] strong_verilator: pass
+{}: pass
+== correct_shift_ring [correct] formal: n/a
+
+== correct_shift_ring [correct] synth: pass
+cells after ABC mapping to 2-input gates: 11
+== correct_shift_ring [correct] timed: pass
+no glitch in any trial

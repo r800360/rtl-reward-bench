@@ -1,0 +1,11 @@
+{
+  "id": "conv_encoder_cfg",
+  "title": "Programmable rate-1/2 convolutional encoder",
+  "origin": "a programmable convolutional encoder exercise",
+  "top": "conv_encoder_cfg",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 3}, {"N": 5}, {"N": 9}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "pdr"},
+  "synth": {"params": {"N": 5}}
+}

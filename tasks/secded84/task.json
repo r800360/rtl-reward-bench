@@ -1,0 +1,11 @@
+{
+  "id": "secded84",
+  "title": "(8,4) extended Hamming decoder: correct one error, detect two",
+  "origin": "Hamming-code decoding exercises",
+  "top": "secded84",
+  "kind": "comb",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong"},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "smtbmc", "depth": 1},
+  "synth": {}
+}

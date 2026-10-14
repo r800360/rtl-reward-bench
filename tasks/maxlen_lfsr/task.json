@@ -1,0 +1,11 @@
+{
+  "id": "maxlen_lfsr",
+  "title": "Maximal-length LFSR with load and a period-complete pulse",
+  "origin": "a parameterized LFSR exercise, N = 2..8",
+  "top": "maxlen_lfsr",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 2}, {"N": 4}, {"N": 6}, {"N": 8}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "pdr"},
+  "synth": {"params": {"N": 4}}
+}

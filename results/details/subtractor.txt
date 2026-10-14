@@ -1,0 +1,604 @@
+== golden [correct] compile: pass
+tasks/subtractor/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/subtractor/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/subtractor/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 10 checks
+tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 5}: pass
+{'N': 16}: pass
+== golden [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 5}: pass
+{'N': 16}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 97
+== golden [correct] timed: n/a
+
+== bug_direction_inverted [bug] compile: pass
+tasks/subtractor/candidates/bug_direction_inverted.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/subtractor/candidates/bug_direction_inverted.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/subtractor/candidates/bug_direction_inverted.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== bug_direction_inverted [bug] lint: pass
+
+== bug_direction_inverted [bug] weak: fail
+[1000] MISMATCH 5, 3: got e, expected 2
+[2000] MISMATCH 3, 5: got 2, expected e
+[3000] MISMATCH 5, 3: got 2, expected e
+[4000] MISMATCH -2, -3: got f, expected 1
+[5000] MISMATCH 0, 4: got c, expected 4
+RESULT: FAIL 5 of 10 checks
+tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
+== bug_direction_inverted [bug] strong_icarus: fail
+{'N': 4}: fail
+[2000] MISMATCH m=0 a=0 b=1: got f, expected 1
+[3000] MISMATCH m=0 a=0 b=2: got e, expected 2
+[4000] MISMATCH m=0 a=0 b=3: got d, expected 3
+[5000] MISMATCH m=0 a=0 b=4: got c, expected 4
+[6000] MISMATCH m=0 a=0 b=5: got b, expected 5
+[7000] MISMATCH m=0 a=0 b=6: got a, expected 6
+[8000] MISMATCH m=0 a=0 b=7: got 9, expected 7
+[9000] MISMATCH ovf_pos m=0 a=0 b=-8: got 1, expected 0
+[10000] MISMATCH m=0 a=0 b=-7: got 7, expected 9
+[11000] MISMATCH m=0 a=0 b=-6: got 6, expected a
+[12000] MISMATCH m=0 a=0 b=-5: got 5, expected b
+[13000] MISMATCH m=0 a=0 b=-4: got 4, expected c
+[14000] MISMATCH m=0 a=0 b=-3: got 3, expected d
+[15000] MISMATCH m=0 a=0 b=-2: got 2, expected e
+[16000] MISMATCH m=0 a=0 b=-1: got 1, expected f
+[17000] MISMATCH m=0 a=1 b=0: got 1, expected f
+[19000] MISMATCH m=0 a=1 b=2: got f, expected 1
+[20000] MISMATCH m=0 a=1 b=3: got e, expected 2
+[21000] MISMATCH m=0 a=1 b=4: got d, expected 3
+[22000] MISMATCH m=0 a=1 b=5: got c, expected 4
+[23000] MISMATCH m=0 a=1 b=6: got b, expected 5
+[24000] MISMATCH m=0 a=1 b=7: got a, expected 6
+[25000] MISMATCH m=0 a=1 b=-8: got 9, expected 7
+[25000] MISMATCH ovf_pos m=0 a=1 b=-8: got 1, expected 0
+[25000] MISMATCH ovf_neg m=0 a=1 b=-8: got 0, expected 1
+... 679 further mismatches not printed
+RESULT: FAIL 704 of 1536 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 512000 (1ps)
+
+{'N': 5}: fail
+[2000] MISMATCH m=0 a=0 b=1: got 1f, expected 1
+[3000] MISMATCH m=0 a=0 b=2: got 1e, expected 2
+[4000] MISMATCH m=0 a=0 b=3: got 1d, expected 3
+[5000] MISMATCH m=0 a=0 b=4: got 1c, expected 4
+[6000] MISMATCH m=0 a=0 b=5: got 1b, expected 5
+[7000] MISMATCH m=0 a=0 b=6: got 1a, expected 6
+[8000] MISMATCH m=0 a=0 b=7: got 19, expected 7
+[9000] MISMATCH m=0 a=0 b=8: got 18, expected 8
+[10000] MISMATCH m=0 a=0 b=9: got 17, expected 9
+[11000] MISMATCH m=0 a=0 b=10: got 16, expected a
+[12000] MISMATCH m=0 a=0 b=11: got 15, expected b
+[13000] MISMATCH m=0 a=0 b=12: got 14, expected c
+[14000] MISMATCH m=0 a=0 b=13: got 13, expected d
+[15000] MISMATCH m=0 a=0 b=14: got 12, expected e
+[16000] MISMATCH m=0 a=0 b=15: got 11, expected f
+[17000] MISMATCH ovf_pos m=0 a=0 b=-16: got 1, expected 0
+[18000] MISMATCH m=0 a=0 b=-15: got f, expected 11
+[19000] MISMATCH m=0 a=0 b=-14: got e, expected 12
+[20000] MISMATCH m=0 a=0 b=-13: got d, expected 13
+[21000] MISMATCH m=0 a=0 b=-12: got c, expected 14
+[22000] MISMATCH m=0 a=0 b=-11: got b, expected 15
+[23000] MISMATCH m=0 a=0 b=-10: got a, expected 16
+[24000] MISMATCH m=0 a=0 b=-9: got 9, expected 17
+[25000] MISMATCH m=0 a=0 b=-8: got 8, expected 18
+[26000] MISMATCH m=0 a=0 b=-7: got 7, expected 19
+... 2919 further mismatches not printed
+RESULT: FAIL 2944 of 6144 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 2048000 (1ps)
+
+{'N': 16}: fail
+expected e180
+[2000] MISMATCH ovf_pos m=1 a=31501 b=-26227: got 0, expected 1
+[2000] MISMATCH ovf_neg m=1 a=31501 b=-26227: got 1, expected 0
+[3000] MISMATCH m=1 a=21010 b=-7423: got 90ef, expected 6f11
+[4000] MISMATCH m=1 a=-3722 b=-12995: got dbc7, expected 2439
+[5000] MISMATCH m=1 a=-2164 b=-5639: got f26d, expected d93
+[6000] MISMATCH m=0 a=-31547 b=-11606: got b21b, expected 4de5
+[7000] MISMATCH m=1 a=29303 b=-10734: got 639b, expected 9c65
+[7000] MISMATCH ovf_pos m=1 a=29303 b=-10734: got 0, expected 1
+[7000] MISMATCH ovf_neg m=1 a=29303 b=-10734: got 1, expected 0
+[8000] MISMATCH m=1 a=27122 b=-26930: got 2cdc, expected d324
+[8000] MISMATCH ovf_pos m=1 a=27122 b=-26930: got 0, expected 1
+[8000] MISMATCH ovf_neg m=1 a=27122 b=-26930: got 1, expected 0
+[9000] MISMATCH m=0 a=20165 b=18780: got 569, expected fa97
+[10000] MISMATCH m=1 a=22573 b=9829: got ce38, expected 31c8
+[11000] MISMATCH m=1 a=-30966 b=8832: got 9b76, expected 648a
+[11000] MISMATCH ovf_pos m=1 a=-30966 b=8832: got 1, expected 0
+[11000] MISMATCH ovf_neg m=1 a=-30966 b=8832: got 0, expected 1
+[12000] MISMATCH m=0 a=17834 b=-13155: got 790d, expected 86f3
+[13000] MISMATCH m=0 a=-18413 b=14349: got 8006, expected 7ffa
+[14000] MISMATCH m=1 a=-8853 b=10965: got 4d6a, expected b296
+[15000] MISMATCH m=0 a=16046 b=-5859: got 5591, expected aa6f
+... 29935 further mismatches not printed
+RESULT: FAIL 29960 of 60000 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
+== bug_direction_inverted [bug] strong_verilator: fail
+{'N': 4}: fail
+=0 a=0 b=2: got e, expected 2
+[4000] MISMATCH m=0 a=0 b=3: got d, expected 3
+[5000] MISMATCH m=0 a=0 b=4: got c, expected 4
+[6000] MISMATCH m=0 a=0 b=5: got b, expected 5
+[7000] MISMATCH m=0 a=0 b=6: got a, expected 6
+[8000] MISMATCH m=0 a=0 b=7: got 9, expected 7
+[9000] MISMATCH ovf_pos m=0 a=0 b=-8: got 1, expected 0
+[10000] MISMATCH m=0 a=0 b=-7: got 7, expected 9
+[11000] MISMATCH m=0 a=0 b=-6: got 6, expected a
+[12000] MISMATCH m=0 a=0 b=-5: got 5, expected b
+[13000] MISMATCH m=0 a=0 b=-4: got 4, expected c
+[14000] MISMATCH m=0 a=0 b=-3: got 3, expected d
+[15000] MISMATCH m=0 a=0 b=-2: got 2, expected e
+[16000] MISMATCH m=0 a=0 b=-1: got 1, expected f
+[17000] MISMATCH m=0 a=1 b=0: got 1, expected f
+[19000] MISMATCH m=0 a=1 b=2: got f, expected 1
+[20000] MISMATCH m=0 a=1 b=3: got e, expected 2
+[21000] MISMATCH m=0 a=1 b=4: got d, expected 3
+[22000] MISMATCH m=0 a=1 b=5: got c, expected 4
+[23000] MISMATCH m=0 a=1 b=6: got b, expected 5
+[24000] MISMATCH m=0 a=1 b=7: got a, expected 6
+[25000] MISMATCH m=0 a=1 b=-8: got 9, expected 7
+[25000] MISMATCH ovf_pos m=0 a=1 b=-8: got 1, expected 0
+[25000] MISMATCH ovf_neg m=0 a=1 b=-8: got 0, expected 1
+... 679 further mismatches not printed
+RESULT: FAIL 704 of 1536 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+
+{'N': 5}: fail
+e, expected 2
+[4000] MISMATCH m=0 a=0 b=3: got 1d, expected 3
+[5000] MISMATCH m=0 a=0 b=4: got 1c, expected 4
+[6000] MISMATCH m=0 a=0 b=5: got 1b, expected 5
+[7000] MISMATCH m=0 a=0 b=6: got 1a, expected 6
+[8000] MISMATCH m=0 a=0 b=7: got 19, expected 7
+[9000] MISMATCH m=0 a=0 b=8: got 18, expected 8
+[10000] MISMATCH m=0 a=0 b=9: got 17, expected 9
+[11000] MISMATCH m=0 a=0 b=10: got 16, expected a
+[12000] MISMATCH m=0 a=0 b=11: got 15, expected b
+[13000] MISMATCH m=0 a=0 b=12: got 14, expected c
+[14000] MISMATCH m=0 a=0 b=13: got 13, expected d
+[15000] MISMATCH m=0 a=0 b=14: got 12, expected e
+[16000] MISMATCH m=0 a=0 b=15: got 11, expected f
+[17000] MISMATCH ovf_pos m=0 a=0 b=-16: got 1, expected 0
+[18000] MISMATCH m=0 a=0 b=-15: got f, expected 11
+[19000] MISMATCH m=0 a=0 b=-14: got e, expected 12
+[20000] MISMATCH m=0 a=0 b=-13: got d, expected 13
+[21000] MISMATCH m=0 a=0 b=-12: got c, expected 14
+[22000] MISMATCH m=0 a=0 b=-11: got b, expected 15
+[23000] MISMATCH m=0 a=0 b=-10: got a, expected 16
+[24000] MISMATCH m=0 a=0 b=-9: got 9, expected 17
+[25000] MISMATCH m=0 a=0 b=-8: got 8, expected 18
+[26000] MISMATCH m=0 a=0 b=-7: got 7, expected 19
+... 2919 further mismatches not printed
+RESULT: FAIL 2944 of 6144 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+
+{'N': 16}: fail
+15357: got fa09, expected 5f7
+[8000] MISMATCH m=0 a=1202 b=19800: got b75a, expected 48a6
+[9000] MISMATCH m=0 a=17822 b=-31458: got c080, expected 3f80
+[9000] MISMATCH ovf_pos m=0 a=17822 b=-31458: got 1, expected 0
+[9000] MISMATCH ovf_neg m=0 a=17822 b=-31458: got 0, expected 1
+[10000] MISMATCH m=0 a=27408 b=7406: got 4e22, expected b1de
+[11000] MISMATCH m=1 a=-23872 b=-4765: got 4aa3, expected b55d
+[12000] MISMATCH m=1 a=-28922 b=3874: got 801c, expected 7fe4
+[12000] MISMATCH ovf_pos m=1 a=-28922 b=3874: got 1, expected 0
+[12000] MISMATCH ovf_neg m=1 a=-28922 b=3874: got 0, expected 1
+[13000] MISMATCH m=1 a=-15752 b=12899: got 6feb, expected 9015
+[14000] MISMATCH m=1 a=-265 b=-9522: got dbd7, expected 2429
+[15000] MISMATCH m=0 a=-10121 b=-19554: got 24d9, expected db27
+[16000] MISMATCH m=1 a=-7345 b=3240: got 2959, expected d6a7
+[17000] MISMATCH m=0 a=12002 b=-30316: got a54e, expected 5ab2
+[17000] MISMATCH ovf_pos m=0 a=12002 b=-30316: got 1, expected 0
+[17000] MISMATCH ovf_neg m=0 a=12002 b=-30316: got 0, expected 1
+[18000] MISMATCH m=1 a=-19703 b=6943: got 6816, expected 97ea
+[19000] MISMATCH m=1 a=-20604 b=-2529: got 469b, expected b965
+... 29981 further mismatches not printed
+RESULT: FAIL 30006 of 60000 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+== bug_direction_inverted [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_24 at harness.sv:7.15-7.56 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_24 at harness.sv:7.15-7.56 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_direction_inverted [bug] synth: pass
+cells after ABC mapping to 2-input gates: 97
+== bug_direction_inverted [bug] timed: n/a
+
+== bug_flags_swapped [bug] compile: pass
+tasks/subtractor/candidates/bug_flags_swapped.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/subtractor/candidates/bug_flags_swapped.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/subtractor/candidates/bug_flags_swapped.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== bug_flags_swapped [bug] lint: pass
+
+== bug_flags_swapped [bug] weak: pass
+RESULT: PASS 10 checks
+tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
+== bug_flags_swapped [bug] strong_icarus: fail
+{'N': 4}: fail
+ b=-8: got 0, expected 1
+[41000] MISMATCH ovf_pos m=0 a=2 b=-8: got 1, expected 0
+[41000] MISMATCH ovf_neg m=0 a=2 b=-8: got 0, expected 1
+[42000] MISMATCH ovf_pos m=0 a=2 b=-7: got 1, expected 0
+[42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
+[57000] MISMATCH ovf_pos m=0 a=3 b=-8: got 1, expected 0
+[57000] MISMATCH ovf_neg m=0 a=3 b=-8: got 0, expected 1
+[58000] MISMATCH ovf_pos m=0 a=3 b=-7: got 1, expected 0
+[58000] MISMATCH ovf_neg m=0 a=3 b=-7: got 0, expected 1
+[59000] MISMATCH ovf_pos m=0 a=3 b=-6: got 1, expected 0
+[59000] MISMATCH ovf_neg m=0 a=3 b=-6: got 0, expected 1
+[73000] MISMATCH ovf_pos m=0 a=4 b=-8: got 1, expected 0
+[73000] MISMATCH ovf_neg m=0 a=4 b=-8: got 0, expected 1
+[74000] MISMATCH ovf_pos m=0 a=4 b=-7: got 1, expected 0
+[74000] MISMATCH ovf_neg m=0 a=4 b=-7: got 0, expected 1
+[75000] MISMATCH ovf_pos m=0 a=4 b=-6: got 1, expected 0
+[75000] MISMATCH ovf_neg m=0 a=4 b=-6: got 0, expected 1
+[76000] MISMATCH ovf_pos m=0 a=4 b=-5: got 1, expected 0
+[76000] MISMATCH ovf_neg m=0 a=4 b=-5: got 0, expected 1
+[89000] MISMATCH ovf_pos m=0 a=5 b=-8: got 1, expected 0
+[89000] MISMATCH ovf_neg m=0 a=5 b=-8: got 0, expected 1
+[90000] MISMATCH ovf_pos m=0 a=5 b=-7: got 1, expected 0
+[90000] MISMATCH ovf_neg m=0 a=5 b=-7: got 0, expected 1
+[91000] MISMATCH ovf_pos m=0 a=5 b=-6: got 1, expected 0
+... 231 further mismatches not printed
+RESULT: FAIL 256 of 1536 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 512000 (1ps)
+
+{'N': 5}: fail
+f_pos m=0 a=2 b=-16: got 1, expected 0
+[81000] MISMATCH ovf_neg m=0 a=2 b=-16: got 0, expected 1
+[82000] MISMATCH ovf_pos m=0 a=2 b=-15: got 1, expected 0
+[82000] MISMATCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
+[113000] MISMATCH ovf_pos m=0 a=3 b=-16: got 1, expected 0
+[113000] MISMATCH ovf_neg m=0 a=3 b=-16: got 0, expected 1
+[114000] MISMATCH ovf_pos m=0 a=3 b=-15: got 1, expected 0
+[114000] MISMATCH ovf_neg m=0 a=3 b=-15: got 0, expected 1
+[115000] MISMATCH ovf_pos m=0 a=3 b=-14: got 1, expected 0
+[115000] MISMATCH ovf_neg m=0 a=3 b=-14: got 0, expected 1
+[145000] MISMATCH ovf_pos m=0 a=4 b=-16: got 1, expected 0
+[145000] MISMATCH ovf_neg m=0 a=4 b=-16: got 0, expected 1
+[146000] MISMATCH ovf_pos m=0 a=4 b=-15: got 1, expected 0
+[146000] MISMATCH ovf_neg m=0 a=4 b=-15: got 0, expected 1
+[147000] MISMATCH ovf_pos m=0 a=4 b=-14: got 1, expected 0
+[147000] MISMATCH ovf_neg m=0 a=4 b=-14: got 0, expected 1
+[148000] MISMATCH ovf_pos m=0 a=4 b=-13: got 1, expected 0
+[148000] MISMATCH ovf_neg m=0 a=4 b=-13: got 0, expected 1
+[177000] MISMATCH ovf_pos m=0 a=5 b=-16: got 1, expected 0
+[177000] MISMATCH ovf_neg m=0 a=5 b=-16: got 0, expected 1
+[178000] MISMATCH ovf_pos m=0 a=5 b=-15: got 1, expected 0
+[178000] MISMATCH ovf_neg m=0 a=5 b=-15: got 0, expected 1
+[179000] MISMATCH ovf_pos m=0 a=5 b=-14: got 1, expected 0
+... 999 further mismatches not printed
+RESULT: FAIL 1024 of 6144 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 2048000 (1ps)
+
+{'N': 16}: fail
+=1 a=29303 b=-10734: got 0, expected 1
+[7000] MISMATCH ovf_neg m=1 a=29303 b=-10734: got 1, expected 0
+[8000] MISMATCH ovf_pos m=1 a=27122 b=-26930: got 0, expected 1
+[8000] MISMATCH ovf_neg m=1 a=27122 b=-26930: got 1, expected 0
+[11000] MISMATCH ovf_pos m=1 a=-30966 b=8832: got 1, expected 0
+[11000] MISMATCH ovf_neg m=1 a=-30966 b=8832: got 0, expected 1
+[17000] MISMATCH ovf_pos m=0 a=19516 b=-16910: got 1, expected 0
+[17000] MISMATCH ovf_neg m=0 a=19516 b=-16910: got 0, expected 1
+[18000] MISMATCH ovf_pos m=0 a=-19647 b=13528: got 0, expected 1
+[18000] MISMATCH ovf_neg m=0 a=-19647 b=13528: got 1, expected 0
+[24000] MISMATCH ovf_pos m=1 a=-25615 b=19417: got 1, expected 0
+[24000] MISMATCH ovf_neg m=1 a=-25615 b=19417: got 0, expected 1
+[26000] MISMATCH ovf_pos m=1 a=-22024 b=24759: got 1, expected 0
+[26000] MISMATCH ovf_neg m=1 a=-22024 b=24759: got 0, expected 1
+[35000] MISMATCH ovf_pos m=1 a=-20694 b=25432: got 1, expected 0
+[35000] MISMATCH ovf_neg m=1 a=-20694 b=25432: got 0, expected 1
+[41000] MISMATCH ovf_pos m=1 a=-7443 b=27866: got 1, expected 0
+[41000] MISMATCH ovf_neg m=1 a=-7443 b=27866: got 0, expected 1
+[45000] MISMATCH ovf_pos m=0 a=-17254 b=29437: got 0, expected 1
+[45000] MISMATCH ovf_neg m=0 a=-17254 b=29437: got 1, expected 0
+[50000] MISMATCH ovf_pos m=1 a=27099 b=-8627: got 0, expected 1
+... 9935 further mismatches not printed
+RESULT: FAIL 9960 of 60000 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
+== bug_flags_swapped [bug] strong_verilator: fail
+{'N': 4}: fail
+=-7: got 1, expected 0
+[42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
+[57000] MISMATCH ovf_pos m=0 a=3 b=-8: got 1, expected 0
+[57000] MISMATCH ovf_neg m=0 a=3 b=-8: got 0, expected 1
+[58000] MISMATCH ovf_pos m=0 a=3 b=-7: got 1, expected 0
+[58000] MISMATCH ovf_neg m=0 a=3 b=-7: got 0, expected 1
+[59000] MISMATCH ovf_pos m=0 a=3 b=-6: got 1, expected 0
+[59000] MISMATCH ovf_neg m=0 a=3 b=-6: got 0, expected 1
+[73000] MISMATCH ovf_pos m=0 a=4 b=-8: got 1, expected 0
+[73000] MISMATCH ovf_neg m=0 a=4 b=-8: got 0, expected 1
+[74000] MISMATCH ovf_pos m=0 a=4 b=-7: got 1, expected 0
+[74000] MISMATCH ovf_neg m=0 a=4 b=-7: got 0, expected 1
+[75000] MISMATCH ovf_pos m=0 a=4 b=-6: got 1, expected 0
+[75000] MISMATCH ovf_neg m=0 a=4 b=-6: got 0, expected 1
+[76000] MISMATCH ovf_pos m=0 a=4 b=-5: got 1, expected 0
+[76000] MISMATCH ovf_neg m=0 a=4 b=-5: got 0, expected 1
+[89000] MISMATCH ovf_pos m=0 a=5 b=-8: got 1, expected 0
+[89000] MISMATCH ovf_neg m=0 a=5 b=-8: got 0, expected 1
+[90000] MISMATCH ovf_pos m=0 a=5 b=-7: got 1, expected 0
+[90000] MISMATCH ovf_neg m=0 a=5 b=-7: got 0, expected 1
+[91000] MISMATCH ovf_pos m=0 a=5 b=-6: got 1, expected 0
+... 231 further mismatches not printed
+RESULT: FAIL 256 of 1536 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+
+{'N': 5}: fail
+TCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
+[113000] MISMATCH ovf_pos m=0 a=3 b=-16: got 1, expected 0
+[113000] MISMATCH ovf_neg m=0 a=3 b=-16: got 0, expected 1
+[114000] MISMATCH ovf_pos m=0 a=3 b=-15: got 1, expected 0
+[114000] MISMATCH ovf_neg m=0 a=3 b=-15: got 0, expected 1
+[115000] MISMATCH ovf_pos m=0 a=3 b=-14: got 1, expected 0
+[115000] MISMATCH ovf_neg m=0 a=3 b=-14: got 0, expected 1
+[145000] MISMATCH ovf_pos m=0 a=4 b=-16: got 1, expected 0
+[145000] MISMATCH ovf_neg m=0 a=4 b=-16: got 0, expected 1
+[146000] MISMATCH ovf_pos m=0 a=4 b=-15: got 1, expected 0
+[146000] MISMATCH ovf_neg m=0 a=4 b=-15: got 0, expected 1
+[147000] MISMATCH ovf_pos m=0 a=4 b=-14: got 1, expected 0
+[147000] MISMATCH ovf_neg m=0 a=4 b=-14: got 0, expected 1
+[148000] MISMATCH ovf_pos m=0 a=4 b=-13: got 1, expected 0
+[148000] MISMATCH ovf_neg m=0 a=4 b=-13: got 0, expected 1
+[177000] MISMATCH ovf_pos m=0 a=5 b=-16: got 1, expected 0
+[177000] MISMATCH ovf_neg m=0 a=5 b=-16: got 0, expected 1
+[178000] MISMATCH ovf_pos m=0 a=5 b=-15: got 1, expected 0
+[178000] MISMATCH ovf_neg m=0 a=5 b=-15: got 0, expected 1
+[179000] MISMATCH ovf_pos m=0 a=5 b=-14: got 1, expected 0
+... 999 further mismatches not printed
+RESULT: FAIL 1024 of 6144 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+
+{'N': 16}: fail
+000] MISMATCH ovf_neg m=1 a=11465 b=-22285: got 1, expected 0
+[22000] MISMATCH ovf_pos m=1 a=-10915 b=26058: got 1, expected 0
+[22000] MISMATCH ovf_neg m=1 a=-10915 b=26058: got 0, expected 1
+[28000] MISMATCH ovf_pos m=1 a=-18225 b=31534: got 1, expected 0
+[28000] MISMATCH ovf_neg m=1 a=-18225 b=31534: got 0, expected 1
+[39000] MISMATCH ovf_pos m=0 a=-24630 b=9826: got 0, expected 1
+[39000] MISMATCH ovf_neg m=0 a=-24630 b=9826: got 1, expected 0
+[43000] MISMATCH ovf_pos m=1 a=21047 b=-25881: got 0, expected 1
+[43000] MISMATCH ovf_neg m=1 a=21047 b=-25881: got 1, expected 0
+[44000] MISMATCH ovf_pos m=0 a=18483 b=-27840: got 1, expected 0
+[44000] MISMATCH ovf_neg m=0 a=18483 b=-27840: got 0, expected 1
+[59000] MISMATCH ovf_pos m=0 a=27388 b=-28462: got 1, expected 0
+[59000] MISMATCH ovf_neg m=0 a=27388 b=-28462: got 0, expected 1
+[62000] MISMATCH ovf_pos m=1 a=-16108 b=21949: got 1, expected 0
+[62000] MISMATCH ovf_neg m=1 a=-16108 b=21949: got 0, expected 1
+[66000] MISMATCH ovf_pos m=1 a=32057 b=-6849: got 0, expected 1
+[66000] MISMATCH ovf_neg m=1 a=32057 b=-6849: got 1, expected 0
+[69000] MISMATCH ovf_pos m=1 a=30251 b=-7050: got 0, expected 1
+... 9981 further mismatches not printed
+RESULT: FAIL 10006 of 60000 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+== bug_flags_swapped [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_24 at harness.sv:7.15-7.56 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_24 at harness.sv:7.15-7.56 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_flags_swapped [bug] synth: pass
+cells after ABC mapping to 2-input gates: 97
+== bug_flags_swapped [bug] timed: n/a
+
+== bug_unsigned_borrow [bug] compile: pass
+
+== bug_unsigned_borrow [bug] lint: pass
+
+== bug_unsigned_borrow [bug] weak: fail
+[2000] MISMATCH no overflow: got 1, expected 0
+[3000] MISMATCH no overflow: got 1, expected 0
+RESULT: FAIL 2 of 10 checks
+tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
+== bug_unsigned_borrow [bug] strong_icarus: fail
+{'N': 4}: fail
+vf_neg m=0 a=1 b=-8: got 0, expected 1
+[33000] MISMATCH ovf_neg m=0 a=2 b=0: got 1, expected 0
+[34000] MISMATCH ovf_neg m=0 a=2 b=1: got 1, expected 0
+[41000] MISMATCH ovf_neg m=0 a=2 b=-8: got 0, expected 1
+[42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
+[49000] MISMATCH ovf_neg m=0 a=3 b=0: got 1, expected 0
+[50000] MISMATCH ovf_neg m=0 a=3 b=1: got 1, expected 0
+[51000] MISMATCH ovf_neg m=0 a=3 b=2: got 1, expected 0
+[57000] MISMATCH ovf_neg m=0 a=3 b=-8: got 0, expected 1
+[58000] MISMATCH ovf_neg m=0 a=3 b=-7: got 0, expected 1
+[59000] MISMATCH ovf_neg m=0 a=3 b=-6: got 0, expected 1
+[65000] MISMATCH ovf_neg m=0 a=4 b=0: got 1, expected 0
+[66000] MISMATCH ovf_neg m=0 a=4 b=1: got 1, expected 0
+[67000] MISMATCH ovf_neg m=0 a=4 b=2: got 1, expected 0
+[68000] MISMATCH ovf_neg m=0 a=4 b=3: got 1, expected 0
+[73000] MISMATCH ovf_neg m=0 a=4 b=-8: got 0, expected 1
+[74000] MISMATCH ovf_neg m=0 a=4 b=-7: got 0, expected 1
+[75000] MISMATCH ovf_neg m=0 a=4 b=-6: got 0, expected 1
+[76000] MISMATCH ovf_neg m=0 a=4 b=-5: got 0, expected 1
+[81000] MISMATCH ovf_neg m=0 a=5 b=0: got 1, expected 0
+[82000] MISMATCH ovf_neg m=0 a=5 b=1: got 1, expected 0
+[83000] MISMATCH ovf_neg m=0 a=5 b=2: got 1, expected 0
+[84000] MISMATCH ovf_neg m=0 a=5 b=3: got 1, expected 0
+[85000] MISMATCH ovf_neg m=0 a=5 b=4: got 1, expected 0
+... 343 further mismatches not printed
+RESULT: FAIL 368 of 1536 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 512000 (1ps)
+
+{'N': 5}: fail
+expected 1
+[65000] MISMATCH ovf_neg m=0 a=2 b=0: got 1, expected 0
+[66000] MISMATCH ovf_neg m=0 a=2 b=1: got 1, expected 0
+[81000] MISMATCH ovf_neg m=0 a=2 b=-16: got 0, expected 1
+[82000] MISMATCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
+[97000] MISMATCH ovf_neg m=0 a=3 b=0: got 1, expected 0
+[98000] MISMATCH ovf_neg m=0 a=3 b=1: got 1, expected 0
+[99000] MISMATCH ovf_neg m=0 a=3 b=2: got 1, expected 0
+[113000] MISMATCH ovf_neg m=0 a=3 b=-16: got 0, expected 1
+[114000] MISMATCH ovf_neg m=0 a=3 b=-15: got 0, expected 1
+[115000] MISMATCH ovf_neg m=0 a=3 b=-14: got 0, expected 1
+[129000] MISMATCH ovf_neg m=0 a=4 b=0: got 1, expected 0
+[130000] MISMATCH ovf_neg m=0 a=4 b=1: got 1, expected 0
+[131000] MISMATCH ovf_neg m=0 a=4 b=2: got 1, expected 0
+[132000] MISMATCH ovf_neg m=0 a=4 b=3: got 1, expected 0
+[145000] MISMATCH ovf_neg m=0 a=4 b=-16: got 0, expected 1
+[146000] MISMATCH ovf_neg m=0 a=4 b=-15: got 0, expected 1
+[147000] MISMATCH ovf_neg m=0 a=4 b=-14: got 0, expected 1
+[148000] MISMATCH ovf_neg m=0 a=4 b=-13: got 0, expected 1
+[161000] MISMATCH ovf_neg m=0 a=5 b=0: got 1, expected 0
+[162000] MISMATCH ovf_neg m=0 a=5 b=1: got 1, expected 0
+[163000] MISMATCH ovf_neg m=0 a=5 b=2: got 1, expected 0
+[164000] MISMATCH ovf_neg m=0 a=5 b=3: got 1, expected 0
+[165000] MISMATCH ovf_neg m=0 a=5 b=4: got 1, expected 0
+... 1479 further mismatches not printed
+RESULT: FAIL 1504 of 6144 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 2048000 (1ps)
+
+{'N': 16}: fail
+pos m=1 a=29303 b=-10734: got 0, expected 1
+[7000] MISMATCH ovf_neg m=1 a=29303 b=-10734: got 1, expected 0
+[8000] MISMATCH ovf_pos m=1 a=27122 b=-26930: got 0, expected 1
+[8000] MISMATCH ovf_neg m=1 a=27122 b=-26930: got 1, expected 0
+[9000] MISMATCH ovf_neg m=0 a=20165 b=18780: got 1, expected 0
+[11000] MISMATCH ovf_neg m=1 a=-30966 b=8832: got 0, expected 1
+[13000] MISMATCH ovf_neg m=0 a=-18413 b=14349: got 1, expected 0
+[16000] MISMATCH ovf_neg m=1 a=18723 b=25866: got 1, expected 0
+[17000] MISMATCH ovf_neg m=0 a=19516 b=-16910: got 0, expected 1
+[18000] MISMATCH ovf_pos m=0 a=-19647 b=13528: got 0, expected 1
+[18000] MISMATCH ovf_neg m=0 a=-19647 b=13528: got 1, expected 0
+[19000] MISMATCH ovf_neg m=0 a=4745 b=3563: got 1, expected 0
+[20000] MISMATCH ovf_neg m=0 a=-1594 b=5038: got 1, expected 0
+[21000] MISMATCH ovf_neg m=0 a=-8918 b=-26101: got 1, expected 0
+[22000] MISMATCH ovf_neg m=1 a=16773 b=21839: got 1, expected 0
+[24000] MISMATCH ovf_neg m=1 a=-25615 b=19417: got 0, expected 1
+[25000] MISMATCH ovf_neg m=0 a=-1204 b=21919: got 1, expected 0
+[26000] MISMATCH ovf_neg m=1 a=-22024 b=24759: got 0, expected 1
+[27000] MISMATCH ovf_neg m=1 a=-27556 b=-16293: got 1, expected 0
+[28000] MISMATCH ovf_neg m=1 a=12873 b=16080: got 1, expected 0
+[34000] MISMATCH ovf_neg m=0 a=22875 b=19273: got 1, expected 0
+... 15079 further mismatches not printed
+RESULT: FAIL 15104 of 60000 checks
+tasks/subtractor/tb_strong.sv:34: $finish called at 20000000 (1ps)
+== bug_unsigned_borrow [bug] strong_verilator: fail
+{'N': 4}: fail
+eg m=0 a=2 b=-8: got 0, expected 1
+[42000] MISMATCH ovf_neg m=0 a=2 b=-7: got 0, expected 1
+[49000] MISMATCH ovf_neg m=0 a=3 b=0: got 1, expected 0
+[50000] MISMATCH ovf_neg m=0 a=3 b=1: got 1, expected 0
+[51000] MISMATCH ovf_neg m=0 a=3 b=2: got 1, expected 0
+[57000] MISMATCH ovf_neg m=0 a=3 b=-8: got 0, expected 1
+[58000] MISMATCH ovf_neg m=0 a=3 b=-7: got 0, expected 1
+[59000] MISMATCH ovf_neg m=0 a=3 b=-6: got 0, expected 1
+[65000] MISMATCH ovf_neg m=0 a=4 b=0: got 1, expected 0
+[66000] MISMATCH ovf_neg m=0 a=4 b=1: got 1, expected 0
+[67000] MISMATCH ovf_neg m=0 a=4 b=2: got 1, expected 0
+[68000] MISMATCH ovf_neg m=0 a=4 b=3: got 1, expected 0
+[73000] MISMATCH ovf_neg m=0 a=4 b=-8: got 0, expected 1
+[74000] MISMATCH ovf_neg m=0 a=4 b=-7: got 0, expected 1
+[75000] MISMATCH ovf_neg m=0 a=4 b=-6: got 0, expected 1
+[76000] MISMATCH ovf_neg m=0 a=4 b=-5: got 0, expected 1
+[81000] MISMATCH ovf_neg m=0 a=5 b=0: got 1, expected 0
+[82000] MISMATCH ovf_neg m=0 a=5 b=1: got 1, expected 0
+[83000] MISMATCH ovf_neg m=0 a=5 b=2: got 1, expected 0
+[84000] MISMATCH ovf_neg m=0 a=5 b=3: got 1, expected 0
+[85000] MISMATCH ovf_neg m=0 a=5 b=4: got 1, expected 0
+... 343 further mismatches not printed
+RESULT: FAIL 368 of 1536 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+
+{'N': 5}: fail
+, expected 1
+[82000] MISMATCH ovf_neg m=0 a=2 b=-15: got 0, expected 1
+[97000] MISMATCH ovf_neg m=0 a=3 b=0: got 1, expected 0
+[98000] MISMATCH ovf_neg m=0 a=3 b=1: got 1, expected 0
+[99000] MISMATCH ovf_neg m=0 a=3 b=2: got 1, expected 0
+[113000] MISMATCH ovf_neg m=0 a=3 b=-16: got 0, expected 1
+[114000] MISMATCH ovf_neg m=0 a=3 b=-15: got 0, expected 1
+[115000] MISMATCH ovf_neg m=0 a=3 b=-14: got 0, expected 1
+[129000] MISMATCH ovf_neg m=0 a=4 b=0: got 1, expected 0
+[130000] MISMATCH ovf_neg m=0 a=4 b=1: got 1, expected 0
+[131000] MISMATCH ovf_neg m=0 a=4 b=2: got 1, expected 0
+[132000] MISMATCH ovf_neg m=0 a=4 b=3: got 1, expected 0
+[145000] MISMATCH ovf_neg m=0 a=4 b=-16: got 0, expected 1
+[146000] MISMATCH ovf_neg m=0 a=4 b=-15: got 0, expected 1
+[147000] MISMATCH ovf_neg m=0 a=4 b=-14: got 0, expected 1
+[148000] MISMATCH ovf_neg m=0 a=4 b=-13: got 0, expected 1
+[161000] MISMATCH ovf_neg m=0 a=5 b=0: got 1, expected 0
+[162000] MISMATCH ovf_neg m=0 a=5 b=1: got 1, expected 0
+[163000] MISMATCH ovf_neg m=0 a=5 b=2: got 1, expected 0
+[164000] MISMATCH ovf_neg m=0 a=5 b=3: got 1, expected 0
+[165000] MISMATCH ovf_neg m=0 a=5 b=4: got 1, expected 0
+... 1479 further mismatches not printed
+RESULT: FAIL 1504 of 6144 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+
+{'N': 16}: fail
+] MISMATCH ovf_neg m=0 a=-10121 b=-19554: got 1, expected 0
+[17000] MISMATCH ovf_neg m=0 a=12002 b=-30316: got 0, expected 1
+[19000] MISMATCH ovf_neg m=1 a=-20604 b=-2529: got 1, expected 0
+[20000] MISMATCH ovf_neg m=0 a=-5557 b=-22989: got 1, expected 0
+[21000] MISMATCH ovf_pos m=1 a=11465 b=-22285: got 0, expected 1
+[21000] MISMATCH ovf_neg m=1 a=11465 b=-22285: got 1, expected 0
+[22000] MISMATCH ovf_neg m=1 a=-10915 b=26058: got 0, expected 1
+[23000] MISMATCH ovf_neg m=1 a=-19729 b=-4828: got 1, expected 0
+[28000] MISMATCH ovf_neg m=1 a=-18225 b=31534: got 0, expected 1
+[31000] MISMATCH ovf_neg m=0 a=-12593 b=17215: got 1, expected 0
+[32000] MISMATCH ovf_neg m=1 a=-25958 b=-7305: got 1, expected 0
+[33000] MISMATCH ovf_neg m=0 a=17071 b=8019: got 1, expected 0
+[36000] MISMATCH ovf_neg m=1 a=-22943 b=-10140: got 1, expected 0
+[37000] MISMATCH ovf_neg m=1 a=10227 b=-8927: got 1, expected 0
+[39000] MISMATCH ovf_pos m=0 a=-24630 b=9826: got 0, expected 1
+[39000] MISMATCH ovf_neg m=0 a=-24630 b=9826: got 1, expected 0
+[40000] MISMATCH ovf_neg m=0 a=-8104 b=-14523: got 1, expected 0
+[43000] MISMATCH ovf_pos m=1 a=21047 b=-25881: got 0, expected 1
+... 14946 further mismatches not printed
+RESULT: FAIL 14971 of 60000 checks
+- tasks/subtractor/tb_strong.sv:29: Verilog $finish
+== bug_unsigned_borrow [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_16 at harness.sv:7.15-7.56 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_16 at harness.sv:7.15-7.56 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_unsigned_borrow [bug] synth: pass
+cells after ABC mapping to 2-input gates: 92
+== bug_unsigned_borrow [bug] timed: n/a
+
+== correct_wide [correct] compile: pass
+
+== correct_wide [correct] lint: pass
+
+== correct_wide [correct] weak: pass
+RESULT: PASS 10 checks
+tasks/subtractor/tb_weak.sv:23: $finish called at 5000 (1ps)
+== correct_wide [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 5}: pass
+{'N': 16}: pass
+== correct_wide [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 5}: pass
+{'N': 16}: pass
+== correct_wide [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_wide [correct] synth: pass
+cells after ABC mapping to 2-input gates: 131
+== correct_wide [correct] timed: n/a
+

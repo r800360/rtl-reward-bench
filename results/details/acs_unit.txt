@@ -1,0 +1,188 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 3 checks
+tasks/acs_unit/tb_weak.sv:21: $finish called at 2000 (1ps)
+== golden [correct] strong_icarus: pass
+{}: pass
+== golden [correct] strong_verilator: pass
+{}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 101
+== golden [correct] timed: n/a
+
+== bug_ignores_validity [bug] compile: pass
+
+== bug_ignores_validity [bug] lint: pass
+
+== bug_ignores_validity [bug] weak: pass
+RESULT: PASS 3 checks
+tasks/acs_unit/tb_weak.sv:21: $finish called at 2000 (1ps)
+== bug_ignores_validity [bug] strong_icarus: fail
+{}: fail
+ v=01 c0=16 c1=38: got 0, expected 1
+[2000] MISMATCH pm v=01 c0=16 c1=38: got 10, expected 26
+[5000] MISMATCH pm v=00 c0=6 c1=44: got 6, expected 0
+[9000] MISMATCH pm v=00 c0=11 c1=3: got b, expected 0
+[10000] MISMATCH sel v=01 c0=29 c1=29: got 0, expected 1
+[13000] MISMATCH pm v=00 c0=36 c1=36: got 24, expected 0
+[17000] MISMATCH pm v=00 c0=62 c1=44: got 3e, expected 0
+[18000] MISMATCH sel v=01 c0=8 c1=16: got 0, expected 1
+[18000] MISMATCH pm v=01 c0=8 c1=16: got 8, expected 10
+[21000] MISMATCH pm v=00 c0=15 c1=59: got f, expected 0
+[22000] MISMATCH sel v=01 c0=31 c1=31: got 0, expected 1
+[25000] MISMATCH pm v=00 c0=57 c1=57: got 39, expected 0
+[27000] MISMATCH sel v=10 c0=20 c1=8: got 1, expected 0
+[27000] MISMATCH pm v=10 c0=20 c1=8: got 8, expected 14
+[29000] MISMATCH pm v=00 c0=27 c1=8: got 1b, expected 0
+[33000] MISMATCH pm v=00 c0=29 c1=43: got 1d, expected 0
+[34000] MISMATCH sel v=01 c0=38 c1=38: got 0, expected 1
+[35000] MISMATCH sel v=10 c0=58 c1=7: got 1, expected 0
+[35000] MISMATCH pm v=10 c0=58 c1=7: got 7, expected 3a
+[37000] MISMATCH pm v=00 c0=61 c1=61: got 3d, expected 0
+[38000] MISMATCH sel v=01 c0=17 c1=41: got 0, expected 1
+[38000] MISMATCH pm v=01 c0=17 c1=41: got 11, expected 29
+[41000] MISMATCH pm v=00 c0=27 c1=14: got 1b, expected 0
+[45000] MISMATCH pm v=00 c0=45 c1=7: got 2d, expected 0
+... 2667 further mismatches not printed
+RESULT: FAIL 2692 of 12000 checks
+tasks/acs_unit/tb_strong.sv:33: $finish called at 4000000 (1ps)
+== bug_ignores_validity [bug] strong_verilator: fail
+{}: fail
+0 c1=14: got 1, expected 0
+[11000] MISMATCH pm v=10 c0=50 c1=14: got e, expected 32
+[13000] MISMATCH pm v=00 c0=17 c1=17: got 11, expected 0
+[14000] MISMATCH sel v=01 c0=37 c1=38: got 0, expected 1
+[14000] MISMATCH pm v=01 c0=37 c1=38: got 25, expected 26
+[15000] MISMATCH sel v=10 c0=38 c1=32: got 1, expected 0
+[15000] MISMATCH pm v=10 c0=38 c1=32: got 20, expected 26
+[17000] MISMATCH pm v=00 c0=54 c1=9: got 36, expected 0
+[21000] MISMATCH pm v=00 c0=22 c1=35: got 16, expected 0
+[22000] MISMATCH sel v=01 c0=46 c1=46: got 0, expected 1
+[23000] MISMATCH sel v=10 c0=16 c1=7: got 1, expected 0
+[23000] MISMATCH pm v=10 c0=16 c1=7: got 7, expected 10
+[25000] MISMATCH pm v=00 c0=66 c1=66: got 42, expected 0
+[27000] MISMATCH sel v=10 c0=50 c1=15: got 1, expected 0
+[27000] MISMATCH pm v=10 c0=50 c1=15: got f, expected 32
+[29000] MISMATCH pm v=00 c0=10 c1=37: got a, expected 0
+[30000] MISMATCH sel v=01 c0=34 c1=52: got 0, expected 1
+[30000] MISMATCH pm v=01 c0=34 c1=52: got 22, expected 34
+[33000] MISMATCH pm v=00 c0=17 c1=32: got 11, expected 0
+[34000] MISMATCH sel v=01 c0=64 c1=64: got 0, expected 1
+[37000] MISMATCH pm v=00 c0=60 c1=60: got 3c, expected 0
+... 2625 further mismatches not printed
+RESULT: FAIL 2650 of 12000 checks
+- tasks/acs_unit/tb_strong.sv:28: Verilog $finish
+== bug_ignores_validity [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_17 at harness.sv:7.15-7.56 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_17 at harness.sv:7.15-7.56 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_ignores_validity [bug] synth: pass
+cells after ABC mapping to 2-input gates: 91
+== bug_ignores_validity [bug] timed: n/a
+
+== bug_ties_to_path1 [bug] compile: pass
+
+== bug_ties_to_path1 [bug] lint: pass
+
+== bug_ties_to_path1 [bug] weak: pass
+RESULT: PASS 3 checks
+tasks/acs_unit/tb_weak.sv:21: $finish called at 2000 (1ps)
+== bug_ties_to_path1 [bug] strong_icarus: fail
+{}: fail
+t 1, expected 0
+[28000] MISMATCH sel v=11 c0=9 c1=9: got 1, expected 0
+[40000] MISMATCH sel v=11 c0=19 c1=19: got 1, expected 0
+[52000] MISMATCH sel v=11 c0=30 c1=30: got 1, expected 0
+[64000] MISMATCH sel v=11 c0=59 c1=59: got 1, expected 0
+[76000] MISMATCH sel v=11 c0=7 c1=7: got 1, expected 0
+[88000] MISMATCH sel v=11 c0=49 c1=49: got 1, expected 0
+[100000] MISMATCH sel v=11 c0=62 c1=62: got 1, expected 0
+[112000] MISMATCH sel v=11 c0=42 c1=42: got 1, expected 0
+[124000] MISMATCH sel v=11 c0=16 c1=16: got 1, expected 0
+[136000] MISMATCH sel v=11 c0=4 c1=4: got 1, expected 0
+[148000] MISMATCH sel v=11 c0=59 c1=59: got 1, expected 0
+[160000] MISMATCH sel v=11 c0=16 c1=16: got 1, expected 0
+[172000] MISMATCH sel v=11 c0=6 c1=6: got 1, expected 0
+[184000] MISMATCH sel v=11 c0=54 c1=54: got 1, expected 0
+[196000] MISMATCH sel v=11 c0=43 c1=43: got 1, expected 0
+[208000] MISMATCH sel v=11 c0=39 c1=39: got 1, expected 0
+[220000] MISMATCH sel v=11 c0=34 c1=34: got 1, expected 0
+[232000] MISMATCH sel v=11 c0=62 c1=62: got 1, expected 0
+[244000] MISMATCH sel v=11 c0=16 c1=16: got 1, expected 0
+[256000] MISMATCH sel v=11 c0=62 c1=62: got 1, expected 0
+[268000] MISMATCH sel v=11 c0=22 c1=22: got 1, expected 0
+[280000] MISMATCH sel v=11 c0=44 c1=44: got 1, expected 0
+[292000] MISMATCH sel v=11 c0=58 c1=58: got 1, expected 0
+... 319 further mismatches not printed
+RESULT: FAIL 344 of 12000 checks
+tasks/acs_unit/tb_strong.sv:33: $finish called at 4000000 (1ps)
+== bug_ties_to_path1 [bug] strong_verilator: fail
+{}: fail
+7: got 1, expected 0
+[64000] MISMATCH sel v=11 c0=9 c1=9: got 1, expected 0
+[76000] MISMATCH sel v=11 c0=59 c1=59: got 1, expected 0
+[88000] MISMATCH sel v=11 c0=44 c1=44: got 1, expected 0
+[100000] MISMATCH sel v=11 c0=3 c1=3: got 1, expected 0
+[112000] MISMATCH sel v=11 c0=17 c1=17: got 1, expected 0
+[124000] MISMATCH sel v=11 c0=43 c1=43: got 1, expected 0
+[136000] MISMATCH sel v=11 c0=47 c1=47: got 1, expected 0
+[148000] MISMATCH sel v=11 c0=1 c1=1: got 1, expected 0
+[160000] MISMATCH sel v=11 c0=49 c1=49: got 1, expected 0
+[172000] MISMATCH sel v=11 c0=22 c1=22: got 1, expected 0
+[184000] MISMATCH sel v=11 c0=47 c1=47: got 1, expected 0
+[196000] MISMATCH sel v=11 c0=19 c1=19: got 1, expected 0
+[208000] MISMATCH sel v=11 c0=7 c1=7: got 1, expected 0
+[220000] MISMATCH sel v=11 c0=16 c1=16: got 1, expected 0
+[232000] MISMATCH sel v=11 c0=62 c1=62: got 1, expected 0
+[244000] MISMATCH sel v=11 c0=54 c1=54: got 1, expected 0
+[256000] MISMATCH sel v=11 c0=25 c1=25: got 1, expected 0
+[268000] MISMATCH sel v=11 c0=7 c1=7: got 1, expected 0
+[280000] MISMATCH sel v=11 c0=34 c1=34: got 1, expected 0
+[292000] MISMATCH sel v=11 c0=15 c1=15: got 1, expected 0
+... 314 further mismatches not printed
+RESULT: FAIL 339 of 12000 checks
+- tasks/acs_unit/tb_strong.sv:28: Verilog $finish
+== bug_ties_to_path1 [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_18 at harness.sv:7.15-7.56 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_18 at harness.sv:7.15-7.56 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_ties_to_path1 [bug] synth: pass
+cells after ABC mapping to 2-input gates: 101
+== bug_ties_to_path1 [bug] timed: n/a
+
+== correct_priority [correct] compile: pass
+
+== correct_priority [correct] lint: pass
+
+== correct_priority [correct] weak: pass
+RESULT: PASS 3 checks
+tasks/acs_unit/tb_weak.sv:21: $finish called at 2000 (1ps)
+== correct_priority [correct] strong_icarus: pass
+{}: pass
+== correct_priority [correct] strong_verilator: pass
+{}: pass
+== correct_priority [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_priority [correct] synth: pass
+cells after ABC mapping to 2-input gates: 100
+== correct_priority [correct] timed: n/a
+

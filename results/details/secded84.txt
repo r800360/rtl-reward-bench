@@ -1,0 +1,203 @@
+== golden [correct] compile: pass
+tasks/secded84/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/golden.sv:9: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 6 checks
+tasks/secded84/tb_weak.sv:30: $finish called at 4000 (1ps)
+== golden [correct] strong_icarus: pass
+{}: pass
+== golden [correct] strong_verilator: pass
+{}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 33
+== golden [correct] timed: n/a
+
+== bug_no_overall_parity [bug] compile: pass
+tasks/secded84/candidates/bug_no_overall_parity.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_no_overall_parity.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_no_overall_parity.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_no_overall_parity.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_no_overall_parity.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_no_overall_parity.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== bug_no_overall_parity [bug] lint: fail
+%Warning-UNUSEDSIGNAL: tasks/secded84/candidates/bug_no_overall_parity.sv:6:22: Bits of signal are not used: 'c'[0]
+%Error: Exiting due to 1 warning(s)
+== bug_no_overall_parity [bug] weak: pass
+RESULT: PASS 6 checks
+tasks/secded84/tb_weak.sv:30: $finish called at 4000 (1ps)
+== bug_no_overall_parity [bug] strong_icarus: fail
+{}: fail
+: got 2, expected 1
+[6000] MISMATCH data 0, bits 0 and 4 wrong: got 2, expected 1
+[7000] MISMATCH data 0, bits 0 and 5 wrong: got 2, expected 1
+[8000] MISMATCH data 0, bits 0 and 6 wrong: got 2, expected 1
+[9000] MISMATCH data 0, bits 0 and 7 wrong: got 2, expected 1
+[11000] MISMATCH data 0, bits 1 and 2 wrong: got 2, expected 1
+[12000] MISMATCH data 0, bits 1 and 3 wrong: got 2, expected 1
+[13000] MISMATCH data 0, bits 1 and 4 wrong: got 2, expected 1
+[14000] MISMATCH data 0, bits 1 and 5 wrong: got 2, expected 1
+[15000] MISMATCH data 0, bits 1 and 6 wrong: got 2, expected 1
+[16000] MISMATCH data 0, bits 1 and 7 wrong: got 2, expected 1
+[18000] MISMATCH data 0, bits 2 and 3 wrong: got 2, expected 1
+[19000] MISMATCH data 0, bits 2 and 4 wrong: got 2, expected 1
+[20000] MISMATCH data 0, bits 2 and 5 wrong: got 2, expected 1
+[21000] MISMATCH data 0, bits 2 and 6 wrong: got 2, expected 1
+[22000] MISMATCH data 0, bits 2 and 7 wrong: got 2, expected 1
+[24000] MISMATCH data 0, bits 3 and 4 wrong: got 2, expected 1
+[25000] MISMATCH data 0, bits 3 and 5 wrong: got 2, expected 1
+[26000] MISMATCH data 0, bits 3 and 6 wrong: got 2, expected 1
+[27000] MISMATCH data 0, bits 3 and 7 wrong: got 2, expected 1
+[29000] MISMATCH data 0, bits 4 and 5 wrong: got 2, expected 1
+[30000] MISMATCH data 0, bits 4 and 6 wrong: got 2, expected 1
+... 439 further mismatches not printed
+RESULT: FAIL 464 of 592 checks
+tasks/secded84/tb_strong.sv:35: $finish called at 592000 (1ps)
+== bug_no_overall_parity [bug] strong_verilator: fail
+{}: fail
+0 and 6 wrong: got 2, expected 1
+[9000] MISMATCH data 0, bits 0 and 7 wrong: got 2, expected 1
+[11000] MISMATCH data 0, bits 1 and 2 wrong: got 2, expected 1
+[12000] MISMATCH data 0, bits 1 and 3 wrong: got 2, expected 1
+[13000] MISMATCH data 0, bits 1 and 4 wrong: got 2, expected 1
+[14000] MISMATCH data 0, bits 1 and 5 wrong: got 2, expected 1
+[15000] MISMATCH data 0, bits 1 and 6 wrong: got 2, expected 1
+[16000] MISMATCH data 0, bits 1 and 7 wrong: got 2, expected 1
+[18000] MISMATCH data 0, bits 2 and 3 wrong: got 2, expected 1
+[19000] MISMATCH data 0, bits 2 and 4 wrong: got 2, expected 1
+[20000] MISMATCH data 0, bits 2 and 5 wrong: got 2, expected 1
+[21000] MISMATCH data 0, bits 2 and 6 wrong: got 2, expected 1
+[22000] MISMATCH data 0, bits 2 and 7 wrong: got 2, expected 1
+[24000] MISMATCH data 0, bits 3 and 4 wrong: got 2, expected 1
+[25000] MISMATCH data 0, bits 3 and 5 wrong: got 2, expected 1
+[26000] MISMATCH data 0, bits 3 and 6 wrong: got 2, expected 1
+[27000] MISMATCH data 0, bits 3 and 7 wrong: got 2, expected 1
+[29000] MISMATCH data 0, bits 4 and 5 wrong: got 2, expected 1
+[30000] MISMATCH data 0, bits 4 and 6 wrong: got 2, expected 1
+... 439 further mismatches not printed
+RESULT: FAIL 464 of 592 checks
+- tasks/secded84/tb_strong.sv:30: Verilog $finish
+== bug_no_overall_parity [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_33 at harness.sv:7.15-7.56 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_33 at harness.sv:7.15-7.56 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_no_overall_parity [bug] synth: pass
+cells after ABC mapping to 2-input gates: 24
+== bug_no_overall_parity [bug] timed: n/a
+
+== bug_syndrome_map [bug] compile: pass
+tasks/secded84/candidates/bug_syndrome_map.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_syndrome_map.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_syndrome_map.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_syndrome_map.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_syndrome_map.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/bug_syndrome_map.sv:12: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== bug_syndrome_map [bug] lint: pass
+
+== bug_syndrome_map [bug] weak: pass
+RESULT: PASS 6 checks
+tasks/secded84/tb_weak.sv:30: $finish called at 4000 (1ps)
+== bug_syndrome_map [bug] strong_icarus: fail
+{}: fail
+65000] MISMATCH data 1, bit 4 wrong: got a, expected 6
+[69000] MISMATCH data 1, bit 5 wrong: got a, expected 6
+[102000] MISMATCH data 2, bit 4 wrong: got 6, expected a
+[106000] MISMATCH data 2, bit 5 wrong: got 6, expected a
+[139000] MISMATCH data 3, bit 4 wrong: got 2, expected e
+[143000] MISMATCH data 3, bit 5 wrong: got 2, expected e
+[176000] MISMATCH data 4, bit 4 wrong: got 1e, expected 12
+[180000] MISMATCH data 4, bit 5 wrong: got 1e, expected 12
+[213000] MISMATCH data 5, bit 4 wrong: got 1a, expected 16
+[217000] MISMATCH data 5, bit 5 wrong: got 1a, expected 16
+[250000] MISMATCH data 6, bit 4 wrong: got 16, expected 1a
+[254000] MISMATCH data 6, bit 5 wrong: got 16, expected 1a
+[287000] MISMATCH data 7, bit 4 wrong: got 12, expected 1e
+[291000] MISMATCH data 7, bit 5 wrong: got 12, expected 1e
+[324000] MISMATCH data 8, bit 4 wrong: got 2e, expected 22
+[328000] MISMATCH data 8, bit 5 wrong: got 2e, expected 22
+[361000] MISMATCH data 9, bit 4 wrong: got 2a, expected 26
+[365000] MISMATCH data 9, bit 5 wrong: got 2a, expected 26
+[398000] MISMATCH data a, bit 4 wrong: got 26, expected 2a
+[402000] MISMATCH data a, bit 5 wrong: got 26, expected 2a
+[435000] MISMATCH data b, bit 4 wrong: got 22, expected 2e
+[439000] MISMATCH data b, bit 5 wrong: got 22, expected 2e
+[472000] MISMATCH data c, bit 4 wrong: got 3e, expected 32
+... 7 further mismatches not printed
+RESULT: FAIL 32 of 592 checks
+tasks/secded84/tb_strong.sv:35: $finish called at 592000 (1ps)
+== bug_syndrome_map [bug] strong_verilator: fail
+{}: fail
+00] MISMATCH data 2, bit 5 wrong: got 6, expected a
+[139000] MISMATCH data 3, bit 4 wrong: got 2, expected e
+[143000] MISMATCH data 3, bit 5 wrong: got 2, expected e
+[176000] MISMATCH data 4, bit 4 wrong: got 1e, expected 12
+[180000] MISMATCH data 4, bit 5 wrong: got 1e, expected 12
+[213000] MISMATCH data 5, bit 4 wrong: got 1a, expected 16
+[217000] MISMATCH data 5, bit 5 wrong: got 1a, expected 16
+[250000] MISMATCH data 6, bit 4 wrong: got 16, expected 1a
+[254000] MISMATCH data 6, bit 5 wrong: got 16, expected 1a
+[287000] MISMATCH data 7, bit 4 wrong: got 12, expected 1e
+[291000] MISMATCH data 7, bit 5 wrong: got 12, expected 1e
+[324000] MISMATCH data 8, bit 4 wrong: got 2e, expected 22
+[328000] MISMATCH data 8, bit 5 wrong: got 2e, expected 22
+[361000] MISMATCH data 9, bit 4 wrong: got 2a, expected 26
+[365000] MISMATCH data 9, bit 5 wrong: got 2a, expected 26
+[398000] MISMATCH data a, bit 4 wrong: got 26, expected 2a
+[402000] MISMATCH data a, bit 5 wrong: got 26, expected 2a
+[435000] MISMATCH data b, bit 4 wrong: got 22, expected 2e
+[439000] MISMATCH data b, bit 5 wrong: got 22, expected 2e
+[472000] MISMATCH data c, bit 4 wrong: got 3e, expected 32
+... 7 further mismatches not printed
+RESULT: FAIL 32 of 592 checks
+- tasks/secded84/tb_strong.sv:30: Verilog $finish
+== bug_syndrome_map [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_38 at harness.sv:7.15-7.56 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_7_38 at harness.sv:7.15-7.56 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_syndrome_map [bug] synth: pass
+cells after ABC mapping to 2-input gates: 33
+== bug_syndrome_map [bug] timed: n/a
+
+== correct_nearest_codeword [correct] compile: pass
+tasks/secded84/candidates/correct_nearest_codeword.sv:17: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/correct_nearest_codeword.sv:17: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/correct_nearest_codeword.sv:17: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/correct_nearest_codeword.sv:17: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/secded84/candidates/correct_nearest_codeword.sv:17: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== correct_nearest_codeword [correct] lint: fail
+%Warning-WIDTHEXPAND: tasks/secded84/candidates/correct_nearest_codeword.sv:26:43: Operator ADD expects 32 bits on the RHS, but RHS's SEL generates 1 bits.
+%Error: Exiting due to 1 warning(s)
+== correct_nearest_codeword [correct] weak: pass
+RESULT: PASS 6 checks
+tasks/secded84/tb_weak.sv:30: $finish called at 4000 (1ps)
+== correct_nearest_codeword [correct] strong_icarus: pass
+{}: pass
+== correct_nearest_codeword [correct] strong_verilator: pass
+{}: pass
+== correct_nearest_codeword [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_nearest_codeword [correct] synth: pass
+cells after ABC mapping to 2-input gates: 494
+== correct_nearest_codeword [correct] timed: n/a
+

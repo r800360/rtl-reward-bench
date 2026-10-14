@@ -1,0 +1,11 @@
+{
+  "id": "adder_cla",
+  "title": "Carry-lookahead adder with a logic-depth requirement",
+  "origin": "a carry-lookahead adder exercise",
+  "top": "adder_cla",
+  "kind": "comb",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 4}, {"N": 16}, {"N": 32}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "smtbmc", "depth": 1},
+  "synth": {"params": {"N": 16}, "max_depth": 12}
+}

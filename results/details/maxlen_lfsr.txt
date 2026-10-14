@@ -1,0 +1,487 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 2 checks
+tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 2}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+{'N': 8}: pass
+== golden [correct] strong_verilator: pass
+{'N': 2}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+{'N': 8}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 35
+== golden [correct] timed: n/a
+
+== bug_done_on_load [bug] compile: pass
+
+== bug_done_on_load [bug] lint: pass
+
+== bug_done_on_load [bug] weak: pass
+RESULT: PASS 2 checks
+tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
+== bug_done_on_load [bug] strong_icarus: fail
+{'N': 2}: fail
+[16000] MISMATCH no done after reset: got 1, expected 0
+[26000] MISMATCH no done while loading: got 1, expected 0
+[96000] MISMATCH no done while loading: got 1, expected 0
+[166000] MISMATCH no done while loading: got 1, expected 0
+RESULT: FAIL 4 of 42 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 216000 (1ps)
+
+{'N': 4}: fail
+[16000] MISMATCH no done after reset: got 1, expected 0
+[26000] MISMATCH no done while loading: got 1, expected 0
+[216000] MISMATCH no done while loading: got 1, expected 0
+[406000] MISMATCH no done while loading: got 1, expected 0
+[596000] MISMATCH no done while loading: got 1, expected 0
+[786000] MISMATCH no done while loading: got 1, expected 0
+[976000] MISMATCH no done while loading: got 1, expected 0
+[1166000] MISMATCH no done while loading: got 1, expected 0
+[1356000] MISMATCH no done while loading: got 1, expected 0
+[1546000] MISMATCH no done while loading: got 1, expected 0
+[1736000] MISMATCH no done while loading: got 1, expected 0
+[1926000] MISMATCH no done while loading: got 1, expected 0
+[2116000] MISMATCH no done while loading: got 1, expected 0
+[2306000] MISMATCH no done while loading: got 1, expected 0
+[2496000] MISMATCH no done while loading: got 1, expected 0
+[2686000] MISMATCH no done while loading: got 1, expected 0
+RESULT: FAIL 16 of 570 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 2856000 (1ps)
+
+{'N': 6}: fail
+ted 0
+[1366000] MISMATCH no done while loading: got 1, expected 0
+[2036000] MISMATCH no done while loading: got 1, expected 0
+[2706000] MISMATCH no done while loading: got 1, expected 0
+[3376000] MISMATCH no done while loading: got 1, expected 0
+[4046000] MISMATCH no done while loading: got 1, expected 0
+[4716000] MISMATCH no done while loading: got 1, expected 0
+[5386000] MISMATCH no done while loading: got 1, expected 0
+[6056000] MISMATCH no done while loading: got 1, expected 0
+[6726000] MISMATCH no done while loading: got 1, expected 0
+[7396000] MISMATCH no done while loading: got 1, expected 0
+[8066000] MISMATCH no done while loading: got 1, expected 0
+[8736000] MISMATCH no done while loading: got 1, expected 0
+[9406000] MISMATCH no done while loading: got 1, expected 0
+[10076000] MISMATCH no done while loading: got 1, expected 0
+[10746000] MISMATCH no done while loading: got 1, expected 0
+[11416000] MISMATCH no done while loading: got 1, expected 0
+[12086000] MISMATCH no done while loading: got 1, expected 0
+[12756000] MISMATCH no done while loading: got 1, expected 0
+[13426000] MISMATCH no done while loading: got 1, expected 0
+[14096000] MISMATCH no done while loading: got 1, expected 0
+[14766000] MISMATCH no done while loading: got 1, expected 0
+[15436000] MISMATCH no done while loading: got 1, expected 0
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 8442 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 42216000 (1ps)
+
+{'N': 8}: fail
+MISMATCH no done while loading: got 1, expected 0
+[7796000] MISMATCH no done while loading: got 1, expected 0
+[10386000] MISMATCH no done while loading: got 1, expected 0
+[12976000] MISMATCH no done while loading: got 1, expected 0
+[15566000] MISMATCH no done while loading: got 1, expected 0
+[18156000] MISMATCH no done while loading: got 1, expected 0
+[20746000] MISMATCH no done while loading: got 1, expected 0
+[23336000] MISMATCH no done while loading: got 1, expected 0
+[25926000] MISMATCH no done while loading: got 1, expected 0
+[28516000] MISMATCH no done while loading: got 1, expected 0
+[31106000] MISMATCH no done while loading: got 1, expected 0
+[33696000] MISMATCH no done while loading: got 1, expected 0
+[36286000] MISMATCH no done while loading: got 1, expected 0
+[38876000] MISMATCH no done while loading: got 1, expected 0
+[41466000] MISMATCH no done while loading: got 1, expected 0
+[44056000] MISMATCH no done while loading: got 1, expected 0
+[46646000] MISMATCH no done while loading: got 1, expected 0
+[49236000] MISMATCH no done while loading: got 1, expected 0
+[51826000] MISMATCH no done while loading: got 1, expected 0
+[54416000] MISMATCH no done while loading: got 1, expected 0
+[57006000] MISMATCH no done while loading: got 1, expected 0
+[59596000] MISMATCH no done while loading: got 1, expected 0
+... 231 further mismatches not printed
+RESULT: FAIL 256 of 132090 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 660456000 (1ps)
+== bug_done_on_load [bug] strong_verilator: fail
+{'N': 2}: fail
+[16000] MISMATCH no done after reset: got 1, expected 0
+[26000] MISMATCH no done while loading: got 1, expected 0
+[96000] MISMATCH no done while loading: got 1, expected 0
+[166000] MISMATCH no done while loading: got 1, expected 0
+RESULT: FAIL 4 of 42 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+
+{'N': 4}: fail
+[16000] MISMATCH no done after reset: got 1, expected 0
+[26000] MISMATCH no done while loading: got 1, expected 0
+[216000] MISMATCH no done while loading: got 1, expected 0
+[406000] MISMATCH no done while loading: got 1, expected 0
+[596000] MISMATCH no done while loading: got 1, expected 0
+[786000] MISMATCH no done while loading: got 1, expected 0
+[976000] MISMATCH no done while loading: got 1, expected 0
+[1166000] MISMATCH no done while loading: got 1, expected 0
+[1356000] MISMATCH no done while loading: got 1, expected 0
+[1546000] MISMATCH no done while loading: got 1, expected 0
+[1736000] MISMATCH no done while loading: got 1, expected 0
+[1926000] MISMATCH no done while loading: got 1, expected 0
+[2116000] MISMATCH no done while loading: got 1, expected 0
+[2306000] MISMATCH no done while loading: got 1, expected 0
+[2496000] MISMATCH no done while loading: got 1, expected 0
+[2686000] MISMATCH no done while loading: got 1, expected 0
+RESULT: FAIL 16 of 570 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+
+{'N': 6}: fail
+ot 1, expected 0
+[3376000] MISMATCH no done while loading: got 1, expected 0
+[4046000] MISMATCH no done while loading: got 1, expected 0
+[4716000] MISMATCH no done while loading: got 1, expected 0
+[5386000] MISMATCH no done while loading: got 1, expected 0
+[6056000] MISMATCH no done while loading: got 1, expected 0
+[6726000] MISMATCH no done while loading: got 1, expected 0
+[7396000] MISMATCH no done while loading: got 1, expected 0
+[8066000] MISMATCH no done while loading: got 1, expected 0
+[8736000] MISMATCH no done while loading: got 1, expected 0
+[9406000] MISMATCH no done while loading: got 1, expected 0
+[10076000] MISMATCH no done while loading: got 1, expected 0
+[10746000] MISMATCH no done while loading: got 1, expected 0
+[11416000] MISMATCH no done while loading: got 1, expected 0
+[12086000] MISMATCH no done while loading: got 1, expected 0
+[12756000] MISMATCH no done while loading: got 1, expected 0
+[13426000] MISMATCH no done while loading: got 1, expected 0
+[14096000] MISMATCH no done while loading: got 1, expected 0
+[14766000] MISMATCH no done while loading: got 1, expected 0
+[15436000] MISMATCH no done while loading: got 1, expected 0
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 8442 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+
+{'N': 8}: fail
+0
+[12976000] MISMATCH no done while loading: got 1, expected 0
+[15566000] MISMATCH no done while loading: got 1, expected 0
+[18156000] MISMATCH no done while loading: got 1, expected 0
+[20746000] MISMATCH no done while loading: got 1, expected 0
+[23336000] MISMATCH no done while loading: got 1, expected 0
+[25926000] MISMATCH no done while loading: got 1, expected 0
+[28516000] MISMATCH no done while loading: got 1, expected 0
+[31106000] MISMATCH no done while loading: got 1, expected 0
+[33696000] MISMATCH no done while loading: got 1, expected 0
+[36286000] MISMATCH no done while loading: got 1, expected 0
+[38876000] MISMATCH no done while loading: got 1, expected 0
+[41466000] MISMATCH no done while loading: got 1, expected 0
+[44056000] MISMATCH no done while loading: got 1, expected 0
+[46646000] MISMATCH no done while loading: got 1, expected 0
+[49236000] MISMATCH no done while loading: got 1, expected 0
+[51826000] MISMATCH no done while loading: got 1, expected 0
+[54416000] MISMATCH no done while loading: got 1, expected 0
+[57006000] MISMATCH no done while loading: got 1, expected 0
+[59596000] MISMATCH no done while loading: got 1, expected 0
+... 231 further mismatches not printed
+RESULT: FAIL 256 of 132090 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+== bug_done_on_load [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_done_on_load [bug] synth: pass
+cells after ABC mapping to 2-input gates: 17
+== bug_done_on_load [bug] timed: n/a
+
+== bug_reset_ones [bug] compile: pass
+
+== bug_reset_ones [bug] lint: pass
+
+== bug_reset_ones [bug] weak: pass
+RESULT: PASS 2 checks
+tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
+== bug_reset_ones [bug] strong_icarus: fail
+{'N': 2}: fail
+[16000] MISMATCH reset gives 0: got 3, expected 0
+[86000] MISMATCH reset gives 0: got 3, expected 0
+[156000] MISMATCH reset gives 0: got 3, expected 0
+RESULT: FAIL 3 of 42 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 216000 (1ps)
+
+{'N': 4}: fail
+[16000] MISMATCH reset gives 0: got f, expected 0
+[206000] MISMATCH reset gives 0: got f, expected 0
+[396000] MISMATCH reset gives 0: got f, expected 0
+[586000] MISMATCH reset gives 0: got f, expected 0
+[776000] MISMATCH reset gives 0: got f, expected 0
+[966000] MISMATCH reset gives 0: got f, expected 0
+[1156000] MISMATCH reset gives 0: got f, expected 0
+[1346000] MISMATCH reset gives 0: got f, expected 0
+[1536000] MISMATCH reset gives 0: got f, expected 0
+[1726000] MISMATCH reset gives 0: got f, expected 0
+[1916000] MISMATCH reset gives 0: got f, expected 0
+[2106000] MISMATCH reset gives 0: got f, expected 0
+[2296000] MISMATCH reset gives 0: got f, expected 0
+[2486000] MISMATCH reset gives 0: got f, expected 0
+[2676000] MISMATCH reset gives 0: got f, expected 0
+RESULT: FAIL 15 of 570 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 2856000 (1ps)
+
+{'N': 6}: fail
+[16000] MISMATCH reset gives 0: got 3f, expected 0
+[686000] MISMATCH reset gives 0: got 3f, expected 0
+[1356000] MISMATCH reset gives 0: got 3f, expected 0
+[2026000] MISMATCH reset gives 0: got 3f, expected 0
+[2696000] MISMATCH reset gives 0: got 3f, expected 0
+[3366000] MISMATCH reset gives 0: got 3f, expected 0
+[4036000] MISMATCH reset gives 0: got 3f, expected 0
+[4706000] MISMATCH reset gives 0: got 3f, expected 0
+[5376000] MISMATCH reset gives 0: got 3f, expected 0
+[6046000] MISMATCH reset gives 0: got 3f, expected 0
+[6716000] MISMATCH reset gives 0: got 3f, expected 0
+[7386000] MISMATCH reset gives 0: got 3f, expected 0
+[8056000] MISMATCH reset gives 0: got 3f, expected 0
+[8726000] MISMATCH reset gives 0: got 3f, expected 0
+[9396000] MISMATCH reset gives 0: got 3f, expected 0
+[10066000] MISMATCH reset gives 0: got 3f, expected 0
+[10736000] MISMATCH reset gives 0: got 3f, expected 0
+[11406000] MISMATCH reset gives 0: got 3f, expected 0
+[12076000] MISMATCH reset gives 0: got 3f, expected 0
+[12746000] MISMATCH reset gives 0: got 3f, expected 0
+[13416000] MISMATCH reset gives 0: got 3f, expected 0
+[14086000] MISMATCH reset gives 0: got 3f, expected 0
+[14756000] MISMATCH reset gives 0: got 3f, expected 0
+[15426000] MISMATCH reset gives 0: got 3f, expected 0
+[16096000] MISMATCH reset gives 0: got 3f, expected 0
+... 38 further mismatches not printed
+RESULT: FAIL 63 of 8442 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 42216000 (1ps)
+
+{'N': 8}: fail
+CH reset gives 0: got ff, expected 0
+[2606000] MISMATCH reset gives 0: got ff, expected 0
+[5196000] MISMATCH reset gives 0: got ff, expected 0
+[7786000] MISMATCH reset gives 0: got ff, expected 0
+[10376000] MISMATCH reset gives 0: got ff, expected 0
+[12966000] MISMATCH reset gives 0: got ff, expected 0
+[15556000] MISMATCH reset gives 0: got ff, expected 0
+[18146000] MISMATCH reset gives 0: got ff, expected 0
+[20736000] MISMATCH reset gives 0: got ff, expected 0
+[23326000] MISMATCH reset gives 0: got ff, expected 0
+[25916000] MISMATCH reset gives 0: got ff, expected 0
+[28506000] MISMATCH reset gives 0: got ff, expected 0
+[31096000] MISMATCH reset gives 0: got ff, expected 0
+[33686000] MISMATCH reset gives 0: got ff, expected 0
+[36276000] MISMATCH reset gives 0: got ff, expected 0
+[38866000] MISMATCH reset gives 0: got ff, expected 0
+[41456000] MISMATCH reset gives 0: got ff, expected 0
+[44046000] MISMATCH reset gives 0: got ff, expected 0
+[46636000] MISMATCH reset gives 0: got ff, expected 0
+[49226000] MISMATCH reset gives 0: got ff, expected 0
+[51816000] MISMATCH reset gives 0: got ff, expected 0
+[54406000] MISMATCH reset gives 0: got ff, expected 0
+[56996000] MISMATCH reset gives 0: got ff, expected 0
+[59586000] MISMATCH reset gives 0: got ff, expected 0
+[62176000] MISMATCH reset gives 0: got ff, expected 0
+... 230 further mismatches not printed
+RESULT: FAIL 255 of 132090 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 660456000 (1ps)
+== bug_reset_ones [bug] strong_verilator: fail
+{'N': 2}: fail
+[16000] MISMATCH reset gives 0: got 3, expected 0
+[86000] MISMATCH reset gives 0: got 3, expected 0
+[156000] MISMATCH reset gives 0: got 3, expected 0
+RESULT: FAIL 3 of 42 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+
+{'N': 4}: fail
+[16000] MISMATCH reset gives 0: got f, expected 0
+[206000] MISMATCH reset gives 0: got f, expected 0
+[396000] MISMATCH reset gives 0: got f, expected 0
+[586000] MISMATCH reset gives 0: got f, expected 0
+[776000] MISMATCH reset gives 0: got f, expected 0
+[966000] MISMATCH reset gives 0: got f, expected 0
+[1156000] MISMATCH reset gives 0: got f, expected 0
+[1346000] MISMATCH reset gives 0: got f, expected 0
+[1536000] MISMATCH reset gives 0: got f, expected 0
+[1726000] MISMATCH reset gives 0: got f, expected 0
+[1916000] MISMATCH reset gives 0: got f, expected 0
+[2106000] MISMATCH reset gives 0: got f, expected 0
+[2296000] MISMATCH reset gives 0: got f, expected 0
+[2486000] MISMATCH reset gives 0: got f, expected 0
+[2676000] MISMATCH reset gives 0: got f, expected 0
+RESULT: FAIL 15 of 570 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+
+{'N': 6}: fail
+MISMATCH reset gives 0: got 3f, expected 0
+[2696000] MISMATCH reset gives 0: got 3f, expected 0
+[3366000] MISMATCH reset gives 0: got 3f, expected 0
+[4036000] MISMATCH reset gives 0: got 3f, expected 0
+[4706000] MISMATCH reset gives 0: got 3f, expected 0
+[5376000] MISMATCH reset gives 0: got 3f, expected 0
+[6046000] MISMATCH reset gives 0: got 3f, expected 0
+[6716000] MISMATCH reset gives 0: got 3f, expected 0
+[7386000] MISMATCH reset gives 0: got 3f, expected 0
+[8056000] MISMATCH reset gives 0: got 3f, expected 0
+[8726000] MISMATCH reset gives 0: got 3f, expected 0
+[9396000] MISMATCH reset gives 0: got 3f, expected 0
+[10066000] MISMATCH reset gives 0: got 3f, expected 0
+[10736000] MISMATCH reset gives 0: got 3f, expected 0
+[11406000] MISMATCH reset gives 0: got 3f, expected 0
+[12076000] MISMATCH reset gives 0: got 3f, expected 0
+[12746000] MISMATCH reset gives 0: got 3f, expected 0
+[13416000] MISMATCH reset gives 0: got 3f, expected 0
+[14086000] MISMATCH reset gives 0: got 3f, expected 0
+[14756000] MISMATCH reset gives 0: got 3f, expected 0
+[15426000] MISMATCH reset gives 0: got 3f, expected 0
+[16096000] MISMATCH reset gives 0: got 3f, expected 0
+... 38 further mismatches not printed
+RESULT: FAIL 63 of 8442 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+
+{'N': 8}: fail
+ives 0: got ff, expected 0
+[10376000] MISMATCH reset gives 0: got ff, expected 0
+[12966000] MISMATCH reset gives 0: got ff, expected 0
+[15556000] MISMATCH reset gives 0: got ff, expected 0
+[18146000] MISMATCH reset gives 0: got ff, expected 0
+[20736000] MISMATCH reset gives 0: got ff, expected 0
+[23326000] MISMATCH reset gives 0: got ff, expected 0
+[25916000] MISMATCH reset gives 0: got ff, expected 0
+[28506000] MISMATCH reset gives 0: got ff, expected 0
+[31096000] MISMATCH reset gives 0: got ff, expected 0
+[33686000] MISMATCH reset gives 0: got ff, expected 0
+[36276000] MISMATCH reset gives 0: got ff, expected 0
+[38866000] MISMATCH reset gives 0: got ff, expected 0
+[41456000] MISMATCH reset gives 0: got ff, expected 0
+[44046000] MISMATCH reset gives 0: got ff, expected 0
+[46636000] MISMATCH reset gives 0: got ff, expected 0
+[49226000] MISMATCH reset gives 0: got ff, expected 0
+[51816000] MISMATCH reset gives 0: got ff, expected 0
+[54406000] MISMATCH reset gives 0: got ff, expected 0
+[56996000] MISMATCH reset gives 0: got ff, expected 0
+[59586000] MISMATCH reset gives 0: got ff, expected 0
+[62176000] MISMATCH reset gives 0: got ff, expected 0
+... 230 further mismatches not printed
+RESULT: FAIL 255 of 132090 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+== bug_reset_ones [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_reset_ones [bug] synth: pass
+cells after ABC mapping to 2-input gates: 35
+== bug_reset_ones [bug] timed: n/a
+
+== bug_taps_n8 [bug] compile: pass
+
+== bug_taps_n8 [bug] lint: pass
+
+== bug_taps_n8 [bug] weak: pass
+RESULT: PASS 2 checks
+tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
+== bug_taps_n8 [bug] strong_icarus: fail
+{'N': 2}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+{'N': 8}: fail
+ step 5: got 22, expected 23
+[86000] MISMATCH seed 1 step 6: got 44, expected 47
+[96000] MISMATCH seed 1 step 7: got 88, expected 8e
+[106000] MISMATCH seed 1 step 8: got 10, expected 1c
+[116000] MISMATCH seed 1 step 9: got 20, expected 38
+[126000] MISMATCH seed 1 step 10: got 40, expected 71
+[136000] MISMATCH seed 1 step 11: got 80, expected e2
+[146000] MISMATCH seed 1 step 12: got 1, expected c4
+[146000] MISMATCH done at step 12 of seed 1: got 1, expected 0
+[156000] MISMATCH seed 1 step 13: got 2, expected 89
+[166000] MISMATCH seed 1 step 14: got 4, expected 12
+[176000] MISMATCH seed 1 step 15: got 8, expected 25
+[186000] MISMATCH seed 1 step 16: got 11, expected 4b
+[196000] MISMATCH seed 1 step 17: got 22, expected 97
+[206000] MISMATCH seed 1 step 18: got 44, expected 2e
+[216000] MISMATCH seed 1 step 19: got 88, expected 5c
+[226000] MISMATCH seed 1 step 20: got 10, expected b8
+[236000] MISMATCH seed 1 step 21: got 20, expected 70
+[246000] MISMATCH seed 1 step 22: got 40, expected e0
+[256000] MISMATCH seed 1 step 23: got 80, expected c0
+[266000] MISMATCH seed 1 step 24: got 1, expected 81
+[266000] MISMATCH done at step 24 of seed 1: got 1, expected 0
+[276000] MISMATCH seed 1 step 25: got 2, expected 3
+[286000] MISMATCH seed 1 step 26: got 4, expected 6
+[296000] MISMATCH seed 1 step 27: got 8, expected c
+... 71141 further mismatches not printed
+RESULT: FAIL 71166 of 132090 checks
+tasks/maxlen_lfsr/tb_strong.sv:39: $finish called at 660456000 (1ps)
+== bug_taps_n8 [bug] strong_verilator: fail
+{'N': 2}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+{'N': 8}: fail
+ 10, expected 1c
+[116000] MISMATCH seed 1 step 9: got 20, expected 38
+[126000] MISMATCH seed 1 step 10: got 40, expected 71
+[136000] MISMATCH seed 1 step 11: got 80, expected e2
+[146000] MISMATCH seed 1 step 12: got 1, expected c4
+[146000] MISMATCH done at step 12 of seed 1: got 1, expected 0
+[156000] MISMATCH seed 1 step 13: got 2, expected 89
+[166000] MISMATCH seed 1 step 14: got 4, expected 12
+[176000] MISMATCH seed 1 step 15: got 8, expected 25
+[186000] MISMATCH seed 1 step 16: got 11, expected 4b
+[196000] MISMATCH seed 1 step 17: got 22, expected 97
+[206000] MISMATCH seed 1 step 18: got 44, expected 2e
+[216000] MISMATCH seed 1 step 19: got 88, expected 5c
+[226000] MISMATCH seed 1 step 20: got 10, expected b8
+[236000] MISMATCH seed 1 step 21: got 20, expected 70
+[246000] MISMATCH seed 1 step 22: got 40, expected e0
+[256000] MISMATCH seed 1 step 23: got 80, expected c0
+[266000] MISMATCH seed 1 step 24: got 1, expected 81
+[266000] MISMATCH done at step 24 of seed 1: got 1, expected 0
+[276000] MISMATCH seed 1 step 25: got 2, expected 3
+[286000] MISMATCH seed 1 step 26: got 4, expected 6
+[296000] MISMATCH seed 1 step 27: got 8, expected c
+... 71141 further mismatches not printed
+RESULT: FAIL 71166 of 132090 checks
+- tasks/maxlen_lfsr/tb_strong.sv:34: Verilog $finish
+== bug_taps_n8 [bug] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== bug_taps_n8 [bug] synth: pass
+cells after ABC mapping to 2-input gates: 35
+== bug_taps_n8 [bug] timed: n/a
+
+== correct_counter_done [correct] compile: pass
+
+== correct_counter_done [correct] lint: pass
+
+== correct_counter_done [correct] weak: pass
+RESULT: PASS 2 checks
+tasks/maxlen_lfsr/tb_weak.sv:28: $finish called at 206000 (1ps)
+== correct_counter_done [correct] strong_icarus: pass
+{'N': 2}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+{'N': 8}: pass
+== correct_counter_done [correct] strong_verilator: pass
+{'N': 2}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+{'N': 8}: pass
+== correct_counter_done [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== correct_counter_done [correct] synth: pass
+cells after ABC mapping to 2-input gates: 33
+== correct_counter_done [correct] timed: n/a
+

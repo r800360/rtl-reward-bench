@@ -1,0 +1,305 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/bitrev_pipe/tb_weak.sv:23: $finish called at 76000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 7}: pass
+== golden [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 7}: pass
+== golden [correct] formal: n/a
+
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 16
+== golden [correct] timed: n/a
+
+== bug_invert_only_if_reversed [bug] compile: pass
+
+== bug_invert_only_if_reversed [bug] lint: pass
+
+== bug_invert_only_if_reversed [bug] weak: fail
+[56000] MISMATCH reverse 0 invert 1: got e, expected 1
+RESULT: FAIL 1 of 4 checks
+tasks/bitrev_pipe/tb_weak.sv:23: $finish called at 76000 (1ps)
+== bug_invert_only_if_reversed [bug] strong_icarus: fail
+{'N': 4}: fail
+[56000] MISMATCH word 2: got 5, expected a
+[76000] MISMATCH word 3: got d, expected 2
+[96000] MISMATCH word 4: got d, expected 2
+[236000] MISMATCH word 11: got 0, expected f
+[296000] MISMATCH word 14: got 2, expected d
+[416000] MISMATCH word 20: got c, expected 3
+[496000] MISMATCH word 24: got 2, expected d
+[516000] MISMATCH word 25: got f, expected 0
+[536000] MISMATCH word 26: got f, expected 0
+[736000] MISMATCH word 36: got a, expected 5
+[776000] MISMATCH word 38: got f, expected 0
+[896000] MISMATCH word 44: got c, expected 3
+[1036000] MISMATCH word 51: got a, expected 5
+[1056000] MISMATCH word 52: got 6, expected 9
+[1156000] MISMATCH word 57: got 6, expected 9
+[1176000] MISMATCH word 58: got 6, expected 9
+[1216000] MISMATCH word 60: got 5, expected a
+[1256000] MISMATCH word 62: got 6, expected 9
+[1316000] MISMATCH word 65: got 9, expected 6
+[1456000] MISMATCH word 72: got e, expected 1
+[1476000] MISMATCH word 73: got a, expected 5
+[1496000] MISMATCH word 74: got e, expected 1
+[1516000] MISMATCH word 75: got 8, expected 7
+[1556000] MISMATCH word 77: got a, expected 5
+[1576000] MISMATCH word 78: got 2, expected d
+... 80 further mismatches not printed
+RESULT: FAIL 105 of 400 checks
+tasks/bitrev_pipe/tb_strong.sv:28: $finish called at 7996000 (1ps)
+
+{'N': 7}: fail
+[56000] MISMATCH word 2: got 65, expected 1a
+[76000] MISMATCH word 3: got d, expected 72
+[96000] MISMATCH word 4: got 6d, expected 12
+[236000] MISMATCH word 11: got 20, expected 5f
+[296000] MISMATCH word 14: got 2, expected 7d
+[416000] MISMATCH word 20: got 3c, expected 43
+[496000] MISMATCH word 24: got 62, expected 1d
+[516000] MISMATCH word 25: got f, expected 70
+[536000] MISMATCH word 26: got 1f, expected 60
+[736000] MISMATCH word 36: got 7a, expected 5
+[776000] MISMATCH word 38: got 5f, expected 20
+[896000] MISMATCH word 44: got 5c, expected 23
+[1036000] MISMATCH word 51: got 4a, expected 35
+[1056000] MISMATCH word 52: got 46, expected 39
+[1156000] MISMATCH word 57: got 6, expected 79
+[1176000] MISMATCH word 58: got 66, expected 19
+[1216000] MISMATCH word 60: got 55, expected 2a
+[1256000] MISMATCH word 62: got 26, expected 59
+[1316000] MISMATCH word 65: got 79, expected 6
+[1456000] MISMATCH word 72: got e, expected 71
+[1476000] MISMATCH word 73: got 2a, expected 55
+[1496000] MISMATCH word 74: got 1e, expected 61
+[1516000] MISMATCH word 75: got 48, expected 37
+[1556000] MISMATCH word 77: got 3a, expected 45
+[1576000] MISMATCH word 78: got 12, expected 6d
+... 80 further mismatches not printed
+RESULT: FAIL 105 of 400 checks
+tasks/bitrev_pipe/tb_strong.sv:28: $finish called at 7996000 (1ps)
+== bug_invert_only_if_reversed [bug] strong_verilator: fail
+{'N': 4}: fail
+[56000] MISMATCH word 2: got 6, expected 9
+[136000] MISMATCH word 6: got d, expected 2
+[216000] MISMATCH word 10: got 3, expected c
+[236000] MISMATCH word 11: got 2, expected d
+[256000] MISMATCH word 12: got 3, expected c
+[376000] MISMATCH word 18: got f, expected 0
+[636000] MISMATCH word 31: got 7, expected 8
+[1056000] MISMATCH word 52: got 4, expected b
+[1076000] MISMATCH word 53: got b, expected 4
+[1116000] MISMATCH word 55: got 0, expected f
+[1236000] MISMATCH word 61: got d, expected 2
+[1456000] MISMATCH word 72: got c, expected 3
+[1596000] MISMATCH word 79: got 1, expected e
+[1636000] MISMATCH word 81: got 6, expected 9
+[1696000] MISMATCH word 84: got 6, expected 9
+[1816000] MISMATCH word 90: got e, expected 1
+[1856000] MISMATCH word 92: got 9, expected 6
+[1896000] MISMATCH word 94: got d, expected 2
+[1956000] MISMATCH word 97: got 8, expected 7
+[2036000] MISMATCH word 101: got c, expected 3
+[2156000] MISMATCH word 107: got 9, expected 6
+[2176000] MISMATCH word 108: got a, expected 5
+[2216000] MISMATCH word 110: got 0, expected f
+[2336000] MISMATCH word 116: got 4, expected b
+[2436000] MISMATCH word 121: got 4, expected b
+... 73 further mismatches not printed
+RESULT: FAIL 98 of 400 checks
+- tasks/bitrev_pipe/tb_strong.sv:23: Verilog $finish
+
+{'N': 7}: fail
+word 2: got 36, expected 49
+[136000] MISMATCH word 6: got 7d, expected 2
+[216000] MISMATCH word 10: got 63, expected 1c
+[236000] MISMATCH word 11: got 22, expected 5d
+[256000] MISMATCH word 12: got 63, expected 1c
+[376000] MISMATCH word 18: got 1f, expected 60
+[636000] MISMATCH word 31: got 77, expected 8
+[1056000] MISMATCH word 52: got 54, expected 2b
+[1076000] MISMATCH word 53: got 1b, expected 64
+[1116000] MISMATCH word 55: got 70, expected f
+[1236000] MISMATCH word 61: got 3d, expected 42
+[1456000] MISMATCH word 72: got 2c, expected 53
+[1596000] MISMATCH word 79: got 71, expected e
+[1636000] MISMATCH word 81: got 6, expected 79
+[1696000] MISMATCH word 84: got 56, expected 29
+[1816000] MISMATCH word 90: got e, expected 71
+[1856000] MISMATCH word 92: got 9, expected 76
+[1896000] MISMATCH word 94: got 6d, expected 12
+[1956000] MISMATCH word 97: got 38, expected 47
+[2036000] MISMATCH word 101: got c, expected 73
+[2156000] MISMATCH word 107: got 29, expected 56
+[2176000] MISMATCH word 108: got 1a, expected 65
+[2216000] MISMATCH word 110: got 0, expected 7f
+[2336000] MISMATCH word 116: got 4, expected 7b
+[2436000] MISMATCH word 121: got 34, expected 4b
+... 73 further mismatches not printed
+RESULT: FAIL 98 of 400 checks
+- tasks/bitrev_pipe/tb_strong.sv:23: Verilog $finish
+== bug_invert_only_if_reversed [bug] formal: n/a
+
+== bug_invert_only_if_reversed [bug] synth: pass
+cells after ABC mapping to 2-input gates: 16
+== bug_invert_only_if_reversed [bug] timed: n/a
+
+== bug_rising_capture [bug] compile: pass
+
+== bug_rising_capture [bug] lint: pass
+
+== bug_rising_capture [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/bitrev_pipe/tb_weak.sv:23: $finish called at 76000 (1ps)
+== bug_rising_capture [bug] strong_icarus: fail
+{'N': 4}: fail
+[16000] MISMATCH word 0: got f, expected d
+[36000] MISMATCH word 1: got 2, expected 3
+[56000] MISMATCH word 2: got 3, expected a
+[76000] MISMATCH word 3: got 5, expected 2
+[96000] MISMATCH word 4: got d, expected 2
+[116000] MISMATCH word 5: got 4, expected 6
+[136000] MISMATCH word 6: got 9, expected a
+[156000] MISMATCH word 7: got a, expected f
+[176000] MISMATCH word 8: got 0, expected 1
+[196000] MISMATCH word 9: got 1, expected 4
+[216000] MISMATCH word 10: got 2, expected 3
+[236000] MISMATCH word 11: got 3, expected f
+[256000] MISMATCH word 12: got 0, expected 9
+[276000] MISMATCH word 13: got 6, expected 3
+[296000] MISMATCH word 14: got 3, expected d
+[316000] MISMATCH word 15: got b, expected f
+[336000] MISMATCH word 16: got 0, expected a
+[356000] MISMATCH word 17: got a, expected 5
+[376000] MISMATCH word 18: got 5, expected e
+[396000] MISMATCH word 19: got 7, expected 6
+[416000] MISMATCH word 20: got 6, expected 3
+[436000] MISMATCH word 21: got 3, expected 7
+[456000] MISMATCH word 22: got e, expected b
+[476000] MISMATCH word 23: got d, expected 5
+[496000] MISMATCH word 24: got 5, expected d
+... 356 further mismatches not printed
+RESULT: FAIL 381 of 400 checks
+tasks/bitrev_pipe/tb_strong.sv:28: $finish called at 7996000 (1ps)
+
+{'N': 7}: fail
+[16000] MISMATCH word 0: got 7f, expected 6d
+[36000] MISMATCH word 1: got 12, expected 1c
+[56000] MISMATCH word 2: got 63, expected 1a
+[76000] MISMATCH word 3: got 65, expected 72
+[96000] MISMATCH word 4: got d, expected 12
+[116000] MISMATCH word 5: got 24, expected 31
+[136000] MISMATCH word 6: got 4e, expected 53
+[156000] MISMATCH word 7: got 1a, expected f
+[176000] MISMATCH word 8: got 7, expected b
+[196000] MISMATCH word 9: got b, expected 21
+[216000] MISMATCH word 10: got 42, expected 63
+[236000] MISMATCH word 11: got 63, expected 5f
+[256000] MISMATCH word 12: got 2, expected 4b
+[276000] MISMATCH word 13: got 34, expected 1a
+[296000] MISMATCH word 14: got 53, expected 7d
+[316000] MISMATCH word 15: got 5f, expected 79
+[336000] MISMATCH word 16: got 30, expected 4a
+[356000] MISMATCH word 17: got 56, expected 28
+[376000] MISMATCH word 18: got 28, expected 70
+[396000] MISMATCH word 19: got 7, expected 36
+[416000] MISMATCH word 20: got 36, expected 43
+[436000] MISMATCH word 21: got 1e, expected 38
+[456000] MISMATCH word 22: got e, expected 3b
+[476000] MISMATCH word 23: got 6e, expected 2b
+[496000] MISMATCH word 24: got 15, expected 1d
+... 371 further mismatches not printed
+RESULT: FAIL 396 of 400 checks
+tasks/bitrev_pipe/tb_strong.sv:28: $finish called at 7996000 (1ps)
+== bug_rising_capture [bug] strong_verilator: fail
+{'N': 4}: fail
+[16000] MISMATCH word 0: got 0, expected 4
+[36000] MISMATCH word 1: got b, expected 4
+[56000] MISMATCH word 2: got 4, expected 9
+[76000] MISMATCH word 3: got 6, expected 3
+[96000] MISMATCH word 4: got c, expected 5
+[116000] MISMATCH word 5: got a, expected 5
+[136000] MISMATCH word 6: got 5, expected 2
+[156000] MISMATCH word 7: got 2, expected 8
+[176000] MISMATCH word 8: got 7, expected e
+[196000] MISMATCH word 9: got 1, expected e
+[216000] MISMATCH word 10: got e, expected c
+[236000] MISMATCH word 11: got 3, expected d
+[256000] MISMATCH word 12: got 2, expected c
+[276000] MISMATCH word 13: got c, expected 8
+[296000] MISMATCH word 14: got 8, expected 7
+[316000] MISMATCH word 15: got 7, expected e
+[336000] MISMATCH word 16: got 7, expected 4
+[356000] MISMATCH word 17: got 2, expected 0
+[376000] MISMATCH word 18: got f, expected 0
+[396000] MISMATCH word 19: got 0, expected c
+[416000] MISMATCH word 20: got c, expected 3
+[436000] MISMATCH word 21: got c, expected a
+[456000] MISMATCH word 22: got 5, expected d
+[476000] MISMATCH word 23: got d, expected b
+[496000] MISMATCH word 24: got 2, expected a
+... 349 further mismatches not printed
+RESULT: FAIL 374 of 400 checks
+- tasks/bitrev_pipe/tb_strong.sv:23: Verilog $finish
+
+{'N': 7}: fail
+[16000] MISMATCH word 0: got 0, expected 44
+[36000] MISMATCH word 1: got 3b, expected 64
+[56000] MISMATCH word 2: got 64, expected 49
+[76000] MISMATCH word 3: got 36, expected 1a
+[96000] MISMATCH word 4: got 2c, expected 45
+[116000] MISMATCH word 5: got 3a, expected 35
+[136000] MISMATCH word 6: got 35, expected 2
+[156000] MISMATCH word 7: got 2, expected 58
+[176000] MISMATCH word 8: got 27, expected 1e
+[196000] MISMATCH word 9: got 61, expected 6e
+[216000] MISMATCH word 10: got 6e, expected 1c
+[236000] MISMATCH word 11: got 63, expected 5d
+[256000] MISMATCH word 12: got 22, expected 1c
+[276000] MISMATCH word 13: got 63, expected 46
+[296000] MISMATCH word 14: got 46, expected 3c
+[316000] MISMATCH word 15: got 3c, expected 75
+[336000] MISMATCH word 16: got 57, expected 14
+[356000] MISMATCH word 17: got 14, expected 3
+[376000] MISMATCH word 18: got 1f, expected 60
+[396000] MISMATCH word 19: got 3, expected 66
+[416000] MISMATCH word 20: got 66, expected 18
+[436000] MISMATCH word 21: got 67, expected 56
+[456000] MISMATCH word 22: got 29, expected 6d
+[476000] MISMATCH word 23: got 6d, expected 5b
+[496000] MISMATCH word 24: got 12, expected 6a
+... 371 further mismatches not printed
+RESULT: FAIL 396 of 400 checks
+- tasks/bitrev_pipe/tb_strong.sv:23: Verilog $finish
+== bug_rising_capture [bug] formal: n/a
+
+== bug_rising_capture [bug] synth: pass
+cells after ABC mapping to 2-input gates: 16
+== bug_rising_capture [bug] timed: n/a
+
+== correct_bit_loop [correct] compile: pass
+
+== correct_bit_loop [correct] lint: pass
+
+== correct_bit_loop [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/bitrev_pipe/tb_weak.sv:23: $finish called at 76000 (1ps)
+== correct_bit_loop [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 7}: pass
+== correct_bit_loop [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 7}: pass
+== correct_bit_loop [correct] formal: n/a
+
+== correct_bit_loop [correct] synth: pass
+cells after ABC mapping to 2-input gates: 16
+== correct_bit_loop [correct] timed: n/a
+

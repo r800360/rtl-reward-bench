@@ -1,0 +1,553 @@
+task,candidate,label,class,grader,verdict
+acs_unit,bug_ignores_validity,bug,missing qualification,compile,pass
+acs_unit,bug_ignores_validity,bug,missing qualification,lint,pass
+acs_unit,bug_ignores_validity,bug,missing qualification,weak,pass
+acs_unit,bug_ignores_validity,bug,missing qualification,strong_icarus,fail
+acs_unit,bug_ignores_validity,bug,missing qualification,strong_verilator,fail
+acs_unit,bug_ignores_validity,bug,missing qualification,formal,fail
+acs_unit,bug_ignores_validity,bug,missing qualification,synth,pass
+acs_unit,bug_ignores_validity,bug,missing qualification,timed,n/a
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,compile,pass
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,lint,pass
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,weak,pass
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,strong_icarus,fail
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,strong_verilator,fail
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,formal,fail
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,synth,pass
+acs_unit,bug_ties_to_path1,bug,tie-breaking rule,timed,n/a
+acs_unit,correct_priority,correct,,compile,pass
+acs_unit,correct_priority,correct,,lint,pass
+acs_unit,correct_priority,correct,,weak,pass
+acs_unit,correct_priority,correct,,strong_icarus,pass
+acs_unit,correct_priority,correct,,strong_verilator,pass
+acs_unit,correct_priority,correct,,formal,pass
+acs_unit,correct_priority,correct,,synth,pass
+acs_unit,correct_priority,correct,,timed,n/a
+acs_unit,golden,correct,,compile,pass
+acs_unit,golden,correct,,lint,pass
+acs_unit,golden,correct,,weak,pass
+acs_unit,golden,correct,,strong_icarus,pass
+acs_unit,golden,correct,,strong_verilator,pass
+acs_unit,golden,correct,,formal,pass
+acs_unit,golden,correct,,synth,pass
+acs_unit,golden,correct,,timed,n/a
+adder_cla,bug_missing_cin_term,bug,missing product term,compile,pass
+adder_cla,bug_missing_cin_term,bug,missing product term,lint,pass
+adder_cla,bug_missing_cin_term,bug,missing product term,weak,pass
+adder_cla,bug_missing_cin_term,bug,missing product term,strong_icarus,fail
+adder_cla,bug_missing_cin_term,bug,missing product term,strong_verilator,fail
+adder_cla,bug_missing_cin_term,bug,missing product term,formal,fail
+adder_cla,bug_missing_cin_term,bug,missing product term,synth,pass
+adder_cla,bug_missing_cin_term,bug,missing product term,timed,n/a
+adder_cla,bug_plain_operator,bug,fails the speed requirement,compile,pass
+adder_cla,bug_plain_operator,bug,fails the speed requirement,lint,pass
+adder_cla,bug_plain_operator,bug,fails the speed requirement,weak,pass
+adder_cla,bug_plain_operator,bug,fails the speed requirement,strong_icarus,pass
+adder_cla,bug_plain_operator,bug,fails the speed requirement,strong_verilator,pass
+adder_cla,bug_plain_operator,bug,fails the speed requirement,formal,pass
+adder_cla,bug_plain_operator,bug,fails the speed requirement,synth,fail
+adder_cla,bug_plain_operator,bug,fails the speed requirement,timed,n/a
+adder_cla,bug_ripple,bug,fails the speed requirement,compile,pass
+adder_cla,bug_ripple,bug,fails the speed requirement,lint,fail
+adder_cla,bug_ripple,bug,fails the speed requirement,weak,pass
+adder_cla,bug_ripple,bug,fails the speed requirement,strong_icarus,pass
+adder_cla,bug_ripple,bug,fails the speed requirement,strong_verilator,pass
+adder_cla,bug_ripple,bug,fails the speed requirement,formal,pass
+adder_cla,bug_ripple,bug,fails the speed requirement,synth,fail
+adder_cla,bug_ripple,bug,fails the speed requirement,timed,n/a
+adder_cla,correct_kogge_stone,correct,,compile,pass
+adder_cla,correct_kogge_stone,correct,,lint,pass
+adder_cla,correct_kogge_stone,correct,,weak,pass
+adder_cla,correct_kogge_stone,correct,,strong_icarus,pass
+adder_cla,correct_kogge_stone,correct,,strong_verilator,pass
+adder_cla,correct_kogge_stone,correct,,formal,pass
+adder_cla,correct_kogge_stone,correct,,synth,pass
+adder_cla,correct_kogge_stone,correct,,timed,n/a
+adder_cla,golden,correct,,compile,pass
+adder_cla,golden,correct,,lint,pass
+adder_cla,golden,correct,,weak,pass
+adder_cla,golden,correct,,strong_icarus,pass
+adder_cla,golden,correct,,strong_verilator,pass
+adder_cla,golden,correct,,formal,pass
+adder_cla,golden,correct,,synth,pass
+adder_cla,golden,correct,,timed,n/a
+alu_reg,bug_fixed_width,bug,not parameterized,compile,pass
+alu_reg,bug_fixed_width,bug,not parameterized,lint,pass
+alu_reg,bug_fixed_width,bug,not parameterized,weak,pass
+alu_reg,bug_fixed_width,bug,not parameterized,strong_icarus,fail
+alu_reg,bug_fixed_width,bug,not parameterized,strong_verilator,fail
+alu_reg,bug_fixed_width,bug,not parameterized,formal,pass
+alu_reg,bug_fixed_width,bug,not parameterized,synth,pass
+alu_reg,bug_fixed_width,bug,not parameterized,timed,n/a
+alu_reg,bug_or_is_xor,bug,wrong operator,compile,pass
+alu_reg,bug_or_is_xor,bug,wrong operator,lint,pass
+alu_reg,bug_or_is_xor,bug,wrong operator,weak,pass
+alu_reg,bug_or_is_xor,bug,wrong operator,strong_icarus,fail
+alu_reg,bug_or_is_xor,bug,wrong operator,strong_verilator,fail
+alu_reg,bug_or_is_xor,bug,wrong operator,formal,fail
+alu_reg,bug_or_is_xor,bug,wrong operator,synth,pass
+alu_reg,bug_or_is_xor,bug,wrong operator,timed,n/a
+alu_reg,bug_sub_swapped,bug,swapped operands,compile,pass
+alu_reg,bug_sub_swapped,bug,swapped operands,lint,pass
+alu_reg,bug_sub_swapped,bug,swapped operands,weak,pass
+alu_reg,bug_sub_swapped,bug,swapped operands,strong_icarus,fail
+alu_reg,bug_sub_swapped,bug,swapped operands,strong_verilator,fail
+alu_reg,bug_sub_swapped,bug,swapped operands,formal,fail
+alu_reg,bug_sub_swapped,bug,swapped operands,synth,pass
+alu_reg,bug_sub_swapped,bug,swapped operands,timed,n/a
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,compile,pass
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,lint,pass
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,weak,pass
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,strong_icarus,fail
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,strong_verilator,fail
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,formal,fail
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,synth,pass
+alu_reg,bug_sync_reset,bug,synchronous instead of asynchronous reset,timed,n/a
+alu_reg,correct_add_complement,correct,,compile,pass
+alu_reg,correct_add_complement,correct,,lint,pass
+alu_reg,correct_add_complement,correct,,weak,pass
+alu_reg,correct_add_complement,correct,,strong_icarus,pass
+alu_reg,correct_add_complement,correct,,strong_verilator,pass
+alu_reg,correct_add_complement,correct,,formal,pass
+alu_reg,correct_add_complement,correct,,synth,pass
+alu_reg,correct_add_complement,correct,,timed,n/a
+alu_reg,golden,correct,,compile,pass
+alu_reg,golden,correct,,lint,pass
+alu_reg,golden,correct,,weak,pass
+alu_reg,golden,correct,,strong_icarus,pass
+alu_reg,golden,correct,,strong_verilator,pass
+alu_reg,golden,correct,,formal,pass
+alu_reg,golden,correct,,synth,pass
+alu_reg,golden,correct,,timed,n/a
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,compile,pass
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,lint,pass
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,weak,fail
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,strong_icarus,fail
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,strong_verilator,fail
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,formal,n/a
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,synth,pass
+bitrev_pipe,bug_invert_only_if_reversed,bug,control logic,timed,n/a
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,compile,pass
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,lint,pass
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,weak,pass
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,strong_icarus,fail
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,strong_verilator,fail
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,formal,n/a
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,synth,pass
+bitrev_pipe,bug_rising_capture,bug,wrong clock edge,timed,n/a
+bitrev_pipe,correct_bit_loop,correct,,compile,pass
+bitrev_pipe,correct_bit_loop,correct,,lint,pass
+bitrev_pipe,correct_bit_loop,correct,,weak,pass
+bitrev_pipe,correct_bit_loop,correct,,strong_icarus,pass
+bitrev_pipe,correct_bit_loop,correct,,strong_verilator,pass
+bitrev_pipe,correct_bit_loop,correct,,formal,n/a
+bitrev_pipe,correct_bit_loop,correct,,synth,pass
+bitrev_pipe,correct_bit_loop,correct,,timed,n/a
+bitrev_pipe,golden,correct,,compile,pass
+bitrev_pipe,golden,correct,,lint,pass
+bitrev_pipe,golden,correct,,weak,pass
+bitrev_pipe,golden,correct,,strong_icarus,pass
+bitrev_pipe,golden,correct,,strong_verilator,pass
+bitrev_pipe,golden,correct,,formal,n/a
+bitrev_pipe,golden,correct,,synth,pass
+bitrev_pipe,golden,correct,,timed,n/a
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),compile,pass
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),lint,pass
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),weak,pass
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),strong_icarus,pass
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),strong_verilator,pass
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),formal,n/a
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),synth,pass
+clkdiv3,bug_decoded_counters,bug,glitch-prone clock (passes every zero-delay test),timed,fail
+clkdiv3,bug_duty_33,bug,wrong duty cycle,compile,pass
+clkdiv3,bug_duty_33,bug,wrong duty cycle,lint,pass
+clkdiv3,bug_duty_33,bug,wrong duty cycle,weak,pass
+clkdiv3,bug_duty_33,bug,wrong duty cycle,strong_icarus,fail
+clkdiv3,bug_duty_33,bug,wrong duty cycle,strong_verilator,fail
+clkdiv3,bug_duty_33,bug,wrong duty cycle,formal,n/a
+clkdiv3,bug_duty_33,bug,wrong duty cycle,synth,pass
+clkdiv3,bug_duty_33,bug,wrong duty cycle,timed,pass
+clkdiv3,correct_shift_ring,correct,,compile,pass
+clkdiv3,correct_shift_ring,correct,,lint,pass
+clkdiv3,correct_shift_ring,correct,,weak,pass
+clkdiv3,correct_shift_ring,correct,,strong_icarus,pass
+clkdiv3,correct_shift_ring,correct,,strong_verilator,pass
+clkdiv3,correct_shift_ring,correct,,formal,n/a
+clkdiv3,correct_shift_ring,correct,,synth,pass
+clkdiv3,correct_shift_ring,correct,,timed,pass
+clkdiv3,golden,correct,,compile,pass
+clkdiv3,golden,correct,,lint,pass
+clkdiv3,golden,correct,,weak,pass
+clkdiv3,golden,correct,,strong_icarus,pass
+clkdiv3,golden,correct,,strong_verilator,pass
+clkdiv3,golden,correct,,formal,n/a
+clkdiv3,golden,correct,,synth,pass
+clkdiv3,golden,correct,,timed,pass
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,compile,pass
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,lint,pass
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,weak,pass
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,strong_icarus,fail
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,strong_verilator,fail
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,formal,fail
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,synth,pass
+conv_encoder_cfg,bug_load_exclusive,bug,control bits not independent,timed,n/a
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,compile,pass
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,lint,pass
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,weak,fail
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,strong_icarus,fail
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,strong_verilator,fail
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,formal,fail
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,synth,pass
+conv_encoder_cfg,bug_reset_clears_generators,bug,reset scope too wide,timed,n/a
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,compile,pass
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,lint,pass
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,weak,pass
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,strong_icarus,fail
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,strong_verilator,fail
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,formal,fail
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,synth,pass
+conv_encoder_cfg,bug_shift_while_loading,bug,missing hold condition,timed,n/a
+conv_encoder_cfg,correct_and_xor_loop,correct,,compile,pass
+conv_encoder_cfg,correct_and_xor_loop,correct,,lint,pass
+conv_encoder_cfg,correct_and_xor_loop,correct,,weak,pass
+conv_encoder_cfg,correct_and_xor_loop,correct,,strong_icarus,pass
+conv_encoder_cfg,correct_and_xor_loop,correct,,strong_verilator,pass
+conv_encoder_cfg,correct_and_xor_loop,correct,,formal,pass
+conv_encoder_cfg,correct_and_xor_loop,correct,,synth,pass
+conv_encoder_cfg,correct_and_xor_loop,correct,,timed,n/a
+conv_encoder_cfg,golden,correct,,compile,pass
+conv_encoder_cfg,golden,correct,,lint,pass
+conv_encoder_cfg,golden,correct,,weak,pass
+conv_encoder_cfg,golden,correct,,strong_icarus,pass
+conv_encoder_cfg,golden,correct,,strong_verilator,pass
+conv_encoder_cfg,golden,correct,,formal,pass
+conv_encoder_cfg,golden,correct,,synth,pass
+conv_encoder_cfg,golden,correct,,timed,n/a
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,compile,pass
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,lint,fail
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,weak,fail
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,strong_icarus,fail
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,strong_verilator,pass
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,formal,pass
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,synth,pass
+gray2bin,bug_comb_order,bug,simulator-dependent always_comb,timed,n/a
+gray2bin,bug_latency_one,bug,timing (pipeline depth),compile,pass
+gray2bin,bug_latency_one,bug,timing (pipeline depth),lint,pass
+gray2bin,bug_latency_one,bug,timing (pipeline depth),weak,pass
+gray2bin,bug_latency_one,bug,timing (pipeline depth),strong_icarus,fail
+gray2bin,bug_latency_one,bug,timing (pipeline depth),strong_verilator,fail
+gray2bin,bug_latency_one,bug,timing (pipeline depth),formal,fail
+gray2bin,bug_latency_one,bug,timing (pipeline depth),synth,pass
+gray2bin,bug_latency_one,bug,timing (pipeline depth),timed,n/a
+gray2bin,bug_pairwise_xor,bug,wrong formula,compile,pass
+gray2bin,bug_pairwise_xor,bug,wrong formula,lint,pass
+gray2bin,bug_pairwise_xor,bug,wrong formula,weak,fail
+gray2bin,bug_pairwise_xor,bug,wrong formula,strong_icarus,fail
+gray2bin,bug_pairwise_xor,bug,wrong formula,strong_verilator,fail
+gray2bin,bug_pairwise_xor,bug,wrong formula,formal,fail
+gray2bin,bug_pairwise_xor,bug,wrong formula,synth,pass
+gray2bin,bug_pairwise_xor,bug,wrong formula,timed,n/a
+gray2bin,correct_shift_xor,correct,,compile,pass
+gray2bin,correct_shift_xor,correct,,lint,pass
+gray2bin,correct_shift_xor,correct,,weak,pass
+gray2bin,correct_shift_xor,correct,,strong_icarus,pass
+gray2bin,correct_shift_xor,correct,,strong_verilator,pass
+gray2bin,correct_shift_xor,correct,,formal,pass
+gray2bin,correct_shift_xor,correct,,synth,pass
+gray2bin,correct_shift_xor,correct,,timed,n/a
+gray2bin,golden,correct,,compile,pass
+gray2bin,golden,correct,,lint,pass
+gray2bin,golden,correct,,weak,pass
+gray2bin,golden,correct,,strong_icarus,pass
+gray2bin,golden,correct,,strong_verilator,pass
+gray2bin,golden,correct,,formal,pass
+gray2bin,golden,correct,,synth,pass
+gray2bin,golden,correct,,timed,n/a
+log_shifter,bug_behavioral,bug,structural rule violated,compile,pass
+log_shifter,bug_behavioral,bug,structural rule violated,lint,fail
+log_shifter,bug_behavioral,bug,structural rule violated,weak,pass
+log_shifter,bug_behavioral,bug,structural rule violated,strong_icarus,pass
+log_shifter,bug_behavioral,bug,structural rule violated,strong_verilator,pass
+log_shifter,bug_behavioral,bug,structural rule violated,formal,pass
+log_shifter,bug_behavioral,bug,structural rule violated,synth,fail
+log_shifter,bug_behavioral,bug,structural rule violated,timed,n/a
+log_shifter,bug_rotate_fill,bug,off-by-one index,compile,pass
+log_shifter,bug_rotate_fill,bug,off-by-one index,lint,pass
+log_shifter,bug_rotate_fill,bug,off-by-one index,weak,pass
+log_shifter,bug_rotate_fill,bug,off-by-one index,strong_icarus,fail
+log_shifter,bug_rotate_fill,bug,off-by-one index,strong_verilator,fail
+log_shifter,bug_rotate_fill,bug,off-by-one index,formal,fail
+log_shifter,bug_rotate_fill,bug,off-by-one index,synth,pass
+log_shifter,bug_rotate_fill,bug,off-by-one index,timed,n/a
+log_shifter,bug_two_stages,bug,not parameterized,compile,pass
+log_shifter,bug_two_stages,bug,not parameterized,lint,fail
+log_shifter,bug_two_stages,bug,not parameterized,weak,pass
+log_shifter,bug_two_stages,bug,not parameterized,strong_icarus,fail
+log_shifter,bug_two_stages,bug,not parameterized,strong_verilator,fail
+log_shifter,bug_two_stages,bug,not parameterized,formal,fail
+log_shifter,bug_two_stages,bug,not parameterized,synth,pass
+log_shifter,bug_two_stages,bug,not parameterized,timed,n/a
+log_shifter,correct_two_networks,correct,,compile,pass
+log_shifter,correct_two_networks,correct,,lint,pass
+log_shifter,correct_two_networks,correct,,weak,pass
+log_shifter,correct_two_networks,correct,,strong_icarus,pass
+log_shifter,correct_two_networks,correct,,strong_verilator,pass
+log_shifter,correct_two_networks,correct,,formal,pass
+log_shifter,correct_two_networks,correct,,synth,pass
+log_shifter,correct_two_networks,correct,,timed,n/a
+log_shifter,golden,correct,,compile,pass
+log_shifter,golden,correct,,lint,pass
+log_shifter,golden,correct,,weak,pass
+log_shifter,golden,correct,,strong_icarus,pass
+log_shifter,golden,correct,,strong_verilator,pass
+log_shifter,golden,correct,,formal,pass
+log_shifter,golden,correct,,synth,pass
+log_shifter,golden,correct,,timed,n/a
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,compile,pass
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,lint,pass
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,weak,pass
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,strong_icarus,fail
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,strong_verilator,fail
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,formal,fail
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,synth,pass
+maxlen_lfsr,bug_done_on_load,bug,output not qualified,timed,n/a
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,compile,pass
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,lint,pass
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,weak,pass
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,strong_icarus,fail
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,strong_verilator,fail
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,formal,fail
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,synth,pass
+maxlen_lfsr,bug_reset_ones,bug,wrong reset value and type,timed,n/a
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,compile,pass
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,lint,pass
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,weak,pass
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,strong_icarus,fail
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,strong_verilator,fail
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,formal,pass
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,synth,pass
+maxlen_lfsr,bug_taps_n8,bug,wrong constant for one parameter value,timed,n/a
+maxlen_lfsr,correct_counter_done,correct,,compile,pass
+maxlen_lfsr,correct_counter_done,correct,,lint,pass
+maxlen_lfsr,correct_counter_done,correct,,weak,pass
+maxlen_lfsr,correct_counter_done,correct,,strong_icarus,pass
+maxlen_lfsr,correct_counter_done,correct,,strong_verilator,pass
+maxlen_lfsr,correct_counter_done,correct,,formal,pass
+maxlen_lfsr,correct_counter_done,correct,,synth,pass
+maxlen_lfsr,correct_counter_done,correct,,timed,n/a
+maxlen_lfsr,golden,correct,,compile,pass
+maxlen_lfsr,golden,correct,,lint,pass
+maxlen_lfsr,golden,correct,,weak,pass
+maxlen_lfsr,golden,correct,,strong_icarus,pass
+maxlen_lfsr,golden,correct,,strong_verilator,pass
+maxlen_lfsr,golden,correct,,formal,pass
+maxlen_lfsr,golden,correct,,synth,pass
+maxlen_lfsr,golden,correct,,timed,n/a
+onehot_decoder,bug_bit_order,bug,wrong bit order,compile,pass
+onehot_decoder,bug_bit_order,bug,wrong bit order,lint,pass
+onehot_decoder,bug_bit_order,bug,wrong bit order,weak,pass
+onehot_decoder,bug_bit_order,bug,wrong bit order,strong_icarus,fail
+onehot_decoder,bug_bit_order,bug,wrong bit order,strong_verilator,fail
+onehot_decoder,bug_bit_order,bug,wrong bit order,formal,fail
+onehot_decoder,bug_bit_order,bug,wrong bit order,synth,pass
+onehot_decoder,bug_bit_order,bug,wrong bit order,timed,n/a
+onehot_decoder,bug_ignores_enable,bug,missing control input,compile,pass
+onehot_decoder,bug_ignores_enable,bug,missing control input,lint,fail
+onehot_decoder,bug_ignores_enable,bug,missing control input,weak,pass
+onehot_decoder,bug_ignores_enable,bug,missing control input,strong_icarus,fail
+onehot_decoder,bug_ignores_enable,bug,missing control input,strong_verilator,fail
+onehot_decoder,bug_ignores_enable,bug,missing control input,formal,fail
+onehot_decoder,bug_ignores_enable,bug,missing control input,synth,pass
+onehot_decoder,bug_ignores_enable,bug,missing control input,timed,n/a
+onehot_decoder,bug_latch,bug,inferred latch,compile,pass
+onehot_decoder,bug_latch,bug,inferred latch,lint,fail
+onehot_decoder,bug_latch,bug,inferred latch,weak,pass
+onehot_decoder,bug_latch,bug,inferred latch,strong_icarus,fail
+onehot_decoder,bug_latch,bug,inferred latch,strong_verilator,fail
+onehot_decoder,bug_latch,bug,inferred latch,formal,fail
+onehot_decoder,bug_latch,bug,inferred latch,synth,fail
+onehot_decoder,bug_latch,bug,inferred latch,timed,n/a
+onehot_decoder,correct_shift,correct,,compile,pass
+onehot_decoder,correct_shift,correct,,lint,pass
+onehot_decoder,correct_shift,correct,,weak,pass
+onehot_decoder,correct_shift,correct,,strong_icarus,pass
+onehot_decoder,correct_shift,correct,,strong_verilator,pass
+onehot_decoder,correct_shift,correct,,formal,pass
+onehot_decoder,correct_shift,correct,,synth,pass
+onehot_decoder,correct_shift,correct,,timed,n/a
+onehot_decoder,golden,correct,,compile,pass
+onehot_decoder,golden,correct,,lint,pass
+onehot_decoder,golden,correct,,weak,pass
+onehot_decoder,golden,correct,,strong_icarus,pass
+onehot_decoder,golden,correct,,strong_verilator,pass
+onehot_decoder,golden,correct,,formal,pass
+onehot_decoder,golden,correct,,synth,pass
+onehot_decoder,golden,correct,,timed,n/a
+secded84,bug_no_overall_parity,bug,missing detection,compile,pass
+secded84,bug_no_overall_parity,bug,missing detection,lint,fail
+secded84,bug_no_overall_parity,bug,missing detection,weak,pass
+secded84,bug_no_overall_parity,bug,missing detection,strong_icarus,fail
+secded84,bug_no_overall_parity,bug,missing detection,strong_verilator,fail
+secded84,bug_no_overall_parity,bug,missing detection,formal,fail
+secded84,bug_no_overall_parity,bug,missing detection,synth,pass
+secded84,bug_no_overall_parity,bug,missing detection,timed,n/a
+secded84,bug_syndrome_map,bug,wrong table entry,compile,pass
+secded84,bug_syndrome_map,bug,wrong table entry,lint,pass
+secded84,bug_syndrome_map,bug,wrong table entry,weak,pass
+secded84,bug_syndrome_map,bug,wrong table entry,strong_icarus,fail
+secded84,bug_syndrome_map,bug,wrong table entry,strong_verilator,fail
+secded84,bug_syndrome_map,bug,wrong table entry,formal,fail
+secded84,bug_syndrome_map,bug,wrong table entry,synth,pass
+secded84,bug_syndrome_map,bug,wrong table entry,timed,n/a
+secded84,correct_nearest_codeword,correct,,compile,pass
+secded84,correct_nearest_codeword,correct,,lint,fail
+secded84,correct_nearest_codeword,correct,,weak,pass
+secded84,correct_nearest_codeword,correct,,strong_icarus,pass
+secded84,correct_nearest_codeword,correct,,strong_verilator,pass
+secded84,correct_nearest_codeword,correct,,formal,pass
+secded84,correct_nearest_codeword,correct,,synth,pass
+secded84,correct_nearest_codeword,correct,,timed,n/a
+secded84,golden,correct,,compile,pass
+secded84,golden,correct,,lint,pass
+secded84,golden,correct,,weak,pass
+secded84,golden,correct,,strong_icarus,pass
+secded84,golden,correct,,strong_verilator,pass
+secded84,golden,correct,,formal,pass
+secded84,golden,correct,,synth,pass
+secded84,golden,correct,,timed,n/a
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,compile,pass
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,lint,fail
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,weak,pass
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,strong_icarus,fail
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,strong_verilator,fail
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,formal,pass
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,synth,pass
+serial_rx,bug_bit7_as_stop,bug,missing protocol step,timed,n/a
+serial_rx,bug_data_cleared,bug,output not held,compile,pass
+serial_rx,bug_data_cleared,bug,output not held,lint,pass
+serial_rx,bug_data_cleared,bug,output not held,weak,pass
+serial_rx,bug_data_cleared,bug,output not held,strong_icarus,fail
+serial_rx,bug_data_cleared,bug,output not held,strong_verilator,fail
+serial_rx,bug_data_cleared,bug,output not held,formal,fail
+serial_rx,bug_data_cleared,bug,output not held,synth,pass
+serial_rx,bug_data_cleared,bug,output not held,timed,n/a
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),compile,pass
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),lint,pass
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),weak,pass
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),strong_icarus,pass
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),strong_verilator,pass
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),formal,pass
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),synth,fail
+serial_rx,bug_no_synchronizer,bug,clock-domain crossing (invisible to simulation),timed,n/a
+serial_rx,bug_sample_at_edge,bug,no timing margin,compile,pass
+serial_rx,bug_sample_at_edge,bug,no timing margin,lint,fail
+serial_rx,bug_sample_at_edge,bug,no timing margin,weak,pass
+serial_rx,bug_sample_at_edge,bug,no timing margin,strong_icarus,fail
+serial_rx,bug_sample_at_edge,bug,no timing margin,strong_verilator,fail
+serial_rx,bug_sample_at_edge,bug,no timing margin,formal,pass
+serial_rx,bug_sample_at_edge,bug,no timing margin,synth,pass
+serial_rx,bug_sample_at_edge,bug,no timing margin,timed,n/a
+serial_rx,correct_counter_sampling,correct,,compile,pass
+serial_rx,correct_counter_sampling,correct,,lint,pass
+serial_rx,correct_counter_sampling,correct,,weak,pass
+serial_rx,correct_counter_sampling,correct,,strong_icarus,pass
+serial_rx,correct_counter_sampling,correct,,strong_verilator,pass
+serial_rx,correct_counter_sampling,correct,,formal,pass
+serial_rx,correct_counter_sampling,correct,,synth,pass
+serial_rx,correct_counter_sampling,correct,,timed,n/a
+serial_rx,correct_down_timer,correct,,compile,pass
+serial_rx,correct_down_timer,correct,,lint,pass
+serial_rx,correct_down_timer,correct,,weak,pass
+serial_rx,correct_down_timer,correct,,strong_icarus,pass
+serial_rx,correct_down_timer,correct,,strong_verilator,pass
+serial_rx,correct_down_timer,correct,,formal,pass
+serial_rx,correct_down_timer,correct,,synth,pass
+serial_rx,correct_down_timer,correct,,timed,n/a
+serial_rx,golden,correct,,compile,pass
+serial_rx,golden,correct,,lint,pass
+serial_rx,golden,correct,,weak,pass
+serial_rx,golden,correct,,strong_icarus,pass
+serial_rx,golden,correct,,strong_verilator,pass
+serial_rx,golden,correct,,formal,pass
+serial_rx,golden,correct,,synth,pass
+serial_rx,golden,correct,,timed,n/a
+subtractor,bug_direction_inverted,bug,control polarity,compile,pass
+subtractor,bug_direction_inverted,bug,control polarity,lint,pass
+subtractor,bug_direction_inverted,bug,control polarity,weak,fail
+subtractor,bug_direction_inverted,bug,control polarity,strong_icarus,fail
+subtractor,bug_direction_inverted,bug,control polarity,strong_verilator,fail
+subtractor,bug_direction_inverted,bug,control polarity,formal,fail
+subtractor,bug_direction_inverted,bug,control polarity,synth,pass
+subtractor,bug_direction_inverted,bug,control polarity,timed,n/a
+subtractor,bug_flags_swapped,bug,swapped outputs,compile,pass
+subtractor,bug_flags_swapped,bug,swapped outputs,lint,pass
+subtractor,bug_flags_swapped,bug,swapped outputs,weak,pass
+subtractor,bug_flags_swapped,bug,swapped outputs,strong_icarus,fail
+subtractor,bug_flags_swapped,bug,swapped outputs,strong_verilator,fail
+subtractor,bug_flags_swapped,bug,swapped outputs,formal,fail
+subtractor,bug_flags_swapped,bug,swapped outputs,synth,pass
+subtractor,bug_flags_swapped,bug,swapped outputs,timed,n/a
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,compile,pass
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,lint,pass
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,weak,fail
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,strong_icarus,fail
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,strong_verilator,fail
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,formal,fail
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,synth,pass
+subtractor,bug_unsigned_borrow,bug,unsigned overflow rule for signed numbers,timed,n/a
+subtractor,correct_wide,correct,,compile,pass
+subtractor,correct_wide,correct,,lint,pass
+subtractor,correct_wide,correct,,weak,pass
+subtractor,correct_wide,correct,,strong_icarus,pass
+subtractor,correct_wide,correct,,strong_verilator,pass
+subtractor,correct_wide,correct,,formal,pass
+subtractor,correct_wide,correct,,synth,pass
+subtractor,correct_wide,correct,,timed,n/a
+subtractor,golden,correct,,compile,pass
+subtractor,golden,correct,,lint,pass
+subtractor,golden,correct,,weak,pass
+subtractor,golden,correct,,strong_icarus,pass
+subtractor,golden,correct,,strong_verilator,pass
+subtractor,golden,correct,,formal,pass
+subtractor,golden,correct,,synth,pass
+subtractor,golden,correct,,timed,n/a
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,compile,pass
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,lint,pass
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,weak,pass
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,strong_icarus,fail
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,strong_verilator,fail
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,formal,fail
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,synth,pass
+twisted_ring_counter,bug_clear_sync,bug,asynchronous control made synchronous,timed,n/a
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,compile,pass
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,lint,pass
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,weak,pass
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,strong_icarus,fail
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,strong_verilator,fail
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,formal,fail
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,synth,pass
+twisted_ring_counter,bug_load_async,bug,synchronous control made asynchronous,timed,n/a
+twisted_ring_counter,bug_shift_left,bug,wrong direction,compile,pass
+twisted_ring_counter,bug_shift_left,bug,wrong direction,lint,pass
+twisted_ring_counter,bug_shift_left,bug,wrong direction,weak,pass
+twisted_ring_counter,bug_shift_left,bug,wrong direction,strong_icarus,fail
+twisted_ring_counter,bug_shift_left,bug,wrong direction,strong_verilator,fail
+twisted_ring_counter,bug_shift_left,bug,wrong direction,formal,fail
+twisted_ring_counter,bug_shift_left,bug,wrong direction,synth,pass
+twisted_ring_counter,bug_shift_left,bug,wrong direction,timed,n/a
+twisted_ring_counter,correct_shift_operator,correct,,compile,pass
+twisted_ring_counter,correct_shift_operator,correct,,lint,pass
+twisted_ring_counter,correct_shift_operator,correct,,weak,pass
+twisted_ring_counter,correct_shift_operator,correct,,strong_icarus,pass
+twisted_ring_counter,correct_shift_operator,correct,,strong_verilator,pass
+twisted_ring_counter,correct_shift_operator,correct,,formal,pass
+twisted_ring_counter,correct_shift_operator,correct,,synth,pass
+twisted_ring_counter,correct_shift_operator,correct,,timed,n/a
+twisted_ring_counter,golden,correct,,compile,pass
+twisted_ring_counter,golden,correct,,lint,pass
+twisted_ring_counter,golden,correct,,weak,pass
+twisted_ring_counter,golden,correct,,strong_icarus,pass
+twisted_ring_counter,golden,correct,,strong_verilator,pass
+twisted_ring_counter,golden,correct,,formal,pass
+twisted_ring_counter,golden,correct,,synth,pass
+twisted_ring_counter,golden,correct,,timed,n/a

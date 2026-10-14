@@ -1,0 +1,11 @@
+{
+  "id": "acs_unit",
+  "title": "Viterbi add-compare-select unit with validity",
+  "origin": "the add-compare-select block of a Viterbi decoder project",
+  "top": "acs_unit",
+  "kind": "comb",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong"},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "smtbmc", "depth": 1},
+  "synth": {"params": {"W": 8}}
+}

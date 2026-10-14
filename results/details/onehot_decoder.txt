@@ -1,0 +1,512 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 1}: pass
+{'N': 2}: pass
+{'N': 3}: pass
+{'N': 5}: pass
+== golden [correct] strong_verilator: pass
+{'N': 1}: pass
+{'N': 2}: pass
+{'N': 3}: pass
+{'N': 5}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 17
+== golden [correct] timed: n/a
+
+== bug_bit_order [bug] compile: pass
+
+== bug_bit_order [bug] lint: pass
+
+== bug_bit_order [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
+== bug_bit_order [bug] strong_icarus: fail
+{'N': 1}: fail
+[2000] MISMATCH en=1 sel=1: got 1, expected 2
+[6000] MISMATCH en=1 sel=1: got 1, expected 2
+RESULT: FAIL 2 of 8 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
+
+{'N': 2}: fail
+[2000] MISMATCH en=1 sel=1: got 4, expected 2
+[3000] MISMATCH en=1 sel=2: got 2, expected 4
+[4000] MISMATCH en=1 sel=3: got 1, expected 8
+[10000] MISMATCH en=1 sel=1: got 4, expected 2
+[11000] MISMATCH en=1 sel=2: got 2, expected 4
+[12000] MISMATCH en=1 sel=3: got 1, expected 8
+RESULT: FAIL 6 of 16 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
+
+{'N': 3}: fail
+[2000] MISMATCH en=1 sel=1: got 40, expected 2
+[3000] MISMATCH en=1 sel=2: got 20, expected 4
+[4000] MISMATCH en=1 sel=3: got 10, expected 8
+[5000] MISMATCH en=1 sel=4: got 8, expected 10
+[6000] MISMATCH en=1 sel=5: got 4, expected 20
+[7000] MISMATCH en=1 sel=6: got 2, expected 40
+[8000] MISMATCH en=1 sel=7: got 1, expected 80
+[18000] MISMATCH en=1 sel=1: got 40, expected 2
+[19000] MISMATCH en=1 sel=2: got 20, expected 4
+[20000] MISMATCH en=1 sel=3: got 10, expected 8
+[21000] MISMATCH en=1 sel=4: got 8, expected 10
+[22000] MISMATCH en=1 sel=5: got 4, expected 20
+[23000] MISMATCH en=1 sel=6: got 2, expected 40
+[24000] MISMATCH en=1 sel=7: got 1, expected 80
+RESULT: FAIL 14 of 32 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 32000 (1ps)
+
+{'N': 5}: fail
+l=1: got 40000000, expected 2
+[3000] MISMATCH en=1 sel=2: got 20000000, expected 4
+[4000] MISMATCH en=1 sel=3: got 10000000, expected 8
+[5000] MISMATCH en=1 sel=4: got 8000000, expected 10
+[6000] MISMATCH en=1 sel=5: got 4000000, expected 20
+[7000] MISMATCH en=1 sel=6: got 2000000, expected 40
+[8000] MISMATCH en=1 sel=7: got 1000000, expected 80
+[9000] MISMATCH en=1 sel=8: got 800000, expected 100
+[10000] MISMATCH en=1 sel=9: got 400000, expected 200
+[11000] MISMATCH en=1 sel=10: got 200000, expected 400
+[12000] MISMATCH en=1 sel=11: got 100000, expected 800
+[13000] MISMATCH en=1 sel=12: got 80000, expected 1000
+[14000] MISMATCH en=1 sel=13: got 40000, expected 2000
+[15000] MISMATCH en=1 sel=14: got 20000, expected 4000
+[16000] MISMATCH en=1 sel=15: got 10000, expected 8000
+[17000] MISMATCH en=1 sel=16: got 8000, expected 10000
+[18000] MISMATCH en=1 sel=17: got 4000, expected 20000
+[19000] MISMATCH en=1 sel=18: got 2000, expected 40000
+[20000] MISMATCH en=1 sel=19: got 1000, expected 80000
+[21000] MISMATCH en=1 sel=20: got 800, expected 100000
+[22000] MISMATCH en=1 sel=21: got 400, expected 200000
+[23000] MISMATCH en=1 sel=22: got 200, expected 400000
+[24000] MISMATCH en=1 sel=23: got 100, expected 800000
+[25000] MISMATCH en=1 sel=24: got 80, expected 1000000
+[26000] MISMATCH en=1 sel=25: got 40, expected 2000000
+... 37 further mismatches not printed
+RESULT: FAIL 62 of 128 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 128000 (1ps)
+== bug_bit_order [bug] strong_verilator: fail
+{'N': 1}: fail
+[2000] MISMATCH en=1 sel=1: got 1, expected 2
+[6000] MISMATCH en=1 sel=1: got 1, expected 2
+RESULT: FAIL 2 of 8 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 2}: fail
+[2000] MISMATCH en=1 sel=1: got 4, expected 2
+[3000] MISMATCH en=1 sel=2: got 2, expected 4
+[4000] MISMATCH en=1 sel=3: got 1, expected 8
+[10000] MISMATCH en=1 sel=1: got 4, expected 2
+[11000] MISMATCH en=1 sel=2: got 2, expected 4
+[12000] MISMATCH en=1 sel=3: got 1, expected 8
+RESULT: FAIL 6 of 16 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 3}: fail
+[2000] MISMATCH en=1 sel=1: got 40, expected 2
+[3000] MISMATCH en=1 sel=2: got 20, expected 4
+[4000] MISMATCH en=1 sel=3: got 10, expected 8
+[5000] MISMATCH en=1 sel=4: got 8, expected 10
+[6000] MISMATCH en=1 sel=5: got 4, expected 20
+[7000] MISMATCH en=1 sel=6: got 2, expected 40
+[8000] MISMATCH en=1 sel=7: got 1, expected 80
+[18000] MISMATCH en=1 sel=1: got 40, expected 2
+[19000] MISMATCH en=1 sel=2: got 20, expected 4
+[20000] MISMATCH en=1 sel=3: got 10, expected 8
+[21000] MISMATCH en=1 sel=4: got 8, expected 10
+[22000] MISMATCH en=1 sel=5: got 4, expected 20
+[23000] MISMATCH en=1 sel=6: got 2, expected 40
+[24000] MISMATCH en=1 sel=7: got 1, expected 80
+RESULT: FAIL 14 of 32 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 5}: fail
+00, expected 10
+[6000] MISMATCH en=1 sel=5: got 4000000, expected 20
+[7000] MISMATCH en=1 sel=6: got 2000000, expected 40
+[8000] MISMATCH en=1 sel=7: got 1000000, expected 80
+[9000] MISMATCH en=1 sel=8: got 800000, expected 100
+[10000] MISMATCH en=1 sel=9: got 400000, expected 200
+[11000] MISMATCH en=1 sel=10: got 200000, expected 400
+[12000] MISMATCH en=1 sel=11: got 100000, expected 800
+[13000] MISMATCH en=1 sel=12: got 80000, expected 1000
+[14000] MISMATCH en=1 sel=13: got 40000, expected 2000
+[15000] MISMATCH en=1 sel=14: got 20000, expected 4000
+[16000] MISMATCH en=1 sel=15: got 10000, expected 8000
+[17000] MISMATCH en=1 sel=16: got 8000, expected 10000
+[18000] MISMATCH en=1 sel=17: got 4000, expected 20000
+[19000] MISMATCH en=1 sel=18: got 2000, expected 40000
+[20000] MISMATCH en=1 sel=19: got 1000, expected 80000
+[21000] MISMATCH en=1 sel=20: got 800, expected 100000
+[22000] MISMATCH en=1 sel=21: got 400, expected 200000
+[23000] MISMATCH en=1 sel=22: got 200, expected 400000
+[24000] MISMATCH en=1 sel=23: got 100, expected 800000
+[25000] MISMATCH en=1 sel=24: got 80, expected 1000000
+[26000] MISMATCH en=1 sel=25: got 40, expected 2000000
+... 37 further mismatches not printed
+RESULT: FAIL 62 of 128 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+== bug_bit_order [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_27 at harness.sv:6.15-6.32 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_27 at harness.sv:6.15-6.32 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_bit_order [bug] synth: pass
+cells after ABC mapping to 2-input gates: 26
+== bug_bit_order [bug] timed: n/a
+
+== bug_ignores_enable [bug] compile: pass
+
+== bug_ignores_enable [bug] lint: fail
+%Warning-UNUSEDSIGNAL: tasks/onehot_decoder/candidates/bug_ignores_enable.sv:5:30: Signal is not used: 'en'
+%Error: Exiting due to 1 warning(s)
+== bug_ignores_enable [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
+== bug_ignores_enable [bug] strong_icarus: fail
+{'N': 1}: fail
+[3000] MISMATCH en=0 sel=0: got 1, expected 0
+[4000] MISMATCH en=0 sel=1: got 2, expected 0
+[7000] MISMATCH en=0 sel=0: got 1, expected 0
+[8000] MISMATCH en=0 sel=1: got 2, expected 0
+RESULT: FAIL 4 of 8 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
+
+{'N': 2}: fail
+[5000] MISMATCH en=0 sel=0: got 1, expected 0
+[6000] MISMATCH en=0 sel=1: got 2, expected 0
+[7000] MISMATCH en=0 sel=2: got 4, expected 0
+[8000] MISMATCH en=0 sel=3: got 8, expected 0
+[13000] MISMATCH en=0 sel=0: got 1, expected 0
+[14000] MISMATCH en=0 sel=1: got 2, expected 0
+[15000] MISMATCH en=0 sel=2: got 4, expected 0
+[16000] MISMATCH en=0 sel=3: got 8, expected 0
+RESULT: FAIL 8 of 16 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
+
+{'N': 3}: fail
+[9000] MISMATCH en=0 sel=0: got 1, expected 0
+[10000] MISMATCH en=0 sel=1: got 2, expected 0
+[11000] MISMATCH en=0 sel=2: got 4, expected 0
+[12000] MISMATCH en=0 sel=3: got 8, expected 0
+[13000] MISMATCH en=0 sel=4: got 10, expected 0
+[14000] MISMATCH en=0 sel=5: got 20, expected 0
+[15000] MISMATCH en=0 sel=6: got 40, expected 0
+[16000] MISMATCH en=0 sel=7: got 80, expected 0
+[25000] MISMATCH en=0 sel=0: got 1, expected 0
+[26000] MISMATCH en=0 sel=1: got 2, expected 0
+[27000] MISMATCH en=0 sel=2: got 4, expected 0
+[28000] MISMATCH en=0 sel=3: got 8, expected 0
+[29000] MISMATCH en=0 sel=4: got 10, expected 0
+[30000] MISMATCH en=0 sel=5: got 20, expected 0
+[31000] MISMATCH en=0 sel=6: got 40, expected 0
+[32000] MISMATCH en=0 sel=7: got 80, expected 0
+RESULT: FAIL 16 of 32 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 32000 (1ps)
+
+{'N': 5}: fail
+[33000] MISMATCH en=0 sel=0: got 1, expected 0
+[34000] MISMATCH en=0 sel=1: got 2, expected 0
+[35000] MISMATCH en=0 sel=2: got 4, expected 0
+[36000] MISMATCH en=0 sel=3: got 8, expected 0
+[37000] MISMATCH en=0 sel=4: got 10, expected 0
+[38000] MISMATCH en=0 sel=5: got 20, expected 0
+[39000] MISMATCH en=0 sel=6: got 40, expected 0
+[40000] MISMATCH en=0 sel=7: got 80, expected 0
+[41000] MISMATCH en=0 sel=8: got 100, expected 0
+[42000] MISMATCH en=0 sel=9: got 200, expected 0
+[43000] MISMATCH en=0 sel=10: got 400, expected 0
+[44000] MISMATCH en=0 sel=11: got 800, expected 0
+[45000] MISMATCH en=0 sel=12: got 1000, expected 0
+[46000] MISMATCH en=0 sel=13: got 2000, expected 0
+[47000] MISMATCH en=0 sel=14: got 4000, expected 0
+[48000] MISMATCH en=0 sel=15: got 8000, expected 0
+[49000] MISMATCH en=0 sel=16: got 10000, expected 0
+[50000] MISMATCH en=0 sel=17: got 20000, expected 0
+[51000] MISMATCH en=0 sel=18: got 40000, expected 0
+[52000] MISMATCH en=0 sel=19: got 80000, expected 0
+[53000] MISMATCH en=0 sel=20: got 100000, expected 0
+[54000] MISMATCH en=0 sel=21: got 200000, expected 0
+[55000] MISMATCH en=0 sel=22: got 400000, expected 0
+[56000] MISMATCH en=0 sel=23: got 800000, expected 0
+[57000] MISMATCH en=0 sel=24: got 1000000, expected 0
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 128 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 128000 (1ps)
+== bug_ignores_enable [bug] strong_verilator: fail
+{'N': 1}: fail
+[3000] MISMATCH en=0 sel=0: got 1, expected 0
+[4000] MISMATCH en=0 sel=1: got 2, expected 0
+[7000] MISMATCH en=0 sel=0: got 1, expected 0
+[8000] MISMATCH en=0 sel=1: got 2, expected 0
+RESULT: FAIL 4 of 8 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 2}: fail
+[5000] MISMATCH en=0 sel=0: got 1, expected 0
+[6000] MISMATCH en=0 sel=1: got 2, expected 0
+[7000] MISMATCH en=0 sel=2: got 4, expected 0
+[8000] MISMATCH en=0 sel=3: got 8, expected 0
+[13000] MISMATCH en=0 sel=0: got 1, expected 0
+[14000] MISMATCH en=0 sel=1: got 2, expected 0
+[15000] MISMATCH en=0 sel=2: got 4, expected 0
+[16000] MISMATCH en=0 sel=3: got 8, expected 0
+RESULT: FAIL 8 of 16 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 3}: fail
+[9000] MISMATCH en=0 sel=0: got 1, expected 0
+[10000] MISMATCH en=0 sel=1: got 2, expected 0
+[11000] MISMATCH en=0 sel=2: got 4, expected 0
+[12000] MISMATCH en=0 sel=3: got 8, expected 0
+[13000] MISMATCH en=0 sel=4: got 10, expected 0
+[14000] MISMATCH en=0 sel=5: got 20, expected 0
+[15000] MISMATCH en=0 sel=6: got 40, expected 0
+[16000] MISMATCH en=0 sel=7: got 80, expected 0
+[25000] MISMATCH en=0 sel=0: got 1, expected 0
+[26000] MISMATCH en=0 sel=1: got 2, expected 0
+[27000] MISMATCH en=0 sel=2: got 4, expected 0
+[28000] MISMATCH en=0 sel=3: got 8, expected 0
+[29000] MISMATCH en=0 sel=4: got 10, expected 0
+[30000] MISMATCH en=0 sel=5: got 20, expected 0
+[31000] MISMATCH en=0 sel=6: got 40, expected 0
+[32000] MISMATCH en=0 sel=7: got 80, expected 0
+RESULT: FAIL 16 of 32 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 5}: fail
+[35000] MISMATCH en=0 sel=2: got 4, expected 0
+[36000] MISMATCH en=0 sel=3: got 8, expected 0
+[37000] MISMATCH en=0 sel=4: got 10, expected 0
+[38000] MISMATCH en=0 sel=5: got 20, expected 0
+[39000] MISMATCH en=0 sel=6: got 40, expected 0
+[40000] MISMATCH en=0 sel=7: got 80, expected 0
+[41000] MISMATCH en=0 sel=8: got 100, expected 0
+[42000] MISMATCH en=0 sel=9: got 200, expected 0
+[43000] MISMATCH en=0 sel=10: got 400, expected 0
+[44000] MISMATCH en=0 sel=11: got 800, expected 0
+[45000] MISMATCH en=0 sel=12: got 1000, expected 0
+[46000] MISMATCH en=0 sel=13: got 2000, expected 0
+[47000] MISMATCH en=0 sel=14: got 4000, expected 0
+[48000] MISMATCH en=0 sel=15: got 8000, expected 0
+[49000] MISMATCH en=0 sel=16: got 10000, expected 0
+[50000] MISMATCH en=0 sel=17: got 20000, expected 0
+[51000] MISMATCH en=0 sel=18: got 40000, expected 0
+[52000] MISMATCH en=0 sel=19: got 80000, expected 0
+[53000] MISMATCH en=0 sel=20: got 100000, expected 0
+[54000] MISMATCH en=0 sel=21: got 200000, expected 0
+[55000] MISMATCH en=0 sel=22: got 400000, expected 0
+[56000] MISMATCH en=0 sel=23: got 800000, expected 0
+[57000] MISMATCH en=0 sel=24: got 1000000, expected 0
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 128 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+== bug_ignores_enable [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_23 at harness.sv:6.15-6.32 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_23 at harness.sv:6.15-6.32 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_ignores_enable [bug] synth: pass
+cells after ABC mapping to 2-input gates: 17
+== bug_ignores_enable [bug] timed: n/a
+
+== bug_latch [bug] compile: pass
+
+== bug_latch [bug] lint: fail
+%Warning-LATCH: tasks/onehot_decoder/candidates/bug_latch.sv:9:3: Latch inferred for signal 'y' (not all control paths of combinational always assign a value)
+%Error: Exiting due to 1 warning(s)
+== bug_latch [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
+== bug_latch [bug] strong_icarus: fail
+{'N': 1}: fail
+[3000] MISMATCH en=0 sel=0: got 2, expected 0
+[4000] MISMATCH en=0 sel=1: got 2, expected 0
+[7000] MISMATCH en=0 sel=0: got 2, expected 0
+[8000] MISMATCH en=0 sel=1: got 2, expected 0
+RESULT: FAIL 4 of 8 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 8000 (1ps)
+
+{'N': 2}: fail
+[5000] MISMATCH en=0 sel=0: got 8, expected 0
+[6000] MISMATCH en=0 sel=1: got 8, expected 0
+[7000] MISMATCH en=0 sel=2: got 8, expected 0
+[8000] MISMATCH en=0 sel=3: got 8, expected 0
+[13000] MISMATCH en=0 sel=0: got 8, expected 0
+[14000] MISMATCH en=0 sel=1: got 8, expected 0
+[15000] MISMATCH en=0 sel=2: got 8, expected 0
+[16000] MISMATCH en=0 sel=3: got 8, expected 0
+RESULT: FAIL 8 of 16 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 16000 (1ps)
+
+{'N': 3}: fail
+[9000] MISMATCH en=0 sel=0: got 80, expected 0
+[10000] MISMATCH en=0 sel=1: got 80, expected 0
+[11000] MISMATCH en=0 sel=2: got 80, expected 0
+[12000] MISMATCH en=0 sel=3: got 80, expected 0
+[13000] MISMATCH en=0 sel=4: got 80, expected 0
+[14000] MISMATCH en=0 sel=5: got 80, expected 0
+[15000] MISMATCH en=0 sel=6: got 80, expected 0
+[16000] MISMATCH en=0 sel=7: got 80, expected 0
+[25000] MISMATCH en=0 sel=0: got 80, expected 0
+[26000] MISMATCH en=0 sel=1: got 80, expected 0
+[27000] MISMATCH en=0 sel=2: got 80, expected 0
+[28000] MISMATCH en=0 sel=3: got 80, expected 0
+[29000] MISMATCH en=0 sel=4: got 80, expected 0
+[30000] MISMATCH en=0 sel=5: got 80, expected 0
+[31000] MISMATCH en=0 sel=6: got 80, expected 0
+[32000] MISMATCH en=0 sel=7: got 80, expected 0
+RESULT: FAIL 16 of 32 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 32000 (1ps)
+
+{'N': 5}: fail
+ot 80000000, expected 0
+[34000] MISMATCH en=0 sel=1: got 80000000, expected 0
+[35000] MISMATCH en=0 sel=2: got 80000000, expected 0
+[36000] MISMATCH en=0 sel=3: got 80000000, expected 0
+[37000] MISMATCH en=0 sel=4: got 80000000, expected 0
+[38000] MISMATCH en=0 sel=5: got 80000000, expected 0
+[39000] MISMATCH en=0 sel=6: got 80000000, expected 0
+[40000] MISMATCH en=0 sel=7: got 80000000, expected 0
+[41000] MISMATCH en=0 sel=8: got 80000000, expected 0
+[42000] MISMATCH en=0 sel=9: got 80000000, expected 0
+[43000] MISMATCH en=0 sel=10: got 80000000, expected 0
+[44000] MISMATCH en=0 sel=11: got 80000000, expected 0
+[45000] MISMATCH en=0 sel=12: got 80000000, expected 0
+[46000] MISMATCH en=0 sel=13: got 80000000, expected 0
+[47000] MISMATCH en=0 sel=14: got 80000000, expected 0
+[48000] MISMATCH en=0 sel=15: got 80000000, expected 0
+[49000] MISMATCH en=0 sel=16: got 80000000, expected 0
+[50000] MISMATCH en=0 sel=17: got 80000000, expected 0
+[51000] MISMATCH en=0 sel=18: got 80000000, expected 0
+[52000] MISMATCH en=0 sel=19: got 80000000, expected 0
+[53000] MISMATCH en=0 sel=20: got 80000000, expected 0
+[54000] MISMATCH en=0 sel=21: got 80000000, expected 0
+[55000] MISMATCH en=0 sel=22: got 80000000, expected 0
+[56000] MISMATCH en=0 sel=23: got 80000000, expected 0
+[57000] MISMATCH en=0 sel=24: got 80000000, expected 0
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 128 checks
+tasks/onehot_decoder/tb_strong.sv:26: $finish called at 128000 (1ps)
+== bug_latch [bug] strong_verilator: fail
+{'N': 1}: fail
+[3000] MISMATCH en=0 sel=0: got 2, expected 0
+[4000] MISMATCH en=0 sel=1: got 2, expected 0
+[7000] MISMATCH en=0 sel=0: got 2, expected 0
+[8000] MISMATCH en=0 sel=1: got 2, expected 0
+RESULT: FAIL 4 of 8 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 2}: fail
+[5000] MISMATCH en=0 sel=0: got 8, expected 0
+[6000] MISMATCH en=0 sel=1: got 8, expected 0
+[7000] MISMATCH en=0 sel=2: got 8, expected 0
+[8000] MISMATCH en=0 sel=3: got 8, expected 0
+[13000] MISMATCH en=0 sel=0: got 8, expected 0
+[14000] MISMATCH en=0 sel=1: got 8, expected 0
+[15000] MISMATCH en=0 sel=2: got 8, expected 0
+[16000] MISMATCH en=0 sel=3: got 8, expected 0
+RESULT: FAIL 8 of 16 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 3}: fail
+[9000] MISMATCH en=0 sel=0: got 80, expected 0
+[10000] MISMATCH en=0 sel=1: got 80, expected 0
+[11000] MISMATCH en=0 sel=2: got 80, expected 0
+[12000] MISMATCH en=0 sel=3: got 80, expected 0
+[13000] MISMATCH en=0 sel=4: got 80, expected 0
+[14000] MISMATCH en=0 sel=5: got 80, expected 0
+[15000] MISMATCH en=0 sel=6: got 80, expected 0
+[16000] MISMATCH en=0 sel=7: got 80, expected 0
+[25000] MISMATCH en=0 sel=0: got 80, expected 0
+[26000] MISMATCH en=0 sel=1: got 80, expected 0
+[27000] MISMATCH en=0 sel=2: got 80, expected 0
+[28000] MISMATCH en=0 sel=3: got 80, expected 0
+[29000] MISMATCH en=0 sel=4: got 80, expected 0
+[30000] MISMATCH en=0 sel=5: got 80, expected 0
+[31000] MISMATCH en=0 sel=6: got 80, expected 0
+[32000] MISMATCH en=0 sel=7: got 80, expected 0
+RESULT: FAIL 16 of 32 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+
+{'N': 5}: fail
+, expected 0
+[37000] MISMATCH en=0 sel=4: got 80000000, expected 0
+[38000] MISMATCH en=0 sel=5: got 80000000, expected 0
+[39000] MISMATCH en=0 sel=6: got 80000000, expected 0
+[40000] MISMATCH en=0 sel=7: got 80000000, expected 0
+[41000] MISMATCH en=0 sel=8: got 80000000, expected 0
+[42000] MISMATCH en=0 sel=9: got 80000000, expected 0
+[43000] MISMATCH en=0 sel=10: got 80000000, expected 0
+[44000] MISMATCH en=0 sel=11: got 80000000, expected 0
+[45000] MISMATCH en=0 sel=12: got 80000000, expected 0
+[46000] MISMATCH en=0 sel=13: got 80000000, expected 0
+[47000] MISMATCH en=0 sel=14: got 80000000, expected 0
+[48000] MISMATCH en=0 sel=15: got 80000000, expected 0
+[49000] MISMATCH en=0 sel=16: got 80000000, expected 0
+[50000] MISMATCH en=0 sel=17: got 80000000, expected 0
+[51000] MISMATCH en=0 sel=18: got 80000000, expected 0
+[52000] MISMATCH en=0 sel=19: got 80000000, expected 0
+[53000] MISMATCH en=0 sel=20: got 80000000, expected 0
+[54000] MISMATCH en=0 sel=21: got 80000000, expected 0
+[55000] MISMATCH en=0 sel=22: got 80000000, expected 0
+[56000] MISMATCH en=0 sel=23: got 80000000, expected 0
+[57000] MISMATCH en=0 sel=24: got 80000000, expected 0
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 128 checks
+- tasks/onehot_decoder/tb_strong.sv:21: Verilog $finish
+== bug_latch [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_24 at harness.sv:6.15-6.32 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_24 at harness.sv:6.15-6.32 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_latch [bug] synth: fail
+cells after ABC mapping to 2-input gates: 25
+latch inferred
+== bug_latch [bug] timed: n/a
+
+== correct_shift [correct] compile: pass
+
+== correct_shift [correct] lint: pass
+
+== correct_shift [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/onehot_decoder/tb_weak.sv:21: $finish called at 4000 (1ps)
+== correct_shift [correct] strong_icarus: pass
+{'N': 1}: pass
+{'N': 2}: pass
+{'N': 3}: pass
+{'N': 5}: pass
+== correct_shift [correct] strong_verilator: pass
+{'N': 1}: pass
+{'N': 2}: pass
+{'N': 3}: pass
+{'N': 5}: pass
+== correct_shift [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_shift [correct] synth: pass
+cells after ABC mapping to 2-input gates: 17
+== correct_shift [correct] timed: n/a
+

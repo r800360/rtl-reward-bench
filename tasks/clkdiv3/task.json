@@ -1,0 +1,11 @@
+{
+  "id": "clkdiv3",
+  "title": "Glitch-free divide-by-3 clock with 50 % duty cycle",
+  "origin": "an odd clock-divider exercise",
+  "top": "clkdiv3",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong"},
+  "timed": {"tb": "tb_timed.sv", "top": "tb_timed"},
+  "synth": {}
+}

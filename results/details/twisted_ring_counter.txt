@@ -1,0 +1,382 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 2 checks
+tasks/twisted_ring_counter/tb_weak.sv:27: $finish called at 86000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 3}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+== golden [correct] strong_verilator: pass
+{'N': 3}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 9
+== golden [correct] timed: n/a
+
+== bug_clear_sync [bug] compile: pass
+
+== bug_clear_sync [bug] lint: pass
+
+== bug_clear_sync [bug] weak: pass
+RESULT: PASS 2 checks
+tasks/twisted_ring_counter/tb_weak.sv:27: $finish called at 86000 (1ps)
+== bug_clear_sync [bug] strong_icarus: fail
+{'N': 3}: fail
+[151000] MISMATCH clear acts before the next edge: got 4, expected 0
+RESULT: FAIL 1 of 81 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 726000 (1ps)
+
+{'N': 4}: fail
+[191000] MISMATCH clear acts before the next edge: got 8, expected 0
+RESULT: FAIL 1 of 181 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 1646000 (1ps)
+
+{'N': 6}: fail
+[271000] MISMATCH clear acts before the next edge: got 20, expected 0
+RESULT: FAIL 1 of 925 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 8606000 (1ps)
+== bug_clear_sync [bug] strong_verilator: fail
+{'N': 3}: fail
+[151000] MISMATCH clear acts before the next edge: got 4, expected 0
+RESULT: FAIL 1 of 81 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+
+{'N': 4}: fail
+[191000] MISMATCH clear acts before the next edge: got 8, expected 0
+RESULT: FAIL 1 of 181 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+
+{'N': 6}: fail
+[271000] MISMATCH clear acts before the next edge: got 20, expected 0
+RESULT: FAIL 1 of 925 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+== bug_clear_sync [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_clear_sync [bug] synth: pass
+cells after ABC mapping to 2-input gates: 9
+== bug_clear_sync [bug] timed: n/a
+
+== bug_load_async [bug] compile: pass
+
+== bug_load_async [bug] lint: pass
+
+== bug_load_async [bug] weak: pass
+RESULT: PASS 2 checks
+tasks/twisted_ring_counter/tb_weak.sv:27: $finish called at 86000 (1ps)
+== bug_load_async [bug] strong_icarus: fail
+{'N': 3}: fail
+[172000] MISMATCH load has no effect before the clock edge: got 0, expected 4
+[242000] MISMATCH load has no effect before the clock edge: got 1, expected 0
+[312000] MISMATCH load has no effect before the clock edge: got 2, expected 1
+[382000] MISMATCH load has no effect before the clock edge: got 3, expected 2
+[452000] MISMATCH load has no effect before the clock edge: got 4, expected 3
+[522000] MISMATCH load has no effect before the clock edge: got 5, expected 4
+[592000] MISMATCH load has no effect before the clock edge: got 6, expected 5
+[662000] MISMATCH load has no effect before the clock edge: got 7, expected 6
+RESULT: FAIL 8 of 81 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 726000 (1ps)
+
+{'N': 4}: fail
+[212000] MISMATCH load has no effect before the clock edge: got 0, expected 8
+[302000] MISMATCH load has no effect before the clock edge: got 1, expected 0
+[392000] MISMATCH load has no effect before the clock edge: got 2, expected 1
+[482000] MISMATCH load has no effect before the clock edge: got 3, expected 2
+[572000] MISMATCH load has no effect before the clock edge: got 4, expected 3
+[662000] MISMATCH load has no effect before the clock edge: got 5, expected 4
+[752000] MISMATCH load has no effect before the clock edge: got 6, expected 5
+[842000] MISMATCH load has no effect before the clock edge: got 7, expected 6
+[932000] MISMATCH load has no effect before the clock edge: got 8, expected 7
+[1022000] MISMATCH load has no effect before the clock edge: got 9, expected 8
+[1112000] MISMATCH load has no effect before the clock edge: got a, expected 9
+[1202000] MISMATCH load has no effect before the clock edge: got b, expected a
+[1292000] MISMATCH load has no effect before the clock edge: got c, expected b
+[1382000] MISMATCH load has no effect before the clock edge: got d, expected c
+[1472000] MISMATCH load has no effect before the clock edge: got e, expected d
+[1562000] MISMATCH load has no effect before the clock edge: got f, expected e
+RESULT: FAIL 16 of 181 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 1646000 (1ps)
+
+{'N': 6}: fail
+ffect before the clock edge: got 8, expected 7
+[1462000] MISMATCH load has no effect before the clock edge: got 9, expected 8
+[1592000] MISMATCH load has no effect before the clock edge: got a, expected 9
+[1722000] MISMATCH load has no effect before the clock edge: got b, expected a
+[1852000] MISMATCH load has no effect before the clock edge: got c, expected b
+[1982000] MISMATCH load has no effect before the clock edge: got d, expected c
+[2112000] MISMATCH load has no effect before the clock edge: got e, expected d
+[2242000] MISMATCH load has no effect before the clock edge: got f, expected e
+[2372000] MISMATCH load has no effect before the clock edge: got 10, expected f
+[2502000] MISMATCH load has no effect before the clock edge: got 11, expected 10
+[2632000] MISMATCH load has no effect before the clock edge: got 12, expected 11
+[2762000] MISMATCH load has no effect before the clock edge: got 13, expected 12
+[2892000] MISMATCH load has no effect before the clock edge: got 14, expected 13
+[3022000] MISMATCH load has no effect before the clock edge: got 15, expected 14
+[3152000] MISMATCH load has no effect before the clock edge: got 16, expected 15
+[3282000] MISMATCH load has no effect before the clock edge: got 17, expected 16
+[3412000] MISMATCH load has no effect before the clock edge: got 18, expected 17
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 925 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 8606000 (1ps)
+== bug_load_async [bug] strong_verilator: fail
+{'N': 3}: fail
+[172000] MISMATCH load has no effect before the clock edge: got 0, expected 4
+[242000] MISMATCH load has no effect before the clock edge: got 1, expected 0
+[312000] MISMATCH load has no effect before the clock edge: got 2, expected 1
+[382000] MISMATCH load has no effect before the clock edge: got 3, expected 2
+[452000] MISMATCH load has no effect before the clock edge: got 4, expected 3
+[522000] MISMATCH load has no effect before the clock edge: got 5, expected 4
+[592000] MISMATCH load has no effect before the clock edge: got 6, expected 5
+[662000] MISMATCH load has no effect before the clock edge: got 7, expected 6
+RESULT: FAIL 8 of 81 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+
+{'N': 4}: fail
+e: got 0, expected 8
+[302000] MISMATCH load has no effect before the clock edge: got 1, expected 0
+[392000] MISMATCH load has no effect before the clock edge: got 2, expected 1
+[482000] MISMATCH load has no effect before the clock edge: got 3, expected 2
+[572000] MISMATCH load has no effect before the clock edge: got 4, expected 3
+[662000] MISMATCH load has no effect before the clock edge: got 5, expected 4
+[752000] MISMATCH load has no effect before the clock edge: got 6, expected 5
+[842000] MISMATCH load has no effect before the clock edge: got 7, expected 6
+[932000] MISMATCH load has no effect before the clock edge: got 8, expected 7
+[1022000] MISMATCH load has no effect before the clock edge: got 9, expected 8
+[1112000] MISMATCH load has no effect before the clock edge: got a, expected 9
+[1202000] MISMATCH load has no effect before the clock edge: got b, expected a
+[1292000] MISMATCH load has no effect before the clock edge: got c, expected b
+[1382000] MISMATCH load has no effect before the clock edge: got d, expected c
+[1472000] MISMATCH load has no effect before the clock edge: got e, expected d
+[1562000] MISMATCH load has no effect before the clock edge: got f, expected e
+RESULT: FAIL 16 of 181 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+
+{'N': 6}: fail
+re the clock edge: got a, expected 9
+[1722000] MISMATCH load has no effect before the clock edge: got b, expected a
+[1852000] MISMATCH load has no effect before the clock edge: got c, expected b
+[1982000] MISMATCH load has no effect before the clock edge: got d, expected c
+[2112000] MISMATCH load has no effect before the clock edge: got e, expected d
+[2242000] MISMATCH load has no effect before the clock edge: got f, expected e
+[2372000] MISMATCH load has no effect before the clock edge: got 10, expected f
+[2502000] MISMATCH load has no effect before the clock edge: got 11, expected 10
+[2632000] MISMATCH load has no effect before the clock edge: got 12, expected 11
+[2762000] MISMATCH load has no effect before the clock edge: got 13, expected 12
+[2892000] MISMATCH load has no effect before the clock edge: got 14, expected 13
+[3022000] MISMATCH load has no effect before the clock edge: got 15, expected 14
+[3152000] MISMATCH load has no effect before the clock edge: got 16, expected 15
+[3282000] MISMATCH load has no effect before the clock edge: got 17, expected 16
+[3412000] MISMATCH load has no effect before the clock edge: got 18, expected 17
+... 39 further mismatches not printed
+RESULT: FAIL 64 of 925 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+== bug_load_async [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_load_async [bug] synth: pass
+cells after ABC mapping to 2-input gates: 23
+== bug_load_async [bug] timed: n/a
+
+== bug_shift_left [bug] compile: pass
+
+== bug_shift_left [bug] lint: pass
+
+== bug_shift_left [bug] weak: pass
+RESULT: PASS 2 checks
+tasks/twisted_ring_counter/tb_weak.sv:27: $finish called at 86000 (1ps)
+== bug_shift_left [bug] strong_icarus: fail
+{'N': 3}: fail
+4, expected 1
+[86000] MISMATCH state after a clock edge: got 1, expected 4
+[96000] MISMATCH state after a clock edge: got 3, expected 6
+[116000] MISMATCH state after a clock edge: got 6, expected 3
+[126000] MISMATCH state after a clock edge: got 4, expected 1
+[146000] MISMATCH state after a clock edge: got 1, expected 4
+[166000] MISMATCH state after a clock edge: got 1, expected 4
+[172000] MISMATCH load has no effect before the clock edge: got 1, expected 4
+[186000] MISMATCH state after a clock edge: got 1, expected 4
+[196000] MISMATCH state after a clock edge: got 3, expected 6
+[216000] MISMATCH state after a clock edge: got 6, expected 3
+[226000] MISMATCH state after a clock edge: got 4, expected 1
+[256000] MISMATCH state after a clock edge: got 3, expected 0
+[266000] MISMATCH state after a clock edge: got 7, expected 4
+[286000] MISMATCH state after a clock edge: got 4, expected 7
+[296000] MISMATCH state after a clock edge: got 0, expected 3
+[396000] MISMATCH state after a clock edge: got 7, expected 1
+[406000] MISMATCH state after a clock edge: got 6, expected 0
+[426000] MISMATCH state after a clock edge: got 0, expected 6
+[436000] MISMATCH state after a clock edge: got 1, expected 7
+[466000] MISMATCH state after a clock edge: got 0, expected 6
+[476000] MISMATCH state after a clock edge: got 1, expected 7
+... 10 further mismatches not printed
+RESULT: FAIL 35 of 81 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 726000 (1ps)
+
+{'N': 4}: fail
+expected 7
+[76000] MISMATCH state after a clock edge: got c, expected 3
+[86000] MISMATCH state after a clock edge: got 8, expected 1
+[106000] MISMATCH state after a clock edge: got 1, expected 8
+[116000] MISMATCH state after a clock edge: got 3, expected c
+[126000] MISMATCH state after a clock edge: got 7, expected e
+[146000] MISMATCH state after a clock edge: got e, expected 7
+[156000] MISMATCH state after a clock edge: got c, expected 3
+[166000] MISMATCH state after a clock edge: got 8, expected 1
+[186000] MISMATCH state after a clock edge: got 1, expected 8
+[206000] MISMATCH state after a clock edge: got 1, expected 8
+[212000] MISMATCH load has no effect before the clock edge: got 1, expected 8
+[226000] MISMATCH state after a clock edge: got 1, expected 8
+[236000] MISMATCH state after a clock edge: got 3, expected c
+[246000] MISMATCH state after a clock edge: got 7, expected e
+[266000] MISMATCH state after a clock edge: got e, expected 7
+[276000] MISMATCH state after a clock edge: got c, expected 3
+[286000] MISMATCH state after a clock edge: got 8, expected 1
+[316000] MISMATCH state after a clock edge: got 3, expected 0
+[326000] MISMATCH state after a clock edge: got 7, expected 8
+[336000] MISMATCH state after a clock edge: got f, expected c
+[356000] MISMATCH state after a clock edge: got c, expected f
+... 86 further mismatches not printed
+RESULT: FAIL 111 of 181 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 1646000 (1ps)
+
+{'N': 6}: fail
+CH state after a clock edge: got 1f, expected 3e
+[86000] MISMATCH state after a clock edge: got 3e, expected 1f
+[96000] MISMATCH state after a clock edge: got 3c, expected f
+[106000] MISMATCH state after a clock edge: got 38, expected 7
+[116000] MISMATCH state after a clock edge: got 30, expected 3
+[126000] MISMATCH state after a clock edge: got 20, expected 1
+[146000] MISMATCH state after a clock edge: got 1, expected 20
+[156000] MISMATCH state after a clock edge: got 3, expected 30
+[166000] MISMATCH state after a clock edge: got 7, expected 38
+[176000] MISMATCH state after a clock edge: got f, expected 3c
+[186000] MISMATCH state after a clock edge: got 1f, expected 3e
+[206000] MISMATCH state after a clock edge: got 3e, expected 1f
+[216000] MISMATCH state after a clock edge: got 3c, expected f
+[226000] MISMATCH state after a clock edge: got 38, expected 7
+[236000] MISMATCH state after a clock edge: got 30, expected 3
+[246000] MISMATCH state after a clock edge: got 20, expected 1
+[266000] MISMATCH state after a clock edge: got 1, expected 20
+[286000] MISMATCH state after a clock edge: got 1, expected 20
+[292000] MISMATCH load has no effect before the clock edge: got 1, expected 20
+[306000] MISMATCH state after a clock edge: got 1, expected 20
+[316000] MISMATCH state after a clock edge: got 3, expected 30
+... 622 further mismatches not printed
+RESULT: FAIL 647 of 925 checks
+tasks/twisted_ring_counter/tb_strong.sv:46: $finish called at 8606000 (1ps)
+== bug_shift_left [bug] strong_verilator: fail
+{'N': 3}: fail
+ edge: got 6, expected 3
+[126000] MISMATCH state after a clock edge: got 4, expected 1
+[146000] MISMATCH state after a clock edge: got 1, expected 4
+[166000] MISMATCH state after a clock edge: got 1, expected 4
+[172000] MISMATCH load has no effect before the clock edge: got 1, expected 4
+[186000] MISMATCH state after a clock edge: got 1, expected 4
+[196000] MISMATCH state after a clock edge: got 3, expected 6
+[216000] MISMATCH state after a clock edge: got 6, expected 3
+[226000] MISMATCH state after a clock edge: got 4, expected 1
+[256000] MISMATCH state after a clock edge: got 3, expected 0
+[266000] MISMATCH state after a clock edge: got 7, expected 4
+[286000] MISMATCH state after a clock edge: got 4, expected 7
+[296000] MISMATCH state after a clock edge: got 0, expected 3
+[396000] MISMATCH state after a clock edge: got 7, expected 1
+[406000] MISMATCH state after a clock edge: got 6, expected 0
+[426000] MISMATCH state after a clock edge: got 0, expected 6
+[436000] MISMATCH state after a clock edge: got 1, expected 7
+[466000] MISMATCH state after a clock edge: got 0, expected 6
+[476000] MISMATCH state after a clock edge: got 1, expected 7
+... 10 further mismatches not printed
+RESULT: FAIL 35 of 81 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+
+{'N': 4}: fail
+ck edge: got 1, expected 8
+[116000] MISMATCH state after a clock edge: got 3, expected c
+[126000] MISMATCH state after a clock edge: got 7, expected e
+[146000] MISMATCH state after a clock edge: got e, expected 7
+[156000] MISMATCH state after a clock edge: got c, expected 3
+[166000] MISMATCH state after a clock edge: got 8, expected 1
+[186000] MISMATCH state after a clock edge: got 1, expected 8
+[206000] MISMATCH state after a clock edge: got 1, expected 8
+[212000] MISMATCH load has no effect before the clock edge: got 1, expected 8
+[226000] MISMATCH state after a clock edge: got 1, expected 8
+[236000] MISMATCH state after a clock edge: got 3, expected c
+[246000] MISMATCH state after a clock edge: got 7, expected e
+[266000] MISMATCH state after a clock edge: got e, expected 7
+[276000] MISMATCH state after a clock edge: got c, expected 3
+[286000] MISMATCH state after a clock edge: got 8, expected 1
+[316000] MISMATCH state after a clock edge: got 3, expected 0
+[326000] MISMATCH state after a clock edge: got 7, expected 8
+[336000] MISMATCH state after a clock edge: got f, expected c
+[356000] MISMATCH state after a clock edge: got c, expected f
+... 86 further mismatches not printed
+RESULT: FAIL 111 of 181 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+
+{'N': 6}: fail
+ted f
+[106000] MISMATCH state after a clock edge: got 38, expected 7
+[116000] MISMATCH state after a clock edge: got 30, expected 3
+[126000] MISMATCH state after a clock edge: got 20, expected 1
+[146000] MISMATCH state after a clock edge: got 1, expected 20
+[156000] MISMATCH state after a clock edge: got 3, expected 30
+[166000] MISMATCH state after a clock edge: got 7, expected 38
+[176000] MISMATCH state after a clock edge: got f, expected 3c
+[186000] MISMATCH state after a clock edge: got 1f, expected 3e
+[206000] MISMATCH state after a clock edge: got 3e, expected 1f
+[216000] MISMATCH state after a clock edge: got 3c, expected f
+[226000] MISMATCH state after a clock edge: got 38, expected 7
+[236000] MISMATCH state after a clock edge: got 30, expected 3
+[246000] MISMATCH state after a clock edge: got 20, expected 1
+[266000] MISMATCH state after a clock edge: got 1, expected 20
+[286000] MISMATCH state after a clock edge: got 1, expected 20
+[292000] MISMATCH load has no effect before the clock edge: got 1, expected 20
+[306000] MISMATCH state after a clock edge: got 1, expected 20
+[316000] MISMATCH state after a clock edge: got 3, expected 30
+... 622 further mismatches not printed
+RESULT: FAIL 647 of 925 checks
+- tasks/twisted_ring_counter/tb_strong.sv:41: Verilog $finish
+== bug_shift_left [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_shift_left [bug] synth: pass
+cells after ABC mapping to 2-input gates: 9
+== bug_shift_left [bug] timed: n/a
+
+== correct_shift_operator [correct] compile: pass
+
+== correct_shift_operator [correct] lint: pass
+
+== correct_shift_operator [correct] weak: pass
+RESULT: PASS 2 checks
+tasks/twisted_ring_counter/tb_weak.sv:27: $finish called at 86000 (1ps)
+== correct_shift_operator [correct] strong_icarus: pass
+{'N': 3}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+== correct_shift_operator [correct] strong_verilator: pass
+{'N': 3}: pass
+{'N': 4}: pass
+{'N': 6}: pass
+== correct_shift_operator [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== correct_shift_operator [correct] synth: pass
+cells after ABC mapping to 2-input gates: 9
+== correct_shift_operator [correct] timed: n/a
+

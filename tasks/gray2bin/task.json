@@ -1,0 +1,11 @@
+{
+  "id": "gray2bin",
+  "title": "Registered Gray-to-binary converter",
+  "origin": "a Gray-code conversion exercise with registered input and output",
+  "top": "gray2bin",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 4}, {"N": 8}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "pdr"},
+  "synth": {"params": {"N": 4}}
+}

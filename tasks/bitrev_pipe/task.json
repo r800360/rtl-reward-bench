@@ -1,0 +1,10 @@
+{
+  "id": "bitrev_pipe",
+  "title": "Dual-edge pipeline: capture on the falling edge, reverse/invert on the rising edge",
+  "origin": "a dual-edge register exercise",
+  "top": "bitrev_pipe",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 4}, {"N": 7}]},
+  "synth": {"params": {"N": 4}}
+}

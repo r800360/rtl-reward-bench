@@ -1,0 +1,189 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 20 checks
+tasks/adder_cla/tb_weak.sv:20: $finish called at 20000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== golden [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 199
+logic depth 11 (limit 12)
+== golden [correct] timed: n/a
+
+== bug_missing_cin_term [bug] compile: pass
+
+== bug_missing_cin_term [bug] lint: pass
+
+== bug_missing_cin_term [bug] weak: pass
+RESULT: PASS 20 checks
+tasks/adder_cla/tb_weak.sv:20: $finish called at 20000 (1ps)
+== bug_missing_cin_term [bug] strong_icarus: fail
+{'N': 4}: fail
+[32000] MISMATCH 0 + f + 1: got 0, expected 10
+[62000] MISMATCH 1 + e + 1: got 0, expected 10
+[92000] MISMATCH 2 + d + 1: got 0, expected 10
+[122000] MISMATCH 3 + c + 1: got 0, expected 10
+[152000] MISMATCH 4 + b + 1: got 0, expected 10
+[182000] MISMATCH 5 + a + 1: got 0, expected 10
+[212000] MISMATCH 6 + 9 + 1: got 0, expected 10
+[242000] MISMATCH 7 + 8 + 1: got 0, expected 10
+[272000] MISMATCH 8 + 7 + 1: got 0, expected 10
+[302000] MISMATCH 9 + 6 + 1: got 0, expected 10
+[332000] MISMATCH a + 5 + 1: got 0, expected 10
+[362000] MISMATCH b + 4 + 1: got 0, expected 10
+[392000] MISMATCH c + 3 + 1: got 0, expected 10
+[422000] MISMATCH d + 2 + 1: got 0, expected 10
+[452000] MISMATCH e + 1 + 1: got 0, expected 10
+[482000] MISMATCH f + 0 + 1: got 0, expected 10
+RESULT: FAIL 16 of 512 checks
+tasks/adder_cla/tb_strong.sv:29: $finish called at 512000 (1ps)
+
+{'N': 16}: fail
+[1000] MISMATCH ffff + 0 + 1: got 0, expected 10000
+[2000] MISMATCH 0 + ffff + 1: got 0, expected 10000
+[33504000] MISMATCH 9188 + 6e77 + 1: got 0, expected 10000
+RESULT: FAIL 3 of 50004 checks
+tasks/adder_cla/tb_strong.sv:29: $finish called at 50004000 (1ps)
+
+{'N': 32}: fail
+[1000] MISMATCH ffffffff + 0 + 1: got 0, expected 100000000
+[2000] MISMATCH 0 + ffffffff + 1: got 0, expected 100000000
+RESULT: FAIL 2 of 50004 checks
+tasks/adder_cla/tb_strong.sv:29: $finish called at 50004000 (1ps)
+== bug_missing_cin_term [bug] strong_verilator: fail
+{'N': 4}: fail
+[32000] MISMATCH 0 + f + 1: got 0, expected 10
+[62000] MISMATCH 1 + e + 1: got 0, expected 10
+[92000] MISMATCH 2 + d + 1: got 0, expected 10
+[122000] MISMATCH 3 + c + 1: got 0, expected 10
+[152000] MISMATCH 4 + b + 1: got 0, expected 10
+[182000] MISMATCH 5 + a + 1: got 0, expected 10
+[212000] MISMATCH 6 + 9 + 1: got 0, expected 10
+[242000] MISMATCH 7 + 8 + 1: got 0, expected 10
+[272000] MISMATCH 8 + 7 + 1: got 0, expected 10
+[302000] MISMATCH 9 + 6 + 1: got 0, expected 10
+[332000] MISMATCH a + 5 + 1: got 0, expected 10
+[362000] MISMATCH b + 4 + 1: got 0, expected 10
+[392000] MISMATCH c + 3 + 1: got 0, expected 10
+[422000] MISMATCH d + 2 + 1: got 0, expected 10
+[452000] MISMATCH e + 1 + 1: got 0, expected 10
+[482000] MISMATCH f + 0 + 1: got 0, expected 10
+RESULT: FAIL 16 of 512 checks
+- tasks/adder_cla/tb_strong.sv:24: Verilog $finish
+
+{'N': 16}: fail
+[1000] MISMATCH ffff + 0 + 1: got 0, expected 10000
+[2000] MISMATCH 0 + ffff + 1: got 0, expected 10000
+RESULT: FAIL 2 of 50004 checks
+- tasks/adder_cla/tb_strong.sv:24: Verilog $finish
+
+{'N': 32}: fail
+[1000] MISMATCH ffffffff + 0 + 1: got 0, expected 100000000
+[2000] MISMATCH 0 + ffffffff + 1: got 0, expected 100000000
+RESULT: FAIL 2 of 50004 checks
+- tasks/adder_cla/tb_strong.sv:24: Verilog $finish
+== bug_missing_cin_term [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY [check] summary: counterexample trace [basecase]: check/engine_0/trace.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_584 at harness.sv:6.15-6.32 in step 0
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_6_584 at harness.sv:6.15-6.32 in step 0
+SBY [check] DONE (FAIL, rc=2)
+== bug_missing_cin_term [bug] synth: pass
+cells after ABC mapping to 2-input gates: 205
+logic depth 11 (limit 12)
+== bug_missing_cin_term [bug] timed: n/a
+
+== bug_plain_operator [bug] compile: pass
+
+== bug_plain_operator [bug] lint: pass
+
+== bug_plain_operator [bug] weak: pass
+RESULT: PASS 20 checks
+tasks/adder_cla/tb_weak.sv:20: $finish called at 20000 (1ps)
+== bug_plain_operator [bug] strong_icarus: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== bug_plain_operator [bug] strong_verilator: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== bug_plain_operator [bug] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== bug_plain_operator [bug] synth: fail
+cells after ABC mapping to 2-input gates: 86
+logic depth 16 (limit 12)
+== bug_plain_operator [bug] timed: n/a
+
+== bug_ripple [bug] compile: pass
+
+== bug_ripple [bug] lint: fail
+%Warning-UNOPTFLAT: tasks/adder_cla/candidates/bug_ripple.sv:10:15: Signal unoptimizable: Circular combinational logic: 'adder_cla.c'
+%Error: Exiting due to 1 warning(s)
+== bug_ripple [bug] weak: pass
+RESULT: PASS 20 checks
+tasks/adder_cla/tb_weak.sv:20: $finish called at 20000 (1ps)
+== bug_ripple [bug] strong_icarus: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== bug_ripple [bug] strong_verilator: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== bug_ripple [bug] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== bug_ripple [bug] synth: fail
+cells after ABC mapping to 2-input gates: 98
+logic depth 33 (limit 12)
+== bug_ripple [bug] timed: n/a
+
+== correct_kogge_stone [correct] compile: pass
+
+== correct_kogge_stone [correct] lint: pass
+
+== correct_kogge_stone [correct] weak: pass
+RESULT: PASS 20 checks
+tasks/adder_cla/tb_weak.sv:20: $finish called at 20000 (1ps)
+== correct_kogge_stone [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== correct_kogge_stone [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 16}: pass
+{'N': 32}: pass
+== correct_kogge_stone [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_kogge_stone [correct] synth: pass
+cells after ABC mapping to 2-input gates: 119
+logic depth 10 (limit 12)
+== correct_kogge_stone [correct] timed: n/a
+

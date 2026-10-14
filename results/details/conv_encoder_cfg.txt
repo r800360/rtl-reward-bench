@@ -1,0 +1,434 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 20 checks
+tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 3}: pass
+{'N': 5}: pass
+{'N': 9}: pass
+== golden [correct] strong_verilator: pass
+{'N': 3}: pass
+{'N': 5}: pass
+{'N': 9}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 34
+== golden [correct] timed: n/a
+
+== bug_load_exclusive [bug] compile: pass
+
+== bug_load_exclusive [bug] lint: pass
+
+== bug_load_exclusive [bug] weak: pass
+RESULT: PASS 20 checks
+tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
+== bug_load_exclusive [bug] strong_icarus: fail
+{'N': 3}: fail
+ock edge: got 2, expected 0
+[6596000] MISMATCH dout after a clock edge: got 1, expected 3
+[6626000] MISMATCH dout after a clock edge: got 1, expected 3
+[6696000] MISMATCH dout after a clock edge: got 1, expected 3
+[6706000] MISMATCH dout after a clock edge: got 1, expected 3
+[6736000] MISMATCH dout after a clock edge: got 1, expected 3
+[6746000] MISMATCH dout after a clock edge: got 1, expected 3
+[6756000] MISMATCH dout after a clock edge: got 2, expected 0
+[6766000] MISMATCH dout after a clock edge: got 2, expected 0
+[6776000] MISMATCH dout after a clock edge: got 2, expected 0
+[6786000] MISMATCH dout after a clock edge: got 2, expected 0
+[6796000] MISMATCH dout after a clock edge: got 2, expected 0
+[6816000] MISMATCH dout after a clock edge: got 2, expected 0
+[6856000] MISMATCH dout after a clock edge: got 1, expected 3
+[6866000] MISMATCH dout after a clock edge: got 1, expected 3
+[6886000] MISMATCH dout after a clock edge: got 2, expected 0
+[6896000] MISMATCH dout after a clock edge: got 1, expected 3
+[6906000] MISMATCH dout after a clock edge: got 2, expected 0
+[6956000] MISMATCH dout after a clock edge: got 1, expected 3
+[6966000] MISMATCH dout after a clock edge: got 1, expected 3
+[6976000] MISMATCH dout after a clock edge: got 2, expected 0
+[6996000] MISMATCH dout after a clock edge: got 2, expected 0
+... 135 further mismatches not printed
+RESULT: FAIL 160 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+
+{'N': 5}: fail
+ock edge: got 1, expected 3
+[6586000] MISMATCH dout after a clock edge: got 2, expected 0
+[6606000] MISMATCH dout after a clock edge: got 1, expected 3
+[6616000] MISMATCH dout after a clock edge: got 1, expected 3
+[6636000] MISMATCH dout after a clock edge: got 1, expected 3
+[6646000] MISMATCH dout after a clock edge: got 1, expected 3
+[6706000] MISMATCH dout after a clock edge: got 2, expected 0
+[6726000] MISMATCH dout after a clock edge: got 1, expected 3
+[6746000] MISMATCH dout after a clock edge: got 1, expected 3
+[6816000] MISMATCH dout after a clock edge: got 2, expected 0
+[6826000] MISMATCH dout after a clock edge: got 1, expected 3
+[6836000] MISMATCH dout after a clock edge: got 2, expected 0
+[6866000] MISMATCH dout after a clock edge: got 2, expected 0
+[6886000] MISMATCH dout after a clock edge: got 1, expected 3
+[6896000] MISMATCH dout after a clock edge: got 1, expected 3
+[6926000] MISMATCH dout after a clock edge: got 2, expected 0
+[6966000] MISMATCH dout after a clock edge: got 2, expected 0
+[6996000] MISMATCH dout after a clock edge: got 2, expected 0
+[7006000] MISMATCH dout after a clock edge: got 1, expected 3
+[7016000] MISMATCH dout after a clock edge: got 2, expected 0
+[7086000] MISMATCH dout after a clock edge: got 2, expected 0
+[7096000] MISMATCH dout after a clock edge: got 1, expected 3
+... 134 further mismatches not printed
+RESULT: FAIL 159 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+
+{'N': 9}: fail
+ock edge: got 2, expected 0
+[6616000] MISMATCH dout after a clock edge: got 1, expected 3
+[6626000] MISMATCH dout after a clock edge: got 1, expected 3
+[6646000] MISMATCH dout after a clock edge: got 1, expected 3
+[6656000] MISMATCH dout after a clock edge: got 2, expected 0
+[6676000] MISMATCH dout after a clock edge: got 1, expected 3
+[6686000] MISMATCH dout after a clock edge: got 1, expected 3
+[6746000] MISMATCH dout after a clock edge: got 2, expected 0
+[6766000] MISMATCH dout after a clock edge: got 2, expected 0
+[6786000] MISMATCH dout after a clock edge: got 2, expected 0
+[6856000] MISMATCH dout after a clock edge: got 2, expected 0
+[6866000] MISMATCH dout after a clock edge: got 1, expected 3
+[6876000] MISMATCH dout after a clock edge: got 2, expected 0
+[6906000] MISMATCH dout after a clock edge: got 2, expected 0
+[6926000] MISMATCH dout after a clock edge: got 2, expected 0
+[6936000] MISMATCH dout after a clock edge: got 2, expected 0
+[6966000] MISMATCH dout after a clock edge: got 2, expected 0
+[7006000] MISMATCH dout after a clock edge: got 1, expected 3
+[7036000] MISMATCH dout after a clock edge: got 2, expected 0
+[7046000] MISMATCH dout after a clock edge: got 1, expected 3
+[7056000] MISMATCH dout after a clock edge: got 2, expected 0
+[7126000] MISMATCH dout after a clock edge: got 2, expected 0
+... 130 further mismatches not printed
+RESULT: FAIL 155 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+== bug_load_exclusive [bug] strong_verilator: fail
+{'N': 3}: pass
+{'N': 5}: pass
+{'N': 9}: fail
+H dout after a clock edge: got 2, expected 0
+[6646000] MISMATCH dout after a clock edge: got 1, expected 3
+[6666000] MISMATCH dout after a clock edge: got 2, expected 0
+[6676000] MISMATCH dout after a clock edge: got 1, expected 3
+[6696000] MISMATCH dout after a clock edge: got 1, expected 3
+[6726000] MISMATCH dout after a clock edge: got 1, expected 3
+[6746000] MISMATCH dout after a clock edge: got 2, expected 0
+[6756000] MISMATCH dout after a clock edge: got 1, expected 3
+[6776000] MISMATCH dout after a clock edge: got 2, expected 0
+[6786000] MISMATCH dout after a clock edge: got 2, expected 0
+[6796000] MISMATCH dout after a clock edge: got 2, expected 0
+[6806000] MISMATCH dout after a clock edge: got 2, expected 0
+[6836000] MISMATCH dout after a clock edge: got 1, expected 3
+[6856000] MISMATCH dout after a clock edge: got 2, expected 0
+[6866000] MISMATCH dout after a clock edge: got 2, expected 0
+[6876000] MISMATCH dout after a clock edge: got 2, expected 0
+[6886000] MISMATCH dout after a clock edge: got 1, expected 3
+[6916000] MISMATCH dout after a clock edge: got 2, expected 0
+[6946000] MISMATCH dout after a clock edge: got 1, expected 3
+... 135 further mismatches not printed
+RESULT: FAIL 160 of 974 checks
+- tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
+== bug_load_exclusive [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_load_exclusive [bug] synth: pass
+cells after ABC mapping to 2-input gates: 36
+== bug_load_exclusive [bug] timed: n/a
+
+== bug_reset_clears_generators [bug] compile: pass
+
+== bug_reset_clears_generators [bug] lint: pass
+
+== bug_reset_clears_generators [bug] weak: fail
+[56000] MISMATCH bit 1: got 0, expected 3
+[66000] MISMATCH bit 2: got 0, expected 2
+[86000] MISMATCH bit 4: got 0, expected 2
+[96000] MISMATCH bit 5: got 0, expected 1
+[106000] MISMATCH bit 6: got 0, expected 1
+[116000] MISMATCH bit 7: got 0, expected 2
+[136000] MISMATCH bit 9: got 0, expected 3
+[156000] MISMATCH bit 11: got 0, expected 3
+[166000] MISMATCH bit 12: got 0, expected 3
+[186000] MISMATCH bit 14: got 0, expected 3
+[206000] MISMATCH bit 16: got 0, expected 2
+[216000] MISMATCH bit 17: got 0, expected 3
+[226000] MISMATCH bit 18: got 0, expected 2
+RESULT: FAIL 13 of 20 checks
+tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
+== bug_reset_clears_generators [bug] strong_icarus: fail
+{'N': 3}: fail
+MISMATCH dout after a clock edge: got 0, expected 2
+[76000] MISMATCH dout after a clock edge: got 0, expected 3
+[86000] MISMATCH dout after a clock edge: got 0, expected 2
+[96000] MISMATCH dout after a clock edge: got 0, expected 1
+[106000] MISMATCH dout after a clock edge: got 0, expected 3
+[116000] MISMATCH dout after a clock edge: got 0, expected 2
+[126000] MISMATCH dout after a clock edge: got 0, expected 1
+[136000] MISMATCH dout after a clock edge: got 0, expected 3
+[146000] MISMATCH dout after a clock edge: got 0, expected 2
+[166000] MISMATCH dout after a clock edge: got 0, expected 2
+[186000] MISMATCH dout after a clock edge: got 0, expected 2
+[196000] MISMATCH dout after a clock edge: got 0, expected 1
+[206000] MISMATCH dout after a clock edge: got 0, expected 3
+[216000] MISMATCH dout after a clock edge: got 0, expected 2
+[236000] MISMATCH dout after a clock edge: got 0, expected 3
+[256000] MISMATCH dout after a clock edge: got 0, expected 1
+[276000] MISMATCH dout after a clock edge: got 0, expected 2
+[286000] MISMATCH dout after a clock edge: got 0, expected 1
+[296000] MISMATCH dout after a clock edge: got 0, expected 2
+[306000] MISMATCH dout after a clock edge: got 0, expected 2
+[316000] MISMATCH dout after a clock edge: got 0, expected 3
+[326000] MISMATCH dout after a clock edge: got 0, expected 3
+... 243 further mismatches not printed
+RESULT: FAIL 268 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+
+{'N': 5}: fail
+SMATCH dout after a clock edge: got 0, expected 2
+[96000] MISMATCH dout after a clock edge: got 0, expected 1
+[116000] MISMATCH dout after a clock edge: got 0, expected 1
+[126000] MISMATCH dout after a clock edge: got 0, expected 1
+[146000] MISMATCH dout after a clock edge: got 0, expected 1
+[156000] MISMATCH dout after a clock edge: got 0, expected 1
+[166000] MISMATCH dout after a clock edge: got 0, expected 2
+[176000] MISMATCH dout after a clock edge: got 0, expected 2
+[186000] MISMATCH dout after a clock edge: got 0, expected 2
+[196000] MISMATCH dout after a clock edge: got 0, expected 2
+[216000] MISMATCH dout after a clock edge: got 0, expected 1
+[226000] MISMATCH dout after a clock edge: got 0, expected 1
+[236000] MISMATCH dout after a clock edge: got 0, expected 2
+[256000] MISMATCH dout after a clock edge: got 0, expected 3
+[266000] MISMATCH dout after a clock edge: got 0, expected 2
+[276000] MISMATCH dout after a clock edge: got 0, expected 1
+[286000] MISMATCH dout after a clock edge: got 0, expected 2
+[306000] MISMATCH dout after a clock edge: got 0, expected 3
+[326000] MISMATCH dout after a clock edge: got 0, expected 2
+[336000] MISMATCH dout after a clock edge: got 0, expected 3
+[346000] MISMATCH dout after a clock edge: got 0, expected 3
+[366000] MISMATCH dout after a clock edge: got 0, expected 2
+... 231 further mismatches not printed
+RESULT: FAIL 256 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+
+{'N': 9}: fail
+ISMATCH dout after a clock edge: got 0, expected 1
+[86000] MISMATCH dout after a clock edge: got 0, expected 2
+[96000] MISMATCH dout after a clock edge: got 0, expected 3
+[106000] MISMATCH dout after a clock edge: got 0, expected 3
+[126000] MISMATCH dout after a clock edge: got 0, expected 2
+[136000] MISMATCH dout after a clock edge: got 0, expected 1
+[176000] MISMATCH dout after a clock edge: got 0, expected 1
+[196000] MISMATCH dout after a clock edge: got 0, expected 1
+[206000] MISMATCH dout after a clock edge: got 0, expected 2
+[216000] MISMATCH dout after a clock edge: got 0, expected 2
+[226000] MISMATCH dout after a clock edge: got 0, expected 3
+[236000] MISMATCH dout after a clock edge: got 0, expected 2
+[246000] MISMATCH dout after a clock edge: got 0, expected 1
+[266000] MISMATCH dout after a clock edge: got 0, expected 1
+[276000] MISMATCH dout after a clock edge: got 0, expected 3
+[296000] MISMATCH dout after a clock edge: got 0, expected 2
+[306000] MISMATCH dout after a clock edge: got 0, expected 2
+[326000] MISMATCH dout after a clock edge: got 0, expected 3
+[336000] MISMATCH dout after a clock edge: got 0, expected 1
+[346000] MISMATCH dout after a clock edge: got 0, expected 3
+[356000] MISMATCH dout after a clock edge: got 0, expected 1
+[366000] MISMATCH dout after a clock edge: got 0, expected 2
+... 243 further mismatches not printed
+RESULT: FAIL 268 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+== bug_reset_clears_generators [bug] strong_verilator: fail
+{'N': 3}: fail
+2
+[176000] MISMATCH dout after a clock edge: got 0, expected 3
+[186000] MISMATCH dout after a clock edge: got 0, expected 1
+[196000] MISMATCH dout after a clock edge: got 0, expected 2
+[206000] MISMATCH dout after a clock edge: got 0, expected 2
+[216000] MISMATCH dout after a clock edge: got 0, expected 2
+[226000] MISMATCH dout after a clock edge: got 0, expected 3
+[306000] MISMATCH dout after a clock edge: got 0, expected 1
+[316000] MISMATCH dout after a clock edge: got 0, expected 2
+[326000] MISMATCH dout after a clock edge: got 0, expected 2
+[336000] MISMATCH dout after a clock edge: got 0, expected 2
+[346000] MISMATCH dout after a clock edge: got 0, expected 3
+[356000] MISMATCH dout after a clock edge: got 0, expected 1
+[366000] MISMATCH dout after a clock edge: got 0, expected 3
+[376000] MISMATCH dout after a clock edge: got 0, expected 1
+[386000] MISMATCH dout after a clock edge: got 0, expected 2
+[396000] MISMATCH dout after a clock edge: got 0, expected 2
+[406000] MISMATCH dout after a clock edge: got 0, expected 2
+[416000] MISMATCH dout after a clock edge: got 0, expected 3
+[426000] MISMATCH dout after a clock edge: got 0, expected 1
+... 237 further mismatches not printed
+RESULT: FAIL 262 of 974 checks
+- tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
+
+{'N': 5}: fail
+2
+[196000] MISMATCH dout after a clock edge: got 0, expected 3
+[206000] MISMATCH dout after a clock edge: got 0, expected 1
+[216000] MISMATCH dout after a clock edge: got 0, expected 2
+[226000] MISMATCH dout after a clock edge: got 0, expected 2
+[236000] MISMATCH dout after a clock edge: got 0, expected 2
+[246000] MISMATCH dout after a clock edge: got 0, expected 3
+[326000] MISMATCH dout after a clock edge: got 0, expected 1
+[336000] MISMATCH dout after a clock edge: got 0, expected 2
+[346000] MISMATCH dout after a clock edge: got 0, expected 2
+[356000] MISMATCH dout after a clock edge: got 0, expected 2
+[366000] MISMATCH dout after a clock edge: got 0, expected 3
+[376000] MISMATCH dout after a clock edge: got 0, expected 1
+[386000] MISMATCH dout after a clock edge: got 0, expected 3
+[396000] MISMATCH dout after a clock edge: got 0, expected 1
+[406000] MISMATCH dout after a clock edge: got 0, expected 2
+[416000] MISMATCH dout after a clock edge: got 0, expected 2
+[426000] MISMATCH dout after a clock edge: got 0, expected 2
+[436000] MISMATCH dout after a clock edge: got 0, expected 3
+[446000] MISMATCH dout after a clock edge: got 0, expected 1
+... 239 further mismatches not printed
+RESULT: FAIL 264 of 974 checks
+- tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
+
+{'N': 9}: fail
+1
+[176000] MISMATCH dout after a clock edge: got 0, expected 1
+[186000] MISMATCH dout after a clock edge: got 0, expected 3
+[206000] MISMATCH dout after a clock edge: got 0, expected 1
+[226000] MISMATCH dout after a clock edge: got 0, expected 3
+[236000] MISMATCH dout after a clock edge: got 0, expected 3
+[246000] MISMATCH dout after a clock edge: got 0, expected 1
+[256000] MISMATCH dout after a clock edge: got 0, expected 2
+[266000] MISMATCH dout after a clock edge: got 0, expected 2
+[276000] MISMATCH dout after a clock edge: got 0, expected 2
+[286000] MISMATCH dout after a clock edge: got 0, expected 3
+[306000] MISMATCH dout after a clock edge: got 0, expected 3
+[316000] MISMATCH dout after a clock edge: got 0, expected 1
+[326000] MISMATCH dout after a clock edge: got 0, expected 2
+[336000] MISMATCH dout after a clock edge: got 0, expected 1
+[346000] MISMATCH dout after a clock edge: got 0, expected 1
+[356000] MISMATCH dout after a clock edge: got 0, expected 3
+[366000] MISMATCH dout after a clock edge: got 0, expected 3
+[376000] MISMATCH dout after a clock edge: got 0, expected 2
+[396000] MISMATCH dout after a clock edge: got 0, expected 3
+... 243 further mismatches not printed
+RESULT: FAIL 268 of 974 checks
+- tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
+== bug_reset_clears_generators [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_reset_clears_generators [bug] synth: pass
+cells after ABC mapping to 2-input gates: 34
+== bug_reset_clears_generators [bug] timed: n/a
+
+== bug_shift_while_loading [bug] compile: pass
+
+== bug_shift_while_loading [bug] lint: pass
+
+== bug_shift_while_loading [bug] weak: pass
+RESULT: PASS 20 checks
+tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
+== bug_shift_while_loading [bug] strong_icarus: fail
+{'N': 3}: fail
+[3266000] MISMATCH dout after a clock edge: got 0, expected 3
+[3276000] MISMATCH dout after a clock edge: got 0, expected 3
+[6516000] MISMATCH dout after a clock edge: got 0, expected 3
+[6526000] MISMATCH dout after a clock edge: got 3, expected 0
+[6536000] MISMATCH dout after a clock edge: got 0, expected 3
+RESULT: FAIL 5 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+
+{'N': 5}: fail
+[3276000] MISMATCH dout after a clock edge: got 3, expected 0
+[3296000] MISMATCH dout after a clock edge: got 1, expected 2
+[6526000] MISMATCH dout after a clock edge: got 3, expected 0
+[6536000] MISMATCH dout after a clock edge: got 0, expected 3
+[6546000] MISMATCH dout after a clock edge: got 3, expected 0
+[6556000] MISMATCH dout after a clock edge: got 0, expected 3
+RESULT: FAIL 6 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+
+{'N': 9}: fail
+[3266000] MISMATCH dout after a clock edge: got 2, expected 3
+[3276000] MISMATCH dout after a clock edge: got 1, expected 3
+[3286000] MISMATCH dout after a clock edge: got 3, expected 0
+[3296000] MISMATCH dout after a clock edge: got 1, expected 0
+[3306000] MISMATCH dout after a clock edge: got 0, expected 3
+[3316000] MISMATCH dout after a clock edge: got 3, expected 0
+[3336000] MISMATCH dout after a clock edge: got 1, expected 2
+[6536000] MISMATCH dout after a clock edge: got 3, expected 0
+[6566000] MISMATCH dout after a clock edge: got 0, expected 3
+[6576000] MISMATCH dout after a clock edge: got 3, expected 0
+[6586000] MISMATCH dout after a clock edge: got 3, expected 0
+[6596000] MISMATCH dout after a clock edge: got 3, expected 0
+RESULT: FAIL 12 of 974 checks
+tasks/conv_encoder_cfg/tb_strong.sv:52: $finish called at 9746000 (1ps)
+== bug_shift_while_loading [bug] strong_verilator: fail
+{'N': 3}: fail
+[6516000] MISMATCH dout after a clock edge: got 0, expected 3
+[6526000] MISMATCH dout after a clock edge: got 3, expected 0
+[6536000] MISMATCH dout after a clock edge: got 0, expected 3
+RESULT: FAIL 3 of 974 checks
+- tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
+
+{'N': 5}: fail
+[6516000] MISMATCH dout after a clock edge: got 3, expected 0
+[6536000] MISMATCH dout after a clock edge: got 0, expected 3
+[6546000] MISMATCH dout after a clock edge: got 0, expected 3
+[6556000] MISMATCH dout after a clock edge: got 0, expected 3
+RESULT: FAIL 4 of 974 checks
+- tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
+
+{'N': 9}: fail
+[3266000] MISMATCH dout after a clock edge: got 0, expected 2
+[3276000] MISMATCH dout after a clock edge: got 3, expected 2
+[3296000] MISMATCH dout after a clock edge: got 3, expected 0
+[3306000] MISMATCH dout after a clock edge: got 3, expected 0
+[6526000] MISMATCH dout after a clock edge: got 0, expected 3
+[6556000] MISMATCH dout after a clock edge: got 3, expected 0
+[6576000] MISMATCH dout after a clock edge: got 3, expected 0
+[6586000] MISMATCH dout after a clock edge: got 0, expected 3
+[6596000] MISMATCH dout after a clock edge: got 3, expected 0
+RESULT: FAIL 9 of 974 checks
+- tasks/conv_encoder_cfg/tb_strong.sv:47: Verilog $finish
+== bug_shift_while_loading [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_shift_while_loading [bug] synth: pass
+cells after ABC mapping to 2-input gates: 33
+== bug_shift_while_loading [bug] timed: n/a
+
+== correct_and_xor_loop [correct] compile: pass
+tasks/conv_encoder_cfg/candidates/correct_and_xor_loop.sv:17: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+tasks/conv_encoder_cfg/candidates/correct_and_xor_loop.sv:17: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== correct_and_xor_loop [correct] lint: pass
+
+== correct_and_xor_loop [correct] weak: pass
+RESULT: PASS 20 checks
+tasks/conv_encoder_cfg/tb_weak.sv:28: $finish called at 236000 (1ps)
+== correct_and_xor_loop [correct] strong_icarus: pass
+{'N': 3}: pass
+{'N': 5}: pass
+{'N': 9}: pass
+== correct_and_xor_loop [correct] strong_verilator: pass
+{'N': 3}: pass
+{'N': 5}: pass
+{'N': 9}: pass
+== correct_and_xor_loop [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== correct_and_xor_loop [correct] synth: pass
+cells after ABC mapping to 2-input gates: 34
+== correct_and_xor_loop [correct] timed: n/a
+

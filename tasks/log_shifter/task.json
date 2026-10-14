@@ -1,0 +1,12 @@
+{
+  "id": "log_shifter",
+  "title": "Barrel shifter from 2:1 multiplexers only",
+  "origin": "a shift/rotate unit that must be built from a given 2:1 mux",
+  "top": "log_shifter",
+  "kind": "comb",
+  "lib": ["mux2.sv"],
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 4}, {"N": 8}, {"N": 16}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "smtbmc", "depth": 1},
+  "synth": {"params": {"N": 8}, "only_instances": ["mux2"]}
+}

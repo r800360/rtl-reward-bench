@@ -1,0 +1,300 @@
+== golden [correct] compile: pass
+tasks/gray2bin/golden.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
+== golden [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 8}: pass
+== golden [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 8}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 11
+== golden [correct] timed: n/a
+
+== bug_comb_order [bug] compile: pass
+tasks/gray2bin/candidates/bug_comb_order.sv:13: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== bug_comb_order [bug] lint: fail
+%Warning-ALWCOMBORDER: tasks/gray2bin/candidates/bug_comb_order.sv:14:37: Always_comb variable driven after use: 'bc'
+%Warning-UNOPTFLAT: tasks/gray2bin/candidates/bug_comb_order.sv:12:21: Signal unoptimizable: Circular combinational logic: 'gray2bin.bc'
+%Error: Exiting due to 2 warning(s)
+== bug_comb_order [bug] weak: fail
+[46000] MISMATCH gray 0000: got X, expected 0
+[76000] MISMATCH gray 0001: got X, expected 1
+[106000] MISMATCH gray 0011: got X, expected 2
+[136000] MISMATCH gray 1000: got 9, expected f
+RESULT: FAIL 4 of 4 checks
+tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
+== bug_comb_order [bug] strong_icarus: fail
+{'N': 4}: fail
+[36000] MISMATCH value applied one clock earlier (0): got X, expected 0
+[46000] MISMATCH value applied one clock earlier (1): got X, expected 1
+[56000] MISMATCH value applied one clock earlier (2): got X, expected 3
+[76000] MISMATCH value applied one clock earlier (4): got 5, expected 7
+[86000] MISMATCH value applied one clock earlier (5): got 7, expected 6
+[96000] MISMATCH value applied one clock earlier (6): got 5, expected 4
+[116000] MISMATCH value applied one clock earlier (8): got a, expected f
+[126000] MISMATCH value applied one clock earlier (9): got c, expected e
+[156000] MISMATCH value applied one clock earlier (12): got a, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got 8, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got a, expected b
+[196000] MISMATCH value applied one clock earlier (16): got 5, expected 0
+RESULT: FAIL 12 of 18 checks
+tasks/gray2bin/tb_strong.sv:35: $finish called at 202000 (1ps)
+
+{'N': 8}: fail
+value applied one clock earlier (8): got a, expected f
+[126000] MISMATCH value applied one clock earlier (9): got c, expected e
+[156000] MISMATCH value applied one clock earlier (12): got a, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got 8, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got a, expected b
+[196000] MISMATCH value applied one clock earlier (16): got 15, expected 1f
+[206000] MISMATCH value applied one clock earlier (17): got 1b, expected 1e
+[216000] MISMATCH value applied one clock earlier (18): got 1f, expected 1c
+[226000] MISMATCH value applied one clock earlier (19): got 1c, expected 1d
+[236000] MISMATCH value applied one clock earlier (20): got 1a, expected 18
+[246000] MISMATCH value applied one clock earlier (21): got 18, expected 19
+[256000] MISMATCH value applied one clock earlier (22): got 1a, expected 1b
+[276000] MISMATCH value applied one clock earlier (24): got 15, expected 10
+[286000] MISMATCH value applied one clock earlier (25): got 13, expected 11
+[316000] MISMATCH value applied one clock earlier (28): got 15, expected 17
+[326000] MISMATCH value applied one clock earlier (29): got 17, expected 16
+[336000] MISMATCH value applied one clock earlier (30): got 15, expected 14
+[356000] MISMATCH value applied one clock earlier (32): got 2a, expected 3f
+... 163 further mismatches not printed
+RESULT: FAIL 188 of 258 checks
+tasks/gray2bin/tb_strong.sv:35: $finish called at 2602000 (1ps)
+== bug_comb_order [bug] strong_verilator: pass
+{'N': 4}: pass
+{'N': 8}: pass
+== bug_comb_order [bug] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== bug_comb_order [bug] synth: pass
+cells after ABC mapping to 2-input gates: 11
+== bug_comb_order [bug] timed: n/a
+
+== bug_latency_one [bug] compile: pass
+tasks/gray2bin/candidates/bug_latency_one.sv:11: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+== bug_latency_one [bug] lint: pass
+
+== bug_latency_one [bug] weak: pass
+RESULT: PASS 4 checks
+tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
+== bug_latency_one [bug] strong_icarus: fail
+{'N': 4}: fail
+[36000] MISMATCH value applied one clock earlier (0): got 1, expected 0
+[46000] MISMATCH value applied one clock earlier (1): got 3, expected 1
+[56000] MISMATCH value applied one clock earlier (2): got 2, expected 3
+[66000] MISMATCH value applied one clock earlier (3): got 7, expected 2
+[76000] MISMATCH value applied one clock earlier (4): got 6, expected 7
+[86000] MISMATCH value applied one clock earlier (5): got 4, expected 6
+[96000] MISMATCH value applied one clock earlier (6): got 5, expected 4
+[106000] MISMATCH value applied one clock earlier (7): got f, expected 5
+[116000] MISMATCH value applied one clock earlier (8): got e, expected f
+[126000] MISMATCH value applied one clock earlier (9): got c, expected e
+[136000] MISMATCH value applied one clock earlier (10): got d, expected c
+[146000] MISMATCH value applied one clock earlier (11): got 8, expected d
+[156000] MISMATCH value applied one clock earlier (12): got 9, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got a, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 0, expected a
+[196000] MISMATCH value applied one clock earlier (16): got 1, expected 0
+RESULT: FAIL 17 of 18 checks
+tasks/gray2bin/tb_strong.sv:35: $finish called at 202000 (1ps)
+
+{'N': 8}: fail
+ISMATCH value applied one clock earlier (7): got f, expected 5
+[116000] MISMATCH value applied one clock earlier (8): got e, expected f
+[126000] MISMATCH value applied one clock earlier (9): got c, expected e
+[136000] MISMATCH value applied one clock earlier (10): got d, expected c
+[146000] MISMATCH value applied one clock earlier (11): got 8, expected d
+[156000] MISMATCH value applied one clock earlier (12): got 9, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got a, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 1f, expected a
+[196000] MISMATCH value applied one clock earlier (16): got 1e, expected 1f
+[206000] MISMATCH value applied one clock earlier (17): got 1c, expected 1e
+[216000] MISMATCH value applied one clock earlier (18): got 1d, expected 1c
+[226000] MISMATCH value applied one clock earlier (19): got 18, expected 1d
+[236000] MISMATCH value applied one clock earlier (20): got 19, expected 18
+[246000] MISMATCH value applied one clock earlier (21): got 1b, expected 19
+[256000] MISMATCH value applied one clock earlier (22): got 1a, expected 1b
+[266000] MISMATCH value applied one clock earlier (23): got 10, expected 1a
+[276000] MISMATCH value applied one clock earlier (24): got 11, expected 10
+... 232 further mismatches not printed
+RESULT: FAIL 257 of 258 checks
+tasks/gray2bin/tb_strong.sv:35: $finish called at 2602000 (1ps)
+== bug_latency_one [bug] strong_verilator: fail
+{'N': 4}: fail
+ clock earlier (0): got 1, expected 0
+[46000] MISMATCH value applied one clock earlier (1): got 3, expected 1
+[56000] MISMATCH value applied one clock earlier (2): got 2, expected 3
+[66000] MISMATCH value applied one clock earlier (3): got 7, expected 2
+[76000] MISMATCH value applied one clock earlier (4): got 6, expected 7
+[86000] MISMATCH value applied one clock earlier (5): got 4, expected 6
+[96000] MISMATCH value applied one clock earlier (6): got 5, expected 4
+[106000] MISMATCH value applied one clock earlier (7): got f, expected 5
+[116000] MISMATCH value applied one clock earlier (8): got e, expected f
+[126000] MISMATCH value applied one clock earlier (9): got c, expected e
+[136000] MISMATCH value applied one clock earlier (10): got d, expected c
+[146000] MISMATCH value applied one clock earlier (11): got 8, expected d
+[156000] MISMATCH value applied one clock earlier (12): got 9, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got a, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 0, expected a
+[196000] MISMATCH value applied one clock earlier (16): got 1, expected 0
+RESULT: FAIL 17 of 18 checks
+- tasks/gray2bin/tb_strong.sv:30: Verilog $finish
+
+{'N': 8}: fail
+one clock earlier (9): got c, expected e
+[136000] MISMATCH value applied one clock earlier (10): got d, expected c
+[146000] MISMATCH value applied one clock earlier (11): got 8, expected d
+[156000] MISMATCH value applied one clock earlier (12): got 9, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got a, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 1f, expected a
+[196000] MISMATCH value applied one clock earlier (16): got 1e, expected 1f
+[206000] MISMATCH value applied one clock earlier (17): got 1c, expected 1e
+[216000] MISMATCH value applied one clock earlier (18): got 1d, expected 1c
+[226000] MISMATCH value applied one clock earlier (19): got 18, expected 1d
+[236000] MISMATCH value applied one clock earlier (20): got 19, expected 18
+[246000] MISMATCH value applied one clock earlier (21): got 1b, expected 19
+[256000] MISMATCH value applied one clock earlier (22): got 1a, expected 1b
+[266000] MISMATCH value applied one clock earlier (23): got 10, expected 1a
+[276000] MISMATCH value applied one clock earlier (24): got 11, expected 10
+... 232 further mismatches not printed
+RESULT: FAIL 257 of 258 checks
+- tasks/gray2bin/tb_strong.sv:30: Verilog $finish
+== bug_latency_one [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_latency_one [bug] synth: pass
+cells after ABC mapping to 2-input gates: 7
+== bug_latency_one [bug] timed: n/a
+
+== bug_pairwise_xor [bug] compile: pass
+
+== bug_pairwise_xor [bug] lint: pass
+
+== bug_pairwise_xor [bug] weak: fail
+[136000] MISMATCH gray 1000: got c, expected f
+RESULT: FAIL 1 of 4 checks
+tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
+== bug_pairwise_xor [bug] strong_icarus: fail
+{'N': 4}: fail
+[76000] MISMATCH value applied one clock earlier (4): got 6, expected 7
+[86000] MISMATCH value applied one clock earlier (5): got 7, expected 6
+[96000] MISMATCH value applied one clock earlier (6): got 5, expected 4
+[106000] MISMATCH value applied one clock earlier (7): got 4, expected 5
+[116000] MISMATCH value applied one clock earlier (8): got c, expected f
+[126000] MISMATCH value applied one clock earlier (9): got d, expected e
+[136000] MISMATCH value applied one clock earlier (10): got f, expected c
+[146000] MISMATCH value applied one clock earlier (11): got e, expected d
+[156000] MISMATCH value applied one clock earlier (12): got a, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got 9, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 8, expected a
+RESULT: FAIL 12 of 18 checks
+tasks/gray2bin/tb_strong.sv:35: $finish called at 202000 (1ps)
+
+{'N': 8}: fail
+lue applied one clock earlier (11): got e, expected d
+[156000] MISMATCH value applied one clock earlier (12): got a, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got 9, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 8, expected a
+[196000] MISMATCH value applied one clock earlier (16): got 18, expected 1f
+[206000] MISMATCH value applied one clock earlier (17): got 19, expected 1e
+[216000] MISMATCH value applied one clock earlier (18): got 1b, expected 1c
+[226000] MISMATCH value applied one clock earlier (19): got 1a, expected 1d
+[236000] MISMATCH value applied one clock earlier (20): got 1e, expected 18
+[246000] MISMATCH value applied one clock earlier (21): got 1f, expected 19
+[256000] MISMATCH value applied one clock earlier (22): got 1d, expected 1b
+[266000] MISMATCH value applied one clock earlier (23): got 1c, expected 1a
+[276000] MISMATCH value applied one clock earlier (24): got 14, expected 10
+[286000] MISMATCH value applied one clock earlier (25): got 15, expected 11
+[296000] MISMATCH value applied one clock earlier (26): got 17, expected 13
+[306000] MISMATCH value applied one clock earlier (27): got 16, expected 12
+[316000] MISMATCH value applied one clock earlier (28): got 12, expected 17
+... 227 further mismatches not printed
+RESULT: FAIL 252 of 258 checks
+tasks/gray2bin/tb_strong.sv:35: $finish called at 2602000 (1ps)
+== bug_pairwise_xor [bug] strong_verilator: fail
+{'N': 4}: fail
+[76000] MISMATCH value applied one clock earlier (4): got 6, expected 7
+[86000] MISMATCH value applied one clock earlier (5): got 7, expected 6
+[96000] MISMATCH value applied one clock earlier (6): got 5, expected 4
+[106000] MISMATCH value applied one clock earlier (7): got 4, expected 5
+[116000] MISMATCH value applied one clock earlier (8): got c, expected f
+[126000] MISMATCH value applied one clock earlier (9): got d, expected e
+[136000] MISMATCH value applied one clock earlier (10): got f, expected c
+[146000] MISMATCH value applied one clock earlier (11): got e, expected d
+[156000] MISMATCH value applied one clock earlier (12): got a, expected 8
+[166000] MISMATCH value applied one clock earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got 9, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 8, expected a
+RESULT: FAIL 12 of 18 checks
+- tasks/gray2bin/tb_strong.sv:30: Verilog $finish
+
+{'N': 8}: fail
+k earlier (13): got b, expected 9
+[176000] MISMATCH value applied one clock earlier (14): got 9, expected b
+[186000] MISMATCH value applied one clock earlier (15): got 8, expected a
+[196000] MISMATCH value applied one clock earlier (16): got 18, expected 1f
+[206000] MISMATCH value applied one clock earlier (17): got 19, expected 1e
+[216000] MISMATCH value applied one clock earlier (18): got 1b, expected 1c
+[226000] MISMATCH value applied one clock earlier (19): got 1a, expected 1d
+[236000] MISMATCH value applied one clock earlier (20): got 1e, expected 18
+[246000] MISMATCH value applied one clock earlier (21): got 1f, expected 19
+[256000] MISMATCH value applied one clock earlier (22): got 1d, expected 1b
+[266000] MISMATCH value applied one clock earlier (23): got 1c, expected 1a
+[276000] MISMATCH value applied one clock earlier (24): got 14, expected 10
+[286000] MISMATCH value applied one clock earlier (25): got 15, expected 11
+[296000] MISMATCH value applied one clock earlier (26): got 17, expected 13
+[306000] MISMATCH value applied one clock earlier (27): got 16, expected 12
+[316000] MISMATCH value applied one clock earlier (28): got 12, expected 17
+... 227 further mismatches not printed
+RESULT: FAIL 252 of 258 checks
+- tasks/gray2bin/tb_strong.sv:30: Verilog $finish
+== bug_pairwise_xor [bug] formal: fail
+SBY [check] ERROR: engine_0: Could not determine aigsmt status.
+SBY [check] summary: engine_0 (abc pdr) returned FAIL
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (ERROR, rc=16)
+== bug_pairwise_xor [bug] synth: pass
+cells after ABC mapping to 2-input gates: 11
+== bug_pairwise_xor [bug] timed: n/a
+
+== correct_shift_xor [correct] compile: pass
+
+== correct_shift_xor [correct] lint: pass
+
+== correct_shift_xor [correct] weak: pass
+RESULT: PASS 4 checks
+tasks/gray2bin/tb_weak.sv:27: $finish called at 136000 (1ps)
+== correct_shift_xor [correct] strong_icarus: pass
+{'N': 4}: pass
+{'N': 8}: pass
+== correct_shift_xor [correct] strong_verilator: pass
+{'N': 4}: pass
+{'N': 8}: pass
+== correct_shift_xor [correct] formal: pass
+SBY [check] summary: engine_0 (abc pdr) returned PASS
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] DONE (PASS, rc=0)
+== correct_shift_xor [correct] synth: pass
+cells after ABC mapping to 2-input gates: 11
+== correct_shift_xor [correct] timed: n/a
+

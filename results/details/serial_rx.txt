@@ -1,0 +1,299 @@
+== golden [correct] compile: pass
+
+== golden [correct] lint: pass
+
+== golden [correct] weak: pass
+RESULT: PASS 5 checks
+tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
+== golden [correct] strong_icarus: pass
+{}: pass
+== golden [correct] strong_verilator: pass
+{}: pass
+== golden [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== golden [correct] synth: pass
+cells after ABC mapping to 2-input gates: 100
+input rx: enters through a chain of 2 flip-flops
+== golden [correct] timed: n/a
+
+== bug_bit7_as_stop [bug] compile: pass
+
+== bug_bit7_as_stop [bug] lint: fail
+%Warning-UNUSEDSIGNAL: tasks/serial_rx/candidates/bug_bit7_as_stop.sv:23:18: Bits of signal are not used: 'shift'[0]
+%Error: Exiting due to 1 warning(s)
+== bug_bit7_as_stop [bug] weak: pass
+RESULT: PASS 5 checks
+tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
+== bug_bit7_as_stop [bug] strong_icarus: fail
+{}: fail
+e byte 2: got 82, expected 2
+[903200000] MISMATCH nominal rate byte 3: got 83, expected 3
+[903200000] MISMATCH nominal rate byte 4: got 84, expected 4
+[903200000] MISMATCH nominal rate byte 5: got 85, expected 5
+[903200000] MISMATCH nominal rate byte 6: got 86, expected 6
+[903200000] MISMATCH nominal rate byte 7: got 87, expected 7
+[903200000] MISMATCH nominal rate byte 8: got 88, expected 8
+[903200000] MISMATCH nominal rate byte 9: got 89, expected 9
+[903200000] MISMATCH nominal rate byte 10: got 8a, expected a
+[903200000] MISMATCH nominal rate byte 11: got 8b, expected b
+[903200000] MISMATCH nominal rate byte 12: got 8c, expected c
+[903200000] MISMATCH nominal rate byte 13: got 8d, expected d
+[903200000] MISMATCH nominal rate byte 14: got 8e, expected e
+[903200000] MISMATCH nominal rate byte 15: got 8f, expected f
+[903200000] MISMATCH nominal rate byte 16: got 90, expected 10
+[903200000] MISMATCH nominal rate byte 17: got 91, expected 11
+[903200000] MISMATCH nominal rate byte 18: got 92, expected 12
+[903200000] MISMATCH nominal rate byte 19: got 93, expected 13
+[903200000] MISMATCH nominal rate byte 20: got 94, expected 14
+[903200000] MISMATCH nominal rate byte 21: got 95, expected 15
+[903200000] MISMATCH nominal rate byte 22: got 96, expected 16
+[903200000] MISMATCH nominal rate byte 23: got 97, expected 17
+... 163 further mismatches not printed
+RESULT: FAIL 188 of 43394 checks
+tasks/serial_rx/tb_strong.sv:57: $finish called at 1335220000 (1ps)
+== bug_bit7_as_stop [bug] strong_verilator: fail
+{}: fail
+MATCH nominal rate byte 5: got 85, expected 5
+[903200000] MISMATCH nominal rate byte 6: got 86, expected 6
+[903200000] MISMATCH nominal rate byte 7: got 87, expected 7
+[903200000] MISMATCH nominal rate byte 8: got 88, expected 8
+[903200000] MISMATCH nominal rate byte 9: got 89, expected 9
+[903200000] MISMATCH nominal rate byte 10: got 8a, expected a
+[903200000] MISMATCH nominal rate byte 11: got 8b, expected b
+[903200000] MISMATCH nominal rate byte 12: got 8c, expected c
+[903200000] MISMATCH nominal rate byte 13: got 8d, expected d
+[903200000] MISMATCH nominal rate byte 14: got 8e, expected e
+[903200000] MISMATCH nominal rate byte 15: got 8f, expected f
+[903200000] MISMATCH nominal rate byte 16: got 90, expected 10
+[903200000] MISMATCH nominal rate byte 17: got 91, expected 11
+[903200000] MISMATCH nominal rate byte 18: got 92, expected 12
+[903200000] MISMATCH nominal rate byte 19: got 93, expected 13
+[903200000] MISMATCH nominal rate byte 20: got 94, expected 14
+[903200000] MISMATCH nominal rate byte 21: got 95, expected 15
+[903200000] MISMATCH nominal rate byte 22: got 96, expected 16
+[903200000] MISMATCH nominal rate byte 23: got 97, expected 17
+... 165 further mismatches not printed
+RESULT: FAIL 190 of 43582 checks
+- tasks/serial_rx/tb_strong.sv:52: Verilog $finish
+== bug_bit7_as_stop [bug] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== bug_bit7_as_stop [bug] synth: pass
+cells after ABC mapping to 2-input gates: 88
+input rx: enters through a chain of 2 flip-flops
+== bug_bit7_as_stop [bug] timed: n/a
+
+== bug_data_cleared [bug] compile: pass
+
+== bug_data_cleared [bug] lint: pass
+
+== bug_data_cleared [bug] weak: pass
+RESULT: PASS 5 checks
+tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
+== bug_data_cleared [bug] strong_icarus: fail
+{}: fail
+ed 1
+[7790000] MISMATCH data holds between bytes: got 0, expected 1
+[7810000] MISMATCH data holds between bytes: got 0, expected 1
+[7830000] MISMATCH data holds between bytes: got 0, expected 1
+[7850000] MISMATCH data holds between bytes: got 0, expected 1
+[7870000] MISMATCH data holds between bytes: got 0, expected 1
+[7890000] MISMATCH data holds between bytes: got 0, expected 1
+[7910000] MISMATCH data holds between bytes: got 0, expected 1
+[7930000] MISMATCH data holds between bytes: got 0, expected 1
+[7950000] MISMATCH data holds between bytes: got 0, expected 1
+[7970000] MISMATCH data holds between bytes: got 0, expected 1
+[7990000] MISMATCH data holds between bytes: got 0, expected 1
+[8010000] MISMATCH data holds between bytes: got 0, expected 1
+[8030000] MISMATCH data holds between bytes: got 0, expected 1
+[8050000] MISMATCH data holds between bytes: got 0, expected 1
+[8070000] MISMATCH data holds between bytes: got 0, expected 1
+[8090000] MISMATCH data holds between bytes: got 0, expected 1
+[8110000] MISMATCH data holds between bytes: got 0, expected 1
+[8130000] MISMATCH data holds between bytes: got 0, expected 1
+[8150000] MISMATCH data holds between bytes: got 0, expected 1
+[8170000] MISMATCH data holds between bytes: got 0, expected 1
+[8190000] MISMATCH data holds between bytes: got 0, expected 1
+... 65288 further mismatches not printed
+RESULT: FAIL 65313 of 66246 checks
+tasks/serial_rx/tb_strong.sv:57: $finish called at 1335220000 (1ps)
+== bug_data_cleared [bug] strong_verilator: fail
+{}: fail
+en bytes: got 0, expected 1
+[7850000] MISMATCH data holds between bytes: got 0, expected 1
+[7870000] MISMATCH data holds between bytes: got 0, expected 1
+[7890000] MISMATCH data holds between bytes: got 0, expected 1
+[7910000] MISMATCH data holds between bytes: got 0, expected 1
+[7930000] MISMATCH data holds between bytes: got 0, expected 1
+[7950000] MISMATCH data holds between bytes: got 0, expected 1
+[7970000] MISMATCH data holds between bytes: got 0, expected 1
+[7990000] MISMATCH data holds between bytes: got 0, expected 1
+[8010000] MISMATCH data holds between bytes: got 0, expected 1
+[8030000] MISMATCH data holds between bytes: got 0, expected 1
+[8050000] MISMATCH data holds between bytes: got 0, expected 1
+[8070000] MISMATCH data holds between bytes: got 0, expected 1
+[8090000] MISMATCH data holds between bytes: got 0, expected 1
+[8110000] MISMATCH data holds between bytes: got 0, expected 1
+[8130000] MISMATCH data holds between bytes: got 0, expected 1
+[8150000] MISMATCH data holds between bytes: got 0, expected 1
+[8170000] MISMATCH data holds between bytes: got 0, expected 1
+[8190000] MISMATCH data holds between bytes: got 0, expected 1
+... 65288 further mismatches not printed
+RESULT: FAIL 65313 of 66246 checks
+- tasks/serial_rx/tb_strong.sv:52: Verilog $finish
+== bug_data_cleared [bug] formal: fail
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned FAIL for induction
+SBY [check] summary: counterexample trace [induction]: check/engine_0/trace_induct.vcd
+SBY [check] summary:   failed assertion harness._witness_.check_assert_harness_sv_13_38 at harness.sv:13.42-13.70 in step 0
+SBY [check] DONE (UNKNOWN, rc=4)
+== bug_data_cleared [bug] synth: pass
+cells after ABC mapping to 2-input gates: 119
+input rx: enters through a chain of 2 flip-flops
+== bug_data_cleared [bug] timed: n/a
+
+== bug_no_synchronizer [bug] compile: pass
+
+== bug_no_synchronizer [bug] lint: pass
+
+== bug_no_synchronizer [bug] weak: pass
+RESULT: PASS 5 checks
+tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
+== bug_no_synchronizer [bug] strong_icarus: pass
+{}: pass
+== bug_no_synchronizer [bug] strong_verilator: pass
+{}: pass
+== bug_no_synchronizer [bug] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== bug_no_synchronizer [bug] synth: fail
+cells after ABC mapping to 2-input gates: 103
+input rx: stage 1: drives 6 cell inputs, expected one flip-flop
+== bug_no_synchronizer [bug] timed: n/a
+
+== bug_sample_at_edge [bug] compile: pass
+
+== bug_sample_at_edge [bug] lint: fail
+%Warning-UNUSEDPARAM: tasks/serial_rx/candidates/bug_sample_at_edge.sv:16:29: Parameter is not used: 'HALF'
+%Error: Exiting due to 1 warning(s)
+== bug_sample_at_edge [bug] weak: pass
+RESULT: PASS 5 checks
+tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
+== bug_sample_at_edge [bug] strong_icarus: fail
+{}: fail
+byte 1: got 1a, expected 81
+[1121736000] MISMATCH 3 % slow byte 2: got da, expected 9
+[1121736000] MISMATCH 3 % slow byte 3: got 18, expected 63
+[1121736000] MISMATCH 3 % slow byte 4: got f3, expected d
+[1121736000] MISMATCH 3 % slow byte 5: got 8c, expected 8d
+[1121736000] MISMATCH 3 % slow byte 6: got 8a, expected 65
+[1121736000] MISMATCH 3 % slow byte 7: got 54, expected 12
+[1121736000] MISMATCH 3 % slow byte 8: got ca, expected 1
+[1121736000] MISMATCH 3 % slow byte 9: got 1f, expected d
+[1121736000] MISMATCH 3 % slow byte 10: got e4, expected 76
+[1121736000] MISMATCH 3 % slow byte 11: got 9c, expected 3d
+[1121736000] MISMATCH 3 % slow byte 12: got d0, expected ed
+[1121736000] MISMATCH 3 % slow byte 13: got 8b, expected 8c
+[1121736000] MISMATCH 3 % slow byte 14: got 7b, expected f9
+[1121736000] MISMATCH 3 % slow byte 15: got 0, expected c6
+[1121736000] MISMATCH 3 % slow byte 16: got 56, expected c5
+[1121736000] MISMATCH 3 % slow byte 17: got 3b, expected aa
+[1121736000] MISMATCH 3 % slow byte 18: got 2c, expected e5
+[1121736000] MISMATCH 3 % slow byte 19: got aa, expected 77
+[1121736000] MISMATCH 3 % slow byte 20: got 5c, expected 12
+[1121736000] MISMATCH 3 % slow byte 21: got 9f, expected 8f
+[1121736000] MISMATCH 3 % slow byte 22: got 94, expected f2
+[1121736000] MISMATCH 3 % slow byte 23: got e4, expected ce
+... 8 further mismatches not printed
+RESULT: FAIL 33 of 66057 checks
+tasks/serial_rx/tb_strong.sv:57: $finish called at 1335220000 (1ps)
+== bug_sample_at_edge [bug] strong_verilator: fail
+{}: fail
+ % slow byte 4: got 6c, expected 78
+[1121736000] MISMATCH 3 % slow byte 5: got c8, expected bc
+[1121736000] MISMATCH 3 % slow byte 6: got 6e, expected b6
+[1121736000] MISMATCH 3 % slow byte 7: got c2, expected e4
+[1121736000] MISMATCH 3 % slow byte 8: got 8a, expected b7
+[1121736000] MISMATCH 3 % slow byte 9: got 4, expected 53
+[1121736000] MISMATCH 3 % slow byte 10: got fa, expected 21
+[1121736000] MISMATCH 3 % slow byte 11: got e8, expected e1
+[1121736000] MISMATCH 3 % slow byte 12: got 64, expected c5
+[1121736000] MISMATCH 3 % slow byte 13: got 3c, expected 82
+[1121736000] MISMATCH 3 % slow byte 14: got 3c, expected 62
+[1121736000] MISMATCH 3 % slow byte 15: got dc, expected 35
+[1121736000] MISMATCH 3 % slow byte 16: got 80, expected 12
+[1121736000] MISMATCH 3 % slow byte 17: got 3, expected 56
+[1121736000] MISMATCH 3 % slow byte 18: got 9c, expected fd
+[1121736000] MISMATCH 3 % slow byte 19: got ee, expected f4
+[1121736000] MISMATCH 3 % slow byte 20: got a2, expected 3b
+[1121736000] MISMATCH 3 % slow byte 21: got 3c, expected 58
+[1121736000] MISMATCH 3 % slow byte 22: got 50, expected b2
+[1121736000] MISMATCH 3 % slow byte 23: got 76, expected 5c
+... 7 further mismatches not printed
+RESULT: FAIL 32 of 66237 checks
+- tasks/serial_rx/tb_strong.sv:52: Verilog $finish
+== bug_sample_at_edge [bug] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== bug_sample_at_edge [bug] synth: pass
+cells after ABC mapping to 2-input gates: 84
+input rx: enters through a chain of 2 flip-flops
+== bug_sample_at_edge [bug] timed: n/a
+
+== correct_counter_sampling [correct] compile: pass
+
+== correct_counter_sampling [correct] lint: pass
+
+== correct_counter_sampling [correct] weak: pass
+RESULT: PASS 5 checks
+tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
+== correct_counter_sampling [correct] strong_icarus: pass
+{}: pass
+== correct_counter_sampling [correct] strong_verilator: pass
+{}: pass
+== correct_counter_sampling [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_counter_sampling [correct] synth: pass
+cells after ABC mapping to 2-input gates: 96
+input rx: enters through a chain of 2 flip-flops
+== correct_counter_sampling [correct] timed: n/a
+
+== correct_down_timer [correct] compile: pass
+
+== correct_down_timer [correct] lint: pass
+
+== correct_down_timer [correct] weak: pass
+RESULT: PASS 5 checks
+tasks/serial_rx/tb_weak.sv:41: $finish called at 17160000 (1ps)
+== correct_down_timer [correct] strong_icarus: pass
+{}: pass
+== correct_down_timer [correct] strong_verilator: pass
+{}: pass
+== correct_down_timer [correct] formal: pass
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY [check] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY [check] summary: engine_0 did not produce any traces
+SBY [check] summary: successful proof by k-induction.
+SBY [check] DONE (PASS, rc=0)
+== correct_down_timer [correct] synth: pass
+cells after ABC mapping to 2-input gates: 122
+input rx: enters through a chain of 2 flip-flops
+== correct_down_timer [correct] timed: n/a
+

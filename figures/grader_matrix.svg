@@ -1,0 +1,670 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1131" height="1224" viewBox="0 0 1131 1224" font-family="DejaVu Sans, Arial, sans-serif" font-size="11">
+<rect width="1131" height="1224" fill="#ffffff"/>
+<text x="12" y="22" font-size="15" font-weight="bold" fill="#1f2328">Every grader on every design</text>
+<text x="12" y="40" fill="#57606a">rows: designs (red name = known bug). Green: the grader passes the design, so green on a red row is a false pass</text>
+<text x="421.0" y="62" text-anchor="middle" fill="#1f2328">compile</text>
+<text x="513.0" y="62" text-anchor="middle" fill="#1f2328">lint</text>
+<text x="605.0" y="62" text-anchor="middle" fill="#1f2328">weak</text>
+<text x="697.0" y="62" text-anchor="middle" fill="#1f2328">strong_icarus</text>
+<text x="789.0" y="62" text-anchor="middle" fill="#1f2328">strong_verilator</text>
+<text x="881.0" y="62" text-anchor="middle" fill="#1f2328">formal</text>
+<text x="973.0" y="62" text-anchor="middle" fill="#1f2328">synth</text>
+<text x="1065.0" y="62" text-anchor="middle" fill="#1f2328">timed</text>
+<line x1="8" y1="70" x2="1119" y2="70" stroke="#8c959f"/>
+<text x="12" y="82" font-weight="bold" fill="#1f2328">acs_unit</text>
+<text x="165" y="82" fill="#1f2328">golden</text>
+<rect x="377" y="72" width="88" height="13" fill="#2da44e"><title>acs_unit/golden compile: pass</title></rect>
+<rect x="469" y="72" width="88" height="13" fill="#2da44e"><title>acs_unit/golden lint: pass</title></rect>
+<rect x="561" y="72" width="88" height="13" fill="#2da44e"><title>acs_unit/golden weak: pass</title></rect>
+<rect x="653" y="72" width="88" height="13" fill="#2da44e"><title>acs_unit/golden strong_icarus: pass</title></rect>
+<rect x="745" y="72" width="88" height="13" fill="#2da44e"><title>acs_unit/golden strong_verilator: pass</title></rect>
+<rect x="837" y="72" width="88" height="13" fill="#2da44e"><title>acs_unit/golden formal: pass</title></rect>
+<rect x="929" y="72" width="88" height="13" fill="#2da44e"><title>acs_unit/golden synth: pass</title></rect>
+<rect x="1021" y="72" width="88" height="13" fill="#d0d7de"><title>acs_unit/golden timed: n/a</title></rect>
+<text x="165" y="98" fill="#1f2328">correct_priority</text>
+<rect x="377" y="88" width="88" height="13" fill="#2da44e"><title>acs_unit/correct_priority compile: pass</title></rect>
+<rect x="469" y="88" width="88" height="13" fill="#2da44e"><title>acs_unit/correct_priority lint: pass</title></rect>
+<rect x="561" y="88" width="88" height="13" fill="#2da44e"><title>acs_unit/correct_priority weak: pass</title></rect>
+<rect x="653" y="88" width="88" height="13" fill="#2da44e"><title>acs_unit/correct_priority strong_icarus: pass</title></rect>
+<rect x="745" y="88" width="88" height="13" fill="#2da44e"><title>acs_unit/correct_priority strong_verilator: pass</title></rect>
+<rect x="837" y="88" width="88" height="13" fill="#2da44e"><title>acs_unit/correct_priority formal: pass</title></rect>
+<rect x="929" y="88" width="88" height="13" fill="#2da44e"><title>acs_unit/correct_priority synth: pass</title></rect>
+<rect x="1021" y="88" width="88" height="13" fill="#d0d7de"><title>acs_unit/correct_priority timed: n/a</title></rect>
+<text x="165" y="114" fill="#cf222e">bug_ignores_validity</text>
+<rect x="377" y="104" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ignores_validity compile: pass</title></rect>
+<rect x="469" y="104" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ignores_validity lint: pass</title></rect>
+<rect x="561" y="104" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ignores_validity weak: pass</title></rect>
+<rect x="653" y="104" width="88" height="13" fill="#cf222e"><title>acs_unit/bug_ignores_validity strong_icarus: fail</title></rect>
+<rect x="745" y="104" width="88" height="13" fill="#cf222e"><title>acs_unit/bug_ignores_validity strong_verilator: fail</title></rect>
+<rect x="837" y="104" width="88" height="13" fill="#cf222e"><title>acs_unit/bug_ignores_validity formal: fail</title></rect>
+<rect x="929" y="104" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ignores_validity synth: pass</title></rect>
+<rect x="1021" y="104" width="88" height="13" fill="#d0d7de"><title>acs_unit/bug_ignores_validity timed: n/a</title></rect>
+<text x="165" y="130" fill="#cf222e">bug_ties_to_path1</text>
+<rect x="377" y="120" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ties_to_path1 compile: pass</title></rect>
+<rect x="469" y="120" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ties_to_path1 lint: pass</title></rect>
+<rect x="561" y="120" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ties_to_path1 weak: pass</title></rect>
+<rect x="653" y="120" width="88" height="13" fill="#cf222e"><title>acs_unit/bug_ties_to_path1 strong_icarus: fail</title></rect>
+<rect x="745" y="120" width="88" height="13" fill="#cf222e"><title>acs_unit/bug_ties_to_path1 strong_verilator: fail</title></rect>
+<rect x="837" y="120" width="88" height="13" fill="#cf222e"><title>acs_unit/bug_ties_to_path1 formal: fail</title></rect>
+<rect x="929" y="120" width="88" height="13" fill="#2da44e"><title>acs_unit/bug_ties_to_path1 synth: pass</title></rect>
+<rect x="1021" y="120" width="88" height="13" fill="#d0d7de"><title>acs_unit/bug_ties_to_path1 timed: n/a</title></rect>
+<line x1="8" y1="134" x2="1119" y2="134" stroke="#8c959f"/>
+<text x="12" y="146" font-weight="bold" fill="#1f2328">adder_cla</text>
+<text x="165" y="146" fill="#1f2328">golden</text>
+<rect x="377" y="136" width="88" height="13" fill="#2da44e"><title>adder_cla/golden compile: pass</title></rect>
+<rect x="469" y="136" width="88" height="13" fill="#2da44e"><title>adder_cla/golden lint: pass</title></rect>
+<rect x="561" y="136" width="88" height="13" fill="#2da44e"><title>adder_cla/golden weak: pass</title></rect>
+<rect x="653" y="136" width="88" height="13" fill="#2da44e"><title>adder_cla/golden strong_icarus: pass</title></rect>
+<rect x="745" y="136" width="88" height="13" fill="#2da44e"><title>adder_cla/golden strong_verilator: pass</title></rect>
+<rect x="837" y="136" width="88" height="13" fill="#2da44e"><title>adder_cla/golden formal: pass</title></rect>
+<rect x="929" y="136" width="88" height="13" fill="#2da44e"><title>adder_cla/golden synth: pass</title></rect>
+<rect x="1021" y="136" width="88" height="13" fill="#d0d7de"><title>adder_cla/golden timed: n/a</title></rect>
+<text x="165" y="162" fill="#1f2328">correct_kogge_stone</text>
+<rect x="377" y="152" width="88" height="13" fill="#2da44e"><title>adder_cla/correct_kogge_stone compile: pass</title></rect>
+<rect x="469" y="152" width="88" height="13" fill="#2da44e"><title>adder_cla/correct_kogge_stone lint: pass</title></rect>
+<rect x="561" y="152" width="88" height="13" fill="#2da44e"><title>adder_cla/correct_kogge_stone weak: pass</title></rect>
+<rect x="653" y="152" width="88" height="13" fill="#2da44e"><title>adder_cla/correct_kogge_stone strong_icarus: pass</title></rect>
+<rect x="745" y="152" width="88" height="13" fill="#2da44e"><title>adder_cla/correct_kogge_stone strong_verilator: pass</title></rect>
+<rect x="837" y="152" width="88" height="13" fill="#2da44e"><title>adder_cla/correct_kogge_stone formal: pass</title></rect>
+<rect x="929" y="152" width="88" height="13" fill="#2da44e"><title>adder_cla/correct_kogge_stone synth: pass</title></rect>
+<rect x="1021" y="152" width="88" height="13" fill="#d0d7de"><title>adder_cla/correct_kogge_stone timed: n/a</title></rect>
+<text x="165" y="178" fill="#cf222e">bug_missing_cin_term</text>
+<rect x="377" y="168" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_missing_cin_term compile: pass</title></rect>
+<rect x="469" y="168" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_missing_cin_term lint: pass</title></rect>
+<rect x="561" y="168" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_missing_cin_term weak: pass</title></rect>
+<rect x="653" y="168" width="88" height="13" fill="#cf222e"><title>adder_cla/bug_missing_cin_term strong_icarus: fail</title></rect>
+<rect x="745" y="168" width="88" height="13" fill="#cf222e"><title>adder_cla/bug_missing_cin_term strong_verilator: fail</title></rect>
+<rect x="837" y="168" width="88" height="13" fill="#cf222e"><title>adder_cla/bug_missing_cin_term formal: fail</title></rect>
+<rect x="929" y="168" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_missing_cin_term synth: pass</title></rect>
+<rect x="1021" y="168" width="88" height="13" fill="#d0d7de"><title>adder_cla/bug_missing_cin_term timed: n/a</title></rect>
+<text x="165" y="194" fill="#cf222e">bug_plain_operator</text>
+<rect x="377" y="184" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_plain_operator compile: pass</title></rect>
+<rect x="469" y="184" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_plain_operator lint: pass</title></rect>
+<rect x="561" y="184" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_plain_operator weak: pass</title></rect>
+<rect x="653" y="184" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_plain_operator strong_icarus: pass</title></rect>
+<rect x="745" y="184" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_plain_operator strong_verilator: pass</title></rect>
+<rect x="837" y="184" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_plain_operator formal: pass</title></rect>
+<rect x="929" y="184" width="88" height="13" fill="#cf222e"><title>adder_cla/bug_plain_operator synth: fail</title></rect>
+<rect x="1021" y="184" width="88" height="13" fill="#d0d7de"><title>adder_cla/bug_plain_operator timed: n/a</title></rect>
+<text x="165" y="210" fill="#cf222e">bug_ripple</text>
+<rect x="377" y="200" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_ripple compile: pass</title></rect>
+<rect x="469" y="200" width="88" height="13" fill="#cf222e"><title>adder_cla/bug_ripple lint: fail</title></rect>
+<rect x="561" y="200" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_ripple weak: pass</title></rect>
+<rect x="653" y="200" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_ripple strong_icarus: pass</title></rect>
+<rect x="745" y="200" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_ripple strong_verilator: pass</title></rect>
+<rect x="837" y="200" width="88" height="13" fill="#2da44e"><title>adder_cla/bug_ripple formal: pass</title></rect>
+<rect x="929" y="200" width="88" height="13" fill="#cf222e"><title>adder_cla/bug_ripple synth: fail</title></rect>
+<rect x="1021" y="200" width="88" height="13" fill="#d0d7de"><title>adder_cla/bug_ripple timed: n/a</title></rect>
+<line x1="8" y1="214" x2="1119" y2="214" stroke="#8c959f"/>
+<text x="12" y="226" font-weight="bold" fill="#1f2328">alu_reg</text>
+<text x="165" y="226" fill="#1f2328">golden</text>
+<rect x="377" y="216" width="88" height="13" fill="#2da44e"><title>alu_reg/golden compile: pass</title></rect>
+<rect x="469" y="216" width="88" height="13" fill="#2da44e"><title>alu_reg/golden lint: pass</title></rect>
+<rect x="561" y="216" width="88" height="13" fill="#2da44e"><title>alu_reg/golden weak: pass</title></rect>
+<rect x="653" y="216" width="88" height="13" fill="#2da44e"><title>alu_reg/golden strong_icarus: pass</title></rect>
+<rect x="745" y="216" width="88" height="13" fill="#2da44e"><title>alu_reg/golden strong_verilator: pass</title></rect>
+<rect x="837" y="216" width="88" height="13" fill="#2da44e"><title>alu_reg/golden formal: pass</title></rect>
+<rect x="929" y="216" width="88" height="13" fill="#2da44e"><title>alu_reg/golden synth: pass</title></rect>
+<rect x="1021" y="216" width="88" height="13" fill="#d0d7de"><title>alu_reg/golden timed: n/a</title></rect>
+<text x="165" y="242" fill="#1f2328">correct_add_complement</text>
+<rect x="377" y="232" width="88" height="13" fill="#2da44e"><title>alu_reg/correct_add_complement compile: pass</title></rect>
+<rect x="469" y="232" width="88" height="13" fill="#2da44e"><title>alu_reg/correct_add_complement lint: pass</title></rect>
+<rect x="561" y="232" width="88" height="13" fill="#2da44e"><title>alu_reg/correct_add_complement weak: pass</title></rect>
+<rect x="653" y="232" width="88" height="13" fill="#2da44e"><title>alu_reg/correct_add_complement strong_icarus: pass</title></rect>
+<rect x="745" y="232" width="88" height="13" fill="#2da44e"><title>alu_reg/correct_add_complement strong_verilator: pass</title></rect>
+<rect x="837" y="232" width="88" height="13" fill="#2da44e"><title>alu_reg/correct_add_complement formal: pass</title></rect>
+<rect x="929" y="232" width="88" height="13" fill="#2da44e"><title>alu_reg/correct_add_complement synth: pass</title></rect>
+<rect x="1021" y="232" width="88" height="13" fill="#d0d7de"><title>alu_reg/correct_add_complement timed: n/a</title></rect>
+<text x="165" y="258" fill="#cf222e">bug_fixed_width</text>
+<rect x="377" y="248" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_fixed_width compile: pass</title></rect>
+<rect x="469" y="248" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_fixed_width lint: pass</title></rect>
+<rect x="561" y="248" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_fixed_width weak: pass</title></rect>
+<rect x="653" y="248" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_fixed_width strong_icarus: fail</title></rect>
+<rect x="745" y="248" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_fixed_width strong_verilator: fail</title></rect>
+<rect x="837" y="248" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_fixed_width formal: pass</title></rect>
+<rect x="929" y="248" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_fixed_width synth: pass</title></rect>
+<rect x="1021" y="248" width="88" height="13" fill="#d0d7de"><title>alu_reg/bug_fixed_width timed: n/a</title></rect>
+<text x="165" y="274" fill="#cf222e">bug_or_is_xor</text>
+<rect x="377" y="264" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_or_is_xor compile: pass</title></rect>
+<rect x="469" y="264" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_or_is_xor lint: pass</title></rect>
+<rect x="561" y="264" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_or_is_xor weak: pass</title></rect>
+<rect x="653" y="264" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_or_is_xor strong_icarus: fail</title></rect>
+<rect x="745" y="264" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_or_is_xor strong_verilator: fail</title></rect>
+<rect x="837" y="264" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_or_is_xor formal: fail</title></rect>
+<rect x="929" y="264" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_or_is_xor synth: pass</title></rect>
+<rect x="1021" y="264" width="88" height="13" fill="#d0d7de"><title>alu_reg/bug_or_is_xor timed: n/a</title></rect>
+<text x="165" y="290" fill="#cf222e">bug_sub_swapped</text>
+<rect x="377" y="280" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sub_swapped compile: pass</title></rect>
+<rect x="469" y="280" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sub_swapped lint: pass</title></rect>
+<rect x="561" y="280" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sub_swapped weak: pass</title></rect>
+<rect x="653" y="280" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_sub_swapped strong_icarus: fail</title></rect>
+<rect x="745" y="280" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_sub_swapped strong_verilator: fail</title></rect>
+<rect x="837" y="280" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_sub_swapped formal: fail</title></rect>
+<rect x="929" y="280" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sub_swapped synth: pass</title></rect>
+<rect x="1021" y="280" width="88" height="13" fill="#d0d7de"><title>alu_reg/bug_sub_swapped timed: n/a</title></rect>
+<text x="165" y="306" fill="#cf222e">bug_sync_reset</text>
+<rect x="377" y="296" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sync_reset compile: pass</title></rect>
+<rect x="469" y="296" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sync_reset lint: pass</title></rect>
+<rect x="561" y="296" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sync_reset weak: pass</title></rect>
+<rect x="653" y="296" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_sync_reset strong_icarus: fail</title></rect>
+<rect x="745" y="296" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_sync_reset strong_verilator: fail</title></rect>
+<rect x="837" y="296" width="88" height="13" fill="#cf222e"><title>alu_reg/bug_sync_reset formal: fail</title></rect>
+<rect x="929" y="296" width="88" height="13" fill="#2da44e"><title>alu_reg/bug_sync_reset synth: pass</title></rect>
+<rect x="1021" y="296" width="88" height="13" fill="#d0d7de"><title>alu_reg/bug_sync_reset timed: n/a</title></rect>
+<line x1="8" y1="310" x2="1119" y2="310" stroke="#8c959f"/>
+<text x="12" y="322" font-weight="bold" fill="#1f2328">bitrev_pipe</text>
+<text x="165" y="322" fill="#1f2328">golden</text>
+<rect x="377" y="312" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/golden compile: pass</title></rect>
+<rect x="469" y="312" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/golden lint: pass</title></rect>
+<rect x="561" y="312" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/golden weak: pass</title></rect>
+<rect x="653" y="312" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/golden strong_icarus: pass</title></rect>
+<rect x="745" y="312" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/golden strong_verilator: pass</title></rect>
+<rect x="837" y="312" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/golden formal: n/a</title></rect>
+<rect x="929" y="312" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/golden synth: pass</title></rect>
+<rect x="1021" y="312" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/golden timed: n/a</title></rect>
+<text x="165" y="338" fill="#1f2328">correct_bit_loop</text>
+<rect x="377" y="328" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/correct_bit_loop compile: pass</title></rect>
+<rect x="469" y="328" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/correct_bit_loop lint: pass</title></rect>
+<rect x="561" y="328" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/correct_bit_loop weak: pass</title></rect>
+<rect x="653" y="328" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/correct_bit_loop strong_icarus: pass</title></rect>
+<rect x="745" y="328" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/correct_bit_loop strong_verilator: pass</title></rect>
+<rect x="837" y="328" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/correct_bit_loop formal: n/a</title></rect>
+<rect x="929" y="328" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/correct_bit_loop synth: pass</title></rect>
+<rect x="1021" y="328" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/correct_bit_loop timed: n/a</title></rect>
+<text x="165" y="354" fill="#cf222e">bug_invert_only_if_reversed</text>
+<rect x="377" y="344" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/bug_invert_only_if_reversed compile: pass</title></rect>
+<rect x="469" y="344" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/bug_invert_only_if_reversed lint: pass</title></rect>
+<rect x="561" y="344" width="88" height="13" fill="#cf222e"><title>bitrev_pipe/bug_invert_only_if_reversed weak: fail</title></rect>
+<rect x="653" y="344" width="88" height="13" fill="#cf222e"><title>bitrev_pipe/bug_invert_only_if_reversed strong_icarus: fail</title></rect>
+<rect x="745" y="344" width="88" height="13" fill="#cf222e"><title>bitrev_pipe/bug_invert_only_if_reversed strong_verilator: fail</title></rect>
+<rect x="837" y="344" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/bug_invert_only_if_reversed formal: n/a</title></rect>
+<rect x="929" y="344" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/bug_invert_only_if_reversed synth: pass</title></rect>
+<rect x="1021" y="344" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/bug_invert_only_if_reversed timed: n/a</title></rect>
+<text x="165" y="370" fill="#cf222e">bug_rising_capture</text>
+<rect x="377" y="360" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/bug_rising_capture compile: pass</title></rect>
+<rect x="469" y="360" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/bug_rising_capture lint: pass</title></rect>
+<rect x="561" y="360" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/bug_rising_capture weak: pass</title></rect>
+<rect x="653" y="360" width="88" height="13" fill="#cf222e"><title>bitrev_pipe/bug_rising_capture strong_icarus: fail</title></rect>
+<rect x="745" y="360" width="88" height="13" fill="#cf222e"><title>bitrev_pipe/bug_rising_capture strong_verilator: fail</title></rect>
+<rect x="837" y="360" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/bug_rising_capture formal: n/a</title></rect>
+<rect x="929" y="360" width="88" height="13" fill="#2da44e"><title>bitrev_pipe/bug_rising_capture synth: pass</title></rect>
+<rect x="1021" y="360" width="88" height="13" fill="#d0d7de"><title>bitrev_pipe/bug_rising_capture timed: n/a</title></rect>
+<line x1="8" y1="374" x2="1119" y2="374" stroke="#8c959f"/>
+<text x="12" y="386" font-weight="bold" fill="#1f2328">clkdiv3</text>
+<text x="165" y="386" fill="#1f2328">golden</text>
+<rect x="377" y="376" width="88" height="13" fill="#2da44e"><title>clkdiv3/golden compile: pass</title></rect>
+<rect x="469" y="376" width="88" height="13" fill="#2da44e"><title>clkdiv3/golden lint: pass</title></rect>
+<rect x="561" y="376" width="88" height="13" fill="#2da44e"><title>clkdiv3/golden weak: pass</title></rect>
+<rect x="653" y="376" width="88" height="13" fill="#2da44e"><title>clkdiv3/golden strong_icarus: pass</title></rect>
+<rect x="745" y="376" width="88" height="13" fill="#2da44e"><title>clkdiv3/golden strong_verilator: pass</title></rect>
+<rect x="837" y="376" width="88" height="13" fill="#d0d7de"><title>clkdiv3/golden formal: n/a</title></rect>
+<rect x="929" y="376" width="88" height="13" fill="#2da44e"><title>clkdiv3/golden synth: pass</title></rect>
+<rect x="1021" y="376" width="88" height="13" fill="#2da44e"><title>clkdiv3/golden timed: pass</title></rect>
+<text x="165" y="402" fill="#1f2328">correct_shift_ring</text>
+<rect x="377" y="392" width="88" height="13" fill="#2da44e"><title>clkdiv3/correct_shift_ring compile: pass</title></rect>
+<rect x="469" y="392" width="88" height="13" fill="#2da44e"><title>clkdiv3/correct_shift_ring lint: pass</title></rect>
+<rect x="561" y="392" width="88" height="13" fill="#2da44e"><title>clkdiv3/correct_shift_ring weak: pass</title></rect>
+<rect x="653" y="392" width="88" height="13" fill="#2da44e"><title>clkdiv3/correct_shift_ring strong_icarus: pass</title></rect>
+<rect x="745" y="392" width="88" height="13" fill="#2da44e"><title>clkdiv3/correct_shift_ring strong_verilator: pass</title></rect>
+<rect x="837" y="392" width="88" height="13" fill="#d0d7de"><title>clkdiv3/correct_shift_ring formal: n/a</title></rect>
+<rect x="929" y="392" width="88" height="13" fill="#2da44e"><title>clkdiv3/correct_shift_ring synth: pass</title></rect>
+<rect x="1021" y="392" width="88" height="13" fill="#2da44e"><title>clkdiv3/correct_shift_ring timed: pass</title></rect>
+<text x="165" y="418" fill="#cf222e">bug_decoded_counters</text>
+<rect x="377" y="408" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_decoded_counters compile: pass</title></rect>
+<rect x="469" y="408" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_decoded_counters lint: pass</title></rect>
+<rect x="561" y="408" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_decoded_counters weak: pass</title></rect>
+<rect x="653" y="408" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_decoded_counters strong_icarus: pass</title></rect>
+<rect x="745" y="408" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_decoded_counters strong_verilator: pass</title></rect>
+<rect x="837" y="408" width="88" height="13" fill="#d0d7de"><title>clkdiv3/bug_decoded_counters formal: n/a</title></rect>
+<rect x="929" y="408" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_decoded_counters synth: pass</title></rect>
+<rect x="1021" y="408" width="88" height="13" fill="#cf222e"><title>clkdiv3/bug_decoded_counters timed: fail</title></rect>
+<text x="165" y="434" fill="#cf222e">bug_duty_33</text>
+<rect x="377" y="424" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_duty_33 compile: pass</title></rect>
+<rect x="469" y="424" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_duty_33 lint: pass</title></rect>
+<rect x="561" y="424" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_duty_33 weak: pass</title></rect>
+<rect x="653" y="424" width="88" height="13" fill="#cf222e"><title>clkdiv3/bug_duty_33 strong_icarus: fail</title></rect>
+<rect x="745" y="424" width="88" height="13" fill="#cf222e"><title>clkdiv3/bug_duty_33 strong_verilator: fail</title></rect>
+<rect x="837" y="424" width="88" height="13" fill="#d0d7de"><title>clkdiv3/bug_duty_33 formal: n/a</title></rect>
+<rect x="929" y="424" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_duty_33 synth: pass</title></rect>
+<rect x="1021" y="424" width="88" height="13" fill="#2da44e"><title>clkdiv3/bug_duty_33 timed: pass</title></rect>
+<line x1="8" y1="438" x2="1119" y2="438" stroke="#8c959f"/>
+<text x="12" y="450" font-weight="bold" fill="#1f2328">conv_encoder_cfg</text>
+<text x="165" y="450" fill="#1f2328">golden</text>
+<rect x="377" y="440" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/golden compile: pass</title></rect>
+<rect x="469" y="440" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/golden lint: pass</title></rect>
+<rect x="561" y="440" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/golden weak: pass</title></rect>
+<rect x="653" y="440" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/golden strong_icarus: pass</title></rect>
+<rect x="745" y="440" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/golden strong_verilator: pass</title></rect>
+<rect x="837" y="440" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/golden formal: pass</title></rect>
+<rect x="929" y="440" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/golden synth: pass</title></rect>
+<rect x="1021" y="440" width="88" height="13" fill="#d0d7de"><title>conv_encoder_cfg/golden timed: n/a</title></rect>
+<text x="165" y="466" fill="#1f2328">correct_and_xor_loop</text>
+<rect x="377" y="456" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/correct_and_xor_loop compile: pass</title></rect>
+<rect x="469" y="456" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/correct_and_xor_loop lint: pass</title></rect>
+<rect x="561" y="456" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/correct_and_xor_loop weak: pass</title></rect>
+<rect x="653" y="456" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/correct_and_xor_loop strong_icarus: pass</title></rect>
+<rect x="745" y="456" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/correct_and_xor_loop strong_verilator: pass</title></rect>
+<rect x="837" y="456" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/correct_and_xor_loop formal: pass</title></rect>
+<rect x="929" y="456" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/correct_and_xor_loop synth: pass</title></rect>
+<rect x="1021" y="456" width="88" height="13" fill="#d0d7de"><title>conv_encoder_cfg/correct_and_xor_loop timed: n/a</title></rect>
+<text x="165" y="482" fill="#cf222e">bug_load_exclusive</text>
+<rect x="377" y="472" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_load_exclusive compile: pass</title></rect>
+<rect x="469" y="472" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_load_exclusive lint: pass</title></rect>
+<rect x="561" y="472" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_load_exclusive weak: pass</title></rect>
+<rect x="653" y="472" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_load_exclusive strong_icarus: fail</title></rect>
+<rect x="745" y="472" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_load_exclusive strong_verilator: fail</title></rect>
+<rect x="837" y="472" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_load_exclusive formal: fail</title></rect>
+<rect x="929" y="472" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_load_exclusive synth: pass</title></rect>
+<rect x="1021" y="472" width="88" height="13" fill="#d0d7de"><title>conv_encoder_cfg/bug_load_exclusive timed: n/a</title></rect>
+<text x="165" y="498" fill="#cf222e">bug_reset_clears_generators</text>
+<rect x="377" y="488" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_reset_clears_generators compile: pass</title></rect>
+<rect x="469" y="488" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_reset_clears_generators lint: pass</title></rect>
+<rect x="561" y="488" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_reset_clears_generators weak: fail</title></rect>
+<rect x="653" y="488" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_reset_clears_generators strong_icarus: fail</title></rect>
+<rect x="745" y="488" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_reset_clears_generators strong_verilator: fail</title></rect>
+<rect x="837" y="488" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_reset_clears_generators formal: fail</title></rect>
+<rect x="929" y="488" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_reset_clears_generators synth: pass</title></rect>
+<rect x="1021" y="488" width="88" height="13" fill="#d0d7de"><title>conv_encoder_cfg/bug_reset_clears_generators timed: n/a</title></rect>
+<text x="165" y="514" fill="#cf222e">bug_shift_while_loading</text>
+<rect x="377" y="504" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_shift_while_loading compile: pass</title></rect>
+<rect x="469" y="504" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_shift_while_loading lint: pass</title></rect>
+<rect x="561" y="504" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_shift_while_loading weak: pass</title></rect>
+<rect x="653" y="504" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_shift_while_loading strong_icarus: fail</title></rect>
+<rect x="745" y="504" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_shift_while_loading strong_verilator: fail</title></rect>
+<rect x="837" y="504" width="88" height="13" fill="#cf222e"><title>conv_encoder_cfg/bug_shift_while_loading formal: fail</title></rect>
+<rect x="929" y="504" width="88" height="13" fill="#2da44e"><title>conv_encoder_cfg/bug_shift_while_loading synth: pass</title></rect>
+<rect x="1021" y="504" width="88" height="13" fill="#d0d7de"><title>conv_encoder_cfg/bug_shift_while_loading timed: n/a</title></rect>
+<line x1="8" y1="518" x2="1119" y2="518" stroke="#8c959f"/>
+<text x="12" y="530" font-weight="bold" fill="#1f2328">gray2bin</text>
+<text x="165" y="530" fill="#1f2328">golden</text>
+<rect x="377" y="520" width="88" height="13" fill="#2da44e"><title>gray2bin/golden compile: pass</title></rect>
+<rect x="469" y="520" width="88" height="13" fill="#2da44e"><title>gray2bin/golden lint: pass</title></rect>
+<rect x="561" y="520" width="88" height="13" fill="#2da44e"><title>gray2bin/golden weak: pass</title></rect>
+<rect x="653" y="520" width="88" height="13" fill="#2da44e"><title>gray2bin/golden strong_icarus: pass</title></rect>
+<rect x="745" y="520" width="88" height="13" fill="#2da44e"><title>gray2bin/golden strong_verilator: pass</title></rect>
+<rect x="837" y="520" width="88" height="13" fill="#2da44e"><title>gray2bin/golden formal: pass</title></rect>
+<rect x="929" y="520" width="88" height="13" fill="#2da44e"><title>gray2bin/golden synth: pass</title></rect>
+<rect x="1021" y="520" width="88" height="13" fill="#d0d7de"><title>gray2bin/golden timed: n/a</title></rect>
+<text x="165" y="546" fill="#1f2328">correct_shift_xor</text>
+<rect x="377" y="536" width="88" height="13" fill="#2da44e"><title>gray2bin/correct_shift_xor compile: pass</title></rect>
+<rect x="469" y="536" width="88" height="13" fill="#2da44e"><title>gray2bin/correct_shift_xor lint: pass</title></rect>
+<rect x="561" y="536" width="88" height="13" fill="#2da44e"><title>gray2bin/correct_shift_xor weak: pass</title></rect>
+<rect x="653" y="536" width="88" height="13" fill="#2da44e"><title>gray2bin/correct_shift_xor strong_icarus: pass</title></rect>
+<rect x="745" y="536" width="88" height="13" fill="#2da44e"><title>gray2bin/correct_shift_xor strong_verilator: pass</title></rect>
+<rect x="837" y="536" width="88" height="13" fill="#2da44e"><title>gray2bin/correct_shift_xor formal: pass</title></rect>
+<rect x="929" y="536" width="88" height="13" fill="#2da44e"><title>gray2bin/correct_shift_xor synth: pass</title></rect>
+<rect x="1021" y="536" width="88" height="13" fill="#d0d7de"><title>gray2bin/correct_shift_xor timed: n/a</title></rect>
+<text x="165" y="562" fill="#cf222e">bug_comb_order</text>
+<rect x="377" y="552" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_comb_order compile: pass</title></rect>
+<rect x="469" y="552" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_comb_order lint: fail</title></rect>
+<rect x="561" y="552" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_comb_order weak: fail</title></rect>
+<rect x="653" y="552" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_comb_order strong_icarus: fail</title></rect>
+<rect x="745" y="552" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_comb_order strong_verilator: pass</title></rect>
+<rect x="837" y="552" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_comb_order formal: pass</title></rect>
+<rect x="929" y="552" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_comb_order synth: pass</title></rect>
+<rect x="1021" y="552" width="88" height="13" fill="#d0d7de"><title>gray2bin/bug_comb_order timed: n/a</title></rect>
+<text x="165" y="578" fill="#cf222e">bug_latency_one</text>
+<rect x="377" y="568" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_latency_one compile: pass</title></rect>
+<rect x="469" y="568" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_latency_one lint: pass</title></rect>
+<rect x="561" y="568" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_latency_one weak: pass</title></rect>
+<rect x="653" y="568" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_latency_one strong_icarus: fail</title></rect>
+<rect x="745" y="568" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_latency_one strong_verilator: fail</title></rect>
+<rect x="837" y="568" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_latency_one formal: fail</title></rect>
+<rect x="929" y="568" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_latency_one synth: pass</title></rect>
+<rect x="1021" y="568" width="88" height="13" fill="#d0d7de"><title>gray2bin/bug_latency_one timed: n/a</title></rect>
+<text x="165" y="594" fill="#cf222e">bug_pairwise_xor</text>
+<rect x="377" y="584" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_pairwise_xor compile: pass</title></rect>
+<rect x="469" y="584" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_pairwise_xor lint: pass</title></rect>
+<rect x="561" y="584" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_pairwise_xor weak: fail</title></rect>
+<rect x="653" y="584" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_pairwise_xor strong_icarus: fail</title></rect>
+<rect x="745" y="584" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_pairwise_xor strong_verilator: fail</title></rect>
+<rect x="837" y="584" width="88" height="13" fill="#cf222e"><title>gray2bin/bug_pairwise_xor formal: fail</title></rect>
+<rect x="929" y="584" width="88" height="13" fill="#2da44e"><title>gray2bin/bug_pairwise_xor synth: pass</title></rect>
+<rect x="1021" y="584" width="88" height="13" fill="#d0d7de"><title>gray2bin/bug_pairwise_xor timed: n/a</title></rect>
+<line x1="8" y1="598" x2="1119" y2="598" stroke="#8c959f"/>
+<text x="12" y="610" font-weight="bold" fill="#1f2328">log_shifter</text>
+<text x="165" y="610" fill="#1f2328">golden</text>
+<rect x="377" y="600" width="88" height="13" fill="#2da44e"><title>log_shifter/golden compile: pass</title></rect>
+<rect x="469" y="600" width="88" height="13" fill="#2da44e"><title>log_shifter/golden lint: pass</title></rect>
+<rect x="561" y="600" width="88" height="13" fill="#2da44e"><title>log_shifter/golden weak: pass</title></rect>
+<rect x="653" y="600" width="88" height="13" fill="#2da44e"><title>log_shifter/golden strong_icarus: pass</title></rect>
+<rect x="745" y="600" width="88" height="13" fill="#2da44e"><title>log_shifter/golden strong_verilator: pass</title></rect>
+<rect x="837" y="600" width="88" height="13" fill="#2da44e"><title>log_shifter/golden formal: pass</title></rect>
+<rect x="929" y="600" width="88" height="13" fill="#2da44e"><title>log_shifter/golden synth: pass</title></rect>
+<rect x="1021" y="600" width="88" height="13" fill="#d0d7de"><title>log_shifter/golden timed: n/a</title></rect>
+<text x="165" y="626" fill="#1f2328">correct_two_networks</text>
+<rect x="377" y="616" width="88" height="13" fill="#2da44e"><title>log_shifter/correct_two_networks compile: pass</title></rect>
+<rect x="469" y="616" width="88" height="13" fill="#2da44e"><title>log_shifter/correct_two_networks lint: pass</title></rect>
+<rect x="561" y="616" width="88" height="13" fill="#2da44e"><title>log_shifter/correct_two_networks weak: pass</title></rect>
+<rect x="653" y="616" width="88" height="13" fill="#2da44e"><title>log_shifter/correct_two_networks strong_icarus: pass</title></rect>
+<rect x="745" y="616" width="88" height="13" fill="#2da44e"><title>log_shifter/correct_two_networks strong_verilator: pass</title></rect>
+<rect x="837" y="616" width="88" height="13" fill="#2da44e"><title>log_shifter/correct_two_networks formal: pass</title></rect>
+<rect x="929" y="616" width="88" height="13" fill="#2da44e"><title>log_shifter/correct_two_networks synth: pass</title></rect>
+<rect x="1021" y="616" width="88" height="13" fill="#d0d7de"><title>log_shifter/correct_two_networks timed: n/a</title></rect>
+<text x="165" y="642" fill="#cf222e">bug_behavioral</text>
+<rect x="377" y="632" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_behavioral compile: pass</title></rect>
+<rect x="469" y="632" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_behavioral lint: fail</title></rect>
+<rect x="561" y="632" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_behavioral weak: pass</title></rect>
+<rect x="653" y="632" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_behavioral strong_icarus: pass</title></rect>
+<rect x="745" y="632" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_behavioral strong_verilator: pass</title></rect>
+<rect x="837" y="632" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_behavioral formal: pass</title></rect>
+<rect x="929" y="632" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_behavioral synth: fail</title></rect>
+<rect x="1021" y="632" width="88" height="13" fill="#d0d7de"><title>log_shifter/bug_behavioral timed: n/a</title></rect>
+<text x="165" y="658" fill="#cf222e">bug_rotate_fill</text>
+<rect x="377" y="648" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_rotate_fill compile: pass</title></rect>
+<rect x="469" y="648" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_rotate_fill lint: pass</title></rect>
+<rect x="561" y="648" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_rotate_fill weak: pass</title></rect>
+<rect x="653" y="648" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_rotate_fill strong_icarus: fail</title></rect>
+<rect x="745" y="648" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_rotate_fill strong_verilator: fail</title></rect>
+<rect x="837" y="648" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_rotate_fill formal: fail</title></rect>
+<rect x="929" y="648" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_rotate_fill synth: pass</title></rect>
+<rect x="1021" y="648" width="88" height="13" fill="#d0d7de"><title>log_shifter/bug_rotate_fill timed: n/a</title></rect>
+<text x="165" y="674" fill="#cf222e">bug_two_stages</text>
+<rect x="377" y="664" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_two_stages compile: pass</title></rect>
+<rect x="469" y="664" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_two_stages lint: fail</title></rect>
+<rect x="561" y="664" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_two_stages weak: pass</title></rect>
+<rect x="653" y="664" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_two_stages strong_icarus: fail</title></rect>
+<rect x="745" y="664" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_two_stages strong_verilator: fail</title></rect>
+<rect x="837" y="664" width="88" height="13" fill="#cf222e"><title>log_shifter/bug_two_stages formal: fail</title></rect>
+<rect x="929" y="664" width="88" height="13" fill="#2da44e"><title>log_shifter/bug_two_stages synth: pass</title></rect>
+<rect x="1021" y="664" width="88" height="13" fill="#d0d7de"><title>log_shifter/bug_two_stages timed: n/a</title></rect>
+<line x1="8" y1="678" x2="1119" y2="678" stroke="#8c959f"/>
+<text x="12" y="690" font-weight="bold" fill="#1f2328">maxlen_lfsr</text>
+<text x="165" y="690" fill="#1f2328">golden</text>
+<rect x="377" y="680" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/golden compile: pass</title></rect>
+<rect x="469" y="680" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/golden lint: pass</title></rect>
+<rect x="561" y="680" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/golden weak: pass</title></rect>
+<rect x="653" y="680" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/golden strong_icarus: pass</title></rect>
+<rect x="745" y="680" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/golden strong_verilator: pass</title></rect>
+<rect x="837" y="680" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/golden formal: pass</title></rect>
+<rect x="929" y="680" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/golden synth: pass</title></rect>
+<rect x="1021" y="680" width="88" height="13" fill="#d0d7de"><title>maxlen_lfsr/golden timed: n/a</title></rect>
+<text x="165" y="706" fill="#1f2328">correct_counter_done</text>
+<rect x="377" y="696" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/correct_counter_done compile: pass</title></rect>
+<rect x="469" y="696" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/correct_counter_done lint: pass</title></rect>
+<rect x="561" y="696" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/correct_counter_done weak: pass</title></rect>
+<rect x="653" y="696" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/correct_counter_done strong_icarus: pass</title></rect>
+<rect x="745" y="696" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/correct_counter_done strong_verilator: pass</title></rect>
+<rect x="837" y="696" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/correct_counter_done formal: pass</title></rect>
+<rect x="929" y="696" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/correct_counter_done synth: pass</title></rect>
+<rect x="1021" y="696" width="88" height="13" fill="#d0d7de"><title>maxlen_lfsr/correct_counter_done timed: n/a</title></rect>
+<text x="165" y="722" fill="#cf222e">bug_done_on_load</text>
+<rect x="377" y="712" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_done_on_load compile: pass</title></rect>
+<rect x="469" y="712" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_done_on_load lint: pass</title></rect>
+<rect x="561" y="712" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_done_on_load weak: pass</title></rect>
+<rect x="653" y="712" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_done_on_load strong_icarus: fail</title></rect>
+<rect x="745" y="712" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_done_on_load strong_verilator: fail</title></rect>
+<rect x="837" y="712" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_done_on_load formal: fail</title></rect>
+<rect x="929" y="712" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_done_on_load synth: pass</title></rect>
+<rect x="1021" y="712" width="88" height="13" fill="#d0d7de"><title>maxlen_lfsr/bug_done_on_load timed: n/a</title></rect>
+<text x="165" y="738" fill="#cf222e">bug_reset_ones</text>
+<rect x="377" y="728" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_reset_ones compile: pass</title></rect>
+<rect x="469" y="728" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_reset_ones lint: pass</title></rect>
+<rect x="561" y="728" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_reset_ones weak: pass</title></rect>
+<rect x="653" y="728" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_reset_ones strong_icarus: fail</title></rect>
+<rect x="745" y="728" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_reset_ones strong_verilator: fail</title></rect>
+<rect x="837" y="728" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_reset_ones formal: fail</title></rect>
+<rect x="929" y="728" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_reset_ones synth: pass</title></rect>
+<rect x="1021" y="728" width="88" height="13" fill="#d0d7de"><title>maxlen_lfsr/bug_reset_ones timed: n/a</title></rect>
+<text x="165" y="754" fill="#cf222e">bug_taps_n8</text>
+<rect x="377" y="744" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_taps_n8 compile: pass</title></rect>
+<rect x="469" y="744" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_taps_n8 lint: pass</title></rect>
+<rect x="561" y="744" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_taps_n8 weak: pass</title></rect>
+<rect x="653" y="744" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_taps_n8 strong_icarus: fail</title></rect>
+<rect x="745" y="744" width="88" height="13" fill="#cf222e"><title>maxlen_lfsr/bug_taps_n8 strong_verilator: fail</title></rect>
+<rect x="837" y="744" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_taps_n8 formal: pass</title></rect>
+<rect x="929" y="744" width="88" height="13" fill="#2da44e"><title>maxlen_lfsr/bug_taps_n8 synth: pass</title></rect>
+<rect x="1021" y="744" width="88" height="13" fill="#d0d7de"><title>maxlen_lfsr/bug_taps_n8 timed: n/a</title></rect>
+<line x1="8" y1="758" x2="1119" y2="758" stroke="#8c959f"/>
+<text x="12" y="770" font-weight="bold" fill="#1f2328">onehot_decoder</text>
+<text x="165" y="770" fill="#1f2328">golden</text>
+<rect x="377" y="760" width="88" height="13" fill="#2da44e"><title>onehot_decoder/golden compile: pass</title></rect>
+<rect x="469" y="760" width="88" height="13" fill="#2da44e"><title>onehot_decoder/golden lint: pass</title></rect>
+<rect x="561" y="760" width="88" height="13" fill="#2da44e"><title>onehot_decoder/golden weak: pass</title></rect>
+<rect x="653" y="760" width="88" height="13" fill="#2da44e"><title>onehot_decoder/golden strong_icarus: pass</title></rect>
+<rect x="745" y="760" width="88" height="13" fill="#2da44e"><title>onehot_decoder/golden strong_verilator: pass</title></rect>
+<rect x="837" y="760" width="88" height="13" fill="#2da44e"><title>onehot_decoder/golden formal: pass</title></rect>
+<rect x="929" y="760" width="88" height="13" fill="#2da44e"><title>onehot_decoder/golden synth: pass</title></rect>
+<rect x="1021" y="760" width="88" height="13" fill="#d0d7de"><title>onehot_decoder/golden timed: n/a</title></rect>
+<text x="165" y="786" fill="#1f2328">correct_shift</text>
+<rect x="377" y="776" width="88" height="13" fill="#2da44e"><title>onehot_decoder/correct_shift compile: pass</title></rect>
+<rect x="469" y="776" width="88" height="13" fill="#2da44e"><title>onehot_decoder/correct_shift lint: pass</title></rect>
+<rect x="561" y="776" width="88" height="13" fill="#2da44e"><title>onehot_decoder/correct_shift weak: pass</title></rect>
+<rect x="653" y="776" width="88" height="13" fill="#2da44e"><title>onehot_decoder/correct_shift strong_icarus: pass</title></rect>
+<rect x="745" y="776" width="88" height="13" fill="#2da44e"><title>onehot_decoder/correct_shift strong_verilator: pass</title></rect>
+<rect x="837" y="776" width="88" height="13" fill="#2da44e"><title>onehot_decoder/correct_shift formal: pass</title></rect>
+<rect x="929" y="776" width="88" height="13" fill="#2da44e"><title>onehot_decoder/correct_shift synth: pass</title></rect>
+<rect x="1021" y="776" width="88" height="13" fill="#d0d7de"><title>onehot_decoder/correct_shift timed: n/a</title></rect>
+<text x="165" y="802" fill="#cf222e">bug_bit_order</text>
+<rect x="377" y="792" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_bit_order compile: pass</title></rect>
+<rect x="469" y="792" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_bit_order lint: pass</title></rect>
+<rect x="561" y="792" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_bit_order weak: pass</title></rect>
+<rect x="653" y="792" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_bit_order strong_icarus: fail</title></rect>
+<rect x="745" y="792" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_bit_order strong_verilator: fail</title></rect>
+<rect x="837" y="792" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_bit_order formal: fail</title></rect>
+<rect x="929" y="792" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_bit_order synth: pass</title></rect>
+<rect x="1021" y="792" width="88" height="13" fill="#d0d7de"><title>onehot_decoder/bug_bit_order timed: n/a</title></rect>
+<text x="165" y="818" fill="#cf222e">bug_ignores_enable</text>
+<rect x="377" y="808" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_ignores_enable compile: pass</title></rect>
+<rect x="469" y="808" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_ignores_enable lint: fail</title></rect>
+<rect x="561" y="808" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_ignores_enable weak: pass</title></rect>
+<rect x="653" y="808" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_ignores_enable strong_icarus: fail</title></rect>
+<rect x="745" y="808" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_ignores_enable strong_verilator: fail</title></rect>
+<rect x="837" y="808" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_ignores_enable formal: fail</title></rect>
+<rect x="929" y="808" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_ignores_enable synth: pass</title></rect>
+<rect x="1021" y="808" width="88" height="13" fill="#d0d7de"><title>onehot_decoder/bug_ignores_enable timed: n/a</title></rect>
+<text x="165" y="834" fill="#cf222e">bug_latch</text>
+<rect x="377" y="824" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_latch compile: pass</title></rect>
+<rect x="469" y="824" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_latch lint: fail</title></rect>
+<rect x="561" y="824" width="88" height="13" fill="#2da44e"><title>onehot_decoder/bug_latch weak: pass</title></rect>
+<rect x="653" y="824" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_latch strong_icarus: fail</title></rect>
+<rect x="745" y="824" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_latch strong_verilator: fail</title></rect>
+<rect x="837" y="824" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_latch formal: fail</title></rect>
+<rect x="929" y="824" width="88" height="13" fill="#cf222e"><title>onehot_decoder/bug_latch synth: fail</title></rect>
+<rect x="1021" y="824" width="88" height="13" fill="#d0d7de"><title>onehot_decoder/bug_latch timed: n/a</title></rect>
+<line x1="8" y1="838" x2="1119" y2="838" stroke="#8c959f"/>
+<text x="12" y="850" font-weight="bold" fill="#1f2328">secded84</text>
+<text x="165" y="850" fill="#1f2328">golden</text>
+<rect x="377" y="840" width="88" height="13" fill="#2da44e"><title>secded84/golden compile: pass</title></rect>
+<rect x="469" y="840" width="88" height="13" fill="#2da44e"><title>secded84/golden lint: pass</title></rect>
+<rect x="561" y="840" width="88" height="13" fill="#2da44e"><title>secded84/golden weak: pass</title></rect>
+<rect x="653" y="840" width="88" height="13" fill="#2da44e"><title>secded84/golden strong_icarus: pass</title></rect>
+<rect x="745" y="840" width="88" height="13" fill="#2da44e"><title>secded84/golden strong_verilator: pass</title></rect>
+<rect x="837" y="840" width="88" height="13" fill="#2da44e"><title>secded84/golden formal: pass</title></rect>
+<rect x="929" y="840" width="88" height="13" fill="#2da44e"><title>secded84/golden synth: pass</title></rect>
+<rect x="1021" y="840" width="88" height="13" fill="#d0d7de"><title>secded84/golden timed: n/a</title></rect>
+<text x="165" y="866" fill="#1f2328">correct_nearest_codeword</text>
+<rect x="377" y="856" width="88" height="13" fill="#2da44e"><title>secded84/correct_nearest_codeword compile: pass</title></rect>
+<rect x="469" y="856" width="88" height="13" fill="#cf222e"><title>secded84/correct_nearest_codeword lint: fail</title></rect>
+<rect x="561" y="856" width="88" height="13" fill="#2da44e"><title>secded84/correct_nearest_codeword weak: pass</title></rect>
+<rect x="653" y="856" width="88" height="13" fill="#2da44e"><title>secded84/correct_nearest_codeword strong_icarus: pass</title></rect>
+<rect x="745" y="856" width="88" height="13" fill="#2da44e"><title>secded84/correct_nearest_codeword strong_verilator: pass</title></rect>
+<rect x="837" y="856" width="88" height="13" fill="#2da44e"><title>secded84/correct_nearest_codeword formal: pass</title></rect>
+<rect x="929" y="856" width="88" height="13" fill="#2da44e"><title>secded84/correct_nearest_codeword synth: pass</title></rect>
+<rect x="1021" y="856" width="88" height="13" fill="#d0d7de"><title>secded84/correct_nearest_codeword timed: n/a</title></rect>
+<text x="165" y="882" fill="#cf222e">bug_no_overall_parity</text>
+<rect x="377" y="872" width="88" height="13" fill="#2da44e"><title>secded84/bug_no_overall_parity compile: pass</title></rect>
+<rect x="469" y="872" width="88" height="13" fill="#cf222e"><title>secded84/bug_no_overall_parity lint: fail</title></rect>
+<rect x="561" y="872" width="88" height="13" fill="#2da44e"><title>secded84/bug_no_overall_parity weak: pass</title></rect>
+<rect x="653" y="872" width="88" height="13" fill="#cf222e"><title>secded84/bug_no_overall_parity strong_icarus: fail</title></rect>
+<rect x="745" y="872" width="88" height="13" fill="#cf222e"><title>secded84/bug_no_overall_parity strong_verilator: fail</title></rect>
+<rect x="837" y="872" width="88" height="13" fill="#cf222e"><title>secded84/bug_no_overall_parity formal: fail</title></rect>
+<rect x="929" y="872" width="88" height="13" fill="#2da44e"><title>secded84/bug_no_overall_parity synth: pass</title></rect>
+<rect x="1021" y="872" width="88" height="13" fill="#d0d7de"><title>secded84/bug_no_overall_parity timed: n/a</title></rect>
+<text x="165" y="898" fill="#cf222e">bug_syndrome_map</text>
+<rect x="377" y="888" width="88" height="13" fill="#2da44e"><title>secded84/bug_syndrome_map compile: pass</title></rect>
+<rect x="469" y="888" width="88" height="13" fill="#2da44e"><title>secded84/bug_syndrome_map lint: pass</title></rect>
+<rect x="561" y="888" width="88" height="13" fill="#2da44e"><title>secded84/bug_syndrome_map weak: pass</title></rect>
+<rect x="653" y="888" width="88" height="13" fill="#cf222e"><title>secded84/bug_syndrome_map strong_icarus: fail</title></rect>
+<rect x="745" y="888" width="88" height="13" fill="#cf222e"><title>secded84/bug_syndrome_map strong_verilator: fail</title></rect>
+<rect x="837" y="888" width="88" height="13" fill="#cf222e"><title>secded84/bug_syndrome_map formal: fail</title></rect>
+<rect x="929" y="888" width="88" height="13" fill="#2da44e"><title>secded84/bug_syndrome_map synth: pass</title></rect>
+<rect x="1021" y="888" width="88" height="13" fill="#d0d7de"><title>secded84/bug_syndrome_map timed: n/a</title></rect>
+<line x1="8" y1="902" x2="1119" y2="902" stroke="#8c959f"/>
+<text x="12" y="914" font-weight="bold" fill="#1f2328">serial_rx</text>
+<text x="165" y="914" fill="#1f2328">golden</text>
+<rect x="377" y="904" width="88" height="13" fill="#2da44e"><title>serial_rx/golden compile: pass</title></rect>
+<rect x="469" y="904" width="88" height="13" fill="#2da44e"><title>serial_rx/golden lint: pass</title></rect>
+<rect x="561" y="904" width="88" height="13" fill="#2da44e"><title>serial_rx/golden weak: pass</title></rect>
+<rect x="653" y="904" width="88" height="13" fill="#2da44e"><title>serial_rx/golden strong_icarus: pass</title></rect>
+<rect x="745" y="904" width="88" height="13" fill="#2da44e"><title>serial_rx/golden strong_verilator: pass</title></rect>
+<rect x="837" y="904" width="88" height="13" fill="#2da44e"><title>serial_rx/golden formal: pass</title></rect>
+<rect x="929" y="904" width="88" height="13" fill="#2da44e"><title>serial_rx/golden synth: pass</title></rect>
+<rect x="1021" y="904" width="88" height="13" fill="#d0d7de"><title>serial_rx/golden timed: n/a</title></rect>
+<text x="165" y="930" fill="#1f2328">correct_counter_sampling</text>
+<rect x="377" y="920" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_counter_sampling compile: pass</title></rect>
+<rect x="469" y="920" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_counter_sampling lint: pass</title></rect>
+<rect x="561" y="920" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_counter_sampling weak: pass</title></rect>
+<rect x="653" y="920" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_counter_sampling strong_icarus: pass</title></rect>
+<rect x="745" y="920" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_counter_sampling strong_verilator: pass</title></rect>
+<rect x="837" y="920" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_counter_sampling formal: pass</title></rect>
+<rect x="929" y="920" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_counter_sampling synth: pass</title></rect>
+<rect x="1021" y="920" width="88" height="13" fill="#d0d7de"><title>serial_rx/correct_counter_sampling timed: n/a</title></rect>
+<text x="165" y="946" fill="#1f2328">correct_down_timer</text>
+<rect x="377" y="936" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_down_timer compile: pass</title></rect>
+<rect x="469" y="936" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_down_timer lint: pass</title></rect>
+<rect x="561" y="936" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_down_timer weak: pass</title></rect>
+<rect x="653" y="936" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_down_timer strong_icarus: pass</title></rect>
+<rect x="745" y="936" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_down_timer strong_verilator: pass</title></rect>
+<rect x="837" y="936" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_down_timer formal: pass</title></rect>
+<rect x="929" y="936" width="88" height="13" fill="#2da44e"><title>serial_rx/correct_down_timer synth: pass</title></rect>
+<rect x="1021" y="936" width="88" height="13" fill="#d0d7de"><title>serial_rx/correct_down_timer timed: n/a</title></rect>
+<text x="165" y="962" fill="#cf222e">bug_bit7_as_stop</text>
+<rect x="377" y="952" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_bit7_as_stop compile: pass</title></rect>
+<rect x="469" y="952" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_bit7_as_stop lint: fail</title></rect>
+<rect x="561" y="952" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_bit7_as_stop weak: pass</title></rect>
+<rect x="653" y="952" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_bit7_as_stop strong_icarus: fail</title></rect>
+<rect x="745" y="952" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_bit7_as_stop strong_verilator: fail</title></rect>
+<rect x="837" y="952" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_bit7_as_stop formal: pass</title></rect>
+<rect x="929" y="952" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_bit7_as_stop synth: pass</title></rect>
+<rect x="1021" y="952" width="88" height="13" fill="#d0d7de"><title>serial_rx/bug_bit7_as_stop timed: n/a</title></rect>
+<text x="165" y="978" fill="#cf222e">bug_data_cleared</text>
+<rect x="377" y="968" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_data_cleared compile: pass</title></rect>
+<rect x="469" y="968" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_data_cleared lint: pass</title></rect>
+<rect x="561" y="968" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_data_cleared weak: pass</title></rect>
+<rect x="653" y="968" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_data_cleared strong_icarus: fail</title></rect>
+<rect x="745" y="968" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_data_cleared strong_verilator: fail</title></rect>
+<rect x="837" y="968" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_data_cleared formal: fail</title></rect>
+<rect x="929" y="968" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_data_cleared synth: pass</title></rect>
+<rect x="1021" y="968" width="88" height="13" fill="#d0d7de"><title>serial_rx/bug_data_cleared timed: n/a</title></rect>
+<text x="165" y="994" fill="#cf222e">bug_no_synchronizer</text>
+<rect x="377" y="984" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_no_synchronizer compile: pass</title></rect>
+<rect x="469" y="984" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_no_synchronizer lint: pass</title></rect>
+<rect x="561" y="984" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_no_synchronizer weak: pass</title></rect>
+<rect x="653" y="984" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_no_synchronizer strong_icarus: pass</title></rect>
+<rect x="745" y="984" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_no_synchronizer strong_verilator: pass</title></rect>
+<rect x="837" y="984" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_no_synchronizer formal: pass</title></rect>
+<rect x="929" y="984" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_no_synchronizer synth: fail</title></rect>
+<rect x="1021" y="984" width="88" height="13" fill="#d0d7de"><title>serial_rx/bug_no_synchronizer timed: n/a</title></rect>
+<text x="165" y="1010" fill="#cf222e">bug_sample_at_edge</text>
+<rect x="377" y="1000" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_sample_at_edge compile: pass</title></rect>
+<rect x="469" y="1000" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_sample_at_edge lint: fail</title></rect>
+<rect x="561" y="1000" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_sample_at_edge weak: pass</title></rect>
+<rect x="653" y="1000" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_sample_at_edge strong_icarus: fail</title></rect>
+<rect x="745" y="1000" width="88" height="13" fill="#cf222e"><title>serial_rx/bug_sample_at_edge strong_verilator: fail</title></rect>
+<rect x="837" y="1000" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_sample_at_edge formal: pass</title></rect>
+<rect x="929" y="1000" width="88" height="13" fill="#2da44e"><title>serial_rx/bug_sample_at_edge synth: pass</title></rect>
+<rect x="1021" y="1000" width="88" height="13" fill="#d0d7de"><title>serial_rx/bug_sample_at_edge timed: n/a</title></rect>
+<line x1="8" y1="1014" x2="1119" y2="1014" stroke="#8c959f"/>
+<text x="12" y="1026" font-weight="bold" fill="#1f2328">subtractor</text>
+<text x="165" y="1026" fill="#1f2328">golden</text>
+<rect x="377" y="1016" width="88" height="13" fill="#2da44e"><title>subtractor/golden compile: pass</title></rect>
+<rect x="469" y="1016" width="88" height="13" fill="#2da44e"><title>subtractor/golden lint: pass</title></rect>
+<rect x="561" y="1016" width="88" height="13" fill="#2da44e"><title>subtractor/golden weak: pass</title></rect>
+<rect x="653" y="1016" width="88" height="13" fill="#2da44e"><title>subtractor/golden strong_icarus: pass</title></rect>
+<rect x="745" y="1016" width="88" height="13" fill="#2da44e"><title>subtractor/golden strong_verilator: pass</title></rect>
+<rect x="837" y="1016" width="88" height="13" fill="#2da44e"><title>subtractor/golden formal: pass</title></rect>
+<rect x="929" y="1016" width="88" height="13" fill="#2da44e"><title>subtractor/golden synth: pass</title></rect>
+<rect x="1021" y="1016" width="88" height="13" fill="#d0d7de"><title>subtractor/golden timed: n/a</title></rect>
+<text x="165" y="1042" fill="#1f2328">correct_wide</text>
+<rect x="377" y="1032" width="88" height="13" fill="#2da44e"><title>subtractor/correct_wide compile: pass</title></rect>
+<rect x="469" y="1032" width="88" height="13" fill="#2da44e"><title>subtractor/correct_wide lint: pass</title></rect>
+<rect x="561" y="1032" width="88" height="13" fill="#2da44e"><title>subtractor/correct_wide weak: pass</title></rect>
+<rect x="653" y="1032" width="88" height="13" fill="#2da44e"><title>subtractor/correct_wide strong_icarus: pass</title></rect>
+<rect x="745" y="1032" width="88" height="13" fill="#2da44e"><title>subtractor/correct_wide strong_verilator: pass</title></rect>
+<rect x="837" y="1032" width="88" height="13" fill="#2da44e"><title>subtractor/correct_wide formal: pass</title></rect>
+<rect x="929" y="1032" width="88" height="13" fill="#2da44e"><title>subtractor/correct_wide synth: pass</title></rect>
+<rect x="1021" y="1032" width="88" height="13" fill="#d0d7de"><title>subtractor/correct_wide timed: n/a</title></rect>
+<text x="165" y="1058" fill="#cf222e">bug_direction_inverted</text>
+<rect x="377" y="1048" width="88" height="13" fill="#2da44e"><title>subtractor/bug_direction_inverted compile: pass</title></rect>
+<rect x="469" y="1048" width="88" height="13" fill="#2da44e"><title>subtractor/bug_direction_inverted lint: pass</title></rect>
+<rect x="561" y="1048" width="88" height="13" fill="#cf222e"><title>subtractor/bug_direction_inverted weak: fail</title></rect>
+<rect x="653" y="1048" width="88" height="13" fill="#cf222e"><title>subtractor/bug_direction_inverted strong_icarus: fail</title></rect>
+<rect x="745" y="1048" width="88" height="13" fill="#cf222e"><title>subtractor/bug_direction_inverted strong_verilator: fail</title></rect>
+<rect x="837" y="1048" width="88" height="13" fill="#cf222e"><title>subtractor/bug_direction_inverted formal: fail</title></rect>
+<rect x="929" y="1048" width="88" height="13" fill="#2da44e"><title>subtractor/bug_direction_inverted synth: pass</title></rect>
+<rect x="1021" y="1048" width="88" height="13" fill="#d0d7de"><title>subtractor/bug_direction_inverted timed: n/a</title></rect>
+<text x="165" y="1074" fill="#cf222e">bug_flags_swapped</text>
+<rect x="377" y="1064" width="88" height="13" fill="#2da44e"><title>subtractor/bug_flags_swapped compile: pass</title></rect>
+<rect x="469" y="1064" width="88" height="13" fill="#2da44e"><title>subtractor/bug_flags_swapped lint: pass</title></rect>
+<rect x="561" y="1064" width="88" height="13" fill="#2da44e"><title>subtractor/bug_flags_swapped weak: pass</title></rect>
+<rect x="653" y="1064" width="88" height="13" fill="#cf222e"><title>subtractor/bug_flags_swapped strong_icarus: fail</title></rect>
+<rect x="745" y="1064" width="88" height="13" fill="#cf222e"><title>subtractor/bug_flags_swapped strong_verilator: fail</title></rect>
+<rect x="837" y="1064" width="88" height="13" fill="#cf222e"><title>subtractor/bug_flags_swapped formal: fail</title></rect>
+<rect x="929" y="1064" width="88" height="13" fill="#2da44e"><title>subtractor/bug_flags_swapped synth: pass</title></rect>
+<rect x="1021" y="1064" width="88" height="13" fill="#d0d7de"><title>subtractor/bug_flags_swapped timed: n/a</title></rect>
+<text x="165" y="1090" fill="#cf222e">bug_unsigned_borrow</text>
+<rect x="377" y="1080" width="88" height="13" fill="#2da44e"><title>subtractor/bug_unsigned_borrow compile: pass</title></rect>
+<rect x="469" y="1080" width="88" height="13" fill="#2da44e"><title>subtractor/bug_unsigned_borrow lint: pass</title></rect>
+<rect x="561" y="1080" width="88" height="13" fill="#cf222e"><title>subtractor/bug_unsigned_borrow weak: fail</title></rect>
+<rect x="653" y="1080" width="88" height="13" fill="#cf222e"><title>subtractor/bug_unsigned_borrow strong_icarus: fail</title></rect>
+<rect x="745" y="1080" width="88" height="13" fill="#cf222e"><title>subtractor/bug_unsigned_borrow strong_verilator: fail</title></rect>
+<rect x="837" y="1080" width="88" height="13" fill="#cf222e"><title>subtractor/bug_unsigned_borrow formal: fail</title></rect>
+<rect x="929" y="1080" width="88" height="13" fill="#2da44e"><title>subtractor/bug_unsigned_borrow synth: pass</title></rect>
+<rect x="1021" y="1080" width="88" height="13" fill="#d0d7de"><title>subtractor/bug_unsigned_borrow timed: n/a</title></rect>
+<line x1="8" y1="1094" x2="1119" y2="1094" stroke="#8c959f"/>
+<text x="12" y="1106" font-weight="bold" fill="#1f2328">twisted_ring_counter</text>
+<text x="165" y="1106" fill="#1f2328">golden</text>
+<rect x="377" y="1096" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/golden compile: pass</title></rect>
+<rect x="469" y="1096" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/golden lint: pass</title></rect>
+<rect x="561" y="1096" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/golden weak: pass</title></rect>
+<rect x="653" y="1096" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/golden strong_icarus: pass</title></rect>
+<rect x="745" y="1096" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/golden strong_verilator: pass</title></rect>
+<rect x="837" y="1096" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/golden formal: pass</title></rect>
+<rect x="929" y="1096" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/golden synth: pass</title></rect>
+<rect x="1021" y="1096" width="88" height="13" fill="#d0d7de"><title>twisted_ring_counter/golden timed: n/a</title></rect>
+<text x="165" y="1122" fill="#1f2328">correct_shift_operator</text>
+<rect x="377" y="1112" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/correct_shift_operator compile: pass</title></rect>
+<rect x="469" y="1112" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/correct_shift_operator lint: pass</title></rect>
+<rect x="561" y="1112" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/correct_shift_operator weak: pass</title></rect>
+<rect x="653" y="1112" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/correct_shift_operator strong_icarus: pass</title></rect>
+<rect x="745" y="1112" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/correct_shift_operator strong_verilator: pass</title></rect>
+<rect x="837" y="1112" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/correct_shift_operator formal: pass</title></rect>
+<rect x="929" y="1112" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/correct_shift_operator synth: pass</title></rect>
+<rect x="1021" y="1112" width="88" height="13" fill="#d0d7de"><title>twisted_ring_counter/correct_shift_operator timed: n/a</title></rect>
+<text x="165" y="1138" fill="#cf222e">bug_clear_sync</text>
+<rect x="377" y="1128" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_clear_sync compile: pass</title></rect>
+<rect x="469" y="1128" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_clear_sync lint: pass</title></rect>
+<rect x="561" y="1128" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_clear_sync weak: pass</title></rect>
+<rect x="653" y="1128" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_clear_sync strong_icarus: fail</title></rect>
+<rect x="745" y="1128" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_clear_sync strong_verilator: fail</title></rect>
+<rect x="837" y="1128" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_clear_sync formal: fail</title></rect>
+<rect x="929" y="1128" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_clear_sync synth: pass</title></rect>
+<rect x="1021" y="1128" width="88" height="13" fill="#d0d7de"><title>twisted_ring_counter/bug_clear_sync timed: n/a</title></rect>
+<text x="165" y="1154" fill="#cf222e">bug_load_async</text>
+<rect x="377" y="1144" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_load_async compile: pass</title></rect>
+<rect x="469" y="1144" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_load_async lint: pass</title></rect>
+<rect x="561" y="1144" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_load_async weak: pass</title></rect>
+<rect x="653" y="1144" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_load_async strong_icarus: fail</title></rect>
+<rect x="745" y="1144" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_load_async strong_verilator: fail</title></rect>
+<rect x="837" y="1144" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_load_async formal: fail</title></rect>
+<rect x="929" y="1144" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_load_async synth: pass</title></rect>
+<rect x="1021" y="1144" width="88" height="13" fill="#d0d7de"><title>twisted_ring_counter/bug_load_async timed: n/a</title></rect>
+<text x="165" y="1170" fill="#cf222e">bug_shift_left</text>
+<rect x="377" y="1160" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_shift_left compile: pass</title></rect>
+<rect x="469" y="1160" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_shift_left lint: pass</title></rect>
+<rect x="561" y="1160" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_shift_left weak: pass</title></rect>
+<rect x="653" y="1160" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_shift_left strong_icarus: fail</title></rect>
+<rect x="745" y="1160" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_shift_left strong_verilator: fail</title></rect>
+<rect x="837" y="1160" width="88" height="13" fill="#cf222e"><title>twisted_ring_counter/bug_shift_left formal: fail</title></rect>
+<rect x="929" y="1160" width="88" height="13" fill="#2da44e"><title>twisted_ring_counter/bug_shift_left synth: pass</title></rect>
+<rect x="1021" y="1160" width="88" height="13" fill="#d0d7de"><title>twisted_ring_counter/bug_shift_left timed: n/a</title></rect>
+<rect x="12" y="1186" width="12" height="12" fill="#2da44e"/>
+<text x="30" y="1196" fill="#1f2328">pass</text>
+<rect x="102" y="1186" width="12" height="12" fill="#cf222e"/>
+<text x="120" y="1196" fill="#1f2328">fail</text>
+<rect x="192" y="1186" width="12" height="12" fill="#82071e"/>
+<text x="210" y="1196" fill="#1f2328">error</text>
+<rect x="282" y="1186" width="12" height="12" fill="#d0d7de"/>
+<text x="300" y="1196" fill="#1f2328">n/a</text>
+</svg>

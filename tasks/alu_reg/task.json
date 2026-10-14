@@ -1,0 +1,11 @@
+{
+  "id": "alu_reg",
+  "title": "N-bit ALU with registered output and asynchronous reset",
+  "origin": "an ALU generalized from 1 to N bits",
+  "top": "alu_reg",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 1}, {"N": 4}, {"N": 8}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "pdr"},
+  "synth": {"params": {"N": 4}}
+}

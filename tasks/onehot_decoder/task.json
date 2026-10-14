@@ -1,0 +1,11 @@
+{
+  "id": "onehot_decoder",
+  "title": "N-to-2^N decoder with enable",
+  "origin": "the decoder of a gate-level / dataflow / behavioral modeling exercise",
+  "top": "onehot_decoder",
+  "kind": "comb",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 1}, {"N": 2}, {"N": 3}, {"N": 5}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "smtbmc", "depth": 1},
+  "synth": {"params": {"N": 3}}
+}

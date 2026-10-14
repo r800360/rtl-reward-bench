@@ -1,0 +1,11 @@
+{
+  "id": "serial_rx",
+  "title": "UART receiver with mid-bit sampling and framing errors",
+  "origin": "a UART receiver (Moore FSM) exercise",
+  "top": "serial_rx",
+  "kind": "seq",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong"},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "smtbmc", "depth": 24},
+  "synth": {"params": {"CLKS_PER_BIT": 16}, "sync_inputs": {"rx": 2}}
+}

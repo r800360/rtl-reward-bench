@@ -1,0 +1,11 @@
+{
+  "id": "subtractor",
+  "title": "Signed subtractor (A - B or B - A) with overflow flags",
+  "origin": "a configurable subtractor exercise",
+  "top": "subtractor",
+  "kind": "comb",
+  "weak": {"tb": "tb_weak.sv", "top": "tb_weak"},
+  "strong": {"tb": "tb_strong.sv", "top": "tb_strong", "params": [{"N": 4}, {"N": 5}, {"N": 16}]},
+  "formal": {"harness": "harness.sv", "top": "harness", "mode": "prove", "engine": "smtbmc", "depth": 1},
+  "synth": {"params": {"N": 8}}
+}
