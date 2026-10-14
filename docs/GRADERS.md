@@ -46,7 +46,9 @@ Every harness fixes one parameter value (N = 4, 5, 8 or 16). Bugs that appear on
 the wrong LFSR taps for N = 8) therefore pass formal and fail the strong testbench, which runs several values.
 Tasks whose behavior depends on both clock edges or on delays (`clkdiv3`, `bitrev_pipe`) have no formal grader.
 SBY occasionally reports a PDR counterexample and then fails to replay it as a trace; "returned FAIL" in the log
-counts as a failure.
+counts as a failure. When a k-induction proof fails, the base case and the induction step run in parallel and
+whether the induction step reports before it is stopped varies from run to run, so its lines are left out of the
+committed log.
 
 ## Synthesis rules
 
